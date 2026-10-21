@@ -1,92 +1,116 @@
-# Diet System 
+# Diet System / IPDOS Rule Replay
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+Derived from [Juggle-ops/dietsystem](https://github.com/Juggle-ops/dietsystem), public baseline commit `a52137f904f78eaebd546d9808503b26e3b10549`. This branch preserves that history and adds the rule replay workbench described below.
 
-This service powers the Stage 3 rollout of the Diet System restaurant platform. It is built with NestJS and Prisma to support forecasting, inventory, marketing, cost monitoring, and decision workflows for multi-store operations.
+NestJS/TypeScript service for restaurant workflow prototypes. The new **local rule replay demonstrator** runs fixed, explicitly synthetic snapshots through the existing rules registry. It compares immutable policy profiles, checks explicit expected rule IDs, shows every evaluated rule, and exports reproducible JSON bundles.
+
+No forecasting model is trained or executed by this demo. Existing forecast snapshots and MAPE/RMSE fields in the seed/fixtures are illustrative constants, not measured predictive performance. The replay suite contains one **deliberately injected** policy regression, not a historical production incident. No field study, causal identification, or store-level A/B benefit is claimed.
 
 ## Authors & Maintainers
 
-* **Zhai Slim**
-* **Chao-Hsien Hsieh**
+- Zhai Slim
+- Chao-Hsien Hsieh
 
+## License status — maintainer decision required
 
-## Tech Stack
+The existing `LICENSE` contains Apache-2.0, the previous README advertised MIT, and `package.json` says `UNLICENSED`. This inconsistency is unresolved. The copyright/license file and package license field have been preserved; maintainers must settle the intended license before release.
 
-- NestJS 11 with TypeScript 5
-- Prisma ORM targeting PostgreSQL
-- Pino structured logging (`nestjs-pino`)
-- Jest + Supertest for tests (to be expanded in later sprints)
+## Run the standalone demo (no database)
 
-## Getting Started
+Requirements: Node.js >=20 (validated on Node 24.19.0) and npm. Run commands from the repository root.
 
-1. Copy the environment template and update the values that make sense for your setup.
-   ```bash
-   cp .env.example .env
-   ```
-2. Export a `DATABASE_URL` that points to a PostgreSQL database (or edit `.env`). The default template expects a database named `diet_system`.
-3. Install dependencies and generate the Prisma client.
-   ```bash
-   npm install
-   npm run prisma:generate
-   ```
-4. Apply migrations (once the database is reachable).
-   ```bash
-   npm run prisma:migrate
-   ```
-5. Seed demo data that matches the product IA.
-   ```bash
-   npm run prisma:seed
-   ```
-6. Start the API.
-   ```bash
-   npm run start:dev
-   ```
+```sh
+npm ci --ignore-scripts
+npm run prisma:generate
+npm run build
+npm run demo
+```
 
-## Environment Variables
+Open **http://127.0.0.1:3017/demo**. The server binds to loopback only. Select a scenario, inspect the reference/candidate checks, replay it, and export the complete candidate JSON. Both profiles can be selected in either position. Comparing `registry-v1` with itself produces no differences.
 
-| Key              | Description                                                                 | Default in template                     |
-| ---------------- | --------------------------------------------------------------------------- | --------------------------------------- |
-| `APP_NAME`       | Identifier used in structured logs                                          | `diet-backend`                          |
-| `APP_PORT`       | HTTP port served by Nest                                                    | `3002`                                  |
-| `NODE_ENV`       | Runtime environment (`development`, `production`, `test`)                   | `development`                           |
-| `LOG_LEVEL`      | Pino log level (`debug`, `info`, `warn`, `error`, `trace`)                  | `debug`                                 |
-| `CORS_ORIGINS`   | Comma separated list of allowed origins. Empty → allow all (for local dev). | `http://localhost:5173`                 |
-| `DATABASE_URL`   | PostgreSQL connection string (Prisma datasource).                           | `postgresql://diet_admin:changeMe@…`    |
-| `PRISMA_LOG_LEVEL` | Prisma client log level (`warn`, `error`, `info`, `query`, `trace`).        | `warn`                                  |
+`REPLAY_PORT` optionally changes the port. This separate NestJS module does not load the business backend, connect to a database, or invoke paid models. Its interface is newly developed for this demonstrator; it is not an old production screenshot. No external frontend package, CDN, or font download is required.
 
-During CI the same `.env` file is consumed; keep secrets out of version control.
+## Reproduce the software checks
 
-## Database Workflow
+```sh
+npm test -- --runInBand
+npx --no-install ts-node scripts/baseline-compatibility.ts
+npm run replay:evidence
+npm run replay:verify -- artifacts/seeded-regression.json
+```
 
-- `npm run prisma:format` – format the Prisma schema
-- `npm run prisma:migrate` – run interactive development migrations
-- `npm run prisma:deploy` – apply existing migrations in non-interactive environments
-- `npm run prisma:seed` – execute `prisma/seed.ts` and populate demo data for stores, inventory, forecasts, marketing campaigns, staff schedules, alerts, cost, and decisions
+The baseline compatibility command checks the SHA-256 of the bundled public registry source from commit `a52137f904f78eaebd546d9808503b26e3b10549`, then compares default outputs on the ten scenarios. It works in an extracted source package without Git history.
 
-A canonical schema lives at `prisma/schema.prisma`. The seed script intentionally upserts by stable IDs so it is safe to re-run when data drifts during exploration.
+With the demo running, use an installed Chromium browser for interaction checks and screenshots:
 
-## Runtime Conventions
+```sh
+npm run test:ui
+```
 
-- Responses are automatically wrapped to `{ data, meta, error }` by `AppResponseInterceptor`.
-- Errors are normalized and logged through `AllExceptionsFilter` with structured Pino logs. Sensitive headers (e.g., Authorization, Cookie) are redacted automatically.
-- Prisma connections are managed via a global `PrismaService`; shutdown hooks ensure graceful exit on process signals.
+Set `CHROME_PATH` if Chrome/Edge/Chromium is not in a standard path; set `REPLAY_URL` when changing the demo port. The browser uses a new workspace profile, never an existing user profile. The command fails clearly if no supported browser is available; it does not auto-install one.
 
-## Project Scripts
+See [docs/REPRODUCIBILITY.md](docs/REPRODUCIBILITY.md) for the exact scenario contracts, export semantics, evidence, and limitations.
 
-| Script                | Purpose                                             |
-| --------------------- | --------------------------------------------------- |
-| `npm run start`       | Start server (default configuration)                |
-| `npm run start:dev`   | Live reload server for development                  |
-| `npm run start:prod`  | Run the compiled output from `dist/`                |
-| `npm run build`       | Compile TypeScript                                  |
-| `npm run lint`        | Lint and auto-fix issues                            |
-| `npm run test`        | Execute unit tests                                  |
-| `npm run prisma:*`    | Database helpers described in the section above     |
+## Run the original backend with synthetic fixtures
 
-## Directory Highlights
+Copy `.env.example` to `.env` (`cp .env.example .env` on Unix; `Copy-Item .env.example .env` in PowerShell), then run the install/generate/build steps above and:
 
-- `src/config` – Environment configuration loaders and validation helpers
-- `src/common` – Cross-cutting interceptors and filters
-- `src/prisma` – PrismaModule and typed PrismaService
-- `prisma/schema.prisma` – Database models for stores, inventory, predictions, marketing, scheduling, alerts, costs, and decisions
-- `prisma/seed.ts` – Domain-aware demo data seeded per store
+```sh
+npm run start:prod
+```
+
+The template explicitly selects `DATABASE_URL=fixture://local`. The original backend serves on port 3002 and exposes `/health`; business responses retain the `{ data, meta, error }` envelope. The standalone replay API uses direct JSON responses and is served by `npm run demo` separately. Existing fixture data are prototypes and are separate from the frozen replay inputs.
+
+## Initialize a separate local PostgreSQL database
+
+Use a new empty development database. Do not point these commands at a production database. A baseline migration and environment template are now included.
+
+An optional Docker configuration provisions a local database:
+
+```sh
+docker compose -f compose.demo.yml up -d --wait
+```
+
+Change `.env` to the following **local demo only** URL (or use your own new local PostgreSQL database):
+
+```dotenv
+DATABASE_URL=postgresql://diet_demo:local_demo_only@127.0.0.1:55432/diet_demo?schema=public
+```
+
+Then initialize and start the original backend:
+
+```sh
+npm run prisma:deploy
+npm run prisma:seed
+npm run start:prod
+```
+
+The seed uses synthetic/example records and stable IDs; rerunning it updates those example records. `prisma:migrate` remains the interactive command for authoring subsequent development migrations. Existing databases created without migration history need a maintainer-reviewed baseline procedure; do not blindly apply the new initial migration to them.
+
+## Environment
+
+| Variable           | Purpose                                                                      | Template/default        |
+| ------------------ | ---------------------------------------------------------------------------- | ----------------------- |
+| `DATABASE_URL`     | Backend datasource; fixture mode avoids a database                           | `fixture://local`       |
+| `APP_NAME`         | Structured log identifier                                                    | `diet-backend`          |
+| `APP_HOST`         | Optional original backend bind address; omitted retains its existing default | `127.0.0.1`             |
+| `APP_PORT`         | Original backend port                                                        | `3002`                  |
+| `NODE_ENV`         | Backend runtime environment                                                  | `development`           |
+| `LOG_LEVEL`        | Pino log level                                                               | `info`                  |
+| `CORS_ORIGINS`     | Backend allowed origins; empty uses local development defaults               | `http://localhost:5173` |
+| `PRISMA_LOG_LEVEL` | Prisma logging                                                               | `warn`                  |
+| `DEMO_AUTH_TOKEN`  | Optional existing backend demo guard                                         | empty                   |
+| `REPLAY_PORT`      | Standalone, loopback-only replay port                                        | `3017`                  |
+
+Keep `.env` files out of Git. `npm run lint` is the original auto-fixing repository-wide lint command; use targeted ESLint checks when reviewing this branch to avoid changing unrelated legacy files.
+
+## Relevant paths
+
+- `src/replay/`: fixed synthetic catalog, replay engine, HTTP API, standalone entry point and tests
+- `src/rules/`: existing rule definitions plus default-preserving policy parameters and full evaluation trace
+- `public/replay.html`: new minimal, dependency-free local interface
+- `scripts/`: evidence generation, exported-bundle verification, base compatibility and browser checks
+- `artifacts/`: actual generated synthetic results and screenshots; local databases/browser profiles/caches stay ignored under `artifacts/local/`
+- `prisma/`: schema, initial migration and synthetic/example seed
+
+For paper-ready mechanism details, exact oracle sources and bounded results, see [docs/MECHANISM_AND_RESULTS.md](docs/MECHANISM_AND_RESULTS.md). The unrecorded 4:30 video plan is [docs/VIDEO_RUNBOOK.md](docs/VIDEO_RUNBOOK.md).

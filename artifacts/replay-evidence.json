@@ -1,0 +1,26 @@
+{
+  "dataOrigin": "synthetic",
+  "baseCommit": "a52137f904f78eaebd546d9808503b26e3b10549",
+  "environment": {
+    "node": "v24.19.0",
+    "platform": "win32",
+    "arch": "x64"
+  },
+  "command": "npm run replay:evidence",
+  "summary": {
+    "scenarios": 10,
+    "baselinePassed": 10,
+    "candidatePassed": 9,
+    "changedScenarios": 1,
+    "ruleEvaluationsPerPolicy": 30
+  },
+  "deterministicRepeats": 100,
+  "suiteDigest": "b51731e649c28f37de36abbc8932f29995d5ccbd5498ecc4f061f95bf5059738",
+  "sourceDigests": {
+    "src/rules/rule.types.ts": "315c2aea5801a76bcd52434d5f44977fd86a2ed948ae311e3d05da7b67c28f9d",
+    "src/rules/rules-registry.service.ts": "3abfff2ebed531ab612a54028b73874fd15112ede17e05b61d54f40417981b79",
+    "src/replay/replay-fixtures.ts": "794ba416debb3032db812692d26f3d1c9052a8288ea3e641892b6b681e917cbd",
+    "src/replay/replay.service.ts": "bb1d298e26f30360c7cf23daa69039dc30f69584ab8e86af002dc04500f0dffd"
+  },
+  "limitation": "Hand-authored synthetic contract checks and one deliberately injected policy regression. Not field evidence or predictive accuracy."
+}

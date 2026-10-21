@@ -131,7 +131,7 @@ function createPredictionFixture(storeId: string) {
       ],
       factors: { weather: 'rain', holiday: false },
     },
-    metrics: { mape: 9.8, rmse: 12.1 },
+    metrics: { dataOrigin: 'synthetic', evaluation: 'illustrative constants; not measured accuracy', mape: 9.8, rmse: 12.1 },
     notes: 'Scenario forecast for lunch service',
     createdAt: new Date('2025-03-04T22:30:00.000Z'),
   };

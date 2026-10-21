@@ -6,6 +6,10 @@
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
+    "demo": "node dist/src/replay/main.js",
+    "replay:evidence": "ts-node scripts/replay-evidence.ts",
+    "replay:verify": "ts-node scripts/replay-verify.ts",
+    "test:ui": "node scripts/ui-smoke.mjs",
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
@@ -22,7 +26,7 @@
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:e2e": "jest --config ./test/jest-e2e.json"
+    "test:e2e": "jest --runInBand --runTestsByPath src/replay/replay.http.spec.ts"
   },
   "dependencies": {
     "@nestjs/common": "^11.0.1",

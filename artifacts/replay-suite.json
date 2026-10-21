@@ -1,0 +1,2391 @@
+{
+  "schemaVersion": "ipdos-rule-suite/v1",
+  "dataOrigin": "synthetic",
+  "summary": {
+    "scenarios": 10,
+    "baselinePassed": 10,
+    "candidatePassed": 9,
+    "changedScenarios": 1,
+    "ruleEvaluationsPerPolicy": 30
+  },
+  "comparisons": [
+    {
+      "baseline": {
+        "schemaVersion": "ipdos-rule-replay/v1",
+        "engineVersion": "registry-replay/1",
+        "dataOrigin": "synthetic",
+        "scenario": {
+          "id": "traffic-eight",
+          "title": "Eight traffic points",
+          "rationale": "Exactly eight points satisfy the existing minimum.",
+          "dataOrigin": "synthetic",
+          "snapshot": {
+            "domain": "traffic",
+            "payload": {
+              "storeId": "SYNTHETIC-001",
+              "evaluationTime": "2026-10-21T12:00:00.000Z",
+              "targetDate": "2026-10-22",
+              "horizon": "NEXT_DAY",
+              "generatedAt": "2026-10-21T08:00:00.000Z",
+              "points": [
+                {
+                  "time": "09:00",
+                  "customers": 100
+                },
+                {
+                  "time": "10:00",
+                  "customers": 100
+                },
+                {
+                  "time": "11:00",
+                  "customers": 100
+                },
+                {
+                  "time": "12:00",
+                  "customers": 100
+                },
+                {
+                  "time": "13:00",
+                  "customers": 100
+                },
+                {
+                  "time": "14:00",
+                  "customers": 100
+                },
+                {
+                  "time": "15:00",
+                  "customers": 100
+                },
+                {
+                  "time": "16:00",
+                  "customers": 100
+                }
+              ]
+            }
+          },
+          "expectedRuleIds": []
+        },
+        "policy": {
+          "id": "registry-v1",
+          "description": "Existing registry defaults; reference policy.",
+          "parameters": {
+            "salesMaxAgeHours": 24,
+            "trafficMaxAgeHours": 12,
+            "minTrafficPoints": 8,
+            "shortageRatio": 0.15,
+            "shortageFloor": 10
+          }
+        },
+        "snapshotDigest": "757173b8ecdd0553184ac1aeef42897e5c99aedfd14370f9c6da4862789d2378",
+        "policyDigest": "a4e1bee35110ee4f69ade8aaf665d954c0cb70038e90f4c72453afc0a1f71f2e",
+        "trace": [
+          {
+            "ruleId": "predictions.traffic.low-resolution",
+            "outcome": "clear",
+            "hit": null
+          },
+          {
+            "ruleId": "predictions.traffic.variance-spike",
+            "outcome": "clear",
+            "hit": null
+          },
+          {
+            "ruleId": "predictions.traffic.snapshot-staleness",
+            "outcome": "clear",
+            "hit": null
+          }
+        ],
+        "actualRuleIds": [],
+        "assertion": {
+          "expectedRuleIds": [],
+          "missing": [],
+          "unexpected": [],
+          "passed": true
+        },
+        "contentDigest": "7c8a644271f1fe70461e19030347bef060215bf33814b8a0547a2c6428f8ecf4"
+      },
+      "candidate": {
+        "schemaVersion": "ipdos-rule-replay/v1",
+        "engineVersion": "registry-replay/1",
+        "dataOrigin": "synthetic",
+        "scenario": {
+          "id": "traffic-eight",
+          "title": "Eight traffic points",
+          "rationale": "Exactly eight points satisfy the existing minimum.",
+          "dataOrigin": "synthetic",
+          "snapshot": {
+            "domain": "traffic",
+            "payload": {
+              "storeId": "SYNTHETIC-001",
+              "evaluationTime": "2026-10-21T12:00:00.000Z",
+              "targetDate": "2026-10-22",
+              "horizon": "NEXT_DAY",
+              "generatedAt": "2026-10-21T08:00:00.000Z",
+              "points": [
+                {
+                  "time": "09:00",
+                  "customers": 100
+                },
+                {
+                  "time": "10:00",
+                  "customers": 100
+                },
+                {
+                  "time": "11:00",
+                  "customers": 100
+                },
+                {
+                  "time": "12:00",
+                  "customers": 100
+                },
+                {
+                  "time": "13:00",
+                  "customers": 100
+                },
+                {
+                  "time": "14:00",
+                  "customers": 100
+                },
+                {
+                  "time": "15:00",
+                  "customers": 100
+                },
+                {
+                  "time": "16:00",
+                  "customers": 100
+                }
+              ]
+            }
+          },
+          "expectedRuleIds": []
+        },
+        "policy": {
+          "id": "sparse-v2-seeded-regression",
+          "description": "Deliberately injected regression: minimum traffic points 8 → 3. Not a historical incident.",
+          "parameters": {
+            "salesMaxAgeHours": 24,
+            "trafficMaxAgeHours": 12,
+            "minTrafficPoints": 3,
+            "shortageRatio": 0.15,
+            "shortageFloor": 10
+          }
+        },
+        "snapshotDigest": "757173b8ecdd0553184ac1aeef42897e5c99aedfd14370f9c6da4862789d2378",
+        "policyDigest": "8ad212ff5d03b459858e31ff7ee0b451feb4255aff646afed21795e45126a214",
+        "trace": [
+          {
+            "ruleId": "predictions.traffic.low-resolution",
+            "outcome": "clear",
+            "hit": null
+          },
+          {
+            "ruleId": "predictions.traffic.variance-spike",
+            "outcome": "clear",
+            "hit": null
+          },
+          {
+            "ruleId": "predictions.traffic.snapshot-staleness",
+            "outcome": "clear",
+            "hit": null
+          }
+        ],
+        "actualRuleIds": [],
+        "assertion": {
+          "expectedRuleIds": [],
+          "missing": [],
+          "unexpected": [],
+          "passed": true
+        },
+        "contentDigest": "b7a759b9e8693e5c248c5e59f89c4cf8f3dd1e256c78eaee9312fdf3a8137e3a"
+      },
+      "delta": {
+        "parameterChanges": [
+          {
+            "parameter": "minTrafficPoints",
+            "baseline": 8,
+            "candidate": 3
+          }
+        ],
+        "added": [],
+        "removed": [],
+        "changed": [],
+        "changedOutcome": false
+      }
+    },
+    {
+      "baseline": {
+        "schemaVersion": "ipdos-rule-replay/v1",
+        "engineVersion": "registry-replay/1",
+        "dataOrigin": "synthetic",
+        "scenario": {
+          "id": "traffic-three",
+          "title": "Three-point warning regression",
+          "rationale": "Three points must retain the low-resolution warning. Candidate v2 deliberately weakens this guard.",
+          "dataOrigin": "synthetic",
+          "snapshot": {
+            "domain": "traffic",
+            "payload": {
+              "storeId": "SYNTHETIC-001",
+              "evaluationTime": "2026-10-21T12:00:00.000Z",
+              "targetDate": "2026-10-22",
+              "horizon": "NEXT_DAY",
+              "generatedAt": "2026-10-21T08:00:00.000Z",
+              "points": [
+                {
+                  "time": "09:00",
+                  "customers": 100
+                },
+                {
+                  "time": "10:00",
+                  "customers": 100
+                },
+                {
+                  "time": "11:00",
+                  "customers": 100
+                }
+              ]
+            }
+          },
+          "expectedRuleIds": [
+            "predictions.traffic.low-resolution"
+          ]
+        },
+        "policy": {
+          "id": "registry-v1",
+          "description": "Existing registry defaults; reference policy.",
+          "parameters": {
+            "salesMaxAgeHours": 24,
+            "trafficMaxAgeHours": 12,
+            "minTrafficPoints": 8,
+            "shortageRatio": 0.15,
+            "shortageFloor": 10
+          }
+        },
+        "snapshotDigest": "adf77e9c5dfe028576981682e75192a15954327f8d2e854ce2d28d485753d9ab",
+        "policyDigest": "a4e1bee35110ee4f69ade8aaf665d954c0cb70038e90f4c72453afc0a1f71f2e",
+        "trace": [
+          {
+            "ruleId": "predictions.traffic.low-resolution",
+            "outcome": "triggered",
+            "hit": {
+              "id": "predictions.traffic.low-resolution",
+              "domain": "predictions",
+              "severity": "medium",
+              "summary": "Traffic forecast only covers 3 time slot(s); capture finer granularity before staffing handoffs.",
+              "detail": {
+                "horizon": "NEXT_DAY",
+                "pointsTracked": 3
+              },
+              "tags": [
+                "staffing",
+                "forecast"
+              ],
+              "evaluatedAt": "2026-10-21T12:00:00.000Z",
+              "storeId": "SYNTHETIC-001",
+              "recommendations": [
+                "Request an hourly forecast export from analytics to align labor scheduling with demand peaks."
+              ]
+            }
+          },
+          {
+            "ruleId": "predictions.traffic.variance-spike",
+            "outcome": "clear",
+            "hit": null
+          },
+          {
+            "ruleId": "predictions.traffic.snapshot-staleness",
+            "outcome": "clear",
+            "hit": null
+          }
+        ],
+        "actualRuleIds": [
+          "predictions.traffic.low-resolution"
+        ],
+        "assertion": {
+          "expectedRuleIds": [
+            "predictions.traffic.low-resolution"
+          ],
+          "missing": [],
+          "unexpected": [],
+          "passed": true
+        },
+        "contentDigest": "d989a7e0cd1b7d1f32f7546ace97588ef6d6ae49bb916570f289f97aaff7f378"
+      },
+      "candidate": {
+        "schemaVersion": "ipdos-rule-replay/v1",
+        "engineVersion": "registry-replay/1",
+        "dataOrigin": "synthetic",
+        "scenario": {
+          "id": "traffic-three",
+          "title": "Three-point warning regression",
+          "rationale": "Three points must retain the low-resolution warning. Candidate v2 deliberately weakens this guard.",
+          "dataOrigin": "synthetic",
+          "snapshot": {
+            "domain": "traffic",
+            "payload": {
+              "storeId": "SYNTHETIC-001",
+              "evaluationTime": "2026-10-21T12:00:00.000Z",
+              "targetDate": "2026-10-22",
+              "horizon": "NEXT_DAY",
+              "generatedAt": "2026-10-21T08:00:00.000Z",
+              "points": [
+                {
+                  "time": "09:00",
+                  "customers": 100
+                },
+                {
+                  "time": "10:00",
+                  "customers": 100
+                },
+                {
+                  "time": "11:00",
+                  "customers": 100
+                }
+              ]
+            }
+          },
+          "expectedRuleIds": [
+            "predictions.traffic.low-resolution"
+          ]
+        },
+        "policy": {
+          "id": "sparse-v2-seeded-regression",
+          "description": "Deliberately injected regression: minimum traffic points 8 → 3. Not a historical incident.",
+          "parameters": {
+            "salesMaxAgeHours": 24,
+            "trafficMaxAgeHours": 12,
+            "minTrafficPoints": 3,
+            "shortageRatio": 0.15,
+            "shortageFloor": 10
+          }
+        },
+        "snapshotDigest": "adf77e9c5dfe028576981682e75192a15954327f8d2e854ce2d28d485753d9ab",
+        "policyDigest": "8ad212ff5d03b459858e31ff7ee0b451feb4255aff646afed21795e45126a214",
+        "trace": [
+          {
+            "ruleId": "predictions.traffic.low-resolution",
+            "outcome": "clear",
+            "hit": null
+          },
+          {
+            "ruleId": "predictions.traffic.variance-spike",
+            "outcome": "clear",
+            "hit": null
+          },
+          {
+            "ruleId": "predictions.traffic.snapshot-staleness",
+            "outcome": "clear",
+            "hit": null
+          }
+        ],
+        "actualRuleIds": [],
+        "assertion": {
+          "expectedRuleIds": [
+            "predictions.traffic.low-resolution"
+          ],
+          "missing": [
+            "predictions.traffic.low-resolution"
+          ],
+          "unexpected": [],
+          "passed": false
+        },
+        "contentDigest": "01f1ce38b15e1edcf4aebed68ec6cf365ba6dbd8c8a72fe52eeeb767e0839016"
+      },
+      "delta": {
+        "parameterChanges": [
+          {
+            "parameter": "minTrafficPoints",
+            "baseline": 8,
+            "candidate": 3
+          }
+        ],
+        "added": [],
+        "removed": [
+          "predictions.traffic.low-resolution"
+        ],
+        "changed": [],
+        "changedOutcome": true
+      }
+    },
+    {
+      "baseline": {
+        "schemaVersion": "ipdos-rule-replay/v1",
+        "engineVersion": "registry-replay/1",
+        "dataOrigin": "synthetic",
+        "scenario": {
+          "id": "traffic-age-12",
+          "title": "Traffic age boundary: 12 h",
+          "rationale": "The existing stale rule uses >12 hours, so equality is clear.",
+          "dataOrigin": "synthetic",
+          "snapshot": {
+            "domain": "traffic",
+            "payload": {
+              "storeId": "SYNTHETIC-001",
+              "evaluationTime": "2026-10-21T12:00:00.000Z",
+              "targetDate": "2026-10-22",
+              "horizon": "NEXT_DAY",
+              "generatedAt": "2026-10-21T00:00:00.000Z",
+              "points": [
+                {
+                  "time": "09:00",
+                  "customers": 100
+                },
+                {
+                  "time": "10:00",
+                  "customers": 100
+                },
+                {
+                  "time": "11:00",
+                  "customers": 100
+                },
+                {
+                  "time": "12:00",
+                  "customers": 100
+                },
+                {
+                  "time": "13:00",
+                  "customers": 100
+                },
+                {
+                  "time": "14:00",
+                  "customers": 100
+                },
+                {
+                  "time": "15:00",
+                  "customers": 100
+                },
+                {
+                  "time": "16:00",
+                  "customers": 100
+                }
+              ]
+            }
+          },
+          "expectedRuleIds": []
+        },
+        "policy": {
+          "id": "registry-v1",
+          "description": "Existing registry defaults; reference policy.",
+          "parameters": {
+            "salesMaxAgeHours": 24,
+            "trafficMaxAgeHours": 12,
+            "minTrafficPoints": 8,
+            "shortageRatio": 0.15,
+            "shortageFloor": 10
+          }
+        },
+        "snapshotDigest": "7ccbee2970ea3a460176c2ac0cc4aa823a97d22ccca74f7531bec75c450c65bd",
+        "policyDigest": "a4e1bee35110ee4f69ade8aaf665d954c0cb70038e90f4c72453afc0a1f71f2e",
+        "trace": [
+          {
+            "ruleId": "predictions.traffic.low-resolution",
+            "outcome": "clear",
+            "hit": null
+          },
+          {
+            "ruleId": "predictions.traffic.variance-spike",
+            "outcome": "clear",
+            "hit": null
+          },
+          {
+            "ruleId": "predictions.traffic.snapshot-staleness",
+            "outcome": "clear",
+            "hit": null
+          }
+        ],
+        "actualRuleIds": [],
+        "assertion": {
+          "expectedRuleIds": [],
+          "missing": [],
+          "unexpected": [],
+          "passed": true
+        },
+        "contentDigest": "1c896a4e04e19df36156f520a852b4d143d6ec2641d0cbc909604a9670a664c1"
+      },
+      "candidate": {
+        "schemaVersion": "ipdos-rule-replay/v1",
+        "engineVersion": "registry-replay/1",
+        "dataOrigin": "synthetic",
+        "scenario": {
+          "id": "traffic-age-12",
+          "title": "Traffic age boundary: 12 h",
+          "rationale": "The existing stale rule uses >12 hours, so equality is clear.",
+          "dataOrigin": "synthetic",
+          "snapshot": {
+            "domain": "traffic",
+            "payload": {
+              "storeId": "SYNTHETIC-001",
+              "evaluationTime": "2026-10-21T12:00:00.000Z",
+              "targetDate": "2026-10-22",
+              "horizon": "NEXT_DAY",
+              "generatedAt": "2026-10-21T00:00:00.000Z",
+              "points": [
+                {
+                  "time": "09:00",
+                  "customers": 100
+                },
+                {
+                  "time": "10:00",
+                  "customers": 100
+                },
+                {
+                  "time": "11:00",
+                  "customers": 100
+                },
+                {
+                  "time": "12:00",
+                  "customers": 100
+                },
+                {
+                  "time": "13:00",
+                  "customers": 100
+                },
+                {
+                  "time": "14:00",
+                  "customers": 100
+                },
+                {
+                  "time": "15:00",
+                  "customers": 100
+                },
+                {
+                  "time": "16:00",
+                  "customers": 100
+                }
+              ]
+            }
+          },
+          "expectedRuleIds": []
+        },
+        "policy": {
+          "id": "sparse-v2-seeded-regression",
+          "description": "Deliberately injected regression: minimum traffic points 8 → 3. Not a historical incident.",
+          "parameters": {
+            "salesMaxAgeHours": 24,
+            "trafficMaxAgeHours": 12,
+            "minTrafficPoints": 3,
+            "shortageRatio": 0.15,
+            "shortageFloor": 10
+          }
+        },
+        "snapshotDigest": "7ccbee2970ea3a460176c2ac0cc4aa823a97d22ccca74f7531bec75c450c65bd",
+        "policyDigest": "8ad212ff5d03b459858e31ff7ee0b451feb4255aff646afed21795e45126a214",
+        "trace": [
+          {
+            "ruleId": "predictions.traffic.low-resolution",
+            "outcome": "clear",
+            "hit": null
+          },
+          {
+            "ruleId": "predictions.traffic.variance-spike",
+            "outcome": "clear",
+            "hit": null
+          },
+          {
+            "ruleId": "predictions.traffic.snapshot-staleness",
+            "outcome": "clear",
+            "hit": null
+          }
+        ],
+        "actualRuleIds": [],
+        "assertion": {
+          "expectedRuleIds": [],
+          "missing": [],
+          "unexpected": [],
+          "passed": true
+        },
+        "contentDigest": "8e6acfb1ba34dedd40b04e22077021938b8f267cfaf3ce6f7a206f3c7a1672ef"
+      },
+      "delta": {
+        "parameterChanges": [
+          {
+            "parameter": "minTrafficPoints",
+            "baseline": 8,
+            "candidate": 3
+          }
+        ],
+        "added": [],
+        "removed": [],
+        "changed": [],
+        "changedOutcome": false
+      }
+    },
+    {
+      "baseline": {
+        "schemaVersion": "ipdos-rule-replay/v1",
+        "engineVersion": "registry-replay/1",
+        "dataOrigin": "synthetic",
+        "scenario": {
+          "id": "traffic-age-13",
+          "title": "Traffic stale: 13 h",
+          "rationale": "One hour beyond the accepted freshness window triggers a warning.",
+          "dataOrigin": "synthetic",
+          "snapshot": {
+            "domain": "traffic",
+            "payload": {
+              "storeId": "SYNTHETIC-001",
+              "evaluationTime": "2026-10-21T12:00:00.000Z",
+              "targetDate": "2026-10-22",
+              "horizon": "NEXT_DAY",
+              "generatedAt": "2026-10-20T23:00:00.000Z",
+              "points": [
+                {
+                  "time": "09:00",
+                  "customers": 100
+                },
+                {
+                  "time": "10:00",
+                  "customers": 100
+                },
+                {
+                  "time": "11:00",
+                  "customers": 100
+                },
+                {
+                  "time": "12:00",
+                  "customers": 100
+                },
+                {
+                  "time": "13:00",
+                  "customers": 100
+                },
+                {
+                  "time": "14:00",
+                  "customers": 100
+                },
+                {
+                  "time": "15:00",
+                  "customers": 100
+                },
+                {
+                  "time": "16:00",
+                  "customers": 100
+                }
+              ]
+            }
+          },
+          "expectedRuleIds": [
+            "predictions.traffic.snapshot-staleness"
+          ]
+        },
+        "policy": {
+          "id": "registry-v1",
+          "description": "Existing registry defaults; reference policy.",
+          "parameters": {
+            "salesMaxAgeHours": 24,
+            "trafficMaxAgeHours": 12,
+            "minTrafficPoints": 8,
+            "shortageRatio": 0.15,
+            "shortageFloor": 10
+          }
+        },
+        "snapshotDigest": "1e58215dcaa41a96e97570e5552c9d95ac4baff7cfc983b52e93fc62f58bfb71",
+        "policyDigest": "a4e1bee35110ee4f69ade8aaf665d954c0cb70038e90f4c72453afc0a1f71f2e",
+        "trace": [
+          {
+            "ruleId": "predictions.traffic.low-resolution",
+            "outcome": "clear",
+            "hit": null
+          },
+          {
+            "ruleId": "predictions.traffic.variance-spike",
+            "outcome": "clear",
+            "hit": null
+          },
+          {
+            "ruleId": "predictions.traffic.snapshot-staleness",
+            "outcome": "triggered",
+            "hit": {
+              "id": "predictions.traffic.snapshot-staleness",
+              "domain": "predictions",
+              "severity": "medium",
+              "summary": "Traffic forecast snapshot is 13 hours old; refresh before publishing staffing guidance.",
+              "detail": {
+                "generatedAt": "2026-10-20T23:00:00.000Z",
+                "horizon": "NEXT_DAY"
+              },
+              "tags": [
+                "data-quality",
+                "cadence"
+              ],
+              "evaluatedAt": "2026-10-21T12:00:00.000Z",
+              "storeId": "SYNTHETIC-001",
+              "recommendations": [
+                "Re-run traffic modeling with the latest booking and walk-in signals to stabilize coverage plans."
+              ]
+            }
+          }
+        ],
+        "actualRuleIds": [
+          "predictions.traffic.snapshot-staleness"
+        ],
+        "assertion": {
+          "expectedRuleIds": [
+            "predictions.traffic.snapshot-staleness"
+          ],
+          "missing": [],
+          "unexpected": [],
+          "passed": true
+        },
+        "contentDigest": "db92fa1029bc5d216514c722bf1fe288de09f95f3b57af22eef3ef791aa37047"
+      },
+      "candidate": {
+        "schemaVersion": "ipdos-rule-replay/v1",
+        "engineVersion": "registry-replay/1",
+        "dataOrigin": "synthetic",
+        "scenario": {
+          "id": "traffic-age-13",
+          "title": "Traffic stale: 13 h",
+          "rationale": "One hour beyond the accepted freshness window triggers a warning.",
+          "dataOrigin": "synthetic",
+          "snapshot": {
+            "domain": "traffic",
+            "payload": {
+              "storeId": "SYNTHETIC-001",
+              "evaluationTime": "2026-10-21T12:00:00.000Z",
+              "targetDate": "2026-10-22",
+              "horizon": "NEXT_DAY",
+              "generatedAt": "2026-10-20T23:00:00.000Z",
+              "points": [
+                {
+                  "time": "09:00",
+                  "customers": 100
+                },
+                {
+                  "time": "10:00",
+                  "customers": 100
+                },
+                {
+                  "time": "11:00",
+                  "customers": 100
+                },
+                {
+                  "time": "12:00",
+                  "customers": 100
+                },
+                {
+                  "time": "13:00",
+                  "customers": 100
+                },
+                {
+                  "time": "14:00",
+                  "customers": 100
+                },
+                {
+                  "time": "15:00",
+                  "customers": 100
+                },
+                {
+                  "time": "16:00",
+                  "customers": 100
+                }
+              ]
+            }
+          },
+          "expectedRuleIds": [
+            "predictions.traffic.snapshot-staleness"
+          ]
+        },
+        "policy": {
+          "id": "sparse-v2-seeded-regression",
+          "description": "Deliberately injected regression: minimum traffic points 8 → 3. Not a historical incident.",
+          "parameters": {
+            "salesMaxAgeHours": 24,
+            "trafficMaxAgeHours": 12,
+            "minTrafficPoints": 3,
+            "shortageRatio": 0.15,
+            "shortageFloor": 10
+          }
+        },
+        "snapshotDigest": "1e58215dcaa41a96e97570e5552c9d95ac4baff7cfc983b52e93fc62f58bfb71",
+        "policyDigest": "8ad212ff5d03b459858e31ff7ee0b451feb4255aff646afed21795e45126a214",
+        "trace": [
+          {
+            "ruleId": "predictions.traffic.low-resolution",
+            "outcome": "clear",
+            "hit": null
+          },
+          {
+            "ruleId": "predictions.traffic.variance-spike",
+            "outcome": "clear",
+            "hit": null
+          },
+          {
+            "ruleId": "predictions.traffic.snapshot-staleness",
+            "outcome": "triggered",
+            "hit": {
+              "id": "predictions.traffic.snapshot-staleness",
+              "domain": "predictions",
+              "severity": "medium",
+              "summary": "Traffic forecast snapshot is 13 hours old; refresh before publishing staffing guidance.",
+              "detail": {
+                "generatedAt": "2026-10-20T23:00:00.000Z",
+                "horizon": "NEXT_DAY"
+              },
+              "tags": [
+                "data-quality",
+                "cadence"
+              ],
+              "evaluatedAt": "2026-10-21T12:00:00.000Z",
+              "storeId": "SYNTHETIC-001",
+              "recommendations": [
+                "Re-run traffic modeling with the latest booking and walk-in signals to stabilize coverage plans."
+              ]
+            }
+          }
+        ],
+        "actualRuleIds": [
+          "predictions.traffic.snapshot-staleness"
+        ],
+        "assertion": {
+          "expectedRuleIds": [
+            "predictions.traffic.snapshot-staleness"
+          ],
+          "missing": [],
+          "unexpected": [],
+          "passed": true
+        },
+        "contentDigest": "dda80d2a61529393b83c580721e472cc6c6353f295040d8474aae9677348e728"
+      },
+      "delta": {
+        "parameterChanges": [
+          {
+            "parameter": "minTrafficPoints",
+            "baseline": 8,
+            "candidate": 3
+          }
+        ],
+        "added": [],
+        "removed": [],
+        "changed": [],
+        "changedOutcome": false
+      }
+    },
+    {
+      "baseline": {
+        "schemaVersion": "ipdos-rule-replay/v1",
+        "engineVersion": "registry-replay/1",
+        "dataOrigin": "synthetic",
+        "scenario": {
+          "id": "sales-clean",
+          "title": "Sales with no shortage",
+          "rationale": "Fresh synthetic snapshot, no critical SKUs, no expected gap.",
+          "dataOrigin": "synthetic",
+          "snapshot": {
+            "domain": "sales",
+            "payload": {
+              "storeId": "SYNTHETIC-001",
+              "evaluationTime": "2026-10-21T12:00:00.000Z",
+              "targetDate": "2026-10-22",
+              "horizon": "NEXT_DAY",
+              "generatedAt": "2026-10-21T08:00:00.000Z",
+              "summary": {
+                "totalDemand": 100,
+                "expectedShortage": 0,
+                "criticalCount": 0,
+                "itemCount": 5
+              },
+              "items": [
+                {
+                  "sku": "SYNTH-0",
+                  "status": "healthy",
+                  "restockRecommendation": 0
+                },
+                {
+                  "sku": "SYNTH-1",
+                  "status": "healthy",
+                  "restockRecommendation": 0
+                },
+                {
+                  "sku": "SYNTH-2",
+                  "status": "healthy",
+                  "restockRecommendation": 0
+                },
+                {
+                  "sku": "SYNTH-3",
+                  "status": "healthy",
+                  "restockRecommendation": 0
+                },
+                {
+                  "sku": "SYNTH-4",
+                  "status": "healthy",
+                  "restockRecommendation": 0
+                }
+              ]
+            }
+          },
+          "expectedRuleIds": []
+        },
+        "policy": {
+          "id": "registry-v1",
+          "description": "Existing registry defaults; reference policy.",
+          "parameters": {
+            "salesMaxAgeHours": 24,
+            "trafficMaxAgeHours": 12,
+            "minTrafficPoints": 8,
+            "shortageRatio": 0.15,
+            "shortageFloor": 10
+          }
+        },
+        "snapshotDigest": "9fcb843d7c11314b61008fae1eba2f3c74ab2db1c7a7d1c62b5fc2dbd563ce8e",
+        "policyDigest": "a4e1bee35110ee4f69ade8aaf665d954c0cb70038e90f4c72453afc0a1f71f2e",
+        "trace": [
+          {
+            "ruleId": "predictions.sales.shortage-escalation",
+            "outcome": "clear",
+            "hit": null
+          },
+          {
+            "ruleId": "predictions.sales.critical-density",
+            "outcome": "clear",
+            "hit": null
+          },
+          {
+            "ruleId": "predictions.sales.snapshot-staleness",
+            "outcome": "clear",
+            "hit": null
+          }
+        ],
+        "actualRuleIds": [],
+        "assertion": {
+          "expectedRuleIds": [],
+          "missing": [],
+          "unexpected": [],
+          "passed": true
+        },
+        "contentDigest": "0bc89995c271ffbfc54907f17e88e9c8ab848e9e0f11e7c46359451e64477efb"
+      },
+      "candidate": {
+        "schemaVersion": "ipdos-rule-replay/v1",
+        "engineVersion": "registry-replay/1",
+        "dataOrigin": "synthetic",
+        "scenario": {
+          "id": "sales-clean",
+          "title": "Sales with no shortage",
+          "rationale": "Fresh synthetic snapshot, no critical SKUs, no expected gap.",
+          "dataOrigin": "synthetic",
+          "snapshot": {
+            "domain": "sales",
+            "payload": {
+              "storeId": "SYNTHETIC-001",
+              "evaluationTime": "2026-10-21T12:00:00.000Z",
+              "targetDate": "2026-10-22",
+              "horizon": "NEXT_DAY",
+              "generatedAt": "2026-10-21T08:00:00.000Z",
+              "summary": {
+                "totalDemand": 100,
+                "expectedShortage": 0,
+                "criticalCount": 0,
+                "itemCount": 5
+              },
+              "items": [
+                {
+                  "sku": "SYNTH-0",
+                  "status": "healthy",
+                  "restockRecommendation": 0
+                },
+                {
+                  "sku": "SYNTH-1",
+                  "status": "healthy",
+                  "restockRecommendation": 0
+                },
+                {
+                  "sku": "SYNTH-2",
+                  "status": "healthy",
+                  "restockRecommendation": 0
+                },
+                {
+                  "sku": "SYNTH-3",
+                  "status": "healthy",
+                  "restockRecommendation": 0
+                },
+                {
+                  "sku": "SYNTH-4",
+                  "status": "healthy",
+                  "restockRecommendation": 0
+                }
+              ]
+            }
+          },
+          "expectedRuleIds": []
+        },
+        "policy": {
+          "id": "sparse-v2-seeded-regression",
+          "description": "Deliberately injected regression: minimum traffic points 8 → 3. Not a historical incident.",
+          "parameters": {
+            "salesMaxAgeHours": 24,
+            "trafficMaxAgeHours": 12,
+            "minTrafficPoints": 3,
+            "shortageRatio": 0.15,
+            "shortageFloor": 10
+          }
+        },
+        "snapshotDigest": "9fcb843d7c11314b61008fae1eba2f3c74ab2db1c7a7d1c62b5fc2dbd563ce8e",
+        "policyDigest": "8ad212ff5d03b459858e31ff7ee0b451feb4255aff646afed21795e45126a214",
+        "trace": [
+          {
+            "ruleId": "predictions.sales.shortage-escalation",
+            "outcome": "clear",
+            "hit": null
+          },
+          {
+            "ruleId": "predictions.sales.critical-density",
+            "outcome": "clear",
+            "hit": null
+          },
+          {
+            "ruleId": "predictions.sales.snapshot-staleness",
+            "outcome": "clear",
+            "hit": null
+          }
+        ],
+        "actualRuleIds": [],
+        "assertion": {
+          "expectedRuleIds": [],
+          "missing": [],
+          "unexpected": [],
+          "passed": true
+        },
+        "contentDigest": "b8275feb6610d8f091b23ed54f451aa61783f839fcf5e82f54e774d434753649"
+      },
+      "delta": {
+        "parameterChanges": [
+          {
+            "parameter": "minTrafficPoints",
+            "baseline": 8,
+            "candidate": 3
+          }
+        ],
+        "added": [],
+        "removed": [],
+        "changed": [],
+        "changedOutcome": false
+      }
+    },
+    {
+      "baseline": {
+        "schemaVersion": "ipdos-rule-replay/v1",
+        "engineVersion": "registry-replay/1",
+        "dataOrigin": "synthetic",
+        "scenario": {
+          "id": "sales-gap-15",
+          "title": "Shortage boundary: 15 units",
+          "rationale": "Gap equals max(10,100*0.15); only critical density (1/5) triggers.",
+          "dataOrigin": "synthetic",
+          "snapshot": {
+            "domain": "sales",
+            "payload": {
+              "storeId": "SYNTHETIC-001",
+              "evaluationTime": "2026-10-21T12:00:00.000Z",
+              "targetDate": "2026-10-22",
+              "horizon": "NEXT_DAY",
+              "generatedAt": "2026-10-21T08:00:00.000Z",
+              "summary": {
+                "totalDemand": 100,
+                "expectedShortage": 15,
+                "criticalCount": 1,
+                "itemCount": 5
+              },
+              "items": [
+                {
+                  "sku": "SYNTH-0",
+                  "status": "critical",
+                  "restockRecommendation": 15
+                },
+                {
+                  "sku": "SYNTH-1",
+                  "status": "healthy",
+                  "restockRecommendation": 0
+                },
+                {
+                  "sku": "SYNTH-2",
+                  "status": "healthy",
+                  "restockRecommendation": 0
+                },
+                {
+                  "sku": "SYNTH-3",
+                  "status": "healthy",
+                  "restockRecommendation": 0
+                },
+                {
+                  "sku": "SYNTH-4",
+                  "status": "healthy",
+                  "restockRecommendation": 0
+                }
+              ]
+            }
+          },
+          "expectedRuleIds": [
+            "predictions.sales.critical-density"
+          ]
+        },
+        "policy": {
+          "id": "registry-v1",
+          "description": "Existing registry defaults; reference policy.",
+          "parameters": {
+            "salesMaxAgeHours": 24,
+            "trafficMaxAgeHours": 12,
+            "minTrafficPoints": 8,
+            "shortageRatio": 0.15,
+            "shortageFloor": 10
+          }
+        },
+        "snapshotDigest": "b27ef37b4b852fa7f813daa02d731ebc0001c75c419da0765ed1e474e4e1a11e",
+        "policyDigest": "a4e1bee35110ee4f69ade8aaf665d954c0cb70038e90f4c72453afc0a1f71f2e",
+        "trace": [
+          {
+            "ruleId": "predictions.sales.shortage-escalation",
+            "outcome": "clear",
+            "hit": null
+          },
+          {
+            "ruleId": "predictions.sales.critical-density",
+            "outcome": "triggered",
+            "hit": {
+              "id": "predictions.sales.critical-density",
+              "domain": "predictions",
+              "severity": "medium",
+              "summary": "1 of 5 forecasted ingredients flag as critical; plan menu fallbacks before service execution.",
+              "detail": {
+                "criticalCount": 1,
+                "totalTracked": 5,
+                "ratio": 0.2
+              },
+              "tags": [
+                "menu",
+                "risk"
+              ],
+              "evaluatedAt": "2026-10-21T12:00:00.000Z",
+              "storeId": "SYNTHETIC-001",
+              "recommendations": [
+                "Review substitution options with culinary to avoid guest experience gaps while restocks land."
+              ]
+            }
+          },
+          {
+            "ruleId": "predictions.sales.snapshot-staleness",
+            "outcome": "clear",
+            "hit": null
+          }
+        ],
+        "actualRuleIds": [
+          "predictions.sales.critical-density"
+        ],
+        "assertion": {
+          "expectedRuleIds": [
+            "predictions.sales.critical-density"
+          ],
+          "missing": [],
+          "unexpected": [],
+          "passed": true
+        },
+        "contentDigest": "0a0e21bbab71aa4ebb4f3ed2da665bbf5a17a6e3baffc39fe1828a37758ff088"
+      },
+      "candidate": {
+        "schemaVersion": "ipdos-rule-replay/v1",
+        "engineVersion": "registry-replay/1",
+        "dataOrigin": "synthetic",
+        "scenario": {
+          "id": "sales-gap-15",
+          "title": "Shortage boundary: 15 units",
+          "rationale": "Gap equals max(10,100*0.15); only critical density (1/5) triggers.",
+          "dataOrigin": "synthetic",
+          "snapshot": {
+            "domain": "sales",
+            "payload": {
+              "storeId": "SYNTHETIC-001",
+              "evaluationTime": "2026-10-21T12:00:00.000Z",
+              "targetDate": "2026-10-22",
+              "horizon": "NEXT_DAY",
+              "generatedAt": "2026-10-21T08:00:00.000Z",
+              "summary": {
+                "totalDemand": 100,
+                "expectedShortage": 15,
+                "criticalCount": 1,
+                "itemCount": 5
+              },
+              "items": [
+                {
+                  "sku": "SYNTH-0",
+                  "status": "critical",
+                  "restockRecommendation": 15
+                },
+                {
+                  "sku": "SYNTH-1",
+                  "status": "healthy",
+                  "restockRecommendation": 0
+                },
+                {
+                  "sku": "SYNTH-2",
+                  "status": "healthy",
+                  "restockRecommendation": 0
+                },
+                {
+                  "sku": "SYNTH-3",
+                  "status": "healthy",
+                  "restockRecommendation": 0
+                },
+                {
+                  "sku": "SYNTH-4",
+                  "status": "healthy",
+                  "restockRecommendation": 0
+                }
+              ]
+            }
+          },
+          "expectedRuleIds": [
+            "predictions.sales.critical-density"
+          ]
+        },
+        "policy": {
+          "id": "sparse-v2-seeded-regression",
+          "description": "Deliberately injected regression: minimum traffic points 8 → 3. Not a historical incident.",
+          "parameters": {
+            "salesMaxAgeHours": 24,
+            "trafficMaxAgeHours": 12,
+            "minTrafficPoints": 3,
+            "shortageRatio": 0.15,
+            "shortageFloor": 10
+          }
+        },
+        "snapshotDigest": "b27ef37b4b852fa7f813daa02d731ebc0001c75c419da0765ed1e474e4e1a11e",
+        "policyDigest": "8ad212ff5d03b459858e31ff7ee0b451feb4255aff646afed21795e45126a214",
+        "trace": [
+          {
+            "ruleId": "predictions.sales.shortage-escalation",
+            "outcome": "clear",
+            "hit": null
+          },
+          {
+            "ruleId": "predictions.sales.critical-density",
+            "outcome": "triggered",
+            "hit": {
+              "id": "predictions.sales.critical-density",
+              "domain": "predictions",
+              "severity": "medium",
+              "summary": "1 of 5 forecasted ingredients flag as critical; plan menu fallbacks before service execution.",
+              "detail": {
+                "criticalCount": 1,
+                "totalTracked": 5,
+                "ratio": 0.2
+              },
+              "tags": [
+                "menu",
+                "risk"
+              ],
+              "evaluatedAt": "2026-10-21T12:00:00.000Z",
+              "storeId": "SYNTHETIC-001",
+              "recommendations": [
+                "Review substitution options with culinary to avoid guest experience gaps while restocks land."
+              ]
+            }
+          },
+          {
+            "ruleId": "predictions.sales.snapshot-staleness",
+            "outcome": "clear",
+            "hit": null
+          }
+        ],
+        "actualRuleIds": [
+          "predictions.sales.critical-density"
+        ],
+        "assertion": {
+          "expectedRuleIds": [
+            "predictions.sales.critical-density"
+          ],
+          "missing": [],
+          "unexpected": [],
+          "passed": true
+        },
+        "contentDigest": "d42497bf62322bd0a75598c814aa53089b3235537db62679d7316cb6f57b8f30"
+      },
+      "delta": {
+        "parameterChanges": [
+          {
+            "parameter": "minTrafficPoints",
+            "baseline": 8,
+            "candidate": 3
+          }
+        ],
+        "added": [],
+        "removed": [],
+        "changed": [],
+        "changedOutcome": false
+      }
+    },
+    {
+      "baseline": {
+        "schemaVersion": "ipdos-rule-replay/v1",
+        "engineVersion": "registry-replay/1",
+        "dataOrigin": "synthetic",
+        "scenario": {
+          "id": "sales-gap-16",
+          "title": "Shortage above threshold",
+          "rationale": "Sixteen units exceed the fifteen-unit threshold; density also triggers.",
+          "dataOrigin": "synthetic",
+          "snapshot": {
+            "domain": "sales",
+            "payload": {
+              "storeId": "SYNTHETIC-001",
+              "evaluationTime": "2026-10-21T12:00:00.000Z",
+              "targetDate": "2026-10-22",
+              "horizon": "NEXT_DAY",
+              "generatedAt": "2026-10-21T08:00:00.000Z",
+              "summary": {
+                "totalDemand": 100,
+                "expectedShortage": 16,
+                "criticalCount": 1,
+                "itemCount": 5
+              },
+              "items": [
+                {
+                  "sku": "SYNTH-0",
+                  "status": "critical",
+                  "restockRecommendation": 16
+                },
+                {
+                  "sku": "SYNTH-1",
+                  "status": "healthy",
+                  "restockRecommendation": 0
+                },
+                {
+                  "sku": "SYNTH-2",
+                  "status": "healthy",
+                  "restockRecommendation": 0
+                },
+                {
+                  "sku": "SYNTH-3",
+                  "status": "healthy",
+                  "restockRecommendation": 0
+                },
+                {
+                  "sku": "SYNTH-4",
+                  "status": "healthy",
+                  "restockRecommendation": 0
+                }
+              ]
+            }
+          },
+          "expectedRuleIds": [
+            "predictions.sales.shortage-escalation",
+            "predictions.sales.critical-density"
+          ]
+        },
+        "policy": {
+          "id": "registry-v1",
+          "description": "Existing registry defaults; reference policy.",
+          "parameters": {
+            "salesMaxAgeHours": 24,
+            "trafficMaxAgeHours": 12,
+            "minTrafficPoints": 8,
+            "shortageRatio": 0.15,
+            "shortageFloor": 10
+          }
+        },
+        "snapshotDigest": "7b9c1c20766a8ef785bbaf9eb53157c1537e73f287fc57abe08ce8978b32e277",
+        "policyDigest": "a4e1bee35110ee4f69ade8aaf665d954c0cb70038e90f4c72453afc0a1f71f2e",
+        "trace": [
+          {
+            "ruleId": "predictions.sales.shortage-escalation",
+            "outcome": "triggered",
+            "hit": {
+              "id": "predictions.sales.shortage-escalation",
+              "domain": "predictions",
+              "severity": "high",
+              "summary": "Forecast indicates 16 unit gap across 1 critical SKU(s); align replenishment before 2026-10-22.",
+              "detail": {
+                "expectedShortage": 16,
+                "criticalSkus": [
+                  "SYNTH-0"
+                ],
+                "horizon": "NEXT_DAY"
+              },
+              "tags": [
+                "forecast",
+                "supply"
+              ],
+              "evaluatedAt": "2026-10-21T12:00:00.000Z",
+              "storeId": "SYNTHETIC-001",
+              "recommendations": [
+                "Coordinate with procurement and prep leaders to stage expedited replenishment for forecasted gaps."
+              ]
+            }
+          },
+          {
+            "ruleId": "predictions.sales.critical-density",
+            "outcome": "triggered",
+            "hit": {
+              "id": "predictions.sales.critical-density",
+              "domain": "predictions",
+              "severity": "medium",
+              "summary": "1 of 5 forecasted ingredients flag as critical; plan menu fallbacks before service execution.",
+              "detail": {
+                "criticalCount": 1,
+                "totalTracked": 5,
+                "ratio": 0.2
+              },
+              "tags": [
+                "menu",
+                "risk"
+              ],
+              "evaluatedAt": "2026-10-21T12:00:00.000Z",
+              "storeId": "SYNTHETIC-001",
+              "recommendations": [
+                "Review substitution options with culinary to avoid guest experience gaps while restocks land."
+              ]
+            }
+          },
+          {
+            "ruleId": "predictions.sales.snapshot-staleness",
+            "outcome": "clear",
+            "hit": null
+          }
+        ],
+        "actualRuleIds": [
+          "predictions.sales.critical-density",
+          "predictions.sales.shortage-escalation"
+        ],
+        "assertion": {
+          "expectedRuleIds": [
+            "predictions.sales.critical-density",
+            "predictions.sales.shortage-escalation"
+          ],
+          "missing": [],
+          "unexpected": [],
+          "passed": true
+        },
+        "contentDigest": "949f9241c7bbbf1f4a4c230e44eb6d97be162b209d23e56be351a5fa66debb66"
+      },
+      "candidate": {
+        "schemaVersion": "ipdos-rule-replay/v1",
+        "engineVersion": "registry-replay/1",
+        "dataOrigin": "synthetic",
+        "scenario": {
+          "id": "sales-gap-16",
+          "title": "Shortage above threshold",
+          "rationale": "Sixteen units exceed the fifteen-unit threshold; density also triggers.",
+          "dataOrigin": "synthetic",
+          "snapshot": {
+            "domain": "sales",
+            "payload": {
+              "storeId": "SYNTHETIC-001",
+              "evaluationTime": "2026-10-21T12:00:00.000Z",
+              "targetDate": "2026-10-22",
+              "horizon": "NEXT_DAY",
+              "generatedAt": "2026-10-21T08:00:00.000Z",
+              "summary": {
+                "totalDemand": 100,
+                "expectedShortage": 16,
+                "criticalCount": 1,
+                "itemCount": 5
+              },
+              "items": [
+                {
+                  "sku": "SYNTH-0",
+                  "status": "critical",
+                  "restockRecommendation": 16
+                },
+                {
+                  "sku": "SYNTH-1",
+                  "status": "healthy",
+                  "restockRecommendation": 0
+                },
+                {
+                  "sku": "SYNTH-2",
+                  "status": "healthy",
+                  "restockRecommendation": 0
+                },
+                {
+                  "sku": "SYNTH-3",
+                  "status": "healthy",
+                  "restockRecommendation": 0
+                },
+                {
+                  "sku": "SYNTH-4",
+                  "status": "healthy",
+                  "restockRecommendation": 0
+                }
+              ]
+            }
+          },
+          "expectedRuleIds": [
+            "predictions.sales.shortage-escalation",
+            "predictions.sales.critical-density"
+          ]
+        },
+        "policy": {
+          "id": "sparse-v2-seeded-regression",
+          "description": "Deliberately injected regression: minimum traffic points 8 → 3. Not a historical incident.",
+          "parameters": {
+            "salesMaxAgeHours": 24,
+            "trafficMaxAgeHours": 12,
+            "minTrafficPoints": 3,
+            "shortageRatio": 0.15,
+            "shortageFloor": 10
+          }
+        },
+        "snapshotDigest": "7b9c1c20766a8ef785bbaf9eb53157c1537e73f287fc57abe08ce8978b32e277",
+        "policyDigest": "8ad212ff5d03b459858e31ff7ee0b451feb4255aff646afed21795e45126a214",
+        "trace": [
+          {
+            "ruleId": "predictions.sales.shortage-escalation",
+            "outcome": "triggered",
+            "hit": {
+              "id": "predictions.sales.shortage-escalation",
+              "domain": "predictions",
+              "severity": "high",
+              "summary": "Forecast indicates 16 unit gap across 1 critical SKU(s); align replenishment before 2026-10-22.",
+              "detail": {
+                "expectedShortage": 16,
+                "criticalSkus": [
+                  "SYNTH-0"
+                ],
+                "horizon": "NEXT_DAY"
+              },
+              "tags": [
+                "forecast",
+                "supply"
+              ],
+              "evaluatedAt": "2026-10-21T12:00:00.000Z",
+              "storeId": "SYNTHETIC-001",
+              "recommendations": [
+                "Coordinate with procurement and prep leaders to stage expedited replenishment for forecasted gaps."
+              ]
+            }
+          },
+          {
+            "ruleId": "predictions.sales.critical-density",
+            "outcome": "triggered",
+            "hit": {
+              "id": "predictions.sales.critical-density",
+              "domain": "predictions",
+              "severity": "medium",
+              "summary": "1 of 5 forecasted ingredients flag as critical; plan menu fallbacks before service execution.",
+              "detail": {
+                "criticalCount": 1,
+                "totalTracked": 5,
+                "ratio": 0.2
+              },
+              "tags": [
+                "menu",
+                "risk"
+              ],
+              "evaluatedAt": "2026-10-21T12:00:00.000Z",
+              "storeId": "SYNTHETIC-001",
+              "recommendations": [
+                "Review substitution options with culinary to avoid guest experience gaps while restocks land."
+              ]
+            }
+          },
+          {
+            "ruleId": "predictions.sales.snapshot-staleness",
+            "outcome": "clear",
+            "hit": null
+          }
+        ],
+        "actualRuleIds": [
+          "predictions.sales.critical-density",
+          "predictions.sales.shortage-escalation"
+        ],
+        "assertion": {
+          "expectedRuleIds": [
+            "predictions.sales.critical-density",
+            "predictions.sales.shortage-escalation"
+          ],
+          "missing": [],
+          "unexpected": [],
+          "passed": true
+        },
+        "contentDigest": "28d04dcc1d975fa7d95bdbc5f69d4c25f7c78d93a9fb8fa2de97d8d8fa087e95"
+      },
+      "delta": {
+        "parameterChanges": [
+          {
+            "parameter": "minTrafficPoints",
+            "baseline": 8,
+            "candidate": 3
+          }
+        ],
+        "added": [],
+        "removed": [],
+        "changed": [],
+        "changedOutcome": false
+      }
+    },
+    {
+      "baseline": {
+        "schemaVersion": "ipdos-rule-replay/v1",
+        "engineVersion": "registry-replay/1",
+        "dataOrigin": "synthetic",
+        "scenario": {
+          "id": "sales-age-25",
+          "title": "Sales stale: 25 h",
+          "rationale": "Freshness exceeds 24 hours, independently of shortage.",
+          "dataOrigin": "synthetic",
+          "snapshot": {
+            "domain": "sales",
+            "payload": {
+              "storeId": "SYNTHETIC-001",
+              "evaluationTime": "2026-10-21T12:00:00.000Z",
+              "targetDate": "2026-10-22",
+              "horizon": "NEXT_DAY",
+              "generatedAt": "2026-10-20T11:00:00.000Z",
+              "summary": {
+                "totalDemand": 100,
+                "expectedShortage": 0,
+                "criticalCount": 0,
+                "itemCount": 5
+              },
+              "items": [
+                {
+                  "sku": "SYNTH-0",
+                  "status": "healthy",
+                  "restockRecommendation": 0
+                },
+                {
+                  "sku": "SYNTH-1",
+                  "status": "healthy",
+                  "restockRecommendation": 0
+                },
+                {
+                  "sku": "SYNTH-2",
+                  "status": "healthy",
+                  "restockRecommendation": 0
+                },
+                {
+                  "sku": "SYNTH-3",
+                  "status": "healthy",
+                  "restockRecommendation": 0
+                },
+                {
+                  "sku": "SYNTH-4",
+                  "status": "healthy",
+                  "restockRecommendation": 0
+                }
+              ]
+            }
+          },
+          "expectedRuleIds": [
+            "predictions.sales.snapshot-staleness"
+          ]
+        },
+        "policy": {
+          "id": "registry-v1",
+          "description": "Existing registry defaults; reference policy.",
+          "parameters": {
+            "salesMaxAgeHours": 24,
+            "trafficMaxAgeHours": 12,
+            "minTrafficPoints": 8,
+            "shortageRatio": 0.15,
+            "shortageFloor": 10
+          }
+        },
+        "snapshotDigest": "3f9acece432da8d703187abcef9174f8df835bfb279343c4e2c96f1c8cd5a44e",
+        "policyDigest": "a4e1bee35110ee4f69ade8aaf665d954c0cb70038e90f4c72453afc0a1f71f2e",
+        "trace": [
+          {
+            "ruleId": "predictions.sales.shortage-escalation",
+            "outcome": "clear",
+            "hit": null
+          },
+          {
+            "ruleId": "predictions.sales.critical-density",
+            "outcome": "clear",
+            "hit": null
+          },
+          {
+            "ruleId": "predictions.sales.snapshot-staleness",
+            "outcome": "triggered",
+            "hit": {
+              "id": "predictions.sales.snapshot-staleness",
+              "domain": "predictions",
+              "severity": "medium",
+              "summary": "Sales forecast snapshot is 25 hours old; refresh the model before committing labor or purchasing plans.",
+              "detail": {
+                "generatedAt": "2026-10-20T11:00:00.000Z",
+                "horizon": "NEXT_DAY"
+              },
+              "tags": [
+                "data-quality",
+                "cadence"
+              ],
+              "evaluatedAt": "2026-10-21T12:00:00.000Z",
+              "storeId": "SYNTHETIC-001",
+              "recommendations": [
+                "Trigger the forecast pipeline and validate inputs (traffic, promos, pricing) before the next standup."
+              ]
+            }
+          }
+        ],
+        "actualRuleIds": [
+          "predictions.sales.snapshot-staleness"
+        ],
+        "assertion": {
+          "expectedRuleIds": [
+            "predictions.sales.snapshot-staleness"
+          ],
+          "missing": [],
+          "unexpected": [],
+          "passed": true
+        },
+        "contentDigest": "02fde4b15257bf47e9ed81df09b8ff7f3e538fe678418c51e26c5371f4ecdb99"
+      },
+      "candidate": {
+        "schemaVersion": "ipdos-rule-replay/v1",
+        "engineVersion": "registry-replay/1",
+        "dataOrigin": "synthetic",
+        "scenario": {
+          "id": "sales-age-25",
+          "title": "Sales stale: 25 h",
+          "rationale": "Freshness exceeds 24 hours, independently of shortage.",
+          "dataOrigin": "synthetic",
+          "snapshot": {
+            "domain": "sales",
+            "payload": {
+              "storeId": "SYNTHETIC-001",
+              "evaluationTime": "2026-10-21T12:00:00.000Z",
+              "targetDate": "2026-10-22",
+              "horizon": "NEXT_DAY",
+              "generatedAt": "2026-10-20T11:00:00.000Z",
+              "summary": {
+                "totalDemand": 100,
+                "expectedShortage": 0,
+                "criticalCount": 0,
+                "itemCount": 5
+              },
+              "items": [
+                {
+                  "sku": "SYNTH-0",
+                  "status": "healthy",
+                  "restockRecommendation": 0
+                },
+                {
+                  "sku": "SYNTH-1",
+                  "status": "healthy",
+                  "restockRecommendation": 0
+                },
+                {
+                  "sku": "SYNTH-2",
+                  "status": "healthy",
+                  "restockRecommendation": 0
+                },
+                {
+                  "sku": "SYNTH-3",
+                  "status": "healthy",
+                  "restockRecommendation": 0
+                },
+                {
+                  "sku": "SYNTH-4",
+                  "status": "healthy",
+                  "restockRecommendation": 0
+                }
+              ]
+            }
+          },
+          "expectedRuleIds": [
+            "predictions.sales.snapshot-staleness"
+          ]
+        },
+        "policy": {
+          "id": "sparse-v2-seeded-regression",
+          "description": "Deliberately injected regression: minimum traffic points 8 → 3. Not a historical incident.",
+          "parameters": {
+            "salesMaxAgeHours": 24,
+            "trafficMaxAgeHours": 12,
+            "minTrafficPoints": 3,
+            "shortageRatio": 0.15,
+            "shortageFloor": 10
+          }
+        },
+        "snapshotDigest": "3f9acece432da8d703187abcef9174f8df835bfb279343c4e2c96f1c8cd5a44e",
+        "policyDigest": "8ad212ff5d03b459858e31ff7ee0b451feb4255aff646afed21795e45126a214",
+        "trace": [
+          {
+            "ruleId": "predictions.sales.shortage-escalation",
+            "outcome": "clear",
+            "hit": null
+          },
+          {
+            "ruleId": "predictions.sales.critical-density",
+            "outcome": "clear",
+            "hit": null
+          },
+          {
+            "ruleId": "predictions.sales.snapshot-staleness",
+            "outcome": "triggered",
+            "hit": {
+              "id": "predictions.sales.snapshot-staleness",
+              "domain": "predictions",
+              "severity": "medium",
+              "summary": "Sales forecast snapshot is 25 hours old; refresh the model before committing labor or purchasing plans.",
+              "detail": {
+                "generatedAt": "2026-10-20T11:00:00.000Z",
+                "horizon": "NEXT_DAY"
+              },
+              "tags": [
+                "data-quality",
+                "cadence"
+              ],
+              "evaluatedAt": "2026-10-21T12:00:00.000Z",
+              "storeId": "SYNTHETIC-001",
+              "recommendations": [
+                "Trigger the forecast pipeline and validate inputs (traffic, promos, pricing) before the next standup."
+              ]
+            }
+          }
+        ],
+        "actualRuleIds": [
+          "predictions.sales.snapshot-staleness"
+        ],
+        "assertion": {
+          "expectedRuleIds": [
+            "predictions.sales.snapshot-staleness"
+          ],
+          "missing": [],
+          "unexpected": [],
+          "passed": true
+        },
+        "contentDigest": "a8324072ee6afcaf37cfcfdbb91433dac816ec383d813b0568dbab69762ad973"
+      },
+      "delta": {
+        "parameterChanges": [
+          {
+            "parameter": "minTrafficPoints",
+            "baseline": 8,
+            "candidate": 3
+          }
+        ],
+        "added": [],
+        "removed": [],
+        "changed": [],
+        "changedOutcome": false
+      }
+    },
+    {
+      "baseline": {
+        "schemaVersion": "ipdos-rule-replay/v1",
+        "engineVersion": "registry-replay/1",
+        "dataOrigin": "synthetic",
+        "scenario": {
+          "id": "menu-clean",
+          "title": "Consistent menu guidance",
+          "rationale": "Five scored items; no restock or contradictory recommendation.",
+          "dataOrigin": "synthetic",
+          "snapshot": {
+            "domain": "menu",
+            "payload": {
+              "storeId": "SYNTHETIC-001",
+              "evaluationTime": "2026-10-21T12:00:00.000Z",
+              "promote": [
+                {
+                  "ingredient": "synthetic-tofu",
+                  "restock": 0
+                }
+              ],
+              "review": [],
+              "suppress": [],
+              "scoredItems": [
+                {
+                  "ingredient": "synthetic-item-0",
+                  "demand": 20,
+                  "stock": 40,
+                  "score": 0.5
+                },
+                {
+                  "ingredient": "synthetic-item-1",
+                  "demand": 20,
+                  "stock": 40,
+                  "score": 0.5
+                },
+                {
+                  "ingredient": "synthetic-item-2",
+                  "demand": 20,
+                  "stock": 40,
+                  "score": 0.5
+                },
+                {
+                  "ingredient": "synthetic-item-3",
+                  "demand": 20,
+                  "stock": 40,
+                  "score": 0.5
+                },
+                {
+                  "ingredient": "synthetic-item-4",
+                  "demand": 20,
+                  "stock": 40,
+                  "score": 0.5
+                }
+              ]
+            }
+          },
+          "expectedRuleIds": []
+        },
+        "policy": {
+          "id": "registry-v1",
+          "description": "Existing registry defaults; reference policy.",
+          "parameters": {
+            "salesMaxAgeHours": 24,
+            "trafficMaxAgeHours": 12,
+            "minTrafficPoints": 8,
+            "shortageRatio": 0.15,
+            "shortageFloor": 10
+          }
+        },
+        "snapshotDigest": "c6403f57bdb5d279949e78aedaecef4aac9f4b6d81653db01436abad67425412",
+        "policyDigest": "a4e1bee35110ee4f69ade8aaf665d954c0cb70038e90f4c72453afc0a1f71f2e",
+        "trace": [
+          {
+            "ruleId": "predictions.menu.restock-alert",
+            "outcome": "clear",
+            "hit": null
+          },
+          {
+            "ruleId": "predictions.menu.conflicting-signals",
+            "outcome": "clear",
+            "hit": null
+          },
+          {
+            "ruleId": "predictions.menu.narrow-coverage",
+            "outcome": "clear",
+            "hit": null
+          }
+        ],
+        "actualRuleIds": [],
+        "assertion": {
+          "expectedRuleIds": [],
+          "missing": [],
+          "unexpected": [],
+          "passed": true
+        },
+        "contentDigest": "01008b135abffc72ccb351f245e1e50df7141414e13d1c0ee1a65701ca00b453"
+      },
+      "candidate": {
+        "schemaVersion": "ipdos-rule-replay/v1",
+        "engineVersion": "registry-replay/1",
+        "dataOrigin": "synthetic",
+        "scenario": {
+          "id": "menu-clean",
+          "title": "Consistent menu guidance",
+          "rationale": "Five scored items; no restock or contradictory recommendation.",
+          "dataOrigin": "synthetic",
+          "snapshot": {
+            "domain": "menu",
+            "payload": {
+              "storeId": "SYNTHETIC-001",
+              "evaluationTime": "2026-10-21T12:00:00.000Z",
+              "promote": [
+                {
+                  "ingredient": "synthetic-tofu",
+                  "restock": 0
+                }
+              ],
+              "review": [],
+              "suppress": [],
+              "scoredItems": [
+                {
+                  "ingredient": "synthetic-item-0",
+                  "demand": 20,
+                  "stock": 40,
+                  "score": 0.5
+                },
+                {
+                  "ingredient": "synthetic-item-1",
+                  "demand": 20,
+                  "stock": 40,
+                  "score": 0.5
+                },
+                {
+                  "ingredient": "synthetic-item-2",
+                  "demand": 20,
+                  "stock": 40,
+                  "score": 0.5
+                },
+                {
+                  "ingredient": "synthetic-item-3",
+                  "demand": 20,
+                  "stock": 40,
+                  "score": 0.5
+                },
+                {
+                  "ingredient": "synthetic-item-4",
+                  "demand": 20,
+                  "stock": 40,
+                  "score": 0.5
+                }
+              ]
+            }
+          },
+          "expectedRuleIds": []
+        },
+        "policy": {
+          "id": "sparse-v2-seeded-regression",
+          "description": "Deliberately injected regression: minimum traffic points 8 → 3. Not a historical incident.",
+          "parameters": {
+            "salesMaxAgeHours": 24,
+            "trafficMaxAgeHours": 12,
+            "minTrafficPoints": 3,
+            "shortageRatio": 0.15,
+            "shortageFloor": 10
+          }
+        },
+        "snapshotDigest": "c6403f57bdb5d279949e78aedaecef4aac9f4b6d81653db01436abad67425412",
+        "policyDigest": "8ad212ff5d03b459858e31ff7ee0b451feb4255aff646afed21795e45126a214",
+        "trace": [
+          {
+            "ruleId": "predictions.menu.restock-alert",
+            "outcome": "clear",
+            "hit": null
+          },
+          {
+            "ruleId": "predictions.menu.conflicting-signals",
+            "outcome": "clear",
+            "hit": null
+          },
+          {
+            "ruleId": "predictions.menu.narrow-coverage",
+            "outcome": "clear",
+            "hit": null
+          }
+        ],
+        "actualRuleIds": [],
+        "assertion": {
+          "expectedRuleIds": [],
+          "missing": [],
+          "unexpected": [],
+          "passed": true
+        },
+        "contentDigest": "cb49873dcc6ed592a0efec5a4e19cb224c0dfcff615d02f725f22b883456d036"
+      },
+      "delta": {
+        "parameterChanges": [
+          {
+            "parameter": "minTrafficPoints",
+            "baseline": 8,
+            "candidate": 3
+          }
+        ],
+        "added": [],
+        "removed": [],
+        "changed": [],
+        "changedOutcome": false
+      }
+    },
+    {
+      "baseline": {
+        "schemaVersion": "ipdos-rule-replay/v1",
+        "engineVersion": "registry-replay/1",
+        "dataOrigin": "synthetic",
+        "scenario": {
+          "id": "menu-conflict",
+          "title": "Conflicting menu guidance",
+          "rationale": "The same synthetic ingredient is promoted and suppressed, with positive restock.",
+          "dataOrigin": "synthetic",
+          "snapshot": {
+            "domain": "menu",
+            "payload": {
+              "storeId": "SYNTHETIC-001",
+              "evaluationTime": "2026-10-21T12:00:00.000Z",
+              "promote": [
+                {
+                  "ingredient": "synthetic-tofu",
+                  "restock": 5
+                }
+              ],
+              "review": [],
+              "suppress": [
+                {
+                  "ingredient": "synthetic-tofu"
+                }
+              ],
+              "scoredItems": [
+                {
+                  "ingredient": "synthetic-item-0",
+                  "demand": 20,
+                  "stock": 40,
+                  "score": 0.5
+                },
+                {
+                  "ingredient": "synthetic-item-1",
+                  "demand": 20,
+                  "stock": 40,
+                  "score": 0.5
+                },
+                {
+                  "ingredient": "synthetic-item-2",
+                  "demand": 20,
+                  "stock": 40,
+                  "score": 0.5
+                },
+                {
+                  "ingredient": "synthetic-item-3",
+                  "demand": 20,
+                  "stock": 40,
+                  "score": 0.5
+                },
+                {
+                  "ingredient": "synthetic-item-4",
+                  "demand": 20,
+                  "stock": 40,
+                  "score": 0.5
+                }
+              ]
+            }
+          },
+          "expectedRuleIds": [
+            "predictions.menu.restock-alert",
+            "predictions.menu.conflicting-signals"
+          ]
+        },
+        "policy": {
+          "id": "registry-v1",
+          "description": "Existing registry defaults; reference policy.",
+          "parameters": {
+            "salesMaxAgeHours": 24,
+            "trafficMaxAgeHours": 12,
+            "minTrafficPoints": 8,
+            "shortageRatio": 0.15,
+            "shortageFloor": 10
+          }
+        },
+        "snapshotDigest": "c542ab1edd4c81c60f63076a3481fdec9cdadb50241a05e40212e4897a55a161",
+        "policyDigest": "a4e1bee35110ee4f69ade8aaf665d954c0cb70038e90f4c72453afc0a1f71f2e",
+        "trace": [
+          {
+            "ruleId": "predictions.menu.restock-alert",
+            "outcome": "triggered",
+            "hit": {
+              "id": "predictions.menu.restock-alert",
+              "domain": "predictions",
+              "severity": "medium",
+              "summary": "1 promoted item(s) require 5.0 units of restock to sustain menu pushes.",
+              "detail": {
+                "restockPromote": [
+                  {
+                    "ingredient": "synthetic-tofu",
+                    "restock": 5
+                  }
+                ]
+              },
+              "tags": [
+                "menu",
+                "inventory"
+              ],
+              "evaluatedAt": "2026-10-21T12:00:00.000Z",
+              "storeId": "SYNTHETIC-001",
+              "recommendations": [
+                "Confirm prep and procurement can cover promotion-driven uplift before publishing menu changes."
+              ]
+            }
+          },
+          {
+            "ruleId": "predictions.menu.conflicting-signals",
+            "outcome": "triggered",
+            "hit": {
+              "id": "predictions.menu.conflicting-signals",
+              "domain": "predictions",
+              "severity": "medium",
+              "summary": "Menu recommendations conflict for synthetic-tofu; reconcile scoring inputs before briefing culinary.",
+              "detail": {
+                "conflicts": [
+                  "synthetic-tofu"
+                ]
+              },
+              "tags": [
+                "menu",
+                "governance"
+              ],
+              "evaluatedAt": "2026-10-21T12:00:00.000Z",
+              "storeId": "SYNTHETIC-001",
+              "recommendations": [
+                "Review margin, risk, and stock overrides to resolve the scoring tie before sharing guidance."
+              ]
+            }
+          },
+          {
+            "ruleId": "predictions.menu.narrow-coverage",
+            "outcome": "clear",
+            "hit": null
+          }
+        ],
+        "actualRuleIds": [
+          "predictions.menu.conflicting-signals",
+          "predictions.menu.restock-alert"
+        ],
+        "assertion": {
+          "expectedRuleIds": [
+            "predictions.menu.conflicting-signals",
+            "predictions.menu.restock-alert"
+          ],
+          "missing": [],
+          "unexpected": [],
+          "passed": true
+        },
+        "contentDigest": "a6bbfc8b7371871af5df08b46a7c0539e3f75a514ed10fc3809f35cf3eb88b2d"
+      },
+      "candidate": {
+        "schemaVersion": "ipdos-rule-replay/v1",
+        "engineVersion": "registry-replay/1",
+        "dataOrigin": "synthetic",
+        "scenario": {
+          "id": "menu-conflict",
+          "title": "Conflicting menu guidance",
+          "rationale": "The same synthetic ingredient is promoted and suppressed, with positive restock.",
+          "dataOrigin": "synthetic",
+          "snapshot": {
+            "domain": "menu",
+            "payload": {
+              "storeId": "SYNTHETIC-001",
+              "evaluationTime": "2026-10-21T12:00:00.000Z",
+              "promote": [
+                {
+                  "ingredient": "synthetic-tofu",
+                  "restock": 5
+                }
+              ],
+              "review": [],
+              "suppress": [
+                {
+                  "ingredient": "synthetic-tofu"
+                }
+              ],
+              "scoredItems": [
+                {
+                  "ingredient": "synthetic-item-0",
+                  "demand": 20,
+                  "stock": 40,
+                  "score": 0.5
+                },
+                {
+                  "ingredient": "synthetic-item-1",
+                  "demand": 20,
+                  "stock": 40,
+                  "score": 0.5
+                },
+                {
+                  "ingredient": "synthetic-item-2",
+                  "demand": 20,
+                  "stock": 40,
+                  "score": 0.5
+                },
+                {
+                  "ingredient": "synthetic-item-3",
+                  "demand": 20,
+                  "stock": 40,
+                  "score": 0.5
+                },
+                {
+                  "ingredient": "synthetic-item-4",
+                  "demand": 20,
+                  "stock": 40,
+                  "score": 0.5
+                }
+              ]
+            }
+          },
+          "expectedRuleIds": [
+            "predictions.menu.restock-alert",
+            "predictions.menu.conflicting-signals"
+          ]
+        },
+        "policy": {
+          "id": "sparse-v2-seeded-regression",
+          "description": "Deliberately injected regression: minimum traffic points 8 → 3. Not a historical incident.",
+          "parameters": {
+            "salesMaxAgeHours": 24,
+            "trafficMaxAgeHours": 12,
+            "minTrafficPoints": 3,
+            "shortageRatio": 0.15,
+            "shortageFloor": 10
+          }
+        },
+        "snapshotDigest": "c542ab1edd4c81c60f63076a3481fdec9cdadb50241a05e40212e4897a55a161",
+        "policyDigest": "8ad212ff5d03b459858e31ff7ee0b451feb4255aff646afed21795e45126a214",
+        "trace": [
+          {
+            "ruleId": "predictions.menu.restock-alert",
+            "outcome": "triggered",
+            "hit": {
+              "id": "predictions.menu.restock-alert",
+              "domain": "predictions",
+              "severity": "medium",
+              "summary": "1 promoted item(s) require 5.0 units of restock to sustain menu pushes.",
+              "detail": {
+                "restockPromote": [
+                  {
+                    "ingredient": "synthetic-tofu",
+                    "restock": 5
+                  }
+                ]
+              },
+              "tags": [
+                "menu",
+                "inventory"
+              ],
+              "evaluatedAt": "2026-10-21T12:00:00.000Z",
+              "storeId": "SYNTHETIC-001",
+              "recommendations": [
+                "Confirm prep and procurement can cover promotion-driven uplift before publishing menu changes."
+              ]
+            }
+          },
+          {
+            "ruleId": "predictions.menu.conflicting-signals",
+            "outcome": "triggered",
+            "hit": {
+              "id": "predictions.menu.conflicting-signals",
+              "domain": "predictions",
+              "severity": "medium",
+              "summary": "Menu recommendations conflict for synthetic-tofu; reconcile scoring inputs before briefing culinary.",
+              "detail": {
+                "conflicts": [
+                  "synthetic-tofu"
+                ]
+              },
+              "tags": [
+                "menu",
+                "governance"
+              ],
+              "evaluatedAt": "2026-10-21T12:00:00.000Z",
+              "storeId": "SYNTHETIC-001",
+              "recommendations": [
+                "Review margin, risk, and stock overrides to resolve the scoring tie before sharing guidance."
+              ]
+            }
+          },
+          {
+            "ruleId": "predictions.menu.narrow-coverage",
+            "outcome": "clear",
+            "hit": null
+          }
+        ],
+        "actualRuleIds": [
+          "predictions.menu.conflicting-signals",
+          "predictions.menu.restock-alert"
+        ],
+        "assertion": {
+          "expectedRuleIds": [
+            "predictions.menu.conflicting-signals",
+            "predictions.menu.restock-alert"
+          ],
+          "missing": [],
+          "unexpected": [],
+          "passed": true
+        },
+        "contentDigest": "d76396df3c0975139db5995e1f0b6411db1edbb784036aca6077827c41c85c30"
+      },
+      "delta": {
+        "parameterChanges": [
+          {
+            "parameter": "minTrafficPoints",
+            "baseline": 8,
+            "candidate": 3
+          }
+        ],
+        "added": [],
+        "removed": [],
+        "changed": [],
+        "changedOutcome": false
+      }
+    }
+  ]
+}

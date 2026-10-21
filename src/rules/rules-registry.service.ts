@@ -1,5 +1,11 @@
 import { Injectable } from '@nestjs/common';
-import { RuleDefinition, RuleHit } from './rule.types';
+import {
+  DEFAULT_FORECAST_RULE_POLICY,
+  ForecastRulePolicy,
+  RuleDefinition,
+  RuleHit,
+  RuleTrace,
+} from './rule.types';
 
 type ChannelMixEntry = { channel: string; share: number };
 
@@ -794,8 +800,9 @@ export class RulesRegistryService {
       tags: ['forecast', 'supply'],
       evaluate(payload, context) {
         const shortageThreshold = Math.max(
-          10,
-          payload.summary.totalDemand * 0.15,
+          (context.policy ?? DEFAULT_FORECAST_RULE_POLICY).shortageFloor,
+          payload.summary.totalDemand *
+            (context.policy ?? DEFAULT_FORECAST_RULE_POLICY).shortageRatio,
         );
         if (payload.summary.expectedShortage <= shortageThreshold) {
           return null;
@@ -870,7 +877,10 @@ export class RulesRegistryService {
         const diffHours =
           (context.evaluationTime.getTime() - payload.generatedAt.getTime()) /
           (1000 * 60 * 60);
-        if (diffHours <= 24) {
+        if (
+          diffHours <=
+          (context.policy ?? DEFAULT_FORECAST_RULE_POLICY).salesMaxAgeHours
+        ) {
           return null;
         }
         return {
@@ -905,7 +915,10 @@ export class RulesRegistryService {
       severity: 'medium',
       tags: ['staffing', 'forecast'],
       evaluate(payload, context) {
-        if (payload.points.length >= 8) {
+        if (
+          payload.points.length >=
+          (context.policy ?? DEFAULT_FORECAST_RULE_POLICY).minTrafficPoints
+        ) {
           return null;
         }
         return {
@@ -985,7 +998,10 @@ export class RulesRegistryService {
         const diffHours =
           (context.evaluationTime.getTime() - payload.generatedAt.getTime()) /
           (1000 * 60 * 60);
-        if (diffHours <= 12) {
+        if (
+          diffHours <=
+          (context.policy ?? DEFAULT_FORECAST_RULE_POLICY).trafficMaxAgeHours
+        ) {
           return null;
         }
         return {
@@ -1290,33 +1306,58 @@ export class RulesRegistryService {
   }
 
   evaluateSalesForecast(payload: SalesForecastRulePayload): RuleHit[] {
-    const context = {
-      storeId: payload.storeId,
-      evaluationTime: payload.evaluationTime,
-    };
-    return this.salesForecastRules
-      .map((rule) => rule.evaluate(payload, context))
-      .filter((hit): hit is RuleHit => Boolean(hit));
+    return this.traceSalesForecast(payload).flatMap((entry) =>
+      entry.hit ? [entry.hit] : [],
+    );
   }
 
   evaluateTrafficForecast(payload: TrafficForecastRulePayload): RuleHit[] {
-    const context = {
-      storeId: payload.storeId,
-      evaluationTime: payload.evaluationTime,
-    };
-    return this.trafficForecastRules
-      .map((rule) => rule.evaluate(payload, context))
-      .filter((hit): hit is RuleHit => Boolean(hit));
+    return this.traceTrafficForecast(payload).flatMap((entry) =>
+      entry.hit ? [entry.hit] : [],
+    );
   }
 
   evaluateMenuAdjustments(payload: MenuAdjustmentRulePayload): RuleHit[] {
+    return this.traceMenuAdjustments(payload).flatMap((entry) =>
+      entry.hit ? [entry.hit] : [],
+    );
+  }
+
+  traceSalesForecast(
+    payload: SalesForecastRulePayload,
+    policy = DEFAULT_FORECAST_RULE_POLICY,
+  ): RuleTrace[] {
+    return this.traceRules(this.salesForecastRules, payload, policy);
+  }
+
+  traceTrafficForecast(
+    payload: TrafficForecastRulePayload,
+    policy = DEFAULT_FORECAST_RULE_POLICY,
+  ): RuleTrace[] {
+    return this.traceRules(this.trafficForecastRules, payload, policy);
+  }
+
+  traceMenuAdjustments(
+    payload: MenuAdjustmentRulePayload,
+    policy = DEFAULT_FORECAST_RULE_POLICY,
+  ): RuleTrace[] {
+    return this.traceRules(this.menuAdjustmentRules, payload, policy);
+  }
+
+  private traceRules<T extends { storeId: string; evaluationTime: Date }>(
+    rules: RuleDefinition<T>[],
+    payload: T,
+    policy: Readonly<ForecastRulePolicy>,
+  ): RuleTrace[] {
     const context = {
       storeId: payload.storeId,
       evaluationTime: payload.evaluationTime,
+      policy,
     };
-    return this.menuAdjustmentRules
-      .map((rule) => rule.evaluate(payload, context))
-      .filter((hit): hit is RuleHit => Boolean(hit));
+    return rules.map((rule) => {
+      const hit = rule.evaluate(payload, context);
+      return { ruleId: rule.id, outcome: hit ? 'triggered' : 'clear', hit };
+    });
   }
 
   evaluateMarketingRecommendations(

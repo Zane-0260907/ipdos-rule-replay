@@ -1,0 +1,655 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>IPDOS · Rule Replay</title>
+    <style>
+      :root {
+        font-family:
+          Inter,
+          Segoe UI,
+          system-ui,
+          sans-serif;
+        color: #172c35;
+        background: #f3f6f6;
+        font-synthesis: none;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+      }
+      button,
+      select {
+        font: inherit;
+      }
+      button,
+      a,
+      select,
+      summary {
+        outline-offset: 4px;
+      }
+      button {
+        cursor: pointer;
+        border: 1px solid #bbcdd0;
+        border-radius: 7px;
+        padding: 10px 15px;
+        background: white;
+        color: #16323b;
+      }
+      button:hover {
+        background: #eaf3f2;
+      }
+      button.primary {
+        background: #076c63;
+        color: white;
+        border-color: #076c63;
+      }
+      button:disabled {
+        opacity: 0.5;
+        cursor: wait;
+      }
+      a {
+        color: #076c63;
+      }
+      header {
+        background: #102e36;
+        color: white;
+        padding: 24px 4vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+      }
+      .brand {
+        font-size: 14px;
+        letter-spacing: 2px;
+        color: #82cdc1;
+      }
+      h1 {
+        font-size: 28px;
+        letter-spacing: -0.7px;
+        margin: 8px 0;
+      }
+      header p {
+        margin: 0;
+        color: #c5d6d8;
+        font-size: 14px;
+      }
+      .badge {
+        display: inline-block;
+        border: 1px solid #739a9f;
+        border-radius: 40px;
+        padding: 7px 12px;
+        white-space: nowrap;
+        font-size: 12px;
+      }
+      .notice {
+        background: #fff5db;
+        padding: 12px 4vw;
+        color: #72551e;
+        font-size: 13px;
+        border-bottom: 1px solid #eddfb8;
+      }
+      .shell {
+        max-width: 1520px;
+        margin: auto;
+        padding: 26px 4vw;
+      }
+      .toolbar {
+        display: flex;
+        gap: 14px;
+        align-items: end;
+        flex-wrap: wrap;
+      }
+      .field {
+        display: grid;
+        gap: 6px;
+        flex: 1;
+        min-width: 220px;
+        font-size: 12px;
+        color: #49636b;
+      }
+      .field select {
+        width: 100%;
+        background: white;
+        border: 1px solid #bdcdd0;
+        border-radius: 7px;
+        padding: 10px;
+        color: #172c35;
+      }
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 14px;
+        margin: 22px 0;
+      }
+      .stat {
+        padding: 17px 20px;
+        background: white;
+        border: 1px solid #d9e3e4;
+        border-radius: 10px;
+      }
+      .stat strong {
+        font-size: 28px;
+        display: block;
+        margin: 4px 0;
+      }
+      .eyebrow {
+        font-size: 11px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: #5a7179;
+      }
+      .layout {
+        display: grid;
+        grid-template-columns: 290px minmax(0, 1fr);
+        gap: 22px;
+      }
+      .panel {
+        background: white;
+        border: 1px solid #d9e3e4;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+      .panel-title {
+        padding: 17px 20px;
+        border-bottom: 1px solid #e1e8e9;
+        font-size: 13px;
+        font-weight: 600;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      nav {
+        padding: 8px;
+      }
+      .case {
+        width: 100%;
+        text-align: left;
+        border: 0;
+        background: white;
+        padding: 12px;
+        border-radius: 6px;
+        display: block;
+        margin: 3px 0;
+        font-size: 13px;
+      }
+      .case small {
+        display: block;
+        margin-top: 6px;
+        color: #5e747c;
+      }
+      .case[aria-current='true'] {
+        background: #e7f4f0;
+        color: #07665d;
+        box-shadow: inset 3px 0 #0a7b6e;
+      }
+      .dot {
+        display: inline-block;
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: #298675;
+        margin-right: 6px;
+      }
+      .dot.fail {
+        background: #c15342;
+      }
+      .detail {
+        padding: 23px;
+      }
+      .detail h2 {
+        margin: 0 0 9px;
+        font-size: 23px;
+        letter-spacing: -0.4px;
+      }
+      .detail p {
+        color: #587078;
+        font-size: 14px;
+        line-height: 1.6;
+        margin: 0 0 18px;
+      }
+      .result {
+        border: 1px solid #d4e6e0;
+        background: #f0faf5;
+        padding: 14px 16px;
+        border-radius: 7px;
+        font-size: 13px;
+        margin: 16px 0;
+        line-height: 1.8;
+      }
+      .result.fail {
+        background: #fff2ef;
+        border-color: #f0cdc7;
+        color: #823e32;
+      }
+      .policy-note {
+        font-size: 12px;
+        color: #5c7179;
+        line-height: 1.7;
+        background: #f5f8f8;
+        padding: 10px 14px;
+        border-radius: 6px;
+      }
+      .actions {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 18px 0;
+      }
+      .actions span {
+        font-size: 12px;
+        color: #53716c;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: left;
+        font-size: 12px;
+      }
+      th {
+        font-weight: 600;
+        color: #557079;
+        background: #f4f7f7;
+      }
+      th,
+      td {
+        padding: 12px;
+        border-bottom: 1px solid #e4ebec;
+        vertical-align: top;
+      }
+      td:first-child {
+        max-width: 380px;
+        overflow-wrap: anywhere;
+      }
+      .pill {
+        display: inline-block;
+        padding: 4px 8px;
+        border-radius: 4px;
+        font-size: 11px;
+        background: #edf3f3;
+        color: #48616a;
+      }
+      .pill.hit {
+        background: #fff0de;
+        color: #835a21;
+      }
+      .pill.removed {
+        background: #ffe4df;
+        color: #8d4034;
+      }
+      details {
+        margin-top: 14px;
+        font-size: 13px;
+      }
+      summary {
+        cursor: pointer;
+        padding: 9px 0;
+        color: #31555e;
+      }
+      pre {
+        background: #102e36;
+        color: #d8e8e8;
+        border-radius: 6px;
+        padding: 16px;
+        overflow: auto;
+        font-size: 11px;
+        max-height: 400px;
+        line-height: 1.6;
+      }
+      .digest {
+        font:
+          11px ui-monospace,
+          monospace;
+        color: #61767d;
+        overflow-wrap: anywhere;
+        line-height: 1.8;
+      }
+      .table-wrap {
+        overflow: auto;
+      }
+      .error {
+        color: #8d3022;
+        background: #ffebe4;
+        padding: 15px;
+        border-radius: 8px;
+        margin: 12px 0;
+      }
+      footer {
+        font-size: 12px;
+        color: #647980;
+        padding: 20px 0;
+        line-height: 1.8;
+      }
+      @media (max-width: 850px) {
+        .layout {
+          grid-template-columns: 1fr;
+        }
+        .stats {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        nav {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+        }
+        header {
+          align-items: start;
+          flex-direction: column;
+        }
+        .shell {
+          padding: 20px;
+        }
+        .detail {
+          padding: 18px;
+        }
+        h1 {
+          font-size: 25px;
+        }
+      }
+      @media (prefers-reduced-motion: no-preference) {
+        button {
+          transition: background 0.15s;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div>
+        <div class="brand">IPDOS / ENGINEERING WORKBENCH</div>
+        <h1>Replay the rule. Inspect the change.</h1>
+        <p>Fixed snapshots · versioned policies · explicit expectations</p>
+      </div>
+      <span class="badge">NEW LOCAL DEMONSTRATOR</span>
+    </header>
+    <div class="notice">
+      <strong>Synthetic data only.</strong> These hand-authored scenarios test
+      software behavior. They are not store observations, forecasting accuracy,
+      or business impact measurements.
+    </div>
+    <main class="shell">
+      <div class="toolbar">
+        <label class="field"
+          >Reference policy<select
+            id="baseline"
+            aria-label="Reference policy"
+          ></select></label
+        ><label class="field"
+          >Candidate policy<select
+            id="candidate"
+            aria-label="Candidate policy"
+          ></select></label
+        ><button class="primary" id="run-all">Run all scenarios</button>
+      </div>
+      <div id="error" role="alert" hidden></div>
+      <div class="stats" aria-live="polite">
+        <div class="stat">
+          <span class="eyebrow">Fixed scenarios</span
+          ><strong id="count">—</strong
+          ><span class="eyebrow">3 rule groups</span>
+        </div>
+        <div class="stat">
+          <span class="eyebrow">Reference passes</span
+          ><strong id="baseline-pass">—</strong
+          ><span class="eyebrow">against explicit oracle</span>
+        </div>
+        <div class="stat">
+          <span class="eyebrow">Candidate passes</span
+          ><strong id="candidate-pass">—</strong
+          ><span class="eyebrow">against the same oracle</span>
+        </div>
+        <div class="stat">
+          <span class="eyebrow">Changed scenarios</span
+          ><strong id="changed">—</strong
+          ><span class="eyebrow">rule output differences</span>
+        </div>
+      </div>
+      <div class="layout">
+        <aside class="panel">
+          <div class="panel-title">
+            SCENARIO SUITE <span id="checks"></span>
+          </div>
+          <nav id="scenarios" aria-label="Replay scenarios"></nav>
+        </aside>
+        <section class="panel" aria-live="polite">
+          <div class="panel-title">
+            SCENARIO COMPARISON <span class="pill">FROZEN CLOCK</span>
+          </div>
+          <div class="detail" id="detail">
+            Loading the synthetic scenario catalog…
+          </div>
+        </section>
+      </div>
+      <footer>
+        This interface was newly developed for rule replay. It calls the
+        existing NestJS rules registry; no forecasting model is trained or
+        executed.<br />Exports include the complete synthetic snapshot, policy
+        parameters, checks, expectations, and SHA-256 content digests. Digests
+        provide content identity, not a security signature.
+      </footer>
+    </main>
+    <script>
+      'use strict';
+      const $ = (id) => document.getElementById(id);
+      let catalog,
+        comparisons = [],
+        selected = 'traffic-three';
+      const escapeHtml = (value) =>
+        String(value).replace(
+          /[&<>"']/g,
+          (c) =>
+            ({
+              '&': '&amp;',
+              '<': '&lt;',
+              '>': '&gt;',
+              '"': '&quot;',
+              "'": '&#39;',
+            })[c],
+        );
+      async function api(path, body) {
+        const response = await fetch(
+          '/demo/api/' + path,
+          body
+            ? {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(body),
+              }
+            : undefined,
+        );
+        if (!response.ok)
+          throw new Error('Request failed (' + response.status + ')');
+        return response.json();
+      }
+      function showError(error) {
+        $('error').hidden = false;
+        $('error').className = 'error';
+        $('error').textContent = error.message;
+      }
+      function request(scenarioId) {
+        return {
+          scenarioId,
+          baselineId: $('baseline').value,
+          candidateId: $('candidate').value,
+        };
+      }
+      async function runSuite() {
+        $('error').hidden = true;
+        $('run-all').disabled = true;
+        $('baseline').disabled = true;
+        $('candidate').disabled = true;
+        try {
+          comparisons = await Promise.all(
+            catalog.scenarios.map((s) => api('compare', request(s.id))),
+          );
+          $('count').textContent = comparisons.length;
+          $('baseline-pass').textContent =
+            comparisons.filter((c) => c.baseline.assertion.passed).length +
+            ' / ' +
+            comparisons.length;
+          $('candidate-pass').textContent =
+            comparisons.filter((c) => c.candidate.assertion.passed).length +
+            ' / ' +
+            comparisons.length;
+          $('changed').textContent = comparisons.filter(
+            (c) => c.delta.changedOutcome,
+          ).length;
+          $('checks').textContent =
+            comparisons.reduce((sum, c) => sum + c.baseline.trace.length, 0) +
+            ' checks / policy';
+          renderNav();
+          renderDetail();
+        } catch (e) {
+          showError(e);
+        } finally {
+          $('run-all').disabled = false;
+          $('baseline').disabled = false;
+          $('candidate').disabled = false;
+        }
+      }
+      function renderNav() {
+        const nav = $('scenarios');
+        nav.replaceChildren();
+        for (const c of comparisons) {
+          const b = document.createElement('button');
+          b.className = 'case';
+          b.dataset.scenario = c.baseline.scenario.id;
+          b.setAttribute(
+            'aria-current',
+            String(b.dataset.scenario === selected),
+          );
+          b.innerHTML =
+            '<span class="dot ' +
+            (c.candidate.assertion.passed ? '' : 'fail') +
+            '"></span>' +
+            escapeHtml(c.baseline.scenario.title) +
+            '<small>' +
+            escapeHtml(c.baseline.scenario.snapshot.domain.toUpperCase()) +
+            ' · ' +
+            (c.delta.changedOutcome ? 'changed output' : 'same output') +
+            '</small>';
+          b.onclick = () => {
+            selected = b.dataset.scenario;
+            renderNav();
+            renderDetail();
+          };
+          nav.append(b);
+        }
+      }
+      function renderDetail() {
+        const c = comparisons.find((c) => c.baseline.scenario.id === selected);
+        if (!c) return;
+        const { baseline: b, candidate: n, delta: d } = c;
+        const fmt = (v) => escapeHtml(JSON.stringify(v, null, 2));
+        $('detail').innerHTML =
+          '<h2>' +
+          escapeHtml(b.scenario.title) +
+          '</h2><p>' +
+          escapeHtml(b.scenario.rationale) +
+          '</p><div class="policy-note">' +
+          escapeHtml(n.policy.description) +
+          '<br>Parameter change: ' +
+          (d.parameterChanges
+            .map(
+              (p) =>
+                escapeHtml(p.parameter) +
+                ': ' +
+                p.baseline +
+                ' → ' +
+                p.candidate,
+            )
+            .join(', ') || 'none') +
+          '</div><div class="result ' +
+          (n.assertion.passed ? '' : 'fail') +
+          '" id="assertion"><strong>' +
+          (n.assertion.passed
+            ? 'Candidate satisfies the scenario contract.'
+            : 'Regression caught: candidate violates the scenario contract.') +
+          '</strong><br>Missing expected warnings: ' +
+          escapeHtml(n.assertion.missing.join(', ') || 'none') +
+          '<br>Unexpected warnings: ' +
+          escapeHtml(n.assertion.unexpected.join(', ') || 'none') +
+          '</div><div class="actions"><button id="rerun">Replay selected</button><a id="export" href="/demo/api/export/' +
+          encodeURIComponent(selected) +
+          '/' +
+          encodeURIComponent(n.policy.id) +
+          '">Export candidate JSON ↓</a><span id="repeat" role="status"></span></div><div class="table-wrap"><table><thead><tr><th>Evaluated rule</th><th>Reference</th><th>Candidate</th><th>Change</th></tr></thead><tbody>' +
+          b.trace
+            .map(
+              (t, i) =>
+                '<tr><td>' +
+                escapeHtml(t.ruleId) +
+                '</td><td><span class="pill ' +
+                (t.hit ? 'hit' : '') +
+                '">' +
+                t.outcome +
+                '</span></td><td><span class="pill ' +
+                (n.trace[i].hit ? 'hit' : '') +
+                '">' +
+                n.trace[i].outcome +
+                '</span></td><td>' +
+                (d.removed.includes(t.ruleId)
+                  ? '<span class="pill removed">warning removed</span>'
+                  : d.added.includes(t.ruleId)
+                    ? 'warning added'
+                    : d.changed.includes(t.ruleId)
+                      ? 'hit detail changed'
+                      : '—') +
+                '</td></tr>',
+            )
+            .join('') +
+          '</tbody></table></div><details><summary>Fixed input snapshot & expected rules</summary><pre>' +
+          fmt(b.scenario) +
+          '</pre></details><details><summary>Execution trace & rule-hit details</summary><pre>' +
+          fmt({ reference: b.trace, candidate: n.trace }) +
+          '</pre></details><details><summary>Policy versions & content identity</summary><pre>' +
+          fmt({ reference: b.policy, candidate: n.policy }) +
+          '</pre></details><p class="digest">Snapshot SHA-256: ' +
+          b.snapshotDigest +
+          '<br>Candidate content SHA-256: ' +
+          n.contentDigest +
+          '</p>';
+        $('rerun').onclick = async () => {
+          const button = $('rerun');
+          button.disabled = true;
+          try {
+            const next = await api('compare', request(selected));
+            $('repeat').textContent =
+              next.candidate.contentDigest === n.contentDigest &&
+              next.baseline.contentDigest === b.contentDigest
+                ? 'Identical digests on replay.'
+                : 'Content changed: inspect engine / inputs.';
+          } catch (e) {
+            showError(e);
+          } finally {
+            button.disabled = false;
+          }
+        };
+      }
+      async function init() {
+        try {
+          catalog = await api('catalog');
+          for (const id of ['baseline', 'candidate'])
+            for (const p of catalog.policies) {
+              const option = document.createElement('option');
+              option.value = p.id;
+              option.textContent = p.id;
+              $(id).append(option);
+            }
+          $('candidate').value = 'sparse-v2-seeded-regression';
+          $('run-all').onclick = runSuite;
+          $('baseline').onchange = runSuite;
+          $('candidate').onchange = runSuite;
+          await runSuite();
+        } catch (e) {
+          showError(e);
+        }
+      }
+      void init();
+    </script>
+  </body>
+</html>

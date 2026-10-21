@@ -41,7 +41,12 @@ async function bootstrap() {
   });
 
   const port = configService.get<number>('app.port', 3002);
-  await app.listen(port);
+  const host = process.env.APP_HOST;
+  if (host) {
+    await app.listen(port, host);
+  } else {
+    await app.listen(port);
+  }
   logger.log(`diet backend listening at :${port}`);
 }
 void bootstrap();

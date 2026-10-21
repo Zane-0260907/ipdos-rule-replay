@@ -1,0 +1,80 @@
+{
+  "schemaVersion": "ipdos-rule-replay/v1",
+  "engineVersion": "registry-replay/1",
+  "dataOrigin": "synthetic",
+  "scenario": {
+    "id": "traffic-three",
+    "title": "Three-point warning regression",
+    "rationale": "Three points must retain the low-resolution warning. Candidate v2 deliberately weakens this guard.",
+    "dataOrigin": "synthetic",
+    "snapshot": {
+      "domain": "traffic",
+      "payload": {
+        "storeId": "SYNTHETIC-001",
+        "evaluationTime": "2026-10-21T12:00:00.000Z",
+        "targetDate": "2026-10-22",
+        "horizon": "NEXT_DAY",
+        "generatedAt": "2026-10-21T08:00:00.000Z",
+        "points": [
+          {
+            "time": "09:00",
+            "customers": 100
+          },
+          {
+            "time": "10:00",
+            "customers": 100
+          },
+          {
+            "time": "11:00",
+            "customers": 100
+          }
+        ]
+      }
+    },
+    "expectedRuleIds": [
+      "predictions.traffic.low-resolution"
+    ]
+  },
+  "policy": {
+    "id": "sparse-v2-seeded-regression",
+    "description": "Deliberately injected regression: minimum traffic points 8 → 3. Not a historical incident.",
+    "parameters": {
+      "salesMaxAgeHours": 24,
+      "trafficMaxAgeHours": 12,
+      "minTrafficPoints": 3,
+      "shortageRatio": 0.15,
+      "shortageFloor": 10
+    }
+  },
+  "snapshotDigest": "adf77e9c5dfe028576981682e75192a15954327f8d2e854ce2d28d485753d9ab",
+  "policyDigest": "8ad212ff5d03b459858e31ff7ee0b451feb4255aff646afed21795e45126a214",
+  "trace": [
+    {
+      "ruleId": "predictions.traffic.low-resolution",
+      "outcome": "clear",
+      "hit": null
+    },
+    {
+      "ruleId": "predictions.traffic.variance-spike",
+      "outcome": "clear",
+      "hit": null
+    },
+    {
+      "ruleId": "predictions.traffic.snapshot-staleness",
+      "outcome": "clear",
+      "hit": null
+    }
+  ],
+  "actualRuleIds": [],
+  "assertion": {
+    "expectedRuleIds": [
+      "predictions.traffic.low-resolution"
+    ],
+    "missing": [
+      "predictions.traffic.low-resolution"
+    ],
+    "unexpected": [],
+    "passed": false
+  },
+  "contentDigest": "01f1ce38b15e1edcf4aebed68ec6cf365ba6dbd8c8a72fe52eeeb767e0839016"
+}

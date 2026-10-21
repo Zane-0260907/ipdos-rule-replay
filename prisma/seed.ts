@@ -229,6 +229,8 @@ async function seedPredictions(storeId: string, code: string) {
     },
   };
   const metrics: Prisma.InputJsonValue = {
+    dataOrigin: 'synthetic',
+    evaluation: 'illustrative constants; not measured accuracy',
     mape: 8.4,
     rmse: 12.5,
     dataFreshnessMinutes: 18,
