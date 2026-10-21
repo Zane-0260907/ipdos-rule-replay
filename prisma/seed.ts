@@ -1,3 +1,4 @@
+// Synthetic local examples only; no real store, employee, or contact records.
 import { Prisma, PrismaClient, $Enums } from '@prisma/client';
 import { Decimal } from '@prisma/client/runtime/library';
 
@@ -19,13 +20,13 @@ type SeedStore = {
 const stores: SeedStore[] = [
   {
     code: 'SH001',
-    name: '上海陆家嘴旗舰店',
+    name: 'Synthetic demo store SH001',
     timezone: 'Asia/Shanghai',
     locale: 'zh-CN',
     currency: 'CNY',
-    address: '上海市浦东新区银城中路68号',
-    managerName: '李想',
-    contactPhone: '+86-21-88886666',
+    address: 'SYNTHETIC-ADDRESS-001',
+    managerName: 'SYNTHETIC-MANAGER-001',
+    contactPhone: 'SYNTHETIC-NO-PHONE-001',
     openedAt: '2023-05-20T00:00:00.000Z',
     metadata: {
       city: '上海',
@@ -35,13 +36,13 @@ const stores: SeedStore[] = [
   },
   {
     code: 'SZ201',
-    name: '深圳科兴城城市店',
+    name: 'Synthetic demo store SZ201',
     timezone: 'Asia/Shanghai',
     locale: 'zh-CN',
     currency: 'CNY',
-    address: '深圳市南山区科苑大道15号',
-    managerName: '王露',
-    contactPhone: '+86-755-77775555',
+    address: 'SYNTHETIC-ADDRESS-002',
+    managerName: 'SYNTHETIC-MANAGER-002',
+    contactPhone: 'SYNTHETIC-NO-PHONE-002',
     openedAt: '2024-03-18T00:00:00.000Z',
     metadata: {
       city: '深圳',
@@ -325,7 +326,7 @@ async function seedStaffSchedules(storeId: string, code: string) {
   }> = [
     {
       id: `${code}-SCHED-AM-20250305-ZHANG`,
-      staffName: '张凯',
+      staffName: 'SYNTHETIC-STAFF-001',
       role: 'line-chef',
       scheduleDate: new Date('2025-03-05T00:00:00.000Z'),
       shiftCode: 'AM_PEAK',
@@ -340,7 +341,7 @@ async function seedStaffSchedules(storeId: string, code: string) {
     },
     {
       id: `${code}-SCHED-PM-20250305-LIN`,
-      staffName: '林伟',
+      staffName: 'SYNTHETIC-STAFF-002',
       role: 'floor-manager',
       scheduleDate: new Date('2025-03-05T00:00:00.000Z'),
       shiftCode: 'PM_PEAK',

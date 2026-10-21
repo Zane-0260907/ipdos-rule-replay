@@ -1,3 +1,4 @@
+// Synthetic local examples only; no real store, employee, or contact records.
 import { $Enums } from '@prisma/client';
 
 type StoreFixture = {
@@ -42,13 +43,13 @@ function createStoreFixture(): StoreFixture {
   return {
     id: 'store-1',
     code: 'SH001',
-    name: 'Shanghai Flagship',
+    name: 'Synthetic demo store SH001',
     timezone: 'Asia/Shanghai',
     locale: 'zh-CN',
     currency: 'CNY',
-    address: 'No. 68 Yincheng Middle Road, Pudong',
-    managerName: 'Li Xiang',
-    contactPhone: '+86-21-88886666',
+    address: 'SYNTHETIC-ADDRESS-001',
+    managerName: 'SYNTHETIC-MANAGER-001',
+    contactPhone: 'SYNTHETIC-NO-PHONE-001',
     openedAt: new Date('2023-05-20T00:00:00.000Z'),
     isActive: true,
     metadata: null,

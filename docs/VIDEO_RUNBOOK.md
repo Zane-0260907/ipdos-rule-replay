@@ -1,6 +1,6 @@
 # Proposed 4 minute 30 second tool demonstration
 
-Status: preparation only. No video has been recorded in this task.
+A 270-second local recording was prepared against engineering commit `52c7897560c0fc967a020a162c8bacc2ae2cb077`. This document retains its preparation script. Video publication is handled separately.
 
 ## Preparation
 
