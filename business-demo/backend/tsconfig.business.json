@@ -1,0 +1,19 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "dist",
+    "incremental": false,
+    "declaration": false
+  },
+  "include": [
+    "src/business/**/*.ts",
+    "src/rules/**/*.ts",
+    "src/common/interceptors/app-response.interceptor.ts"
+  ],
+  "exclude": [
+    "**/*.spec.ts",
+    "node_modules",
+    "dist"
+  ]
+}

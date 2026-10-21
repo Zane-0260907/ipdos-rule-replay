@@ -1,131 +1,61 @@
-# Diet System / IPDOS Rule Replay
+# IPDOS: Traceable Human-Confirmed Replenishment
 
-Derived from [Juggle-ops/dietsystem](https://github.com/Juggle-ops/dietsystem), public baseline commit `a52137f904f78eaebd546d9808503b26e3b10549`. This branch preserves that history and adds the rule replay workbench described below.
+The current revision demonstrates a bounded restaurant workflow: **demand snapshot → inventory gap → human-edited proposal → matching review → simulated order → persistent receipt and report**. It retains the restaurant navigation, tables and chart. New source: [`business-demo/`](business-demo/).
 
-NestJS/TypeScript service for restaurant workflow prototypes. The new **local rule replay demonstrator** runs fixed, explicitly synthetic snapshots through the existing rules registry. It compares immutable policy profiles, checks explicit expected rule IDs, shows every evaluated rule, and exports reproducible JSON bundles.
+**Synthetic data and simulated procurement only.** No supplier connection, payment, real transaction, live forecasting model or production authentication is provided.
 
-This artifact implements reproducible regression checks for decision rules. It does not implement the old manuscript's Prophet forecasting, Shapley/SHAP explanations, Kalman filtering, causal identification, or real-store A/B evaluation. No forecasting model is trained or executed by this demo. Existing forecast snapshots and MAPE/RMSE fields in the seed/fixtures are illustrative constants, not measured predictive performance. The replay suite contains one **deliberately injected** policy regression, not a historical production incident. No field study, causal identification, or store-level A/B benefit is claimed.
+## Download and run — no build required
 
-## Authors & Maintainers
+[**Download the prebuilt business demo**](https://github.com/Zane-0260907/ipdos-rule-replay/releases/download/v0.2.0-business-r2/ipdos-business-prebuilt-r1.zip) · [Release files](https://github.com/Zane-0260907/ipdos-rule-replay/releases/tag/v0.2.0-business-r2) · [**Watch the new business-flow video**](https://www.youtube.com/watch?v=6EFWHdpDLiw)
 
-- Zhai Slim
-- Chao-Hsien Hsieh
+Requires **an existing Node.js 24 installation**. Verified with **Node 24.19.0 / Windows x64**. Node is **not bundled**. Other platforms and versions have not been validated.
 
-## License
+1. Extract the entire ZIP to a writable folder.
+2. Run `start.cmd`, or run `node reviewer-launcher.cjs` from that folder.
+3. Open **http://127.0.0.1:3038/** and select the synthetic manager role.
+4. Press **Ctrl+C** to stop. Records persist in that extracted copy's `data/simulation.sqlite`.
 
-Licensed under [Apache-2.0](LICENSE), as confirmed by the maintainer. The original LICENSE and copyright attributions are retained; README and package metadata are aligned to that existing license.
+The ZIP includes built frontend files, compiled Nest backend and runtime dependencies. **No npm install, compiler, Vite server, PostgreSQL or Docker is needed to run it.** Only loopback ports 3037/3038 are used. Port conflicts produce a startup error; other applications are not stopped. For a fresh scenario, extract another copy of the original ZIP and preserve records you want to keep.
 
-## Demonstration
+ZIP: **21,122,476 bytes**. SHA-256:
 
-[Watch the demonstration with English subtitles](https://youtu.be/wjxquXh4LxQ) (270-second source; YouTube displays 4:31).
-
-[![Actual screenshot of the new synthetic rule replay workbench](artifacts/replay-desktop.png)](https://youtu.be/wjxquXh4LxQ)
-
-The recording shows actual local execution on fixed synthetic cases, including a deliberately injected threshold regression and JSON export verification. It is not a historical production incident, field evaluation, forecasting-accuracy result or store-benefit study. The core replay code and scenarios match engineering commit `52c7897`; subsequent publication changes align license metadata and clarify legacy example labels.
-
-## Run the standalone demo (no database)
-
-Requirements: Node.js >=20 (validated on Node 24.19.0) and npm. Run commands from the repository root.
-
-Clone the published revision, preserving its upstream history:
-
-```sh
-git clone --branch demo/reproducible-rule-replay https://github.com/Zane-0260907/ipdos-rule-replay.git
-cd ipdos-rule-replay
+```text
+65a4796410075577aa944540412e7f950c41e6b4b4a628a65b20795d15790415
 ```
 
-```sh
-npm ci --ignore-scripts
-npm run prisma:generate
-npm run build
-npm run demo
-```
+## Business walkthrough
 
-Open **http://127.0.0.1:3017/demo**. The server binds to loopback only. Select a scenario, inspect the reference/candidate checks, replay it, and export the complete candidate JSON. Both profiles can be selected in either position. Comparing `registry-v1` with itself produces no differences.
+| Step | Observable result |
+| --- | --- |
+| Read 智能预测 / demand snapshot | Fixed rice demand 50 kg, stock 25 kg and suggestion 30 kg. The traffic chart is a fixed synthetic snapshot. |
+| Calculate, edit and review | Save a 31.5 kg proposal and explicitly review that content. Preview/review creates no order. |
+| Change stock during review | The synthetic button changes rice stock from 25 to 20 kg. Old confirmation returns HTTP 409, with zero orders. |
+| Recalculate and review again | Suggestion becomes 35 kg. Edit to 36.5 kg, save, review that content, then confirm. |
+| Read the simulated receipt | Local SQLite preserves the order, linked review, confirmed quantities and input revision. No supplier receives anything. |
+| Retry, export and restart | The same request returns the same receipt. DOCX/JSON read the saved record. After restart, select a role again to read it. |
 
-`REPLAY_PORT` optionally changes the port. This separate NestJS module does not load the business backend, connect to a database, or invoke paid models. Its interface is newly developed for this demonstrator; it is not an old production screenshot. No external frontend package, CDN, or font download is required.
+![Actual synthetic demand and inventory in the restaurant UI](business-demo/screenshots/ui-01-demand-snapshot.png)
 
-## Reproduce the software checks
+![Actual persisted simulated order and receipt](business-demo/screenshots/ui-04-persisted-order-receipt.png)
 
-```sh
-npm test -- --runInBand
-npx --no-install ts-node scripts/baseline-compatibility.ts
-npm run replay:evidence
-npm run replay:verify -- artifacts/seeded-regression.json
-```
+These are real screenshots of the isolated revision. Other restaurant navigation entries remain unconnected; their presence is not a claim of integrated functionality.
 
-The baseline compatibility command checks the SHA-256 of the bundled public registry source from commit `a52137f904f78eaebd546d9808503b26e3b10549`, then compares default outputs on the ten scenarios. It works in an extracted source package without Git history.
+## Verification and limits
 
-With the demo running, use an installed Chromium browser for interaction checks and screenshots:
+R2 passed **14 core checks and 12 real HTTP checks**, including stale input, content/review mismatch, permissions, durable retries, write failure/rollback, restart and report content. The layers overlap and are not field experiments. A separate fresh R2 dependency installation and both builds passed.
 
-```sh
-npm run test:ui
-```
+The exact prebuilt ZIP was extracted and run without dependency installation or compilation. Actual Chromium checks covered the workflow, matching DOCX/JSON downloads, process restart and viewer restrictions. See [runtime evidence](business-demo/verification/prebuilt-runtime-verification-r1.json) and [source correspondence](business-demo/SOURCE_PROVENANCE.json).
 
-Set `CHROME_PATH` if Chrome/Edge/Chromium is not in a standard path; set `REPLAY_URL` when changing the demo port. The browser uses a new workspace profile, never an existing user profile. The command fails clearly if no supported browser is available; it does not auto-install one.
+- Proposals bind the complete synthetic snapshot, inventory revision, policy values, selected rule-module fingerprints and quantities. Review binds immutable content and actor. Creating B does not globally revoke a review of A.
+- Confirmation rechecks role, matching review/content, current input version and loaded rule binding. Calculation and registry modules are hashed on startup/module load; there is no live file monitor or whole-program fingerprint.
+- SQLite transactions, uniqueness constraints and a durable actor/key/request-hash/order association provide bounded local retry handling. This does not prevent every similar purchase or establish unconditional/distributed exactly-once execution.
+- The role selector is deliberately accessible. The viewer button's “只读” label is overbroad: viewer can calculate, edit and save proposals; it cannot review, confirm or change inventory.
+- No Prophet/SHAP/Kalman algorithms, causal identification, forecasting accuracy, optimal scheduling, real-store A/B results or business gains are established. DOCX structure/content were checked; Word layout was not visually validated.
 
-See [docs/REPRODUCIBILITY.md](docs/REPRODUCIBILITY.md) for the exact scenario contracts, export semantics, evidence, and limitations.
+## Source, earlier version and license
 
-## Run the original backend with synthetic fixtures
+The restaurant frontend is based on the owner's supplied restaurant project. Backend lineage includes [Juggle-ops/dietsystem](https://github.com/Juggle-ops/dietsystem), baseline `a52137f904f78eaebd546d9808503b26e3b10549`; its history remains here. This revision adds the isolated human-confirmed flow. [Developer instructions](business-demo/README.md) are optional; reviewers can use the ZIP.
 
-Copy `.env.example` to `.env` (`cp .env.example .env` on Unix; `Copy-Item .env.example .env` in PowerShell), then run the install/generate/build steps above and:
+The repository name preserves the earlier **rule-replay workbench**. Its original root files remain, its documentation is preserved in [README-rule-replay.md](README-rule-replay.md), and [commit 4e70bf6](https://github.com/Zane-0260907/ipdos-rule-replay/tree/4e70bf67abe48edf8045898b03f8e8f92bd24dd1) remains accessible. Its 28 tests and [older video](https://youtu.be/wjxquXh4LxQ) describe that older tool, not this business workflow.
 
-```sh
-npm run start:prod
-```
-
-The template explicitly selects `DATABASE_URL=fixture://local`. The original backend serves on port 3002 and exposes `/health`; business responses retain the `{ data, meta, error }` envelope. The standalone replay API uses direct JSON responses and is served by `npm run demo` separately. Existing fixture data are prototypes and are separate from the frozen replay inputs.
-
-## Initialize a separate local PostgreSQL database
-
-Use a new empty development database. Do not point these commands at a production database. A baseline migration and environment template are now included.
-
-An optional Docker configuration provisions a local database:
-
-```sh
-docker compose -f compose.demo.yml up -d --wait
-```
-
-Change `.env` to the following **local demo only** URL (or use your own new local PostgreSQL database):
-
-```dotenv
-DATABASE_URL=postgresql://diet_demo:local_demo_only@127.0.0.1:55432/diet_demo?schema=public
-```
-
-Then initialize and start the original backend:
-
-```sh
-npm run prisma:deploy
-npm run prisma:seed
-npm run start:prod
-```
-
-The seed uses synthetic/example records and stable IDs; rerunning it updates those example records. `prisma:migrate` remains the interactive command for authoring subsequent development migrations. Existing databases created without migration history need a maintainer-reviewed baseline procedure; do not blindly apply the new initial migration to them.
-
-## Environment
-
-| Variable           | Purpose                                                                      | Template/default        |
-| ------------------ | ---------------------------------------------------------------------------- | ----------------------- |
-| `DATABASE_URL`     | Backend datasource; fixture mode avoids a database                           | `fixture://local`       |
-| `APP_NAME`         | Structured log identifier                                                    | `diet-backend`          |
-| `APP_HOST`         | Optional original backend bind address; omitted retains its existing default | `127.0.0.1`             |
-| `APP_PORT`         | Original backend port                                                        | `3002`                  |
-| `NODE_ENV`         | Backend runtime environment                                                  | `development`           |
-| `LOG_LEVEL`        | Pino log level                                                               | `info`                  |
-| `CORS_ORIGINS`     | Backend allowed origins; empty uses local development defaults               | `http://localhost:5173` |
-| `PRISMA_LOG_LEVEL` | Prisma logging                                                               | `warn`                  |
-| `DEMO_AUTH_TOKEN`  | Optional existing backend demo guard                                         | empty                   |
-| `REPLAY_PORT`      | Standalone, loopback-only replay port                                        | `3017`                  |
-
-Keep `.env` files out of Git. `npm run lint` is the original auto-fixing repository-wide lint command; use targeted ESLint checks when reviewing this branch to avoid changing unrelated legacy files.
-
-## Relevant paths
-
-- `src/replay/`: fixed synthetic catalog, replay engine, HTTP API, standalone entry point and tests
-- `src/rules/`: existing rule definitions plus default-preserving policy parameters and full evaluation trace
-- `public/replay.html`: new minimal, dependency-free local interface
-- `scripts/`: evidence generation, exported-bundle verification, base compatibility and browser checks
-- `artifacts/`: actual generated synthetic results and screenshots; local databases/browser profiles/caches stay ignored under `artifacts/local/`
-- `prisma/`: schema, initial migration and synthetic/example seed
-
-For paper-ready mechanism details, exact oracle sources and bounded results, see [docs/MECHANISM_AND_RESULTS.md](docs/MECHANISM_AND_RESULTS.md). The 4:30 demonstration walkthrough is [docs/VIDEO_RUNBOOK.md](docs/VIDEO_RUNBOOK.md).
+Project code follows the existing [Apache-2.0 LICENSE](LICENSE); original copyright text is retained. Dependencies retain their own licenses. The ZIP preserves their supplied LICENSE/NOTICE files and includes frontend/backend license inventories.

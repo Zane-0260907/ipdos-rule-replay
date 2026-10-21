@@ -1,0 +1,52 @@
+{
+  "passed": true,
+  "node": "24.19.0",
+  "npm": "11.17.0",
+  "platform": "Windows x64",
+  "results": {
+    "core-tests.xml": {
+      "tests": 14,
+      "failed": 0,
+      "rawReportSha256": "6ed31b38887a49c95e2b32570cd99f947f2e59f6589a682038b178140ec5a0ef"
+    },
+    "business-tests.xml": {
+      "tests": 12,
+      "failed": 0,
+      "rawReportSha256": "73ea59de9897be5e82bb159ecbe5a934b6924ee9499fd1f0563fb7e3dc56ce15"
+    }
+  },
+  "backendBuild": "passed",
+  "frontendBuild": "passed; existing >500 kB chunk warning",
+  "compiledFilesMatchingValidatedRuntimeZip": [
+    "frontend/assets/index-BmmXq3AQ.css",
+    "frontend/assets/index-C8HB0VGL.js",
+    "frontend/index.html",
+    "frontend/logo.svg",
+    "backend/dist/business/bootstrap.js",
+    "backend/dist/business/bootstrap.js.map",
+    "backend/dist/business/business.controller.js",
+    "backend/dist/business/business.controller.js.map",
+    "backend/dist/business/business.module.js",
+    "backend/dist/business/business.module.js.map",
+    "backend/dist/business/business.service.js",
+    "backend/dist/business/business.service.js.map",
+    "backend/dist/business/domain.js",
+    "backend/dist/business/domain.js.map",
+    "backend/dist/business/dto.js",
+    "backend/dist/business/dto.js.map",
+    "backend/dist/business/main.js",
+    "backend/dist/business/main.js.map",
+    "backend/dist/business/store.js",
+    "backend/dist/business/store.js.map",
+    "backend/dist/common/interceptors/app-response.interceptor.js",
+    "backend/dist/common/interceptors/app-response.interceptor.js.map",
+    "backend/dist/rules/rule.types.js",
+    "backend/dist/rules/rule.types.js.map",
+    "backend/dist/rules/rules-registry.service.js",
+    "backend/dist/rules/rules-registry.service.js.map"
+  ],
+  "matchingCompiledFileCount": 26,
+  "dependencyUse": "Existing verified R2 dependencies resolved from parent directories; this publication check is not a fresh dependency installation. Separate R2 clean-install evidence predates this check.",
+  "setupFix": "Create XML reporter output directory before Node test runner startup; assertions and business implementation unchanged.",
+  "runtimeZipSha256": "65a4796410075577aa944540412e7f950c41e6b4b4a628a65b20795d15790415"
+}
