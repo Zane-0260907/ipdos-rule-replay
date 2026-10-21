@@ -15,6 +15,14 @@ This artifact implements reproducible regression checks for decision rules. It d
 
 Licensed under [Apache-2.0](LICENSE), as confirmed by the maintainer. The original LICENSE and copyright attributions are retained; README and package metadata are aligned to that existing license.
 
+## Demonstration
+
+[Watch the demonstration with English subtitles](https://youtu.be/wjxquXh4LxQ) (270-second source; YouTube displays 4:31).
+
+[![Actual screenshot of the new synthetic rule replay workbench](artifacts/replay-desktop.png)](https://youtu.be/wjxquXh4LxQ)
+
+The recording shows actual local execution on fixed synthetic cases, including a deliberately injected threshold regression and JSON export verification. It is not a historical production incident, field evaluation, forecasting-accuracy result or store-benefit study. The core replay code and scenarios match engineering commit `52c7897`; subsequent publication changes align license metadata and clarify legacy example labels.
+
 ## Run the standalone demo (no database)
 
 Requirements: Node.js >=20 (validated on Node 24.19.0) and npm. Run commands from the repository root.
