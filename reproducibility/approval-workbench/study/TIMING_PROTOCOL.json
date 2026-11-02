@@ -1,0 +1,16 @@
+{
+  "protocol":"approval-validation-cost-v1",
+  "frozenBeforeTiming":true,
+  "workflow":"procurement",
+  "modes":["whole","rows","full","incremental"],
+  "scales":[3,30,120],
+  "patterns":["unchanged","unrelated_store","related_stock","shared_budget_price"],
+  "warmupsPerCell":5,
+  "measuredSamplesPerCell":30,
+  "validationScope":"Fresh SQLite file per cell, synchronous direct service validate inside BEGIN IMMEDIATE; no HTTP/browser time, contention, other writers or external effects. The measured wrapper includes transaction begin/end. Original approvals are not re-reviewed between validation samples; field ABA remains invalid.",
+  "captureScope":"One initial immutable full snapshot + sealed preview, and explicit all-clause review measured separately per cell. This includes common contract generation required by all modes.",
+  "commitScope":"After validation samples, one fresh sealed snapshot and explicit all-clause review precede one real simulated commit per cell; complete authority/intent/rule/evidence checks and SQLite receipt/effect/outcome write are included. These are descriptive single observations per pattern, not latency distribution estimates.",
+  "costMetrics":["validation elapsed microseconds","required review decisions","evaluated/reused graph nodes","read rows/events","predicate/key index buckets","serialized deduplicated witness bytes","serialized immutable snapshot bytes","serialized approval ledger bytes","capture and review elapsed microseconds","complete commit elapsed microseconds"],
+  "safety":"All retained decisions checked against the independent full oracle before recording a sample; any unsafe retention aborts timing. This is correctness checking, not an independent functional scenario count.",
+  "report":"Preserve dense/shared-budget cases and negative speedups. Quantiles describe only these local samples. Review counts/fields are workload proxies, not measured human time. Serialized byte sizes are not process heap memory. No asymptotic, deployment or user-benefit claim is inferred."
+}

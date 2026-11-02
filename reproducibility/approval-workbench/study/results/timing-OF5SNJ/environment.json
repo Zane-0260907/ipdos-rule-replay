@@ -1,0 +1,91 @@
+{
+  "node": "v24.19.0",
+  "versions": {
+    "node": "24.19.0",
+    "acorn": "8.17.0",
+    "ada": "3.4.4",
+    "amaro": "1.1.10",
+    "ares": "1.34.6",
+    "brotli": "1.2.0",
+    "cldr": "48.0",
+    "icu": "78.3",
+    "llhttp": "9.4.3",
+    "merve": "1.2.2",
+    "modules": "137",
+    "napi": "10",
+    "nbytes": "0.1.4",
+    "ncrypto": "0.0.1",
+    "nghttp2": "1.69.0",
+    "nghttp3": "",
+    "ngtcp2": "",
+    "openssl": "3.5.7",
+    "simdjson": "4.6.4",
+    "simdutf": "6.4.0",
+    "sqlite": "3.53.3",
+    "tz": "2026b",
+    "undici": "7.29.0",
+    "unicode": "17.0",
+    "uv": "1.52.1",
+    "uvwasi": "0.0.23",
+    "v8": "13.6.233.17-node.51",
+    "zlib": "1.3.2.1-motley-3246f1b",
+    "zstd": "1.5.7"
+  },
+  "platform": "win32",
+  "cpu": "12th Gen Intel(R) Core(TM) i7-12700H",
+  "protocol": {
+    "protocol": "approval-validation-cost-v1",
+    "frozenBeforeTiming": true,
+    "workflow": "procurement",
+    "modes": [
+      "whole",
+      "rows",
+      "full",
+      "incremental"
+    ],
+    "scales": [
+      3,
+      30,
+      120
+    ],
+    "patterns": [
+      "unchanged",
+      "unrelated_store",
+      "related_stock",
+      "shared_budget_price"
+    ],
+    "warmupsPerCell": 5,
+    "measuredSamplesPerCell": 30,
+    "validationScope": "Fresh SQLite file per cell, synchronous direct service validate inside BEGIN IMMEDIATE; no HTTP/browser time, contention, other writers or external effects. The measured wrapper includes transaction begin/end. Original approvals are not re-reviewed between validation samples; field ABA remains invalid.",
+    "captureScope": "One initial immutable full snapshot + sealed preview, and explicit all-clause review measured separately per cell. This includes common contract generation required by all modes.",
+    "commitScope": "After validation samples, one fresh sealed snapshot and explicit all-clause review precede one real simulated commit per cell; complete authority/intent/rule/evidence checks and SQLite receipt/effect/outcome write are included. These are descriptive single observations per pattern, not latency distribution estimates.",
+    "costMetrics": [
+      "validation elapsed microseconds",
+      "required review decisions",
+      "evaluated/reused graph nodes",
+      "read rows/events",
+      "predicate/key index buckets",
+      "serialized deduplicated witness bytes",
+      "serialized immutable snapshot bytes",
+      "serialized approval ledger bytes",
+      "capture and review elapsed microseconds",
+      "complete commit elapsed microseconds"
+    ],
+    "safety": "All retained decisions checked against the independent full oracle before recording a sample; any unsafe retention aborts timing. This is correctness checking, not an independent functional scenario count.",
+    "report": "Preserve dense/shared-budget cases and negative speedups. Quantiles describe only these local samples. Review counts/fields are workload proxies, not measured human time. Serialized byte sizes are not process heap memory. No asymptotic, deployment or user-benefit claim is inferred."
+  },
+  "hashes": {
+    "study/TIMING_PROTOCOL.json": "7784431a945c74bf043b4d9994c9897346df2e985d20c18137db48bacd8a19f0",
+    "study/run-timing.cjs": "4914e2adb458fec888687bc5422e33df2b46b7d70997ff6581a36a4c74f86290",
+    "tests/full-oracle.cjs": "e19f67cf3db5f41d55bdb17c2dc75f0e139240f01de317384f68ce04c67499a0",
+    "core/adapters.cjs": "b9d87577c22eb732d189386a7fcbe6c0dc9e4c90db0a1e63ab2a37f9d231a445",
+    "core/contracts.cjs": "1bdd35c69220744821773a4fe629b392f26be570f2a38a3ff551bb0f881fe7e9",
+    "core/documents.cjs": "f26a0f6aa275d701c4b750f9d080299cdd6a416536f5608dc226173a1eec5475",
+    "core/engine.cjs": "353a449e6dbffe73a28d026b3eacb0f8a6487f58f113cf28bbde30800b3d900b",
+    "core/fixtures.cjs": "024b56dd06a398e5cb20e868a135b5754b009c4659eab17f9517b743df8cc244",
+    "core/predicate.cjs": "e69ef5a2d904cce215f5c83839ed263c8c3d9994e129ceb5e8a4623e7afac3e9",
+    "core/service.cjs": "c82509b5001b1b4811eb9a38b2ef33eb39023ed289abb2cc63b980f0971aee31",
+    "core/store.cjs": "18857bf553fd1f65d543d2a92aa22f663e5f06ce3681b4509fbd303f55727b53",
+    "core/value.cjs": "08aabda7ba336faffab8488fd364ff5bc621d6a3065ecab985d723cdb0476bc4"
+  }
+}

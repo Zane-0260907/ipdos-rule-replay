@@ -1,0 +1,7 @@
+# Contract interpretation at the API boundary
+
+The frozen pilot describes selective re-review as explicitly selecting invalid/missing clauses. The current API additionally permits an actor to explicitly select and renew an unchanged clause. This appends a new approval and leaves the original approval/snapshot immutable; it never retargets or transfers an old approval to new evidence. Preservation of approval-head identity applies to clauses left unselected. The UI's “Select decisions needing review” action selects only invalid/missing clauses whose current conditions allow approval. Selecting further checkboxes is an explicit renewal. The timing protocol explicitly renews all clauses before its separate commit-cost observation. This behavior is stated here so the frozen contract's shorthand is not read as an API prohibition on explicit renewal.
+
+The formal functional matrices exercise preservation of every unselected original head during repair. They do not measure human comprehension or whether reviewers will choose the minimum possible scope. Required review counts and protected field occurrences are workload proxies.
+
+A newly discovered dependency is labelled “not previously observed” in the explanation UI. That differs from an explicitly observed missing key, which has an absence epoch. Both force review when they affect the protected witness; the UI does not manufacture a prior absence observation for a newly read existing key.

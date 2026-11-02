@@ -1,0 +1,17 @@
+{
+  "exactBlobOrAbsenceABA": [],
+  "sourcePathChanges": {
+    "A": 1,
+    "D": 1,
+    "M": 32
+  },
+  "sharedBindingChangeTransitions": 9,
+  "unobserved": [
+    "real approval/signoff changes",
+    "permission or audience revocation",
+    "transaction faults",
+    "concurrent writers",
+    "rendered-document changes"
+  ],
+  "sourceMembershipBoundaryLimitation": "The sole source addition and deletion occur in a commit that also changes conf.py; the shared binding invalidates all clauses. This is natural membership coverage, not an isolated selective-benefit test for membership changes."
+}

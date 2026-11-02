@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "prebuilt": {
+    "path": "${ARTIFACT_ROOT}\\deliverables\\ipdos-approval-prototype-prebuilt-v2.zip",
+    "bytes": 165744,
+    "sha256": "2f5159611deafc168031d7c3549f6af944b8b6c6ef2b2fe4ac0d3b75b18a4438",
+    "extractDirectory": "${ARTIFACT_ROOT}\\artifacts\\prebuilt-acceptance-cl7q2vdh",
+    "runtimeFileCount": 19,
+    "manifestVerified": true,
+    "containsNodeModules": false
+  },
+  "workflows": {
+    "procurement": {
+      "evidence": "${ARTIFACT_ROOT}\\artifacts\\prebuilt-acceptance-cl7q2vdh\\artifacts\\browser-approval-run-Foj0UR\\evidence.json",
+      "screenshots": [
+        "${ARTIFACT_ROOT}\\artifacts\\prebuilt-acceptance-cl7q2vdh\\artifacts\\browser-approval-run-Foj0UR\\prototype-01-unrelated-retained.png",
+        "${ARTIFACT_ROOT}\\artifacts\\prebuilt-acceptance-cl7q2vdh\\artifacts\\browser-approval-run-Foj0UR\\prototype-02-whole-invalidation.png",
+        "${ARTIFACT_ROOT}\\artifacts\\prebuilt-acceptance-cl7q2vdh\\artifacts\\browser-approval-run-Foj0UR\\prototype-03-related-stock-reason.png",
+        "${ARTIFACT_ROOT}\\artifacts\\prebuilt-acceptance-cl7q2vdh\\artifacts\\browser-approval-run-Foj0UR\\prototype-04-shared-budget-scope.png",
+        "${ARTIFACT_ROOT}\\artifacts\\prebuilt-acceptance-cl7q2vdh\\artifacts\\browser-approval-run-Foj0UR\\prototype-05-saved-authority-chain.png"
+      ]
+    },
+    "document": {
+      "evidence": "${ARTIFACT_ROOT}\\artifacts\\prebuilt-acceptance-cl7q2vdh\\artifacts\\browser-document-run-Q1qjJx\\evidence.json",
+      "screenshots": [
+        "${ARTIFACT_ROOT}\\artifacts\\prebuilt-acceptance-cl7q2vdh\\artifacts\\browser-document-run-Q1qjJx\\prototype-document-01-content-blocked.png",
+        "${ARTIFACT_ROOT}\\artifacts\\prebuilt-acceptance-cl7q2vdh\\artifacts\\browser-document-run-Q1qjJx\\prototype-document-02-audience-reason.png",
+        "${ARTIFACT_ROOT}\\artifacts\\prebuilt-acceptance-cl7q2vdh\\artifacts\\browser-document-run-Q1qjJx\\prototype-document-03-saved-release.png"
+      ]
+    }
+  },
+  "handledUiBannerMonitor": "nonvisual MutationObserver/CDP console across document reloads plus settled DOM check; negative control rejects v1 on setPreview",
+  "negativeControl": "artifacts/ui-banner-negative-control.log",
+  "coreHashEvidence": "artifacts/ui-fix-core-hashes.json"
+}

@@ -1,0 +1,64 @@
+{
+  "phase": "sanity",
+  "run": "${ARTIFACT_ROOT}\\study\\results\\sanity-0VBnnq",
+  "finishedUTC": "2026-11-01T07:14:54.239Z",
+  "codeDigest": "c78191881f575fa9c098f499de0b7e2d37b9957c6bbe251bf1835035d20dc27f",
+  "trials": 176,
+  "scenarioCount": 44,
+  "byMode": {
+    "whole": {
+      "trials": 44,
+      "unsafeRetainedApprovals": 0,
+      "incorrectNewCommits": 0,
+      "partialEffectStates": 0,
+      "unnecessaryReviewDecisions": 54,
+      "requiredReviewDecisions": 111,
+      "validOriginalRequestRejections": 4,
+      "receiptRecoveries": 1,
+      "infrastructureErrors": 1
+    },
+    "rows": {
+      "trials": 44,
+      "unsafeRetainedApprovals": 0,
+      "incorrectNewCommits": 0,
+      "partialEffectStates": 0,
+      "unnecessaryReviewDecisions": 20,
+      "requiredReviewDecisions": 77,
+      "validOriginalRequestRejections": 2,
+      "receiptRecoveries": 1,
+      "infrastructureErrors": 1
+    },
+    "full": {
+      "trials": 44,
+      "unsafeRetainedApprovals": 0,
+      "incorrectNewCommits": 0,
+      "partialEffectStates": 0,
+      "unnecessaryReviewDecisions": 0,
+      "requiredReviewDecisions": 57,
+      "validOriginalRequestRejections": 0,
+      "receiptRecoveries": 1,
+      "infrastructureErrors": 1
+    },
+    "incremental": {
+      "trials": 44,
+      "unsafeRetainedApprovals": 0,
+      "incorrectNewCommits": 0,
+      "partialEffectStates": 0,
+      "unnecessaryReviewDecisions": 0,
+      "requiredReviewDecisions": 57,
+      "validOriginalRequestRejections": 0,
+      "receiptRecoveries": 1,
+      "infrastructureErrors": 1
+    }
+  },
+  "passed": false,
+  "interpretation": "Functional repetitions are deterministic replay checks, not independent field cases. Injected SQLite exceptions are not process crashes or power loss. Child-process reopen/retry is normal process recovery. All SQLite runs use one database authority boundary; no distributed, multi-writer throughput or production rate is claimed.",
+  "denominator": "Deterministic pre-specified synthetic scenario-mode-scale repetitions; not production probabilities",
+  "files": [
+    "raw.jsonl",
+    "trials.csv",
+    "environment.json",
+    "summary.json",
+    "per-trial synthetic SQLite and process inputs/outputs"
+  ]
+}

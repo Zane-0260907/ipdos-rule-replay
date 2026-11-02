@@ -1,0 +1,3028 @@
+{
+  "run": "artifacts/browser-approval-run-Foj0UR",
+  "screenshots": [
+    "${ARTIFACT_ROOT}\\artifacts\\prebuilt-acceptance-cl7q2vdh\\artifacts\\browser-approval-run-Foj0UR\\prototype-01-unrelated-retained.png",
+    "${ARTIFACT_ROOT}\\artifacts\\prebuilt-acceptance-cl7q2vdh\\artifacts\\browser-approval-run-Foj0UR\\prototype-02-whole-invalidation.png",
+    "${ARTIFACT_ROOT}\\artifacts\\prebuilt-acceptance-cl7q2vdh\\artifacts\\browser-approval-run-Foj0UR\\prototype-03-related-stock-reason.png",
+    "${ARTIFACT_ROOT}\\artifacts\\prebuilt-acceptance-cl7q2vdh\\artifacts\\browser-approval-run-Foj0UR\\prototype-04-shared-budget-scope.png",
+    "${ARTIFACT_ROOT}\\artifacts\\prebuilt-acceptance-cl7q2vdh\\artifacts\\browser-approval-run-Foj0UR\\prototype-05-saved-authority-chain.png"
+  ],
+  "actions": [
+    {
+      "change": "unrelated_stock",
+      "revision": 19
+    },
+    {
+      "change": "related_stock",
+      "revision": 20
+    },
+    {
+      "change": "unrelated_stock",
+      "revision": 23
+    }
+  ],
+  "startedUTC": "2026-11-01T09:01:27.916Z",
+  "original": {
+    "workflow": "procurement",
+    "draft": {
+      "id": "PROC-001",
+      "workflow": "procurement",
+      "context": {
+        "draftId": "PROC-001",
+        "storeId": "STORE-001",
+        "actorId": "synthetic-manager-01",
+        "skus": [
+          "RICE",
+          "CHICKEN",
+          "GREENS"
+        ],
+        "opaque": false
+      },
+      "intent_revision": 1,
+      "status": "open"
+    },
+    "actor": "synthetic-manager-01",
+    "role": "manager",
+    "mode": "incremental",
+    "validation": {
+      "draftId": "PROC-001",
+      "mode": "incremental",
+      "revision": 18,
+      "generation": "c0764d7d-6817-49e2-b252-479e6afe75d8",
+      "contractHash": "c3f533c1e7895ff854d7df56c9266544eba45f7b0df28af5a99c0e3a830b2a20",
+      "clauses": [
+        {
+          "id": "quantity:RICE",
+          "label": "RICE procurement decision",
+          "status": "retained",
+          "retained": true,
+          "reason": "Original protected evidence is unchanged; original approval snapshot retained.",
+          "approvalId": "APP-1ee04d02c1582bb537c67954699e21de5abb0aa0d67c67201f73bf7c72e7bf07",
+          "originalSnapshotId": "SNAP-21890231d9e8034a6dad1e6bfbdcf0c32df6982bb8d676c459ca7e51c8e8606d",
+          "reviewedRevision": 18,
+          "validatedRevision": 18,
+          "canCommit": true,
+          "current": {
+            "value": {
+              "sku": "RICE",
+              "proposedG": 31500,
+              "demandG": 50000,
+              "onHandG": 25000,
+              "reservedG": 0,
+              "suggestedG": 31500,
+              "unitPriceCents": 200,
+              "sharedBudget": {
+                "limitCents": 30000,
+                "priorUseCents": 0,
+                "proposedCostCents": 13800,
+                "canCommit": true,
+                "ruleVersion": "budget-1"
+              },
+              "inventoryRuleVersion": "inventory-1",
+              "grantVersion": 1,
+              "canCommit": true
+            },
+            "error": null,
+            "viewHash": "114df61b87dda2f45c57f1d5c9c441d7c140980cfb4e6719e0bd5786f9db75f9"
+          },
+          "differences": []
+        },
+        {
+          "id": "quantity:CHICKEN",
+          "label": "CHICKEN procurement decision",
+          "status": "retained",
+          "retained": true,
+          "reason": "Original protected evidence is unchanged; original approval snapshot retained.",
+          "approvalId": "APP-1fc6be1586ec591fcd1de8d04987e5c94ec8e7de4a73b1af0acc17bd93fdbc07",
+          "originalSnapshotId": "SNAP-21890231d9e8034a6dad1e6bfbdcf0c32df6982bb8d676c459ca7e51c8e8606d",
+          "reviewedRevision": 18,
+          "validatedRevision": 18,
+          "canCommit": true,
+          "current": {
+            "value": {
+              "sku": "CHICKEN",
+              "proposedG": 25000,
+              "demandG": 30000,
+              "onHandG": 8000,
+              "reservedG": 0,
+              "suggestedG": 25900,
+              "unitPriceCents": 300,
+              "sharedBudget": {
+                "limitCents": 30000,
+                "priorUseCents": 0,
+                "proposedCostCents": 13800,
+                "canCommit": true,
+                "ruleVersion": "budget-1"
+              },
+              "inventoryRuleVersion": "inventory-1",
+              "grantVersion": 1,
+              "canCommit": true
+            },
+            "error": null,
+            "viewHash": "e034072ce8b1b6117650addeb8cfe8755b77715f2b6b82b812ba7b5295d9c433"
+          },
+          "differences": []
+        },
+        {
+          "id": "quantity:GREENS",
+          "label": "GREENS procurement decision",
+          "status": "retained",
+          "retained": true,
+          "reason": "Original protected evidence is unchanged; original approval snapshot retained.",
+          "approvalId": "APP-b3b58e6a58fb0cfbbd799e37dc3eca7d82b4eb7b1aca4756f6e59a6958860148",
+          "originalSnapshotId": "SNAP-21890231d9e8034a6dad1e6bfbdcf0c32df6982bb8d676c459ca7e51c8e8606d",
+          "reviewedRevision": 18,
+          "validatedRevision": 18,
+          "canCommit": true,
+          "current": {
+            "value": {
+              "sku": "GREENS",
+              "proposedG": 0,
+              "demandG": 20000,
+              "onHandG": 26000,
+              "reservedG": 0,
+              "suggestedG": 0,
+              "unitPriceCents": 100,
+              "sharedBudget": {
+                "limitCents": 30000,
+                "priorUseCents": 0,
+                "proposedCostCents": 13800,
+                "canCommit": true,
+                "ruleVersion": "budget-1"
+              },
+              "inventoryRuleVersion": "inventory-1",
+              "grantVersion": 1,
+              "canCommit": true
+            },
+            "error": null,
+            "viewHash": "4c21dc599e976a65d72df60c3763ba13b927941fdce08dabb99d2246c622c6b6"
+          },
+          "differences": []
+        }
+      ],
+      "allApproved": true,
+      "requiredReviewCount": 0,
+      "metrics": {
+        "verificationMicroseconds": 1863.9,
+        "materialization": {
+          "mode": "incremental",
+          "revision": 18,
+          "totalNodes": 34,
+          "evaluatedNodes": 0,
+          "reusedNodes": 34,
+          "nominatedLeaves": 0,
+          "propagationEdges": 0,
+          "keyReads": 0,
+          "scanReads": 0,
+          "rowsRead": 0,
+          "eventsRead": 0,
+          "elapsedMicroseconds": 348.2,
+          "fallback": null,
+          "trackedKeyBuckets": 14,
+          "trackedScanNodes": 5
+        },
+        "coarseVersionLookups": 0
+      }
+    },
+    "items": [
+      {
+        "sku": "RICE",
+        "storeId": "STORE-001",
+        "demandG": 50000,
+        "onHandG": 25000,
+        "name": "Synthetic rice",
+        "note": "Display-only note",
+        "quantityG": 31500
+      },
+      {
+        "sku": "CHICKEN",
+        "storeId": "STORE-001",
+        "demandG": 30000,
+        "onHandG": 8000,
+        "name": "Synthetic chicken",
+        "note": "Display-only note",
+        "quantityG": 25000
+      },
+      {
+        "sku": "GREENS",
+        "storeId": "STORE-001",
+        "demandG": 20000,
+        "onHandG": 26000,
+        "name": "Synthetic greens",
+        "note": "Display-only note",
+        "quantityG": 0
+      }
+    ],
+    "documents": [],
+    "changes": [],
+    "receipts": [],
+    "request": {
+      "draftId": "PROC-001",
+      "mode": "incremental",
+      "intentHash": "b733c56686900d1ddf4c4c01b0464b1ea0be200baa2f65bb4e5a1d0c26058802",
+      "approvalSelection": "11aa40caaa6703a4c571136709391d32c7b3da1d7652d0714291c0503b9c16b6"
+    },
+    "displayOnly": [
+      {
+        "table": "inventory",
+        "fields": [
+          "name",
+          "note"
+        ]
+      },
+      {
+        "table": "reserveReasons",
+        "fields": [
+          "label"
+        ]
+      }
+    ],
+    "protectedScope": "Every selected key field, scan membership/generation, projected field version, joined key and shared-budget input is in the witness.",
+    "grants": {
+      "view": true,
+      "approve": true,
+      "commit": true,
+      "grantVersion": 1
+    }
+  },
+  "unrelated": {
+    "workflow": "procurement",
+    "draft": {
+      "id": "PROC-001",
+      "workflow": "procurement",
+      "context": {
+        "draftId": "PROC-001",
+        "storeId": "STORE-001",
+        "actorId": "synthetic-manager-01",
+        "skus": [
+          "RICE",
+          "CHICKEN",
+          "GREENS"
+        ],
+        "opaque": false
+      },
+      "intent_revision": 1,
+      "status": "open"
+    },
+    "actor": "synthetic-manager-01",
+    "role": "manager",
+    "mode": "incremental",
+    "validation": {
+      "draftId": "PROC-001",
+      "mode": "incremental",
+      "revision": 19,
+      "generation": "c0764d7d-6817-49e2-b252-479e6afe75d8",
+      "contractHash": "c3f533c1e7895ff854d7df56c9266544eba45f7b0df28af5a99c0e3a830b2a20",
+      "clauses": [
+        {
+          "id": "quantity:RICE",
+          "label": "RICE procurement decision",
+          "status": "retained",
+          "retained": true,
+          "reason": "Original protected evidence is unchanged; original approval snapshot retained.",
+          "approvalId": "APP-1ee04d02c1582bb537c67954699e21de5abb0aa0d67c67201f73bf7c72e7bf07",
+          "originalSnapshotId": "SNAP-21890231d9e8034a6dad1e6bfbdcf0c32df6982bb8d676c459ca7e51c8e8606d",
+          "reviewedRevision": 18,
+          "validatedRevision": 19,
+          "canCommit": true,
+          "current": {
+            "value": {
+              "sku": "RICE",
+              "proposedG": 31500,
+              "demandG": 50000,
+              "onHandG": 25000,
+              "reservedG": 0,
+              "suggestedG": 31500,
+              "unitPriceCents": 200,
+              "sharedBudget": {
+                "limitCents": 30000,
+                "priorUseCents": 0,
+                "proposedCostCents": 13800,
+                "canCommit": true,
+                "ruleVersion": "budget-1"
+              },
+              "inventoryRuleVersion": "inventory-1",
+              "grantVersion": 1,
+              "canCommit": true
+            },
+            "error": null,
+            "viewHash": "114df61b87dda2f45c57f1d5c9c441d7c140980cfb4e6719e0bd5786f9db75f9"
+          },
+          "differences": []
+        },
+        {
+          "id": "quantity:CHICKEN",
+          "label": "CHICKEN procurement decision",
+          "status": "retained",
+          "retained": true,
+          "reason": "Original protected evidence is unchanged; original approval snapshot retained.",
+          "approvalId": "APP-1fc6be1586ec591fcd1de8d04987e5c94ec8e7de4a73b1af0acc17bd93fdbc07",
+          "originalSnapshotId": "SNAP-21890231d9e8034a6dad1e6bfbdcf0c32df6982bb8d676c459ca7e51c8e8606d",
+          "reviewedRevision": 18,
+          "validatedRevision": 19,
+          "canCommit": true,
+          "current": {
+            "value": {
+              "sku": "CHICKEN",
+              "proposedG": 25000,
+              "demandG": 30000,
+              "onHandG": 8000,
+              "reservedG": 0,
+              "suggestedG": 25900,
+              "unitPriceCents": 300,
+              "sharedBudget": {
+                "limitCents": 30000,
+                "priorUseCents": 0,
+                "proposedCostCents": 13800,
+                "canCommit": true,
+                "ruleVersion": "budget-1"
+              },
+              "inventoryRuleVersion": "inventory-1",
+              "grantVersion": 1,
+              "canCommit": true
+            },
+            "error": null,
+            "viewHash": "e034072ce8b1b6117650addeb8cfe8755b77715f2b6b82b812ba7b5295d9c433"
+          },
+          "differences": []
+        },
+        {
+          "id": "quantity:GREENS",
+          "label": "GREENS procurement decision",
+          "status": "retained",
+          "retained": true,
+          "reason": "Original protected evidence is unchanged; original approval snapshot retained.",
+          "approvalId": "APP-b3b58e6a58fb0cfbbd799e37dc3eca7d82b4eb7b1aca4756f6e59a6958860148",
+          "originalSnapshotId": "SNAP-21890231d9e8034a6dad1e6bfbdcf0c32df6982bb8d676c459ca7e51c8e8606d",
+          "reviewedRevision": 18,
+          "validatedRevision": 19,
+          "canCommit": true,
+          "current": {
+            "value": {
+              "sku": "GREENS",
+              "proposedG": 0,
+              "demandG": 20000,
+              "onHandG": 26000,
+              "reservedG": 0,
+              "suggestedG": 0,
+              "unitPriceCents": 100,
+              "sharedBudget": {
+                "limitCents": 30000,
+                "priorUseCents": 0,
+                "proposedCostCents": 13800,
+                "canCommit": true,
+                "ruleVersion": "budget-1"
+              },
+              "inventoryRuleVersion": "inventory-1",
+              "grantVersion": 1,
+              "canCommit": true
+            },
+            "error": null,
+            "viewHash": "4c21dc599e976a65d72df60c3763ba13b927941fdce08dabb99d2246c622c6b6"
+          },
+          "differences": []
+        }
+      ],
+      "allApproved": true,
+      "requiredReviewCount": 0,
+      "metrics": {
+        "verificationMicroseconds": 1255,
+        "materialization": {
+          "mode": "incremental",
+          "revision": 19,
+          "totalNodes": 34,
+          "evaluatedNodes": 0,
+          "reusedNodes": 34,
+          "nominatedLeaves": 0,
+          "propagationEdges": 0,
+          "keyReads": 0,
+          "scanReads": 0,
+          "rowsRead": 0,
+          "eventsRead": 0,
+          "elapsedMicroseconds": 283.5,
+          "fallback": null,
+          "trackedKeyBuckets": 14,
+          "trackedScanNodes": 5
+        },
+        "coarseVersionLookups": 0
+      }
+    },
+    "items": [
+      {
+        "sku": "RICE",
+        "storeId": "STORE-001",
+        "demandG": 50000,
+        "onHandG": 25000,
+        "name": "Synthetic rice",
+        "note": "Display-only note",
+        "quantityG": 31500
+      },
+      {
+        "sku": "CHICKEN",
+        "storeId": "STORE-001",
+        "demandG": 30000,
+        "onHandG": 8000,
+        "name": "Synthetic chicken",
+        "note": "Display-only note",
+        "quantityG": 25000
+      },
+      {
+        "sku": "GREENS",
+        "storeId": "STORE-001",
+        "demandG": 20000,
+        "onHandG": 26000,
+        "name": "Synthetic greens",
+        "note": "Display-only note",
+        "quantityG": 0
+      }
+    ],
+    "documents": [],
+    "changes": [
+      {
+        "revision": 19,
+        "table": "inventory",
+        "key": "OTHER-STORE:RICE",
+        "fields": [
+          "onHandG"
+        ],
+        "before": {
+          "storeId": "OTHER-STORE",
+          "sku": "RICE",
+          "demandG": 90000,
+          "onHandG": 60000,
+          "name": "Other-store rice",
+          "note": "Outside this approval contract"
+        },
+        "after": {
+          "storeId": "OTHER-STORE",
+          "sku": "RICE",
+          "demandG": 90000,
+          "onHandG": 59000,
+          "name": "Other-store rice",
+          "note": "Outside this approval contract"
+        }
+      }
+    ],
+    "receipts": [],
+    "request": {
+      "draftId": "PROC-001",
+      "mode": "incremental",
+      "intentHash": "b733c56686900d1ddf4c4c01b0464b1ea0be200baa2f65bb4e5a1d0c26058802",
+      "approvalSelection": "11aa40caaa6703a4c571136709391d32c7b3da1d7652d0714291c0503b9c16b6"
+    },
+    "displayOnly": [
+      {
+        "table": "inventory",
+        "fields": [
+          "name",
+          "note"
+        ]
+      },
+      {
+        "table": "reserveReasons",
+        "fields": [
+          "label"
+        ]
+      }
+    ],
+    "protectedScope": "Every selected key field, scan membership/generation, projected field version, joined key and shared-budget input is in the witness.",
+    "grants": {
+      "view": true,
+      "approve": true,
+      "commit": true,
+      "grantVersion": 1
+    }
+  },
+  "whole": {
+    "workflow": "procurement",
+    "draft": {
+      "id": "PROC-001",
+      "workflow": "procurement",
+      "context": {
+        "draftId": "PROC-001",
+        "storeId": "STORE-001",
+        "actorId": "synthetic-manager-01",
+        "skus": [
+          "RICE",
+          "CHICKEN",
+          "GREENS"
+        ],
+        "opaque": false
+      },
+      "intent_revision": 1,
+      "status": "open"
+    },
+    "actor": "synthetic-manager-01",
+    "role": "manager",
+    "mode": "whole",
+    "validation": {
+      "draftId": "PROC-001",
+      "mode": "whole",
+      "revision": 19,
+      "generation": "c0764d7d-6817-49e2-b252-479e6afe75d8",
+      "contractHash": "c3f533c1e7895ff854d7df56c9266544eba45f7b0df28af5a99c0e3a830b2a20",
+      "clauses": [
+        {
+          "id": "quantity:RICE",
+          "label": "RICE procurement decision",
+          "status": "needs_review",
+          "retained": false,
+          "reason": "Whole-snapshot revision changed; this mode requires all decisions to be reviewed.",
+          "approvalId": "APP-1ee04d02c1582bb537c67954699e21de5abb0aa0d67c67201f73bf7c72e7bf07",
+          "originalSnapshotId": "SNAP-21890231d9e8034a6dad1e6bfbdcf0c32df6982bb8d676c459ca7e51c8e8606d",
+          "reviewedRevision": 18,
+          "validatedRevision": 19,
+          "canCommit": false,
+          "current": {
+            "value": {
+              "sku": "RICE",
+              "proposedG": 31500,
+              "demandG": 50000,
+              "onHandG": 25000,
+              "reservedG": 0,
+              "suggestedG": 31500,
+              "unitPriceCents": 200,
+              "sharedBudget": {
+                "limitCents": 30000,
+                "priorUseCents": 0,
+                "proposedCostCents": 13800,
+                "canCommit": true,
+                "ruleVersion": "budget-1"
+              },
+              "inventoryRuleVersion": "inventory-1",
+              "grantVersion": 1,
+              "canCommit": true
+            },
+            "error": null,
+            "viewHash": "114df61b87dda2f45c57f1d5c9c441d7c140980cfb4e6719e0bd5786f9db75f9"
+          },
+          "differences": []
+        },
+        {
+          "id": "quantity:CHICKEN",
+          "label": "CHICKEN procurement decision",
+          "status": "needs_review",
+          "retained": false,
+          "reason": "Whole-snapshot revision changed; this mode requires all decisions to be reviewed.",
+          "approvalId": "APP-1fc6be1586ec591fcd1de8d04987e5c94ec8e7de4a73b1af0acc17bd93fdbc07",
+          "originalSnapshotId": "SNAP-21890231d9e8034a6dad1e6bfbdcf0c32df6982bb8d676c459ca7e51c8e8606d",
+          "reviewedRevision": 18,
+          "validatedRevision": 19,
+          "canCommit": false,
+          "current": {
+            "value": {
+              "sku": "CHICKEN",
+              "proposedG": 25000,
+              "demandG": 30000,
+              "onHandG": 8000,
+              "reservedG": 0,
+              "suggestedG": 25900,
+              "unitPriceCents": 300,
+              "sharedBudget": {
+                "limitCents": 30000,
+                "priorUseCents": 0,
+                "proposedCostCents": 13800,
+                "canCommit": true,
+                "ruleVersion": "budget-1"
+              },
+              "inventoryRuleVersion": "inventory-1",
+              "grantVersion": 1,
+              "canCommit": true
+            },
+            "error": null,
+            "viewHash": "e034072ce8b1b6117650addeb8cfe8755b77715f2b6b82b812ba7b5295d9c433"
+          },
+          "differences": []
+        },
+        {
+          "id": "quantity:GREENS",
+          "label": "GREENS procurement decision",
+          "status": "needs_review",
+          "retained": false,
+          "reason": "Whole-snapshot revision changed; this mode requires all decisions to be reviewed.",
+          "approvalId": "APP-b3b58e6a58fb0cfbbd799e37dc3eca7d82b4eb7b1aca4756f6e59a6958860148",
+          "originalSnapshotId": "SNAP-21890231d9e8034a6dad1e6bfbdcf0c32df6982bb8d676c459ca7e51c8e8606d",
+          "reviewedRevision": 18,
+          "validatedRevision": 19,
+          "canCommit": false,
+          "current": {
+            "value": {
+              "sku": "GREENS",
+              "proposedG": 0,
+              "demandG": 20000,
+              "onHandG": 26000,
+              "reservedG": 0,
+              "suggestedG": 0,
+              "unitPriceCents": 100,
+              "sharedBudget": {
+                "limitCents": 30000,
+                "priorUseCents": 0,
+                "proposedCostCents": 13800,
+                "canCommit": true,
+                "ruleVersion": "budget-1"
+              },
+              "inventoryRuleVersion": "inventory-1",
+              "grantVersion": 1,
+              "canCommit": true
+            },
+            "error": null,
+            "viewHash": "4c21dc599e976a65d72df60c3763ba13b927941fdce08dabb99d2246c622c6b6"
+          },
+          "differences": []
+        }
+      ],
+      "allApproved": false,
+      "requiredReviewCount": 3,
+      "metrics": {
+        "verificationMicroseconds": 808.7,
+        "materialization": null,
+        "coarseVersionLookups": 0
+      }
+    },
+    "items": [
+      {
+        "sku": "RICE",
+        "storeId": "STORE-001",
+        "demandG": 50000,
+        "onHandG": 25000,
+        "name": "Synthetic rice",
+        "note": "Display-only note",
+        "quantityG": 31500
+      },
+      {
+        "sku": "CHICKEN",
+        "storeId": "STORE-001",
+        "demandG": 30000,
+        "onHandG": 8000,
+        "name": "Synthetic chicken",
+        "note": "Display-only note",
+        "quantityG": 25000
+      },
+      {
+        "sku": "GREENS",
+        "storeId": "STORE-001",
+        "demandG": 20000,
+        "onHandG": 26000,
+        "name": "Synthetic greens",
+        "note": "Display-only note",
+        "quantityG": 0
+      }
+    ],
+    "documents": [],
+    "changes": [
+      {
+        "revision": 19,
+        "table": "inventory",
+        "key": "OTHER-STORE:RICE",
+        "fields": [
+          "onHandG"
+        ],
+        "before": {
+          "storeId": "OTHER-STORE",
+          "sku": "RICE",
+          "demandG": 90000,
+          "onHandG": 60000,
+          "name": "Other-store rice",
+          "note": "Outside this approval contract"
+        },
+        "after": {
+          "storeId": "OTHER-STORE",
+          "sku": "RICE",
+          "demandG": 90000,
+          "onHandG": 59000,
+          "name": "Other-store rice",
+          "note": "Outside this approval contract"
+        }
+      }
+    ],
+    "receipts": [],
+    "request": {
+      "draftId": "PROC-001",
+      "mode": "whole",
+      "intentHash": "b733c56686900d1ddf4c4c01b0464b1ea0be200baa2f65bb4e5a1d0c26058802",
+      "approvalSelection": "11aa40caaa6703a4c571136709391d32c7b3da1d7652d0714291c0503b9c16b6"
+    },
+    "displayOnly": [
+      {
+        "table": "inventory",
+        "fields": [
+          "name",
+          "note"
+        ]
+      },
+      {
+        "table": "reserveReasons",
+        "fields": [
+          "label"
+        ]
+      }
+    ],
+    "protectedScope": "Every selected key field, scan membership/generation, projected field version, joined key and shared-budget input is in the witness.",
+    "grants": {
+      "view": true,
+      "approve": true,
+      "commit": true,
+      "grantVersion": 1
+    }
+  },
+  "related": {
+    "workflow": "procurement",
+    "draft": {
+      "id": "PROC-001",
+      "workflow": "procurement",
+      "context": {
+        "draftId": "PROC-001",
+        "storeId": "STORE-001",
+        "actorId": "synthetic-manager-01",
+        "skus": [
+          "RICE",
+          "CHICKEN",
+          "GREENS"
+        ],
+        "opaque": false
+      },
+      "intent_revision": 1,
+      "status": "open"
+    },
+    "actor": "synthetic-manager-01",
+    "role": "manager",
+    "mode": "incremental",
+    "validation": {
+      "draftId": "PROC-001",
+      "mode": "incremental",
+      "revision": 20,
+      "generation": "c0764d7d-6817-49e2-b252-479e6afe75d8",
+      "contractHash": "c3f533c1e7895ff854d7df56c9266544eba45f7b0df28af5a99c0e3a830b2a20",
+      "clauses": [
+        {
+          "id": "quantity:RICE",
+          "label": "RICE procurement decision",
+          "status": "needs_review",
+          "retained": false,
+          "reason": "Protected evidence, member identity, rule or authority version changed.",
+          "approvalId": "APP-1ee04d02c1582bb537c67954699e21de5abb0aa0d67c67201f73bf7c72e7bf07",
+          "originalSnapshotId": "SNAP-21890231d9e8034a6dad1e6bfbdcf0c32df6982bb8d676c459ca7e51c8e8606d",
+          "reviewedRevision": 18,
+          "validatedRevision": 20,
+          "canCommit": true,
+          "current": {
+            "value": {
+              "sku": "RICE",
+              "proposedG": 31500,
+              "demandG": 50000,
+              "onHandG": 20000,
+              "reservedG": 0,
+              "suggestedG": 36500,
+              "unitPriceCents": 200,
+              "sharedBudget": {
+                "limitCents": 30000,
+                "priorUseCents": 0,
+                "proposedCostCents": 13800,
+                "canCommit": true,
+                "ruleVersion": "budget-1"
+              },
+              "inventoryRuleVersion": "inventory-1",
+              "grantVersion": 1,
+              "canCommit": true
+            },
+            "error": null,
+            "viewHash": "123eff4357a4dc7b88051f8e7472198ae6b2bcee3eacb1a91d12779ea7e3c9eb"
+          },
+          "differences": [
+            {
+              "token": "key:{\"fields\":[\"demandG\",\"onHandG\",\"sku\",\"storeId\"],\"key\":\"STORE-001:RICE\",\"table\":\"inventory\"}",
+              "before": {
+                "id": "key:{\"fields\":[\"demandG\",\"onHandG\",\"sku\",\"storeId\"],\"key\":\"STORE-001:RICE\",\"table\":\"inventory\"}",
+                "kind": "key",
+                "table": "inventory",
+                "key": "STORE-001:RICE",
+                "exists": true,
+                "birth": 7,
+                "fields": {
+                  "demandG": {
+                    "present": true,
+                    "value": 50000,
+                    "version": 7
+                  },
+                  "onHandG": {
+                    "present": true,
+                    "value": 25000,
+                    "version": 7
+                  },
+                  "sku": {
+                    "present": true,
+                    "value": "RICE",
+                    "version": 7
+                  },
+                  "storeId": {
+                    "present": true,
+                    "value": "STORE-001",
+                    "version": 7
+                  }
+                }
+              },
+              "after": {
+                "id": "key:{\"fields\":[\"demandG\",\"onHandG\",\"sku\",\"storeId\"],\"key\":\"STORE-001:RICE\",\"table\":\"inventory\"}",
+                "kind": "key",
+                "table": "inventory",
+                "key": "STORE-001:RICE",
+                "exists": true,
+                "birth": 7,
+                "fields": {
+                  "demandG": {
+                    "present": true,
+                    "value": 50000,
+                    "version": 7
+                  },
+                  "onHandG": {
+                    "present": true,
+                    "value": 20000,
+                    "version": 20
+                  },
+                  "sku": {
+                    "present": true,
+                    "value": "RICE",
+                    "version": 7
+                  },
+                  "storeId": {
+                    "present": true,
+                    "value": "STORE-001",
+                    "version": 7
+                  }
+                }
+              },
+              "rulePaths": [
+                [
+                  "stock:RICE",
+                  "decision:RICE"
+                ],
+                [
+                  "stock:RICE",
+                  "suggested:RICE",
+                  "decision:RICE"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "id": "quantity:CHICKEN",
+          "label": "CHICKEN procurement decision",
+          "status": "retained",
+          "retained": true,
+          "reason": "Original protected evidence is unchanged; original approval snapshot retained.",
+          "approvalId": "APP-1fc6be1586ec591fcd1de8d04987e5c94ec8e7de4a73b1af0acc17bd93fdbc07",
+          "originalSnapshotId": "SNAP-21890231d9e8034a6dad1e6bfbdcf0c32df6982bb8d676c459ca7e51c8e8606d",
+          "reviewedRevision": 18,
+          "validatedRevision": 20,
+          "canCommit": true,
+          "current": {
+            "value": {
+              "sku": "CHICKEN",
+              "proposedG": 25000,
+              "demandG": 30000,
+              "onHandG": 8000,
+              "reservedG": 0,
+              "suggestedG": 25900,
+              "unitPriceCents": 300,
+              "sharedBudget": {
+                "limitCents": 30000,
+                "priorUseCents": 0,
+                "proposedCostCents": 13800,
+                "canCommit": true,
+                "ruleVersion": "budget-1"
+              },
+              "inventoryRuleVersion": "inventory-1",
+              "grantVersion": 1,
+              "canCommit": true
+            },
+            "error": null,
+            "viewHash": "e034072ce8b1b6117650addeb8cfe8755b77715f2b6b82b812ba7b5295d9c433"
+          },
+          "differences": []
+        },
+        {
+          "id": "quantity:GREENS",
+          "label": "GREENS procurement decision",
+          "status": "retained",
+          "retained": true,
+          "reason": "Original protected evidence is unchanged; original approval snapshot retained.",
+          "approvalId": "APP-b3b58e6a58fb0cfbbd799e37dc3eca7d82b4eb7b1aca4756f6e59a6958860148",
+          "originalSnapshotId": "SNAP-21890231d9e8034a6dad1e6bfbdcf0c32df6982bb8d676c459ca7e51c8e8606d",
+          "reviewedRevision": 18,
+          "validatedRevision": 20,
+          "canCommit": true,
+          "current": {
+            "value": {
+              "sku": "GREENS",
+              "proposedG": 0,
+              "demandG": 20000,
+              "onHandG": 26000,
+              "reservedG": 0,
+              "suggestedG": 0,
+              "unitPriceCents": 100,
+              "sharedBudget": {
+                "limitCents": 30000,
+                "priorUseCents": 0,
+                "proposedCostCents": 13800,
+                "canCommit": true,
+                "ruleVersion": "budget-1"
+              },
+              "inventoryRuleVersion": "inventory-1",
+              "grantVersion": 1,
+              "canCommit": true
+            },
+            "error": null,
+            "viewHash": "4c21dc599e976a65d72df60c3763ba13b927941fdce08dabb99d2246c622c6b6"
+          },
+          "differences": []
+        }
+      ],
+      "allApproved": false,
+      "requiredReviewCount": 1,
+      "metrics": {
+        "verificationMicroseconds": 2246.3,
+        "materialization": {
+          "mode": "incremental",
+          "revision": 20,
+          "totalNodes": 34,
+          "evaluatedNodes": 0,
+          "reusedNodes": 34,
+          "nominatedLeaves": 0,
+          "propagationEdges": 0,
+          "keyReads": 0,
+          "scanReads": 0,
+          "rowsRead": 0,
+          "eventsRead": 0,
+          "elapsedMicroseconds": 415.4,
+          "fallback": null,
+          "trackedKeyBuckets": 14,
+          "trackedScanNodes": 5
+        },
+        "coarseVersionLookups": 0
+      }
+    },
+    "items": [
+      {
+        "sku": "RICE",
+        "storeId": "STORE-001",
+        "demandG": 50000,
+        "onHandG": 20000,
+        "name": "Synthetic rice",
+        "note": "Display-only note",
+        "quantityG": 31500
+      },
+      {
+        "sku": "CHICKEN",
+        "storeId": "STORE-001",
+        "demandG": 30000,
+        "onHandG": 8000,
+        "name": "Synthetic chicken",
+        "note": "Display-only note",
+        "quantityG": 25000
+      },
+      {
+        "sku": "GREENS",
+        "storeId": "STORE-001",
+        "demandG": 20000,
+        "onHandG": 26000,
+        "name": "Synthetic greens",
+        "note": "Display-only note",
+        "quantityG": 0
+      }
+    ],
+    "documents": [],
+    "changes": [
+      {
+        "revision": 19,
+        "table": "inventory",
+        "key": "OTHER-STORE:RICE",
+        "fields": [
+          "onHandG"
+        ],
+        "before": {
+          "storeId": "OTHER-STORE",
+          "sku": "RICE",
+          "demandG": 90000,
+          "onHandG": 60000,
+          "name": "Other-store rice",
+          "note": "Outside this approval contract"
+        },
+        "after": {
+          "storeId": "OTHER-STORE",
+          "sku": "RICE",
+          "demandG": 90000,
+          "onHandG": 59000,
+          "name": "Other-store rice",
+          "note": "Outside this approval contract"
+        }
+      },
+      {
+        "revision": 20,
+        "table": "inventory",
+        "key": "STORE-001:RICE",
+        "fields": [
+          "onHandG"
+        ],
+        "before": {
+          "storeId": "STORE-001",
+          "sku": "RICE",
+          "demandG": 50000,
+          "onHandG": 25000,
+          "name": "Synthetic rice",
+          "note": "Display-only note"
+        },
+        "after": {
+          "storeId": "STORE-001",
+          "sku": "RICE",
+          "demandG": 50000,
+          "onHandG": 20000,
+          "name": "Synthetic rice",
+          "note": "Display-only note"
+        }
+      }
+    ],
+    "receipts": [],
+    "request": {
+      "draftId": "PROC-001",
+      "mode": "incremental",
+      "intentHash": "b733c56686900d1ddf4c4c01b0464b1ea0be200baa2f65bb4e5a1d0c26058802",
+      "approvalSelection": "11aa40caaa6703a4c571136709391d32c7b3da1d7652d0714291c0503b9c16b6"
+    },
+    "displayOnly": [
+      {
+        "table": "inventory",
+        "fields": [
+          "name",
+          "note"
+        ]
+      },
+      {
+        "table": "reserveReasons",
+        "fields": [
+          "label"
+        ]
+      }
+    ],
+    "protectedScope": "Every selected key field, scan membership/generation, projected field version, joined key and shared-budget input is in the witness.",
+    "grants": {
+      "view": true,
+      "approve": true,
+      "commit": true,
+      "grantVersion": 1
+    }
+  },
+  "sharedBudgetAfterEdit": {
+    "workflow": "procurement",
+    "draft": {
+      "id": "PROC-001",
+      "workflow": "procurement",
+      "context": {
+        "draftId": "PROC-001",
+        "storeId": "STORE-001",
+        "actorId": "synthetic-manager-01",
+        "skus": [
+          "RICE",
+          "CHICKEN",
+          "GREENS"
+        ],
+        "opaque": false
+      },
+      "intent_revision": 2,
+      "status": "open"
+    },
+    "actor": "synthetic-manager-01",
+    "role": "manager",
+    "mode": "incremental",
+    "validation": {
+      "draftId": "PROC-001",
+      "mode": "incremental",
+      "revision": 21,
+      "generation": "c0764d7d-6817-49e2-b252-479e6afe75d8",
+      "contractHash": "c3f533c1e7895ff854d7df56c9266544eba45f7b0df28af5a99c0e3a830b2a20",
+      "clauses": [
+        {
+          "id": "quantity:RICE",
+          "label": "RICE procurement decision",
+          "status": "needs_review",
+          "retained": false,
+          "reason": "Protected evidence, member identity, rule or authority version changed.",
+          "approvalId": "APP-1ee04d02c1582bb537c67954699e21de5abb0aa0d67c67201f73bf7c72e7bf07",
+          "originalSnapshotId": "SNAP-21890231d9e8034a6dad1e6bfbdcf0c32df6982bb8d676c459ca7e51c8e8606d",
+          "reviewedRevision": 18,
+          "validatedRevision": 21,
+          "canCommit": true,
+          "current": {
+            "value": {
+              "sku": "RICE",
+              "proposedG": 36500,
+              "demandG": 50000,
+              "onHandG": 20000,
+              "reservedG": 0,
+              "suggestedG": 36500,
+              "unitPriceCents": 200,
+              "sharedBudget": {
+                "limitCents": 30000,
+                "priorUseCents": 0,
+                "proposedCostCents": 14800,
+                "canCommit": true,
+                "ruleVersion": "budget-1"
+              },
+              "inventoryRuleVersion": "inventory-1",
+              "grantVersion": 1,
+              "canCommit": true
+            },
+            "error": null,
+            "viewHash": "9df639a707d7ce900f7f03e2cff10cfd19dca75ed3d3207333df8f051073fa28"
+          },
+          "differences": [
+            {
+              "token": "key:{\"fields\":[\"draftId\",\"quantityG\",\"sku\"],\"key\":\"PROC-001:RICE\",\"table\":\"proposalLines\"}",
+              "before": {
+                "id": "key:{\"fields\":[\"draftId\",\"quantityG\",\"sku\"],\"key\":\"PROC-001:RICE\",\"table\":\"proposalLines\"}",
+                "kind": "key",
+                "table": "proposalLines",
+                "key": "PROC-001:RICE",
+                "exists": true,
+                "birth": 9,
+                "fields": {
+                  "draftId": {
+                    "present": true,
+                    "value": "PROC-001",
+                    "version": 9
+                  },
+                  "quantityG": {
+                    "present": true,
+                    "value": 31500,
+                    "version": 9
+                  },
+                  "sku": {
+                    "present": true,
+                    "value": "RICE",
+                    "version": 9
+                  }
+                }
+              },
+              "after": {
+                "id": "key:{\"fields\":[\"draftId\",\"quantityG\",\"sku\"],\"key\":\"PROC-001:RICE\",\"table\":\"proposalLines\"}",
+                "kind": "key",
+                "table": "proposalLines",
+                "key": "PROC-001:RICE",
+                "exists": true,
+                "birth": 9,
+                "fields": {
+                  "draftId": {
+                    "present": true,
+                    "value": "PROC-001",
+                    "version": 9
+                  },
+                  "quantityG": {
+                    "present": true,
+                    "value": 36500,
+                    "version": 21
+                  },
+                  "sku": {
+                    "present": true,
+                    "value": "RICE",
+                    "version": 9
+                  }
+                }
+              },
+              "rulePaths": [
+                [
+                  "line:RICE",
+                  "decision:RICE"
+                ]
+              ]
+            },
+            {
+              "token": "key:{\"fields\":[\"demandG\",\"onHandG\",\"sku\",\"storeId\"],\"key\":\"STORE-001:RICE\",\"table\":\"inventory\"}",
+              "before": {
+                "id": "key:{\"fields\":[\"demandG\",\"onHandG\",\"sku\",\"storeId\"],\"key\":\"STORE-001:RICE\",\"table\":\"inventory\"}",
+                "kind": "key",
+                "table": "inventory",
+                "key": "STORE-001:RICE",
+                "exists": true,
+                "birth": 7,
+                "fields": {
+                  "demandG": {
+                    "present": true,
+                    "value": 50000,
+                    "version": 7
+                  },
+                  "onHandG": {
+                    "present": true,
+                    "value": 25000,
+                    "version": 7
+                  },
+                  "sku": {
+                    "present": true,
+                    "value": "RICE",
+                    "version": 7
+                  },
+                  "storeId": {
+                    "present": true,
+                    "value": "STORE-001",
+                    "version": 7
+                  }
+                }
+              },
+              "after": {
+                "id": "key:{\"fields\":[\"demandG\",\"onHandG\",\"sku\",\"storeId\"],\"key\":\"STORE-001:RICE\",\"table\":\"inventory\"}",
+                "kind": "key",
+                "table": "inventory",
+                "key": "STORE-001:RICE",
+                "exists": true,
+                "birth": 7,
+                "fields": {
+                  "demandG": {
+                    "present": true,
+                    "value": 50000,
+                    "version": 7
+                  },
+                  "onHandG": {
+                    "present": true,
+                    "value": 20000,
+                    "version": 20
+                  },
+                  "sku": {
+                    "present": true,
+                    "value": "RICE",
+                    "version": 7
+                  },
+                  "storeId": {
+                    "present": true,
+                    "value": "STORE-001",
+                    "version": 7
+                  }
+                }
+              },
+              "rulePaths": [
+                [
+                  "stock:RICE",
+                  "decision:RICE"
+                ],
+                [
+                  "stock:RICE",
+                  "suggested:RICE",
+                  "decision:RICE"
+                ]
+              ]
+            },
+            {
+              "token": "scan:draft-lines",
+              "before": {
+                "id": "scan:draft-lines",
+                "kind": "scan",
+                "table": "proposalLines",
+                "predicate": {
+                  "op": "eq",
+                  "field": "draftId",
+                  "value": "PROC-001"
+                },
+                "fieldsProjected": [
+                  "draftId",
+                  "quantityG",
+                  "sku"
+                ],
+                "membershipEpoch": 15,
+                "members": [
+                  {
+                    "key": "PROC-001:CHICKEN",
+                    "birth": 12,
+                    "fields": {
+                      "draftId": {
+                        "present": true,
+                        "value": "PROC-001",
+                        "version": 12
+                      },
+                      "quantityG": {
+                        "present": true,
+                        "value": 25000,
+                        "version": 12
+                      },
+                      "sku": {
+                        "present": true,
+                        "value": "CHICKEN",
+                        "version": 12
+                      }
+                    }
+                  },
+                  {
+                    "key": "PROC-001:GREENS",
+                    "birth": 15,
+                    "fields": {
+                      "draftId": {
+                        "present": true,
+                        "value": "PROC-001",
+                        "version": 15
+                      },
+                      "quantityG": {
+                        "present": true,
+                        "value": 0,
+                        "version": 15
+                      },
+                      "sku": {
+                        "present": true,
+                        "value": "GREENS",
+                        "version": 15
+                      }
+                    }
+                  },
+                  {
+                    "key": "PROC-001:RICE",
+                    "birth": 9,
+                    "fields": {
+                      "draftId": {
+                        "present": true,
+                        "value": "PROC-001",
+                        "version": 9
+                      },
+                      "quantityG": {
+                        "present": true,
+                        "value": 31500,
+                        "version": 9
+                      },
+                      "sku": {
+                        "present": true,
+                        "value": "RICE",
+                        "version": 9
+                      }
+                    }
+                  }
+                ]
+              },
+              "after": {
+                "id": "scan:draft-lines",
+                "kind": "scan",
+                "table": "proposalLines",
+                "predicate": {
+                  "op": "eq",
+                  "field": "draftId",
+                  "value": "PROC-001"
+                },
+                "fieldsProjected": [
+                  "draftId",
+                  "quantityG",
+                  "sku"
+                ],
+                "membershipEpoch": 15,
+                "members": [
+                  {
+                    "key": "PROC-001:CHICKEN",
+                    "birth": 12,
+                    "fields": {
+                      "draftId": {
+                        "present": true,
+                        "value": "PROC-001",
+                        "version": 12
+                      },
+                      "quantityG": {
+                        "present": true,
+                        "value": 25000,
+                        "version": 12
+                      },
+                      "sku": {
+                        "present": true,
+                        "value": "CHICKEN",
+                        "version": 12
+                      }
+                    }
+                  },
+                  {
+                    "key": "PROC-001:GREENS",
+                    "birth": 15,
+                    "fields": {
+                      "draftId": {
+                        "present": true,
+                        "value": "PROC-001",
+                        "version": 15
+                      },
+                      "quantityG": {
+                        "present": true,
+                        "value": 0,
+                        "version": 15
+                      },
+                      "sku": {
+                        "present": true,
+                        "value": "GREENS",
+                        "version": 15
+                      }
+                    }
+                  },
+                  {
+                    "key": "PROC-001:RICE",
+                    "birth": 9,
+                    "fields": {
+                      "draftId": {
+                        "present": true,
+                        "value": "PROC-001",
+                        "version": 9
+                      },
+                      "quantityG": {
+                        "present": true,
+                        "value": 36500,
+                        "version": 21
+                      },
+                      "sku": {
+                        "present": true,
+                        "value": "RICE",
+                        "version": 9
+                      }
+                    }
+                  }
+                ]
+              },
+              "rulePaths": [
+                [
+                  "draft-lines",
+                  "shared-budget",
+                  "decision:RICE"
+                ],
+                [
+                  "draft-lines",
+                  "priced-lines",
+                  "total-cost",
+                  "shared-budget",
+                  "decision:RICE"
+                ],
+                [
+                  "priced-lines",
+                  "total-cost",
+                  "shared-budget",
+                  "decision:RICE"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "id": "quantity:CHICKEN",
+          "label": "CHICKEN procurement decision",
+          "status": "needs_review",
+          "retained": false,
+          "reason": "Protected evidence, member identity, rule or authority version changed.",
+          "approvalId": "APP-1fc6be1586ec591fcd1de8d04987e5c94ec8e7de4a73b1af0acc17bd93fdbc07",
+          "originalSnapshotId": "SNAP-21890231d9e8034a6dad1e6bfbdcf0c32df6982bb8d676c459ca7e51c8e8606d",
+          "reviewedRevision": 18,
+          "validatedRevision": 21,
+          "canCommit": true,
+          "current": {
+            "value": {
+              "sku": "CHICKEN",
+              "proposedG": 25000,
+              "demandG": 30000,
+              "onHandG": 8000,
+              "reservedG": 0,
+              "suggestedG": 25900,
+              "unitPriceCents": 300,
+              "sharedBudget": {
+                "limitCents": 30000,
+                "priorUseCents": 0,
+                "proposedCostCents": 14800,
+                "canCommit": true,
+                "ruleVersion": "budget-1"
+              },
+              "inventoryRuleVersion": "inventory-1",
+              "grantVersion": 1,
+              "canCommit": true
+            },
+            "error": null,
+            "viewHash": "fabca849bdbb274df87304de2091356781767370b0f868d0538e71045c01535f"
+          },
+          "differences": [
+            {
+              "token": "scan:draft-lines",
+              "before": {
+                "id": "scan:draft-lines",
+                "kind": "scan",
+                "table": "proposalLines",
+                "predicate": {
+                  "op": "eq",
+                  "field": "draftId",
+                  "value": "PROC-001"
+                },
+                "fieldsProjected": [
+                  "draftId",
+                  "quantityG",
+                  "sku"
+                ],
+                "membershipEpoch": 15,
+                "members": [
+                  {
+                    "key": "PROC-001:CHICKEN",
+                    "birth": 12,
+                    "fields": {
+                      "draftId": {
+                        "present": true,
+                        "value": "PROC-001",
+                        "version": 12
+                      },
+                      "quantityG": {
+                        "present": true,
+                        "value": 25000,
+                        "version": 12
+                      },
+                      "sku": {
+                        "present": true,
+                        "value": "CHICKEN",
+                        "version": 12
+                      }
+                    }
+                  },
+                  {
+                    "key": "PROC-001:GREENS",
+                    "birth": 15,
+                    "fields": {
+                      "draftId": {
+                        "present": true,
+                        "value": "PROC-001",
+                        "version": 15
+                      },
+                      "quantityG": {
+                        "present": true,
+                        "value": 0,
+                        "version": 15
+                      },
+                      "sku": {
+                        "present": true,
+                        "value": "GREENS",
+                        "version": 15
+                      }
+                    }
+                  },
+                  {
+                    "key": "PROC-001:RICE",
+                    "birth": 9,
+                    "fields": {
+                      "draftId": {
+                        "present": true,
+                        "value": "PROC-001",
+                        "version": 9
+                      },
+                      "quantityG": {
+                        "present": true,
+                        "value": 31500,
+                        "version": 9
+                      },
+                      "sku": {
+                        "present": true,
+                        "value": "RICE",
+                        "version": 9
+                      }
+                    }
+                  }
+                ]
+              },
+              "after": {
+                "id": "scan:draft-lines",
+                "kind": "scan",
+                "table": "proposalLines",
+                "predicate": {
+                  "op": "eq",
+                  "field": "draftId",
+                  "value": "PROC-001"
+                },
+                "fieldsProjected": [
+                  "draftId",
+                  "quantityG",
+                  "sku"
+                ],
+                "membershipEpoch": 15,
+                "members": [
+                  {
+                    "key": "PROC-001:CHICKEN",
+                    "birth": 12,
+                    "fields": {
+                      "draftId": {
+                        "present": true,
+                        "value": "PROC-001",
+                        "version": 12
+                      },
+                      "quantityG": {
+                        "present": true,
+                        "value": 25000,
+                        "version": 12
+                      },
+                      "sku": {
+                        "present": true,
+                        "value": "CHICKEN",
+                        "version": 12
+                      }
+                    }
+                  },
+                  {
+                    "key": "PROC-001:GREENS",
+                    "birth": 15,
+                    "fields": {
+                      "draftId": {
+                        "present": true,
+                        "value": "PROC-001",
+                        "version": 15
+                      },
+                      "quantityG": {
+                        "present": true,
+                        "value": 0,
+                        "version": 15
+                      },
+                      "sku": {
+                        "present": true,
+                        "value": "GREENS",
+                        "version": 15
+                      }
+                    }
+                  },
+                  {
+                    "key": "PROC-001:RICE",
+                    "birth": 9,
+                    "fields": {
+                      "draftId": {
+                        "present": true,
+                        "value": "PROC-001",
+                        "version": 9
+                      },
+                      "quantityG": {
+                        "present": true,
+                        "value": 36500,
+                        "version": 21
+                      },
+                      "sku": {
+                        "present": true,
+                        "value": "RICE",
+                        "version": 9
+                      }
+                    }
+                  }
+                ]
+              },
+              "rulePaths": [
+                [
+                  "draft-lines",
+                  "shared-budget",
+                  "decision:CHICKEN"
+                ],
+                [
+                  "draft-lines",
+                  "priced-lines",
+                  "total-cost",
+                  "shared-budget",
+                  "decision:CHICKEN"
+                ],
+                [
+                  "priced-lines",
+                  "total-cost",
+                  "shared-budget",
+                  "decision:CHICKEN"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "id": "quantity:GREENS",
+          "label": "GREENS procurement decision",
+          "status": "needs_review",
+          "retained": false,
+          "reason": "Protected evidence, member identity, rule or authority version changed.",
+          "approvalId": "APP-b3b58e6a58fb0cfbbd799e37dc3eca7d82b4eb7b1aca4756f6e59a6958860148",
+          "originalSnapshotId": "SNAP-21890231d9e8034a6dad1e6bfbdcf0c32df6982bb8d676c459ca7e51c8e8606d",
+          "reviewedRevision": 18,
+          "validatedRevision": 21,
+          "canCommit": true,
+          "current": {
+            "value": {
+              "sku": "GREENS",
+              "proposedG": 0,
+              "demandG": 20000,
+              "onHandG": 26000,
+              "reservedG": 0,
+              "suggestedG": 0,
+              "unitPriceCents": 100,
+              "sharedBudget": {
+                "limitCents": 30000,
+                "priorUseCents": 0,
+                "proposedCostCents": 14800,
+                "canCommit": true,
+                "ruleVersion": "budget-1"
+              },
+              "inventoryRuleVersion": "inventory-1",
+              "grantVersion": 1,
+              "canCommit": true
+            },
+            "error": null,
+            "viewHash": "e0d140575d82ff76a75ca7eb2f3ca2faee5cc5835562e276c02785c9bd4977ad"
+          },
+          "differences": [
+            {
+              "token": "scan:draft-lines",
+              "before": {
+                "id": "scan:draft-lines",
+                "kind": "scan",
+                "table": "proposalLines",
+                "predicate": {
+                  "op": "eq",
+                  "field": "draftId",
+                  "value": "PROC-001"
+                },
+                "fieldsProjected": [
+                  "draftId",
+                  "quantityG",
+                  "sku"
+                ],
+                "membershipEpoch": 15,
+                "members": [
+                  {
+                    "key": "PROC-001:CHICKEN",
+                    "birth": 12,
+                    "fields": {
+                      "draftId": {
+                        "present": true,
+                        "value": "PROC-001",
+                        "version": 12
+                      },
+                      "quantityG": {
+                        "present": true,
+                        "value": 25000,
+                        "version": 12
+                      },
+                      "sku": {
+                        "present": true,
+                        "value": "CHICKEN",
+                        "version": 12
+                      }
+                    }
+                  },
+                  {
+                    "key": "PROC-001:GREENS",
+                    "birth": 15,
+                    "fields": {
+                      "draftId": {
+                        "present": true,
+                        "value": "PROC-001",
+                        "version": 15
+                      },
+                      "quantityG": {
+                        "present": true,
+                        "value": 0,
+                        "version": 15
+                      },
+                      "sku": {
+                        "present": true,
+                        "value": "GREENS",
+                        "version": 15
+                      }
+                    }
+                  },
+                  {
+                    "key": "PROC-001:RICE",
+                    "birth": 9,
+                    "fields": {
+                      "draftId": {
+                        "present": true,
+                        "value": "PROC-001",
+                        "version": 9
+                      },
+                      "quantityG": {
+                        "present": true,
+                        "value": 31500,
+                        "version": 9
+                      },
+                      "sku": {
+                        "present": true,
+                        "value": "RICE",
+                        "version": 9
+                      }
+                    }
+                  }
+                ]
+              },
+              "after": {
+                "id": "scan:draft-lines",
+                "kind": "scan",
+                "table": "proposalLines",
+                "predicate": {
+                  "op": "eq",
+                  "field": "draftId",
+                  "value": "PROC-001"
+                },
+                "fieldsProjected": [
+                  "draftId",
+                  "quantityG",
+                  "sku"
+                ],
+                "membershipEpoch": 15,
+                "members": [
+                  {
+                    "key": "PROC-001:CHICKEN",
+                    "birth": 12,
+                    "fields": {
+                      "draftId": {
+                        "present": true,
+                        "value": "PROC-001",
+                        "version": 12
+                      },
+                      "quantityG": {
+                        "present": true,
+                        "value": 25000,
+                        "version": 12
+                      },
+                      "sku": {
+                        "present": true,
+                        "value": "CHICKEN",
+                        "version": 12
+                      }
+                    }
+                  },
+                  {
+                    "key": "PROC-001:GREENS",
+                    "birth": 15,
+                    "fields": {
+                      "draftId": {
+                        "present": true,
+                        "value": "PROC-001",
+                        "version": 15
+                      },
+                      "quantityG": {
+                        "present": true,
+                        "value": 0,
+                        "version": 15
+                      },
+                      "sku": {
+                        "present": true,
+                        "value": "GREENS",
+                        "version": 15
+                      }
+                    }
+                  },
+                  {
+                    "key": "PROC-001:RICE",
+                    "birth": 9,
+                    "fields": {
+                      "draftId": {
+                        "present": true,
+                        "value": "PROC-001",
+                        "version": 9
+                      },
+                      "quantityG": {
+                        "present": true,
+                        "value": 36500,
+                        "version": 21
+                      },
+                      "sku": {
+                        "present": true,
+                        "value": "RICE",
+                        "version": 9
+                      }
+                    }
+                  }
+                ]
+              },
+              "rulePaths": [
+                [
+                  "draft-lines",
+                  "shared-budget",
+                  "decision:GREENS"
+                ],
+                [
+                  "draft-lines",
+                  "priced-lines",
+                  "total-cost",
+                  "shared-budget",
+                  "decision:GREENS"
+                ],
+                [
+                  "priced-lines",
+                  "total-cost",
+                  "shared-budget",
+                  "decision:GREENS"
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "allApproved": false,
+      "requiredReviewCount": 3,
+      "metrics": {
+        "verificationMicroseconds": 1089.8,
+        "materialization": {
+          "mode": "incremental",
+          "revision": 21,
+          "totalNodes": 34,
+          "evaluatedNodes": 0,
+          "reusedNodes": 34,
+          "nominatedLeaves": 0,
+          "propagationEdges": 0,
+          "keyReads": 0,
+          "scanReads": 0,
+          "rowsRead": 0,
+          "eventsRead": 0,
+          "elapsedMicroseconds": 192.9,
+          "fallback": null,
+          "trackedKeyBuckets": 14,
+          "trackedScanNodes": 5
+        },
+        "coarseVersionLookups": 0
+      }
+    },
+    "items": [
+      {
+        "sku": "RICE",
+        "storeId": "STORE-001",
+        "demandG": 50000,
+        "onHandG": 20000,
+        "name": "Synthetic rice",
+        "note": "Display-only note",
+        "quantityG": 36500
+      },
+      {
+        "sku": "CHICKEN",
+        "storeId": "STORE-001",
+        "demandG": 30000,
+        "onHandG": 8000,
+        "name": "Synthetic chicken",
+        "note": "Display-only note",
+        "quantityG": 25000
+      },
+      {
+        "sku": "GREENS",
+        "storeId": "STORE-001",
+        "demandG": 20000,
+        "onHandG": 26000,
+        "name": "Synthetic greens",
+        "note": "Display-only note",
+        "quantityG": 0
+      }
+    ],
+    "documents": [],
+    "changes": [
+      {
+        "revision": 19,
+        "table": "inventory",
+        "key": "OTHER-STORE:RICE",
+        "fields": [
+          "onHandG"
+        ],
+        "before": {
+          "storeId": "OTHER-STORE",
+          "sku": "RICE",
+          "demandG": 90000,
+          "onHandG": 60000,
+          "name": "Other-store rice",
+          "note": "Outside this approval contract"
+        },
+        "after": {
+          "storeId": "OTHER-STORE",
+          "sku": "RICE",
+          "demandG": 90000,
+          "onHandG": 59000,
+          "name": "Other-store rice",
+          "note": "Outside this approval contract"
+        }
+      },
+      {
+        "revision": 20,
+        "table": "inventory",
+        "key": "STORE-001:RICE",
+        "fields": [
+          "onHandG"
+        ],
+        "before": {
+          "storeId": "STORE-001",
+          "sku": "RICE",
+          "demandG": 50000,
+          "onHandG": 25000,
+          "name": "Synthetic rice",
+          "note": "Display-only note"
+        },
+        "after": {
+          "storeId": "STORE-001",
+          "sku": "RICE",
+          "demandG": 50000,
+          "onHandG": 20000,
+          "name": "Synthetic rice",
+          "note": "Display-only note"
+        }
+      },
+      {
+        "revision": 21,
+        "table": "proposalLines",
+        "key": "PROC-001:RICE",
+        "fields": [
+          "quantityG"
+        ],
+        "before": {
+          "draftId": "PROC-001",
+          "sku": "RICE",
+          "quantityG": 31500
+        },
+        "after": {
+          "draftId": "PROC-001",
+          "sku": "RICE",
+          "quantityG": 36500
+        }
+      }
+    ],
+    "receipts": [],
+    "request": {
+      "draftId": "PROC-001",
+      "mode": "incremental",
+      "intentHash": "63d06162469016feaa00bd02fc3c02673977ee103785e9a17b620fe415440497",
+      "approvalSelection": "11aa40caaa6703a4c571136709391d32c7b3da1d7652d0714291c0503b9c16b6"
+    },
+    "displayOnly": [
+      {
+        "table": "inventory",
+        "fields": [
+          "name",
+          "note"
+        ]
+      },
+      {
+        "table": "reserveReasons",
+        "fields": [
+          "label"
+        ]
+      }
+    ],
+    "protectedScope": "Every selected key field, scan membership/generation, projected field version, joined key and shared-budget input is in the witness.",
+    "grants": {
+      "view": true,
+      "approve": true,
+      "commit": true,
+      "grantVersion": 1
+    }
+  },
+  "committed": {
+    "workflow": "procurement",
+    "draft": {
+      "id": "PROC-001",
+      "workflow": "procurement",
+      "context": {
+        "draftId": "PROC-001",
+        "storeId": "STORE-001",
+        "actorId": "synthetic-manager-01",
+        "skus": [
+          "RICE",
+          "CHICKEN",
+          "GREENS"
+        ],
+        "opaque": false
+      },
+      "intent_revision": 2,
+      "status": "committed"
+    },
+    "actor": "synthetic-manager-01",
+    "role": "manager",
+    "mode": "incremental",
+    "validation": {
+      "draftId": "PROC-001",
+      "mode": "incremental",
+      "revision": 22,
+      "generation": "c0764d7d-6817-49e2-b252-479e6afe75d8",
+      "contractHash": "c3f533c1e7895ff854d7df56c9266544eba45f7b0df28af5a99c0e3a830b2a20",
+      "clauses": [
+        {
+          "id": "quantity:RICE",
+          "label": "RICE procurement decision",
+          "status": "retained",
+          "retained": true,
+          "reason": "Original protected evidence is unchanged; original approval snapshot retained.",
+          "approvalId": "APP-639be3e0b9997c0c75260e7a79ca4e90cb7e583e9713004630a80c3f243e82c0",
+          "originalSnapshotId": "SNAP-18f26ff4c89ec0de9a8562c06db56e37159f997891d41c844208031823b8e8c3",
+          "reviewedRevision": 21,
+          "validatedRevision": 22,
+          "canCommit": true,
+          "current": {
+            "value": {
+              "sku": "RICE",
+              "proposedG": 36500,
+              "demandG": 50000,
+              "onHandG": 20000,
+              "reservedG": 0,
+              "suggestedG": 36500,
+              "unitPriceCents": 200,
+              "sharedBudget": {
+                "limitCents": 30000,
+                "priorUseCents": 0,
+                "proposedCostCents": 14800,
+                "canCommit": true,
+                "ruleVersion": "budget-1"
+              },
+              "inventoryRuleVersion": "inventory-1",
+              "grantVersion": 1,
+              "canCommit": true
+            },
+            "error": null,
+            "viewHash": "9df639a707d7ce900f7f03e2cff10cfd19dca75ed3d3207333df8f051073fa28"
+          },
+          "differences": []
+        },
+        {
+          "id": "quantity:CHICKEN",
+          "label": "CHICKEN procurement decision",
+          "status": "retained",
+          "retained": true,
+          "reason": "Original protected evidence is unchanged; original approval snapshot retained.",
+          "approvalId": "APP-ca00aebf9816cf11bcc4319fbb7a6b4755894a2951d3f8084a0f6304a749e183",
+          "originalSnapshotId": "SNAP-18f26ff4c89ec0de9a8562c06db56e37159f997891d41c844208031823b8e8c3",
+          "reviewedRevision": 21,
+          "validatedRevision": 22,
+          "canCommit": true,
+          "current": {
+            "value": {
+              "sku": "CHICKEN",
+              "proposedG": 25000,
+              "demandG": 30000,
+              "onHandG": 8000,
+              "reservedG": 0,
+              "suggestedG": 25900,
+              "unitPriceCents": 300,
+              "sharedBudget": {
+                "limitCents": 30000,
+                "priorUseCents": 0,
+                "proposedCostCents": 14800,
+                "canCommit": true,
+                "ruleVersion": "budget-1"
+              },
+              "inventoryRuleVersion": "inventory-1",
+              "grantVersion": 1,
+              "canCommit": true
+            },
+            "error": null,
+            "viewHash": "fabca849bdbb274df87304de2091356781767370b0f868d0538e71045c01535f"
+          },
+          "differences": []
+        },
+        {
+          "id": "quantity:GREENS",
+          "label": "GREENS procurement decision",
+          "status": "retained",
+          "retained": true,
+          "reason": "Original protected evidence is unchanged; original approval snapshot retained.",
+          "approvalId": "APP-a05d8a0e54b316736b6712754715d625dbb9230cde85f8c2dda5f124d5422192",
+          "originalSnapshotId": "SNAP-18f26ff4c89ec0de9a8562c06db56e37159f997891d41c844208031823b8e8c3",
+          "reviewedRevision": 21,
+          "validatedRevision": 22,
+          "canCommit": true,
+          "current": {
+            "value": {
+              "sku": "GREENS",
+              "proposedG": 0,
+              "demandG": 20000,
+              "onHandG": 26000,
+              "reservedG": 0,
+              "suggestedG": 0,
+              "unitPriceCents": 100,
+              "sharedBudget": {
+                "limitCents": 30000,
+                "priorUseCents": 0,
+                "proposedCostCents": 14800,
+                "canCommit": true,
+                "ruleVersion": "budget-1"
+              },
+              "inventoryRuleVersion": "inventory-1",
+              "grantVersion": 1,
+              "canCommit": true
+            },
+            "error": null,
+            "viewHash": "e0d140575d82ff76a75ca7eb2f3ca2faee5cc5835562e276c02785c9bd4977ad"
+          },
+          "differences": []
+        }
+      ],
+      "allApproved": true,
+      "requiredReviewCount": 0,
+      "metrics": {
+        "verificationMicroseconds": 1099.4,
+        "materialization": {
+          "mode": "incremental",
+          "revision": 22,
+          "totalNodes": 34,
+          "evaluatedNodes": 0,
+          "reusedNodes": 34,
+          "nominatedLeaves": 0,
+          "propagationEdges": 0,
+          "keyReads": 0,
+          "scanReads": 0,
+          "rowsRead": 0,
+          "eventsRead": 0,
+          "elapsedMicroseconds": 201.3,
+          "fallback": null,
+          "trackedKeyBuckets": 14,
+          "trackedScanNodes": 5
+        },
+        "coarseVersionLookups": 0
+      }
+    },
+    "items": [
+      {
+        "sku": "RICE",
+        "storeId": "STORE-001",
+        "demandG": 50000,
+        "onHandG": 20000,
+        "name": "Synthetic rice",
+        "note": "Display-only note",
+        "quantityG": 36500
+      },
+      {
+        "sku": "CHICKEN",
+        "storeId": "STORE-001",
+        "demandG": 30000,
+        "onHandG": 8000,
+        "name": "Synthetic chicken",
+        "note": "Display-only note",
+        "quantityG": 25000
+      },
+      {
+        "sku": "GREENS",
+        "storeId": "STORE-001",
+        "demandG": 20000,
+        "onHandG": 26000,
+        "name": "Synthetic greens",
+        "note": "Display-only note",
+        "quantityG": 0
+      }
+    ],
+    "documents": [],
+    "changes": [
+      {
+        "revision": 22,
+        "table": "budgetUses",
+        "key": "SIM-e87fef6f-0afc-40d1-a562-2fd2db9e712f",
+        "fields": [
+          "amountCents",
+          "draftId",
+          "status",
+          "storeId"
+        ],
+        "before": null,
+        "after": {
+          "storeId": "STORE-001",
+          "draftId": "PROC-001",
+          "status": "committed",
+          "amountCents": 14800
+        }
+      }
+    ],
+    "receipts": [
+      {
+        "id": "SIM-e87fef6f-0afc-40d1-a562-2fd2db9e712f",
+        "receiptId": "RECEIPT-7a0345fd-a294-49cc-a621-ebc9046c5621",
+        "draftId": "PROC-001",
+        "workflow": "procurement",
+        "synthetic": true,
+        "execution": "SIMULATED_ONLY_NO_SUPPLIER",
+        "confirmedAt": "2026-11-01T09:01:34.262Z",
+        "confirmedBy": "synthetic-manager-01",
+        "intentHash": "63d06162469016feaa00bd02fc3c02673977ee103785e9a17b620fe415440497",
+        "contractHash": "c3f533c1e7895ff854d7df56c9266544eba45f7b0df28af5a99c0e3a830b2a20",
+        "validatedRevision": 21,
+        "mode": "incremental",
+        "decisions": [
+          {
+            "clauseId": "quantity:CHICKEN",
+            "value": {
+              "sku": "CHICKEN",
+              "proposedG": 25000,
+              "demandG": 30000,
+              "onHandG": 8000,
+              "reservedG": 0,
+              "suggestedG": 25900,
+              "unitPriceCents": 300,
+              "sharedBudget": {
+                "limitCents": 30000,
+                "priorUseCents": 0,
+                "proposedCostCents": 14800,
+                "canCommit": true,
+                "ruleVersion": "budget-1"
+              },
+              "inventoryRuleVersion": "inventory-1",
+              "grantVersion": 1,
+              "canCommit": true
+            }
+          },
+          {
+            "clauseId": "quantity:GREENS",
+            "value": {
+              "sku": "GREENS",
+              "proposedG": 0,
+              "demandG": 20000,
+              "onHandG": 26000,
+              "reservedG": 0,
+              "suggestedG": 0,
+              "unitPriceCents": 100,
+              "sharedBudget": {
+                "limitCents": 30000,
+                "priorUseCents": 0,
+                "proposedCostCents": 14800,
+                "canCommit": true,
+                "ruleVersion": "budget-1"
+              },
+              "inventoryRuleVersion": "inventory-1",
+              "grantVersion": 1,
+              "canCommit": true
+            }
+          },
+          {
+            "clauseId": "quantity:RICE",
+            "value": {
+              "sku": "RICE",
+              "proposedG": 36500,
+              "demandG": 50000,
+              "onHandG": 20000,
+              "reservedG": 0,
+              "suggestedG": 36500,
+              "unitPriceCents": 200,
+              "sharedBudget": {
+                "limitCents": 30000,
+                "priorUseCents": 0,
+                "proposedCostCents": 14800,
+                "canCommit": true,
+                "ruleVersion": "budget-1"
+              },
+              "inventoryRuleVersion": "inventory-1",
+              "grantVersion": 1,
+              "canCommit": true
+            }
+          }
+        ],
+        "authorityChain": [
+          {
+            "clauseId": "quantity:RICE",
+            "originalApprovalId": "APP-639be3e0b9997c0c75260e7a79ca4e90cb7e583e9713004630a80c3f243e82c0",
+            "originalSnapshotId": "SNAP-18f26ff4c89ec0de9a8562c06db56e37159f997891d41c844208031823b8e8c3",
+            "reviewedRevision": 21,
+            "validatedRevision": 21,
+            "protectedWitnessUnchanged": true
+          },
+          {
+            "clauseId": "quantity:CHICKEN",
+            "originalApprovalId": "APP-ca00aebf9816cf11bcc4319fbb7a6b4755894a2951d3f8084a0f6304a749e183",
+            "originalSnapshotId": "SNAP-18f26ff4c89ec0de9a8562c06db56e37159f997891d41c844208031823b8e8c3",
+            "reviewedRevision": 21,
+            "validatedRevision": 21,
+            "protectedWitnessUnchanged": true
+          },
+          {
+            "clauseId": "quantity:GREENS",
+            "originalApprovalId": "APP-a05d8a0e54b316736b6712754715d625dbb9230cde85f8c2dda5f124d5422192",
+            "originalSnapshotId": "SNAP-18f26ff4c89ec0de9a8562c06db56e37159f997891d41c844208031823b8e8c3",
+            "reviewedRevision": 21,
+            "validatedRevision": 21,
+            "protectedWitnessUnchanged": true
+          }
+        ]
+      }
+    ],
+    "request": {
+      "draftId": "PROC-001",
+      "mode": "incremental",
+      "intentHash": "63d06162469016feaa00bd02fc3c02673977ee103785e9a17b620fe415440497",
+      "approvalSelection": "e1fa5c338d90f3ac38515883bb95e27bdfb52ac86ae345d1bc065e8ae8b5995f"
+    },
+    "displayOnly": [
+      {
+        "table": "inventory",
+        "fields": [
+          "name",
+          "note"
+        ]
+      },
+      {
+        "table": "reserveReasons",
+        "fields": [
+          "label"
+        ]
+      }
+    ],
+    "protectedScope": "Every selected key field, scan membership/generation, projected field version, joined key and shared-budget input is in the witness.",
+    "grants": {
+      "view": true,
+      "approve": true,
+      "commit": true,
+      "grantVersion": 1
+    }
+  },
+  "retried": {
+    "workflow": "procurement",
+    "draft": {
+      "id": "PROC-001",
+      "workflow": "procurement",
+      "context": {
+        "draftId": "PROC-001",
+        "storeId": "STORE-001",
+        "actorId": "synthetic-manager-01",
+        "skus": [
+          "RICE",
+          "CHICKEN",
+          "GREENS"
+        ],
+        "opaque": false
+      },
+      "intent_revision": 2,
+      "status": "committed"
+    },
+    "actor": "synthetic-manager-01",
+    "role": "manager",
+    "mode": "incremental",
+    "validation": {
+      "draftId": "PROC-001",
+      "mode": "incremental",
+      "revision": 23,
+      "generation": "c0764d7d-6817-49e2-b252-479e6afe75d8",
+      "contractHash": "c3f533c1e7895ff854d7df56c9266544eba45f7b0df28af5a99c0e3a830b2a20",
+      "clauses": [
+        {
+          "id": "quantity:RICE",
+          "label": "RICE procurement decision",
+          "status": "retained",
+          "retained": true,
+          "reason": "Original protected evidence is unchanged; original approval snapshot retained.",
+          "approvalId": "APP-639be3e0b9997c0c75260e7a79ca4e90cb7e583e9713004630a80c3f243e82c0",
+          "originalSnapshotId": "SNAP-18f26ff4c89ec0de9a8562c06db56e37159f997891d41c844208031823b8e8c3",
+          "reviewedRevision": 21,
+          "validatedRevision": 23,
+          "canCommit": true,
+          "current": {
+            "value": {
+              "sku": "RICE",
+              "proposedG": 36500,
+              "demandG": 50000,
+              "onHandG": 20000,
+              "reservedG": 0,
+              "suggestedG": 36500,
+              "unitPriceCents": 200,
+              "sharedBudget": {
+                "limitCents": 30000,
+                "priorUseCents": 0,
+                "proposedCostCents": 14800,
+                "canCommit": true,
+                "ruleVersion": "budget-1"
+              },
+              "inventoryRuleVersion": "inventory-1",
+              "grantVersion": 1,
+              "canCommit": true
+            },
+            "error": null,
+            "viewHash": "9df639a707d7ce900f7f03e2cff10cfd19dca75ed3d3207333df8f051073fa28"
+          },
+          "differences": []
+        },
+        {
+          "id": "quantity:CHICKEN",
+          "label": "CHICKEN procurement decision",
+          "status": "retained",
+          "retained": true,
+          "reason": "Original protected evidence is unchanged; original approval snapshot retained.",
+          "approvalId": "APP-ca00aebf9816cf11bcc4319fbb7a6b4755894a2951d3f8084a0f6304a749e183",
+          "originalSnapshotId": "SNAP-18f26ff4c89ec0de9a8562c06db56e37159f997891d41c844208031823b8e8c3",
+          "reviewedRevision": 21,
+          "validatedRevision": 23,
+          "canCommit": true,
+          "current": {
+            "value": {
+              "sku": "CHICKEN",
+              "proposedG": 25000,
+              "demandG": 30000,
+              "onHandG": 8000,
+              "reservedG": 0,
+              "suggestedG": 25900,
+              "unitPriceCents": 300,
+              "sharedBudget": {
+                "limitCents": 30000,
+                "priorUseCents": 0,
+                "proposedCostCents": 14800,
+                "canCommit": true,
+                "ruleVersion": "budget-1"
+              },
+              "inventoryRuleVersion": "inventory-1",
+              "grantVersion": 1,
+              "canCommit": true
+            },
+            "error": null,
+            "viewHash": "fabca849bdbb274df87304de2091356781767370b0f868d0538e71045c01535f"
+          },
+          "differences": []
+        },
+        {
+          "id": "quantity:GREENS",
+          "label": "GREENS procurement decision",
+          "status": "retained",
+          "retained": true,
+          "reason": "Original protected evidence is unchanged; original approval snapshot retained.",
+          "approvalId": "APP-a05d8a0e54b316736b6712754715d625dbb9230cde85f8c2dda5f124d5422192",
+          "originalSnapshotId": "SNAP-18f26ff4c89ec0de9a8562c06db56e37159f997891d41c844208031823b8e8c3",
+          "reviewedRevision": 21,
+          "validatedRevision": 23,
+          "canCommit": true,
+          "current": {
+            "value": {
+              "sku": "GREENS",
+              "proposedG": 0,
+              "demandG": 20000,
+              "onHandG": 26000,
+              "reservedG": 0,
+              "suggestedG": 0,
+              "unitPriceCents": 100,
+              "sharedBudget": {
+                "limitCents": 30000,
+                "priorUseCents": 0,
+                "proposedCostCents": 14800,
+                "canCommit": true,
+                "ruleVersion": "budget-1"
+              },
+              "inventoryRuleVersion": "inventory-1",
+              "grantVersion": 1,
+              "canCommit": true
+            },
+            "error": null,
+            "viewHash": "e0d140575d82ff76a75ca7eb2f3ca2faee5cc5835562e276c02785c9bd4977ad"
+          },
+          "differences": []
+        }
+      ],
+      "allApproved": true,
+      "requiredReviewCount": 0,
+      "metrics": {
+        "verificationMicroseconds": 989.2,
+        "materialization": {
+          "mode": "incremental",
+          "revision": 23,
+          "totalNodes": 34,
+          "evaluatedNodes": 0,
+          "reusedNodes": 34,
+          "nominatedLeaves": 0,
+          "propagationEdges": 0,
+          "keyReads": 0,
+          "scanReads": 0,
+          "rowsRead": 0,
+          "eventsRead": 0,
+          "elapsedMicroseconds": 181.2,
+          "fallback": null,
+          "trackedKeyBuckets": 14,
+          "trackedScanNodes": 5
+        },
+        "coarseVersionLookups": 0
+      }
+    },
+    "items": [
+      {
+        "sku": "RICE",
+        "storeId": "STORE-001",
+        "demandG": 50000,
+        "onHandG": 20000,
+        "name": "Synthetic rice",
+        "note": "Display-only note",
+        "quantityG": 36500
+      },
+      {
+        "sku": "CHICKEN",
+        "storeId": "STORE-001",
+        "demandG": 30000,
+        "onHandG": 8000,
+        "name": "Synthetic chicken",
+        "note": "Display-only note",
+        "quantityG": 25000
+      },
+      {
+        "sku": "GREENS",
+        "storeId": "STORE-001",
+        "demandG": 20000,
+        "onHandG": 26000,
+        "name": "Synthetic greens",
+        "note": "Display-only note",
+        "quantityG": 0
+      }
+    ],
+    "documents": [],
+    "changes": [
+      {
+        "revision": 22,
+        "table": "budgetUses",
+        "key": "SIM-e87fef6f-0afc-40d1-a562-2fd2db9e712f",
+        "fields": [
+          "amountCents",
+          "draftId",
+          "status",
+          "storeId"
+        ],
+        "before": null,
+        "after": {
+          "storeId": "STORE-001",
+          "draftId": "PROC-001",
+          "status": "committed",
+          "amountCents": 14800
+        }
+      },
+      {
+        "revision": 23,
+        "table": "inventory",
+        "key": "OTHER-STORE:RICE",
+        "fields": [
+          "onHandG"
+        ],
+        "before": {
+          "storeId": "OTHER-STORE",
+          "sku": "RICE",
+          "demandG": 90000,
+          "onHandG": 59000,
+          "name": "Other-store rice",
+          "note": "Outside this approval contract"
+        },
+        "after": {
+          "storeId": "OTHER-STORE",
+          "sku": "RICE",
+          "demandG": 90000,
+          "onHandG": 58000,
+          "name": "Other-store rice",
+          "note": "Outside this approval contract"
+        }
+      }
+    ],
+    "receipts": [
+      {
+        "id": "SIM-e87fef6f-0afc-40d1-a562-2fd2db9e712f",
+        "receiptId": "RECEIPT-7a0345fd-a294-49cc-a621-ebc9046c5621",
+        "draftId": "PROC-001",
+        "workflow": "procurement",
+        "synthetic": true,
+        "execution": "SIMULATED_ONLY_NO_SUPPLIER",
+        "confirmedAt": "2026-11-01T09:01:34.262Z",
+        "confirmedBy": "synthetic-manager-01",
+        "intentHash": "63d06162469016feaa00bd02fc3c02673977ee103785e9a17b620fe415440497",
+        "contractHash": "c3f533c1e7895ff854d7df56c9266544eba45f7b0df28af5a99c0e3a830b2a20",
+        "validatedRevision": 21,
+        "mode": "incremental",
+        "decisions": [
+          {
+            "clauseId": "quantity:CHICKEN",
+            "value": {
+              "sku": "CHICKEN",
+              "proposedG": 25000,
+              "demandG": 30000,
+              "onHandG": 8000,
+              "reservedG": 0,
+              "suggestedG": 25900,
+              "unitPriceCents": 300,
+              "sharedBudget": {
+                "limitCents": 30000,
+                "priorUseCents": 0,
+                "proposedCostCents": 14800,
+                "canCommit": true,
+                "ruleVersion": "budget-1"
+              },
+              "inventoryRuleVersion": "inventory-1",
+              "grantVersion": 1,
+              "canCommit": true
+            }
+          },
+          {
+            "clauseId": "quantity:GREENS",
+            "value": {
+              "sku": "GREENS",
+              "proposedG": 0,
+              "demandG": 20000,
+              "onHandG": 26000,
+              "reservedG": 0,
+              "suggestedG": 0,
+              "unitPriceCents": 100,
+              "sharedBudget": {
+                "limitCents": 30000,
+                "priorUseCents": 0,
+                "proposedCostCents": 14800,
+                "canCommit": true,
+                "ruleVersion": "budget-1"
+              },
+              "inventoryRuleVersion": "inventory-1",
+              "grantVersion": 1,
+              "canCommit": true
+            }
+          },
+          {
+            "clauseId": "quantity:RICE",
+            "value": {
+              "sku": "RICE",
+              "proposedG": 36500,
+              "demandG": 50000,
+              "onHandG": 20000,
+              "reservedG": 0,
+              "suggestedG": 36500,
+              "unitPriceCents": 200,
+              "sharedBudget": {
+                "limitCents": 30000,
+                "priorUseCents": 0,
+                "proposedCostCents": 14800,
+                "canCommit": true,
+                "ruleVersion": "budget-1"
+              },
+              "inventoryRuleVersion": "inventory-1",
+              "grantVersion": 1,
+              "canCommit": true
+            }
+          }
+        ],
+        "authorityChain": [
+          {
+            "clauseId": "quantity:RICE",
+            "originalApprovalId": "APP-639be3e0b9997c0c75260e7a79ca4e90cb7e583e9713004630a80c3f243e82c0",
+            "originalSnapshotId": "SNAP-18f26ff4c89ec0de9a8562c06db56e37159f997891d41c844208031823b8e8c3",
+            "reviewedRevision": 21,
+            "validatedRevision": 21,
+            "protectedWitnessUnchanged": true
+          },
+          {
+            "clauseId": "quantity:CHICKEN",
+            "originalApprovalId": "APP-ca00aebf9816cf11bcc4319fbb7a6b4755894a2951d3f8084a0f6304a749e183",
+            "originalSnapshotId": "SNAP-18f26ff4c89ec0de9a8562c06db56e37159f997891d41c844208031823b8e8c3",
+            "reviewedRevision": 21,
+            "validatedRevision": 21,
+            "protectedWitnessUnchanged": true
+          },
+          {
+            "clauseId": "quantity:GREENS",
+            "originalApprovalId": "APP-a05d8a0e54b316736b6712754715d625dbb9230cde85f8c2dda5f124d5422192",
+            "originalSnapshotId": "SNAP-18f26ff4c89ec0de9a8562c06db56e37159f997891d41c844208031823b8e8c3",
+            "reviewedRevision": 21,
+            "validatedRevision": 21,
+            "protectedWitnessUnchanged": true
+          }
+        ]
+      }
+    ],
+    "request": {
+      "draftId": "PROC-001",
+      "mode": "incremental",
+      "intentHash": "63d06162469016feaa00bd02fc3c02673977ee103785e9a17b620fe415440497",
+      "approvalSelection": "e1fa5c338d90f3ac38515883bb95e27bdfb52ac86ae345d1bc065e8ae8b5995f"
+    },
+    "displayOnly": [
+      {
+        "table": "inventory",
+        "fields": [
+          "name",
+          "note"
+        ]
+      },
+      {
+        "table": "reserveReasons",
+        "fields": [
+          "label"
+        ]
+      }
+    ],
+    "protectedScope": "Every selected key field, scan membership/generation, projected field version, joined key and shared-budget input is in the witness.",
+    "grants": {
+      "view": true,
+      "approve": true,
+      "commit": true,
+      "grantVersion": 1
+    }
+  },
+  "uiErrors": [],
+  "exceptions": [],
+  "blockedExternal": [],
+  "responses": [
+    {
+      "path": "/auth/login",
+      "status": 204,
+      "mimeType": ""
+    },
+    {
+      "path": "/auth/login",
+      "status": 200,
+      "mimeType": "application/json"
+    },
+    {
+      "path": "/approval/context",
+      "status": 204,
+      "mimeType": ""
+    },
+    {
+      "path": "/approval/context",
+      "status": 200,
+      "mimeType": "application/json"
+    },
+    {
+      "path": "/demo/reset",
+      "status": 204,
+      "mimeType": ""
+    },
+    {
+      "path": "/demo/reset",
+      "status": 200,
+      "mimeType": "application/json"
+    },
+    {
+      "path": "/approval/context",
+      "status": 200,
+      "mimeType": "application/json"
+    },
+    {
+      "path": "/approval/context",
+      "status": 200,
+      "mimeType": "application/json"
+    },
+    {
+      "path": "/approval/context",
+      "status": 200,
+      "mimeType": "application/json"
+    },
+    {
+      "path": "/approval/preview",
+      "status": 204,
+      "mimeType": ""
+    },
+    {
+      "path": "/approval/preview",
+      "status": 200,
+      "mimeType": "application/json"
+    },
+    {
+      "path": "/approval/context",
+      "status": 200,
+      "mimeType": "application/json"
+    },
+    {
+      "path": "/approval/review",
+      "status": 204,
+      "mimeType": ""
+    },
+    {
+      "path": "/approval/review",
+      "status": 200,
+      "mimeType": "application/json"
+    },
+    {
+      "path": "/approval/context",
+      "status": 200,
+      "mimeType": "application/json"
+    },
+    {
+      "path": "/approval/context",
+      "status": 200,
+      "mimeType": "application/json"
+    },
+    {
+      "path": "/demo/change",
+      "status": 204,
+      "mimeType": ""
+    },
+    {
+      "path": "/demo/change",
+      "status": 200,
+      "mimeType": "application/json"
+    },
+    {
+      "path": "/approval/context",
+      "status": 200,
+      "mimeType": "application/json"
+    },
+    {
+      "path": "/approval/context",
+      "status": 200,
+      "mimeType": "application/json"
+    },
+    {
+      "path": "/approval/context",
+      "status": 200,
+      "mimeType": "application/json"
+    },
+    {
+      "path": "/approval/context",
+      "status": 204,
+      "mimeType": ""
+    },
+    {
+      "path": "/approval/context",
+      "status": 200,
+      "mimeType": "application/json"
+    },
+    {
+      "path": "/approval/context",
+      "status": 200,
+      "mimeType": "application/json"
+    },
+    {
+      "path": "/approval/context",
+      "status": 200,
+      "mimeType": "application/json"
+    },
+    {
+      "path": "/demo/change",
+      "status": 200,
+      "mimeType": "application/json"
+    },
+    {
+      "path": "/approval/context",
+      "status": 200,
+      "mimeType": "application/json"
+    },
+    {
+      "path": "/approval/context",
+      "status": 200,
+      "mimeType": "application/json"
+    },
+    {
+      "path": "/approval/context",
+      "status": 200,
+      "mimeType": "application/json"
+    },
+    {
+      "path": "/approval/quantity",
+      "status": 204,
+      "mimeType": ""
+    },
+    {
+      "path": "/approval/quantity",
+      "status": 200,
+      "mimeType": "application/json"
+    },
+    {
+      "path": "/approval/context",
+      "status": 200,
+      "mimeType": "application/json"
+    },
+    {
+      "path": "/approval/context",
+      "status": 204,
+      "mimeType": ""
+    },
+    {
+      "path": "/approval/context",
+      "status": 200,
+      "mimeType": "application/json"
+    },
+    {
+      "path": "/approval/preview",
+      "status": 200,
+      "mimeType": "application/json"
+    },
+    {
+      "path": "/approval/context",
+      "status": 200,
+      "mimeType": "application/json"
+    },
+    {
+      "path": "/approval/review",
+      "status": 200,
+      "mimeType": "application/json"
+    },
+    {
+      "path": "/approval/context",
+      "status": 200,
+      "mimeType": "application/json"
+    },
+    {
+      "path": "/approval/confirm",
+      "status": 204,
+      "mimeType": ""
+    },
+    {
+      "path": "/approval/confirm",
+      "status": 200,
+      "mimeType": "application/json"
+    },
+    {
+      "path": "/approval/context",
+      "status": 200,
+      "mimeType": "application/json"
+    },
+    {
+      "path": "/approval/context",
+      "status": 200,
+      "mimeType": "application/json"
+    },
+    {
+      "path": "/demo/change",
+      "status": 200,
+      "mimeType": "application/json"
+    },
+    {
+      "path": "/approval/context",
+      "status": 200,
+      "mimeType": "application/json"
+    },
+    {
+      "path": "/approval/context",
+      "status": 200,
+      "mimeType": "application/json"
+    },
+    {
+      "path": "/approval/confirm",
+      "status": 200,
+      "mimeType": "application/json"
+    },
+    {
+      "path": "/approval/context",
+      "status": 200,
+      "mimeType": "application/json"
+    },
+    {
+      "path": "/approval/context",
+      "status": 200,
+      "mimeType": "application/json"
+    }
+  ],
+  "completed": true
+}

@@ -1,0 +1,9 @@
+{
+  "protocol":"document-release-pilot-v1",
+  "modes":["whole","rows","full","incremental"],
+  "sanityRepeats":1,
+  "mainRepeats":3,
+  "hardGate":"Zero unsafe retained approvals, incorrect new commits, partial local release records and infrastructure errors",
+  "scenarios":["unchanged","unrelated_document","display_title","content_changed","content_and_signatures_refreshed","classification_blocked","readiness_revoked","signoff_insert","signoff_delete","signoff_predicate_aba","duplicate_signer_not_quorum","editor_revoke","editor_restore","missing_editor_aba","audience_insert","audience_aba","principal_revoke","channel_revoke","rule_revoke","permission_restore","stale_preview","same_receipt_retry","atomic_exception"],
+  "limits":"Two local synthetic documents; deterministic replay, no human study, publication, paid API, external file access or distributed-throughput claim"
+}

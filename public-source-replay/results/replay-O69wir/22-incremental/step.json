@@ -1,0 +1,2285 @@
+{
+  "index": 22,
+  "mode": "incremental",
+  "beforeSha": "dce8cdf564daa3663736f6a763f31c3523c24397",
+  "afterSha": "da26e03ae07538395644fb4c10fd4f88525c6231",
+  "timeUtc": "2026-10-27T19:22:51Z",
+  "changes": [
+    {
+      "path": "testing/run-write-tests.rst",
+      "type": "M",
+      "before": {
+        "path": "testing/run-write-tests.rst",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "405d10f039b27738b3bb90509358b1cf5abc8c60",
+        "size": 8650
+      },
+      "after": {
+        "path": "testing/run-write-tests.rst",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c7c36a7ba1d2679f8a44afb2c42404f648c4c5ea",
+        "size": 8911
+      },
+      "source": true
+    }
+  ],
+  "affectedSourcePartitions": [
+    {
+      "name": "testing",
+      "docId": "SRC-c8b61ec034d17530"
+    }
+  ],
+  "sharedBindingChanged": false,
+  "database": "22-incremental\\counterfactual.sqlite",
+  "syntheticApprovalContract": true,
+  "scopeCount": 11,
+  "falseRetainedApprovals": 0,
+  "incorrectNewEffects": 0,
+  "partialEffects": 0,
+  "oracleComparisons": [
+    {
+      "phase": "initial",
+      "id": "publish:SRC-bc8ba1310cbdd792",
+      "comparisons": {
+        "value": true,
+        "tokensHash": true,
+        "canCommit": true,
+        "error": true
+      },
+      "actual": {
+        "value": {
+          "docId": "SRC-bc8ba1310cbdd792",
+          "contentDigest": "371e4b5ab87d7107546c51db66d40bfd11cb2763f16a6e36d6ae489baa17f8b2",
+          "classification": "public",
+          "requested": true,
+          "eligibleSignoffs": 2,
+          "requiredSignoffs": 2,
+          "releaseAudience": {
+            "audienceCount": 1,
+            "channelVersion": "researcher-generated-channel-v1",
+            "canCommit": true
+          },
+          "policyVersion": "596acb7f6031de2d560373c4d0ddfedf84097797f419ee88f355c1e09d3ace5e",
+          "grantVersion": 1,
+          "canCommit": true
+        },
+        "tokensHash": "d2939e6b500a942d04c0cc3b5dd0a5c25ca1d0256db3375bc59b09bf66000aeb",
+        "canCommit": true
+      },
+      "expected": {
+        "value": {
+          "docId": "SRC-bc8ba1310cbdd792",
+          "contentDigest": "371e4b5ab87d7107546c51db66d40bfd11cb2763f16a6e36d6ae489baa17f8b2",
+          "classification": "public",
+          "requested": true,
+          "eligibleSignoffs": 2,
+          "requiredSignoffs": 2,
+          "releaseAudience": {
+            "audienceCount": 1,
+            "channelVersion": "researcher-generated-channel-v1",
+            "canCommit": true
+          },
+          "policyVersion": "596acb7f6031de2d560373c4d0ddfedf84097797f419ee88f355c1e09d3ace5e",
+          "grantVersion": 1,
+          "canCommit": true
+        },
+        "tokensHash": "d2939e6b500a942d04c0cc3b5dd0a5c25ca1d0256db3375bc59b09bf66000aeb",
+        "canCommit": true
+      }
+    },
+    {
+      "phase": "initial",
+      "id": "publish:SRC-0f1dbd8bea159c1d",
+      "comparisons": {
+        "value": true,
+        "tokensHash": true,
+        "canCommit": true,
+        "error": true
+      },
+      "actual": {
+        "value": {
+          "docId": "SRC-0f1dbd8bea159c1d",
+          "contentDigest": "5ca2f2f2d6de977e71bc68c4f5070d60fcd269c04517758f1eb537badbca11aa",
+          "classification": "public",
+          "requested": true,
+          "eligibleSignoffs": 2,
+          "requiredSignoffs": 2,
+          "releaseAudience": {
+            "audienceCount": 1,
+            "channelVersion": "researcher-generated-channel-v1",
+            "canCommit": true
+          },
+          "policyVersion": "596acb7f6031de2d560373c4d0ddfedf84097797f419ee88f355c1e09d3ace5e",
+          "grantVersion": 1,
+          "canCommit": true
+        },
+        "tokensHash": "9f636e76acc7989e638f8b7c6fd6758a5b366329e8ef1d593a78ae59dbfae009",
+        "canCommit": true
+      },
+      "expected": {
+        "value": {
+          "docId": "SRC-0f1dbd8bea159c1d",
+          "contentDigest": "5ca2f2f2d6de977e71bc68c4f5070d60fcd269c04517758f1eb537badbca11aa",
+          "classification": "public",
+          "requested": true,
+          "eligibleSignoffs": 2,
+          "requiredSignoffs": 2,
+          "releaseAudience": {
+            "audienceCount": 1,
+            "channelVersion": "researcher-generated-channel-v1",
+            "canCommit": true
+          },
+          "policyVersion": "596acb7f6031de2d560373c4d0ddfedf84097797f419ee88f355c1e09d3ace5e",
+          "grantVersion": 1,
+          "canCommit": true
+        },
+        "tokensHash": "9f636e76acc7989e638f8b7c6fd6758a5b366329e8ef1d593a78ae59dbfae009",
+        "canCommit": true
+      }
+    },
+    {
+      "phase": "initial",
+      "id": "publish:SRC-691898886b6d0c66",
+      "comparisons": {
+        "value": true,
+        "tokensHash": true,
+        "canCommit": true,
+        "error": true
+      },
+      "actual": {
+        "value": {
+          "docId": "SRC-691898886b6d0c66",
+          "contentDigest": "8964c0c8a3ec1c1f18eb12689a62c601f3bc7efd79739d1363cccd610c207b85",
+          "classification": "public",
+          "requested": true,
+          "eligibleSignoffs": 2,
+          "requiredSignoffs": 2,
+          "releaseAudience": {
+            "audienceCount": 1,
+            "channelVersion": "researcher-generated-channel-v1",
+            "canCommit": true
+          },
+          "policyVersion": "596acb7f6031de2d560373c4d0ddfedf84097797f419ee88f355c1e09d3ace5e",
+          "grantVersion": 1,
+          "canCommit": true
+        },
+        "tokensHash": "04ba8603fc9d4c3ced6a375f2795e2df236ecfdc3ea65e819180fa35ff5d0186",
+        "canCommit": true
+      },
+      "expected": {
+        "value": {
+          "docId": "SRC-691898886b6d0c66",
+          "contentDigest": "8964c0c8a3ec1c1f18eb12689a62c601f3bc7efd79739d1363cccd610c207b85",
+          "classification": "public",
+          "requested": true,
+          "eligibleSignoffs": 2,
+          "requiredSignoffs": 2,
+          "releaseAudience": {
+            "audienceCount": 1,
+            "channelVersion": "researcher-generated-channel-v1",
+            "canCommit": true
+          },
+          "policyVersion": "596acb7f6031de2d560373c4d0ddfedf84097797f419ee88f355c1e09d3ace5e",
+          "grantVersion": 1,
+          "canCommit": true
+        },
+        "tokensHash": "04ba8603fc9d4c3ced6a375f2795e2df236ecfdc3ea65e819180fa35ff5d0186",
+        "canCommit": true
+      }
+    },
+    {
+      "phase": "initial",
+      "id": "publish:SRC-fea91f0ad1d1c7e2",
+      "comparisons": {
+        "value": true,
+        "tokensHash": true,
+        "canCommit": true,
+        "error": true
+      },
+      "actual": {
+        "value": {
+          "docId": "SRC-fea91f0ad1d1c7e2",
+          "contentDigest": "f0fb73500f410da432448ed5845cb3e6f5471d8b0b1c81db5c92c4809f849acd",
+          "classification": "public",
+          "requested": true,
+          "eligibleSignoffs": 2,
+          "requiredSignoffs": 2,
+          "releaseAudience": {
+            "audienceCount": 1,
+            "channelVersion": "researcher-generated-channel-v1",
+            "canCommit": true
+          },
+          "policyVersion": "596acb7f6031de2d560373c4d0ddfedf84097797f419ee88f355c1e09d3ace5e",
+          "grantVersion": 1,
+          "canCommit": true
+        },
+        "tokensHash": "b974be08371df9e877116f1b4af88f4a532f9d0dfa1e9cfae19dd5408a8b9d9a",
+        "canCommit": true
+      },
+      "expected": {
+        "value": {
+          "docId": "SRC-fea91f0ad1d1c7e2",
+          "contentDigest": "f0fb73500f410da432448ed5845cb3e6f5471d8b0b1c81db5c92c4809f849acd",
+          "classification": "public",
+          "requested": true,
+          "eligibleSignoffs": 2,
+          "requiredSignoffs": 2,
+          "releaseAudience": {
+            "audienceCount": 1,
+            "channelVersion": "researcher-generated-channel-v1",
+            "canCommit": true
+          },
+          "policyVersion": "596acb7f6031de2d560373c4d0ddfedf84097797f419ee88f355c1e09d3ace5e",
+          "grantVersion": 1,
+          "canCommit": true
+        },
+        "tokensHash": "b974be08371df9e877116f1b4af88f4a532f9d0dfa1e9cfae19dd5408a8b9d9a",
+        "canCommit": true
+      }
+    },
+    {
+      "phase": "initial",
+      "id": "publish:SRC-e83645b07732fa66",
+      "comparisons": {
+        "value": true,
+        "tokensHash": true,
+        "canCommit": true,
+        "error": true
+      },
+      "actual": {
+        "value": {
+          "docId": "SRC-e83645b07732fa66",
+          "contentDigest": "13d732103cd6380da5ab40cd282e5a012815bc8d133d882b4085efbe856b9e1e",
+          "classification": "public",
+          "requested": true,
+          "eligibleSignoffs": 2,
+          "requiredSignoffs": 2,
+          "releaseAudience": {
+            "audienceCount": 1,
+            "channelVersion": "researcher-generated-channel-v1",
+            "canCommit": true
+          },
+          "policyVersion": "596acb7f6031de2d560373c4d0ddfedf84097797f419ee88f355c1e09d3ace5e",
+          "grantVersion": 1,
+          "canCommit": true
+        },
+        "tokensHash": "585bcfe928cc51940a4b05d447876be8a2f69810a137f72a6febfc059410956b",
+        "canCommit": true
+      },
+      "expected": {
+        "value": {
+          "docId": "SRC-e83645b07732fa66",
+          "contentDigest": "13d732103cd6380da5ab40cd282e5a012815bc8d133d882b4085efbe856b9e1e",
+          "classification": "public",
+          "requested": true,
+          "eligibleSignoffs": 2,
+          "requiredSignoffs": 2,
+          "releaseAudience": {
+            "audienceCount": 1,
+            "channelVersion": "researcher-generated-channel-v1",
+            "canCommit": true
+          },
+          "policyVersion": "596acb7f6031de2d560373c4d0ddfedf84097797f419ee88f355c1e09d3ace5e",
+          "grantVersion": 1,
+          "canCommit": true
+        },
+        "tokensHash": "585bcfe928cc51940a4b05d447876be8a2f69810a137f72a6febfc059410956b",
+        "canCommit": true
+      }
+    },
+    {
+      "phase": "initial",
+      "id": "publish:SRC-17eeefc6e504dbee",
+      "comparisons": {
+        "value": true,
+        "tokensHash": true,
+        "canCommit": true,
+        "error": true
+      },
+      "actual": {
+        "value": {
+          "docId": "SRC-17eeefc6e504dbee",
+          "contentDigest": "c5f1a26b28cc53c8960548837ddf456fa41e9741d637ec21d8219628fb7dc296",
+          "classification": "public",
+          "requested": true,
+          "eligibleSignoffs": 2,
+          "requiredSignoffs": 2,
+          "releaseAudience": {
+            "audienceCount": 1,
+            "channelVersion": "researcher-generated-channel-v1",
+            "canCommit": true
+          },
+          "policyVersion": "596acb7f6031de2d560373c4d0ddfedf84097797f419ee88f355c1e09d3ace5e",
+          "grantVersion": 1,
+          "canCommit": true
+        },
+        "tokensHash": "a12a8a6f96434c1c2d580e490dae78e317ab98df7cc9916d18a95ad99fef5519",
+        "canCommit": true
+      },
+      "expected": {
+        "value": {
+          "docId": "SRC-17eeefc6e504dbee",
+          "contentDigest": "c5f1a26b28cc53c8960548837ddf456fa41e9741d637ec21d8219628fb7dc296",
+          "classification": "public",
+          "requested": true,
+          "eligibleSignoffs": 2,
+          "requiredSignoffs": 2,
+          "releaseAudience": {
+            "audienceCount": 1,
+            "channelVersion": "researcher-generated-channel-v1",
+            "canCommit": true
+          },
+          "policyVersion": "596acb7f6031de2d560373c4d0ddfedf84097797f419ee88f355c1e09d3ace5e",
+          "grantVersion": 1,
+          "canCommit": true
+        },
+        "tokensHash": "a12a8a6f96434c1c2d580e490dae78e317ab98df7cc9916d18a95ad99fef5519",
+        "canCommit": true
+      }
+    },
+    {
+      "phase": "initial",
+      "id": "publish:SRC-a4e2c3f07fd120ab",
+      "comparisons": {
+        "value": true,
+        "tokensHash": true,
+        "canCommit": true,
+        "error": true
+      },
+      "actual": {
+        "value": {
+          "docId": "SRC-a4e2c3f07fd120ab",
+          "contentDigest": "69b0f4e1f5c4b341074c6d0d767fb76508f59314f66269f3a4823e43c9f385e2",
+          "classification": "public",
+          "requested": true,
+          "eligibleSignoffs": 2,
+          "requiredSignoffs": 2,
+          "releaseAudience": {
+            "audienceCount": 1,
+            "channelVersion": "researcher-generated-channel-v1",
+            "canCommit": true
+          },
+          "policyVersion": "596acb7f6031de2d560373c4d0ddfedf84097797f419ee88f355c1e09d3ace5e",
+          "grantVersion": 1,
+          "canCommit": true
+        },
+        "tokensHash": "34b37067780ddcc0c3cbeb29f13694815227f8811aa6c474fa0425cac349082b",
+        "canCommit": true
+      },
+      "expected": {
+        "value": {
+          "docId": "SRC-a4e2c3f07fd120ab",
+          "contentDigest": "69b0f4e1f5c4b341074c6d0d767fb76508f59314f66269f3a4823e43c9f385e2",
+          "classification": "public",
+          "requested": true,
+          "eligibleSignoffs": 2,
+          "requiredSignoffs": 2,
+          "releaseAudience": {
+            "audienceCount": 1,
+            "channelVersion": "researcher-generated-channel-v1",
+            "canCommit": true
+          },
+          "policyVersion": "596acb7f6031de2d560373c4d0ddfedf84097797f419ee88f355c1e09d3ace5e",
+          "grantVersion": 1,
+          "canCommit": true
+        },
+        "tokensHash": "34b37067780ddcc0c3cbeb29f13694815227f8811aa6c474fa0425cac349082b",
+        "canCommit": true
+      }
+    },
+    {
+      "phase": "initial",
+      "id": "publish:SRC-2baab988b2e9f199",
+      "comparisons": {
+        "value": true,
+        "tokensHash": true,
+        "canCommit": true,
+        "error": true
+      },
+      "actual": {
+        "value": {
+          "docId": "SRC-2baab988b2e9f199",
+          "contentDigest": "886b755d5463542a3d10679388fcfccb73a0ece6b54ecf7d9c34ef5bd5e64ed8",
+          "classification": "public",
+          "requested": true,
+          "eligibleSignoffs": 2,
+          "requiredSignoffs": 2,
+          "releaseAudience": {
+            "audienceCount": 1,
+            "channelVersion": "researcher-generated-channel-v1",
+            "canCommit": true
+          },
+          "policyVersion": "596acb7f6031de2d560373c4d0ddfedf84097797f419ee88f355c1e09d3ace5e",
+          "grantVersion": 1,
+          "canCommit": true
+        },
+        "tokensHash": "0ce0f1bdbf3e915578271669fbecfefb9cdd5c92a37fb8056e15a1d60346cac2",
+        "canCommit": true
+      },
+      "expected": {
+        "value": {
+          "docId": "SRC-2baab988b2e9f199",
+          "contentDigest": "886b755d5463542a3d10679388fcfccb73a0ece6b54ecf7d9c34ef5bd5e64ed8",
+          "classification": "public",
+          "requested": true,
+          "eligibleSignoffs": 2,
+          "requiredSignoffs": 2,
+          "releaseAudience": {
+            "audienceCount": 1,
+            "channelVersion": "researcher-generated-channel-v1",
+            "canCommit": true
+          },
+          "policyVersion": "596acb7f6031de2d560373c4d0ddfedf84097797f419ee88f355c1e09d3ace5e",
+          "grantVersion": 1,
+          "canCommit": true
+        },
+        "tokensHash": "0ce0f1bdbf3e915578271669fbecfefb9cdd5c92a37fb8056e15a1d60346cac2",
+        "canCommit": true
+      }
+    },
+    {
+      "phase": "initial",
+      "id": "publish:SRC-361e7b1acb6d80d7",
+      "comparisons": {
+        "value": true,
+        "tokensHash": true,
+        "canCommit": true,
+        "error": true
+      },
+      "actual": {
+        "value": {
+          "docId": "SRC-361e7b1acb6d80d7",
+          "contentDigest": "f85914c0d09df65ad37545d95566bb0cb6dc38c96c2aae5bc35081a0c43643ff",
+          "classification": "public",
+          "requested": true,
+          "eligibleSignoffs": 2,
+          "requiredSignoffs": 2,
+          "releaseAudience": {
+            "audienceCount": 1,
+            "channelVersion": "researcher-generated-channel-v1",
+            "canCommit": true
+          },
+          "policyVersion": "596acb7f6031de2d560373c4d0ddfedf84097797f419ee88f355c1e09d3ace5e",
+          "grantVersion": 1,
+          "canCommit": true
+        },
+        "tokensHash": "485677c7c44a7b12cf1583195838dcaf6034f1508f8198de5959ecd37f79d404",
+        "canCommit": true
+      },
+      "expected": {
+        "value": {
+          "docId": "SRC-361e7b1acb6d80d7",
+          "contentDigest": "f85914c0d09df65ad37545d95566bb0cb6dc38c96c2aae5bc35081a0c43643ff",
+          "classification": "public",
+          "requested": true,
+          "eligibleSignoffs": 2,
+          "requiredSignoffs": 2,
+          "releaseAudience": {
+            "audienceCount": 1,
+            "channelVersion": "researcher-generated-channel-v1",
+            "canCommit": true
+          },
+          "policyVersion": "596acb7f6031de2d560373c4d0ddfedf84097797f419ee88f355c1e09d3ace5e",
+          "grantVersion": 1,
+          "canCommit": true
+        },
+        "tokensHash": "485677c7c44a7b12cf1583195838dcaf6034f1508f8198de5959ecd37f79d404",
+        "canCommit": true
+      }
+    },
+    {
+      "phase": "initial",
+      "id": "publish:SRC-c8b61ec034d17530",
+      "comparisons": {
+        "value": true,
+        "tokensHash": true,
+        "canCommit": true,
+        "error": true
+      },
+      "actual": {
+        "value": {
+          "docId": "SRC-c8b61ec034d17530",
+          "contentDigest": "be2b62162f0144d2b1b90c9bbe9edeaba03c0da761204ccc88e1810e27cea1f2",
+          "classification": "public",
+          "requested": true,
+          "eligibleSignoffs": 2,
+          "requiredSignoffs": 2,
+          "releaseAudience": {
+            "audienceCount": 1,
+            "channelVersion": "researcher-generated-channel-v1",
+            "canCommit": true
+          },
+          "policyVersion": "596acb7f6031de2d560373c4d0ddfedf84097797f419ee88f355c1e09d3ace5e",
+          "grantVersion": 1,
+          "canCommit": true
+        },
+        "tokensHash": "b78867df6531496027f94fcef2c4583c509aa0b58c5c9bdcfbe92e16f45ec26e",
+        "canCommit": true
+      },
+      "expected": {
+        "value": {
+          "docId": "SRC-c8b61ec034d17530",
+          "contentDigest": "be2b62162f0144d2b1b90c9bbe9edeaba03c0da761204ccc88e1810e27cea1f2",
+          "classification": "public",
+          "requested": true,
+          "eligibleSignoffs": 2,
+          "requiredSignoffs": 2,
+          "releaseAudience": {
+            "audienceCount": 1,
+            "channelVersion": "researcher-generated-channel-v1",
+            "canCommit": true
+          },
+          "policyVersion": "596acb7f6031de2d560373c4d0ddfedf84097797f419ee88f355c1e09d3ace5e",
+          "grantVersion": 1,
+          "canCommit": true
+        },
+        "tokensHash": "b78867df6531496027f94fcef2c4583c509aa0b58c5c9bdcfbe92e16f45ec26e",
+        "canCommit": true
+      }
+    },
+    {
+      "phase": "initial",
+      "id": "publish:SRC-50b9032eef30a098",
+      "comparisons": {
+        "value": true,
+        "tokensHash": true,
+        "canCommit": true,
+        "error": true
+      },
+      "actual": {
+        "value": {
+          "docId": "SRC-50b9032eef30a098",
+          "contentDigest": "adf7c49302adbf65a61287246ae77d5d21be38c03a35f61dd154b7543e5d766c",
+          "classification": "public",
+          "requested": true,
+          "eligibleSignoffs": 2,
+          "requiredSignoffs": 2,
+          "releaseAudience": {
+            "audienceCount": 1,
+            "channelVersion": "researcher-generated-channel-v1",
+            "canCommit": true
+          },
+          "policyVersion": "596acb7f6031de2d560373c4d0ddfedf84097797f419ee88f355c1e09d3ace5e",
+          "grantVersion": 1,
+          "canCommit": true
+        },
+        "tokensHash": "36333c5fa3a03c23b20e559505bd990191a67cde43fe24907443f04fd73f9a2e",
+        "canCommit": true
+      },
+      "expected": {
+        "value": {
+          "docId": "SRC-50b9032eef30a098",
+          "contentDigest": "adf7c49302adbf65a61287246ae77d5d21be38c03a35f61dd154b7543e5d766c",
+          "classification": "public",
+          "requested": true,
+          "eligibleSignoffs": 2,
+          "requiredSignoffs": 2,
+          "releaseAudience": {
+            "audienceCount": 1,
+            "channelVersion": "researcher-generated-channel-v1",
+            "canCommit": true
+          },
+          "policyVersion": "596acb7f6031de2d560373c4d0ddfedf84097797f419ee88f355c1e09d3ace5e",
+          "grantVersion": 1,
+          "canCommit": true
+        },
+        "tokensHash": "36333c5fa3a03c23b20e559505bd990191a67cde43fe24907443f04fd73f9a2e",
+        "canCommit": true
+      }
+    },
+    {
+      "phase": "current",
+      "id": "publish:SRC-bc8ba1310cbdd792",
+      "comparisons": {
+        "value": true,
+        "tokensHash": true,
+        "canCommit": true,
+        "error": true
+      },
+      "actual": {
+        "value": {
+          "docId": "SRC-bc8ba1310cbdd792",
+          "contentDigest": "371e4b5ab87d7107546c51db66d40bfd11cb2763f16a6e36d6ae489baa17f8b2",
+          "classification": "public",
+          "requested": true,
+          "eligibleSignoffs": 2,
+          "requiredSignoffs": 2,
+          "releaseAudience": {
+            "audienceCount": 1,
+            "channelVersion": "researcher-generated-channel-v1",
+            "canCommit": true
+          },
+          "policyVersion": "596acb7f6031de2d560373c4d0ddfedf84097797f419ee88f355c1e09d3ace5e",
+          "grantVersion": 1,
+          "canCommit": true
+        },
+        "tokensHash": "d2939e6b500a942d04c0cc3b5dd0a5c25ca1d0256db3375bc59b09bf66000aeb",
+        "canCommit": true
+      },
+      "expected": {
+        "value": {
+          "docId": "SRC-bc8ba1310cbdd792",
+          "contentDigest": "371e4b5ab87d7107546c51db66d40bfd11cb2763f16a6e36d6ae489baa17f8b2",
+          "classification": "public",
+          "requested": true,
+          "eligibleSignoffs": 2,
+          "requiredSignoffs": 2,
+          "releaseAudience": {
+            "audienceCount": 1,
+            "channelVersion": "researcher-generated-channel-v1",
+            "canCommit": true
+          },
+          "policyVersion": "596acb7f6031de2d560373c4d0ddfedf84097797f419ee88f355c1e09d3ace5e",
+          "grantVersion": 1,
+          "canCommit": true
+        },
+        "tokensHash": "d2939e6b500a942d04c0cc3b5dd0a5c25ca1d0256db3375bc59b09bf66000aeb",
+        "canCommit": true
+      }
+    },
+    {
+      "phase": "current",
+      "id": "publish:SRC-0f1dbd8bea159c1d",
+      "comparisons": {
+        "value": true,
+        "tokensHash": true,
+        "canCommit": true,
+        "error": true
+      },
+      "actual": {
+        "value": {
+          "docId": "SRC-0f1dbd8bea159c1d",
+          "contentDigest": "5ca2f2f2d6de977e71bc68c4f5070d60fcd269c04517758f1eb537badbca11aa",
+          "classification": "public",
+          "requested": true,
+          "eligibleSignoffs": 2,
+          "requiredSignoffs": 2,
+          "releaseAudience": {
+            "audienceCount": 1,
+            "channelVersion": "researcher-generated-channel-v1",
+            "canCommit": true
+          },
+          "policyVersion": "596acb7f6031de2d560373c4d0ddfedf84097797f419ee88f355c1e09d3ace5e",
+          "grantVersion": 1,
+          "canCommit": true
+        },
+        "tokensHash": "9f636e76acc7989e638f8b7c6fd6758a5b366329e8ef1d593a78ae59dbfae009",
+        "canCommit": true
+      },
+      "expected": {
+        "value": {
+          "docId": "SRC-0f1dbd8bea159c1d",
+          "contentDigest": "5ca2f2f2d6de977e71bc68c4f5070d60fcd269c04517758f1eb537badbca11aa",
+          "classification": "public",
+          "requested": true,
+          "eligibleSignoffs": 2,
+          "requiredSignoffs": 2,
+          "releaseAudience": {
+            "audienceCount": 1,
+            "channelVersion": "researcher-generated-channel-v1",
+            "canCommit": true
+          },
+          "policyVersion": "596acb7f6031de2d560373c4d0ddfedf84097797f419ee88f355c1e09d3ace5e",
+          "grantVersion": 1,
+          "canCommit": true
+        },
+        "tokensHash": "9f636e76acc7989e638f8b7c6fd6758a5b366329e8ef1d593a78ae59dbfae009",
+        "canCommit": true
+      }
+    },
+    {
+      "phase": "current",
+      "id": "publish:SRC-691898886b6d0c66",
+      "comparisons": {
+        "value": true,
+        "tokensHash": true,
+        "canCommit": true,
+        "error": true
+      },
+      "actual": {
+        "value": {
+          "docId": "SRC-691898886b6d0c66",
+          "contentDigest": "8964c0c8a3ec1c1f18eb12689a62c601f3bc7efd79739d1363cccd610c207b85",
+          "classification": "public",
+          "requested": true,
+          "eligibleSignoffs": 2,
+          "requiredSignoffs": 2,
+          "releaseAudience": {
+            "audienceCount": 1,
+            "channelVersion": "researcher-generated-channel-v1",
+            "canCommit": true
+          },
+          "policyVersion": "596acb7f6031de2d560373c4d0ddfedf84097797f419ee88f355c1e09d3ace5e",
+          "grantVersion": 1,
+          "canCommit": true
+        },
+        "tokensHash": "04ba8603fc9d4c3ced6a375f2795e2df236ecfdc3ea65e819180fa35ff5d0186",
+        "canCommit": true
+      },
+      "expected": {
+        "value": {
+          "docId": "SRC-691898886b6d0c66",
+          "contentDigest": "8964c0c8a3ec1c1f18eb12689a62c601f3bc7efd79739d1363cccd610c207b85",
+          "classification": "public",
+          "requested": true,
+          "eligibleSignoffs": 2,
+          "requiredSignoffs": 2,
+          "releaseAudience": {
+            "audienceCount": 1,
+            "channelVersion": "researcher-generated-channel-v1",
+            "canCommit": true
+          },
+          "policyVersion": "596acb7f6031de2d560373c4d0ddfedf84097797f419ee88f355c1e09d3ace5e",
+          "grantVersion": 1,
+          "canCommit": true
+        },
+        "tokensHash": "04ba8603fc9d4c3ced6a375f2795e2df236ecfdc3ea65e819180fa35ff5d0186",
+        "canCommit": true
+      }
+    },
+    {
+      "phase": "current",
+      "id": "publish:SRC-fea91f0ad1d1c7e2",
+      "comparisons": {
+        "value": true,
+        "tokensHash": true,
+        "canCommit": true,
+        "error": true
+      },
+      "actual": {
+        "value": {
+          "docId": "SRC-fea91f0ad1d1c7e2",
+          "contentDigest": "f0fb73500f410da432448ed5845cb3e6f5471d8b0b1c81db5c92c4809f849acd",
+          "classification": "public",
+          "requested": true,
+          "eligibleSignoffs": 2,
+          "requiredSignoffs": 2,
+          "releaseAudience": {
+            "audienceCount": 1,
+            "channelVersion": "researcher-generated-channel-v1",
+            "canCommit": true
+          },
+          "policyVersion": "596acb7f6031de2d560373c4d0ddfedf84097797f419ee88f355c1e09d3ace5e",
+          "grantVersion": 1,
+          "canCommit": true
+        },
+        "tokensHash": "b974be08371df9e877116f1b4af88f4a532f9d0dfa1e9cfae19dd5408a8b9d9a",
+        "canCommit": true
+      },
+      "expected": {
+        "value": {
+          "docId": "SRC-fea91f0ad1d1c7e2",
+          "contentDigest": "f0fb73500f410da432448ed5845cb3e6f5471d8b0b1c81db5c92c4809f849acd",
+          "classification": "public",
+          "requested": true,
+          "eligibleSignoffs": 2,
+          "requiredSignoffs": 2,
+          "releaseAudience": {
+            "audienceCount": 1,
+            "channelVersion": "researcher-generated-channel-v1",
+            "canCommit": true
+          },
+          "policyVersion": "596acb7f6031de2d560373c4d0ddfedf84097797f419ee88f355c1e09d3ace5e",
+          "grantVersion": 1,
+          "canCommit": true
+        },
+        "tokensHash": "b974be08371df9e877116f1b4af88f4a532f9d0dfa1e9cfae19dd5408a8b9d9a",
+        "canCommit": true
+      }
+    },
+    {
+      "phase": "current",
+      "id": "publish:SRC-e83645b07732fa66",
+      "comparisons": {
+        "value": true,
+        "tokensHash": true,
+        "canCommit": true,
+        "error": true
+      },
+      "actual": {
+        "value": {
+          "docId": "SRC-e83645b07732fa66",
+          "contentDigest": "13d732103cd6380da5ab40cd282e5a012815bc8d133d882b4085efbe856b9e1e",
+          "classification": "public",
+          "requested": true,
+          "eligibleSignoffs": 2,
+          "requiredSignoffs": 2,
+          "releaseAudience": {
+            "audienceCount": 1,
+            "channelVersion": "researcher-generated-channel-v1",
+            "canCommit": true
+          },
+          "policyVersion": "596acb7f6031de2d560373c4d0ddfedf84097797f419ee88f355c1e09d3ace5e",
+          "grantVersion": 1,
+          "canCommit": true
+        },
+        "tokensHash": "585bcfe928cc51940a4b05d447876be8a2f69810a137f72a6febfc059410956b",
+        "canCommit": true
+      },
+      "expected": {
+        "value": {
+          "docId": "SRC-e83645b07732fa66",
+          "contentDigest": "13d732103cd6380da5ab40cd282e5a012815bc8d133d882b4085efbe856b9e1e",
+          "classification": "public",
+          "requested": true,
+          "eligibleSignoffs": 2,
+          "requiredSignoffs": 2,
+          "releaseAudience": {
+            "audienceCount": 1,
+            "channelVersion": "researcher-generated-channel-v1",
+            "canCommit": true
+          },
+          "policyVersion": "596acb7f6031de2d560373c4d0ddfedf84097797f419ee88f355c1e09d3ace5e",
+          "grantVersion": 1,
+          "canCommit": true
+        },
+        "tokensHash": "585bcfe928cc51940a4b05d447876be8a2f69810a137f72a6febfc059410956b",
+        "canCommit": true
+      }
+    },
+    {
+      "phase": "current",
+      "id": "publish:SRC-17eeefc6e504dbee",
+      "comparisons": {
+        "value": true,
+        "tokensHash": true,
+        "canCommit": true,
+        "error": true
+      },
+      "actual": {
+        "value": {
+          "docId": "SRC-17eeefc6e504dbee",
+          "contentDigest": "c5f1a26b28cc53c8960548837ddf456fa41e9741d637ec21d8219628fb7dc296",
+          "classification": "public",
+          "requested": true,
+          "eligibleSignoffs": 2,
+          "requiredSignoffs": 2,
+          "releaseAudience": {
+            "audienceCount": 1,
+            "channelVersion": "researcher-generated-channel-v1",
+            "canCommit": true
+          },
+          "policyVersion": "596acb7f6031de2d560373c4d0ddfedf84097797f419ee88f355c1e09d3ace5e",
+          "grantVersion": 1,
+          "canCommit": true
+        },
+        "tokensHash": "a12a8a6f96434c1c2d580e490dae78e317ab98df7cc9916d18a95ad99fef5519",
+        "canCommit": true
+      },
+      "expected": {
+        "value": {
+          "docId": "SRC-17eeefc6e504dbee",
+          "contentDigest": "c5f1a26b28cc53c8960548837ddf456fa41e9741d637ec21d8219628fb7dc296",
+          "classification": "public",
+          "requested": true,
+          "eligibleSignoffs": 2,
+          "requiredSignoffs": 2,
+          "releaseAudience": {
+            "audienceCount": 1,
+            "channelVersion": "researcher-generated-channel-v1",
+            "canCommit": true
+          },
+          "policyVersion": "596acb7f6031de2d560373c4d0ddfedf84097797f419ee88f355c1e09d3ace5e",
+          "grantVersion": 1,
+          "canCommit": true
+        },
+        "tokensHash": "a12a8a6f96434c1c2d580e490dae78e317ab98df7cc9916d18a95ad99fef5519",
+        "canCommit": true
+      }
+    },
+    {
+      "phase": "current",
+      "id": "publish:SRC-a4e2c3f07fd120ab",
+      "comparisons": {
+        "value": true,
+        "tokensHash": true,
+        "canCommit": true,
+        "error": true
+      },
+      "actual": {
+        "value": {
+          "docId": "SRC-a4e2c3f07fd120ab",
+          "contentDigest": "69b0f4e1f5c4b341074c6d0d767fb76508f59314f66269f3a4823e43c9f385e2",
+          "classification": "public",
+          "requested": true,
+          "eligibleSignoffs": 2,
+          "requiredSignoffs": 2,
+          "releaseAudience": {
+            "audienceCount": 1,
+            "channelVersion": "researcher-generated-channel-v1",
+            "canCommit": true
+          },
+          "policyVersion": "596acb7f6031de2d560373c4d0ddfedf84097797f419ee88f355c1e09d3ace5e",
+          "grantVersion": 1,
+          "canCommit": true
+        },
+        "tokensHash": "34b37067780ddcc0c3cbeb29f13694815227f8811aa6c474fa0425cac349082b",
+        "canCommit": true
+      },
+      "expected": {
+        "value": {
+          "docId": "SRC-a4e2c3f07fd120ab",
+          "contentDigest": "69b0f4e1f5c4b341074c6d0d767fb76508f59314f66269f3a4823e43c9f385e2",
+          "classification": "public",
+          "requested": true,
+          "eligibleSignoffs": 2,
+          "requiredSignoffs": 2,
+          "releaseAudience": {
+            "audienceCount": 1,
+            "channelVersion": "researcher-generated-channel-v1",
+            "canCommit": true
+          },
+          "policyVersion": "596acb7f6031de2d560373c4d0ddfedf84097797f419ee88f355c1e09d3ace5e",
+          "grantVersion": 1,
+          "canCommit": true
+        },
+        "tokensHash": "34b37067780ddcc0c3cbeb29f13694815227f8811aa6c474fa0425cac349082b",
+        "canCommit": true
+      }
+    },
+    {
+      "phase": "current",
+      "id": "publish:SRC-2baab988b2e9f199",
+      "comparisons": {
+        "value": true,
+        "tokensHash": true,
+        "canCommit": true,
+        "error": true
+      },
+      "actual": {
+        "value": {
+          "docId": "SRC-2baab988b2e9f199",
+          "contentDigest": "886b755d5463542a3d10679388fcfccb73a0ece6b54ecf7d9c34ef5bd5e64ed8",
+          "classification": "public",
+          "requested": true,
+          "eligibleSignoffs": 2,
+          "requiredSignoffs": 2,
+          "releaseAudience": {
+            "audienceCount": 1,
+            "channelVersion": "researcher-generated-channel-v1",
+            "canCommit": true
+          },
+          "policyVersion": "596acb7f6031de2d560373c4d0ddfedf84097797f419ee88f355c1e09d3ace5e",
+          "grantVersion": 1,
+          "canCommit": true
+        },
+        "tokensHash": "0ce0f1bdbf3e915578271669fbecfefb9cdd5c92a37fb8056e15a1d60346cac2",
+        "canCommit": true
+      },
+      "expected": {
+        "value": {
+          "docId": "SRC-2baab988b2e9f199",
+          "contentDigest": "886b755d5463542a3d10679388fcfccb73a0ece6b54ecf7d9c34ef5bd5e64ed8",
+          "classification": "public",
+          "requested": true,
+          "eligibleSignoffs": 2,
+          "requiredSignoffs": 2,
+          "releaseAudience": {
+            "audienceCount": 1,
+            "channelVersion": "researcher-generated-channel-v1",
+            "canCommit": true
+          },
+          "policyVersion": "596acb7f6031de2d560373c4d0ddfedf84097797f419ee88f355c1e09d3ace5e",
+          "grantVersion": 1,
+          "canCommit": true
+        },
+        "tokensHash": "0ce0f1bdbf3e915578271669fbecfefb9cdd5c92a37fb8056e15a1d60346cac2",
+        "canCommit": true
+      }
+    },
+    {
+      "phase": "current",
+      "id": "publish:SRC-361e7b1acb6d80d7",
+      "comparisons": {
+        "value": true,
+        "tokensHash": true,
+        "canCommit": true,
+        "error": true
+      },
+      "actual": {
+        "value": {
+          "docId": "SRC-361e7b1acb6d80d7",
+          "contentDigest": "f85914c0d09df65ad37545d95566bb0cb6dc38c96c2aae5bc35081a0c43643ff",
+          "classification": "public",
+          "requested": true,
+          "eligibleSignoffs": 2,
+          "requiredSignoffs": 2,
+          "releaseAudience": {
+            "audienceCount": 1,
+            "channelVersion": "researcher-generated-channel-v1",
+            "canCommit": true
+          },
+          "policyVersion": "596acb7f6031de2d560373c4d0ddfedf84097797f419ee88f355c1e09d3ace5e",
+          "grantVersion": 1,
+          "canCommit": true
+        },
+        "tokensHash": "485677c7c44a7b12cf1583195838dcaf6034f1508f8198de5959ecd37f79d404",
+        "canCommit": true
+      },
+      "expected": {
+        "value": {
+          "docId": "SRC-361e7b1acb6d80d7",
+          "contentDigest": "f85914c0d09df65ad37545d95566bb0cb6dc38c96c2aae5bc35081a0c43643ff",
+          "classification": "public",
+          "requested": true,
+          "eligibleSignoffs": 2,
+          "requiredSignoffs": 2,
+          "releaseAudience": {
+            "audienceCount": 1,
+            "channelVersion": "researcher-generated-channel-v1",
+            "canCommit": true
+          },
+          "policyVersion": "596acb7f6031de2d560373c4d0ddfedf84097797f419ee88f355c1e09d3ace5e",
+          "grantVersion": 1,
+          "canCommit": true
+        },
+        "tokensHash": "485677c7c44a7b12cf1583195838dcaf6034f1508f8198de5959ecd37f79d404",
+        "canCommit": true
+      }
+    },
+    {
+      "phase": "current",
+      "id": "publish:SRC-c8b61ec034d17530",
+      "comparisons": {
+        "value": true,
+        "tokensHash": true,
+        "canCommit": true,
+        "error": true
+      },
+      "actual": {
+        "value": {
+          "docId": "SRC-c8b61ec034d17530",
+          "contentDigest": "a44c2e933dca1d3ca317e82d23666b76967915656a2afae06b97f53404604670",
+          "classification": "public",
+          "requested": true,
+          "eligibleSignoffs": 2,
+          "requiredSignoffs": 2,
+          "releaseAudience": {
+            "audienceCount": 1,
+            "channelVersion": "researcher-generated-channel-v1",
+            "canCommit": true
+          },
+          "policyVersion": "596acb7f6031de2d560373c4d0ddfedf84097797f419ee88f355c1e09d3ace5e",
+          "grantVersion": 1,
+          "canCommit": true
+        },
+        "tokensHash": "d7867de4e62442113793c6557ca36930f6dfeadfff7ea843eaa8e890a8a357a5",
+        "canCommit": true
+      },
+      "expected": {
+        "value": {
+          "docId": "SRC-c8b61ec034d17530",
+          "contentDigest": "a44c2e933dca1d3ca317e82d23666b76967915656a2afae06b97f53404604670",
+          "classification": "public",
+          "requested": true,
+          "eligibleSignoffs": 2,
+          "requiredSignoffs": 2,
+          "releaseAudience": {
+            "audienceCount": 1,
+            "channelVersion": "researcher-generated-channel-v1",
+            "canCommit": true
+          },
+          "policyVersion": "596acb7f6031de2d560373c4d0ddfedf84097797f419ee88f355c1e09d3ace5e",
+          "grantVersion": 1,
+          "canCommit": true
+        },
+        "tokensHash": "d7867de4e62442113793c6557ca36930f6dfeadfff7ea843eaa8e890a8a357a5",
+        "canCommit": true
+      }
+    },
+    {
+      "phase": "current",
+      "id": "publish:SRC-50b9032eef30a098",
+      "comparisons": {
+        "value": true,
+        "tokensHash": true,
+        "canCommit": true,
+        "error": true
+      },
+      "actual": {
+        "value": {
+          "docId": "SRC-50b9032eef30a098",
+          "contentDigest": "adf7c49302adbf65a61287246ae77d5d21be38c03a35f61dd154b7543e5d766c",
+          "classification": "public",
+          "requested": true,
+          "eligibleSignoffs": 2,
+          "requiredSignoffs": 2,
+          "releaseAudience": {
+            "audienceCount": 1,
+            "channelVersion": "researcher-generated-channel-v1",
+            "canCommit": true
+          },
+          "policyVersion": "596acb7f6031de2d560373c4d0ddfedf84097797f419ee88f355c1e09d3ace5e",
+          "grantVersion": 1,
+          "canCommit": true
+        },
+        "tokensHash": "36333c5fa3a03c23b20e559505bd990191a67cde43fe24907443f04fd73f9a2e",
+        "canCommit": true
+      },
+      "expected": {
+        "value": {
+          "docId": "SRC-50b9032eef30a098",
+          "contentDigest": "adf7c49302adbf65a61287246ae77d5d21be38c03a35f61dd154b7543e5d766c",
+          "classification": "public",
+          "requested": true,
+          "eligibleSignoffs": 2,
+          "requiredSignoffs": 2,
+          "releaseAudience": {
+            "audienceCount": 1,
+            "channelVersion": "researcher-generated-channel-v1",
+            "canCommit": true
+          },
+          "policyVersion": "596acb7f6031de2d560373c4d0ddfedf84097797f419ee88f355c1e09d3ace5e",
+          "grantVersion": 1,
+          "canCommit": true
+        },
+        "tokensHash": "36333c5fa3a03c23b20e559505bd990191a67cde43fe24907443f04fd73f9a2e",
+        "canCommit": true
+      }
+    }
+  ],
+  "infrastructureError": null,
+  "initial": {
+    "revision": 51,
+    "generation": "64eb8cbf-330f-44cc-9828-08dadabe407c",
+    "contractHash": "74839214bb9d365576f6786ce5368fb2b123ffcbd99507d7eb5655b261c2c725",
+    "approvalIds": {
+      "publish:SRC-0f1dbd8bea159c1d": "APP-20a2cf9f4b6cd1c8bd70a53f4acfc33ec9982f7195636e62867c2da5b26fe139",
+      "publish:SRC-17eeefc6e504dbee": "APP-6748e2bbfa33b7f1b3e94df281e9ad36bd2a6207ad691f9b39946427ad10ea51",
+      "publish:SRC-2baab988b2e9f199": "APP-51b353fc504dbeafde6408832518fa55e769b71f2d2786fff1692c23482d390e",
+      "publish:SRC-361e7b1acb6d80d7": "APP-8ee846ac0d9b08bcf864943eaa54825076f5a50b486d3628653c5331c38f480c",
+      "publish:SRC-50b9032eef30a098": "APP-c471875211e34d64ccacefe7dc2e6e2657be97af89efc0c5a30b17dbb8ee3366",
+      "publish:SRC-691898886b6d0c66": "APP-b46079ae096bb5884d4285ccae95db6cef5e22d11b1033c1d4ff1c76dd5d1481",
+      "publish:SRC-a4e2c3f07fd120ab": "APP-72b9dfdb37f2d2a3f6e1af788b9516e352bc555efc67ccc7a3236d82dd012796",
+      "publish:SRC-bc8ba1310cbdd792": "APP-5c7446a74b14801a7ce5924a2362810bef2b4019f31b89206455fad0a5e17796",
+      "publish:SRC-c8b61ec034d17530": "APP-a669ee6565a1c9d3f4bd740fac3fa97b3061f45a938aa6e15e959067801546a4",
+      "publish:SRC-e83645b07732fa66": "APP-052c3f76365ad8b229f9df6ed78aa38389817d2500809156a5c321b95c8fcaaa",
+      "publish:SRC-fea91f0ad1d1c7e2": "APP-f87d740cfa81fdec444e7dd7cd63c9711a0e542db2394ed5d95d8b2996b0d439"
+    },
+    "sourceState": "dce8cdf564daa3663736f6a763f31c3523c24397"
+  },
+  "factChanges": [
+    {
+      "table": "documents",
+      "key": "SRC-c8b61ec034d17530",
+      "synthetic": false,
+      "meaning": "Hash of actual exact source member vector"
+    },
+    {
+      "table": "signoffs",
+      "key": "SRC-c8b61ec034d17530:CF-EDITOR-A",
+      "synthetic": true
+    },
+    {
+      "table": "signoffs",
+      "key": "SRC-c8b61ec034d17530:CF-EDITOR-B",
+      "synthetic": true
+    }
+  ],
+  "mutationMicroseconds": 10783.4,
+  "independentOracleMicroseconds": 1263.4,
+  "transitionRevision": 54,
+  "necessaryReviewIds": [
+    "publish:SRC-c8b61ec034d17530"
+  ],
+  "necessaryReviewCount": 1,
+  "oracleRetained": {
+    "publish:SRC-bc8ba1310cbdd792": true,
+    "publish:SRC-0f1dbd8bea159c1d": true,
+    "publish:SRC-691898886b6d0c66": true,
+    "publish:SRC-fea91f0ad1d1c7e2": true,
+    "publish:SRC-e83645b07732fa66": true,
+    "publish:SRC-17eeefc6e504dbee": true,
+    "publish:SRC-a4e2c3f07fd120ab": true,
+    "publish:SRC-2baab988b2e9f199": true,
+    "publish:SRC-361e7b1acb6d80d7": true,
+    "publish:SRC-c8b61ec034d17530": false,
+    "publish:SRC-50b9032eef30a098": true
+  },
+  "validation": {
+    "draftId": "CF-DOCUMENT-001",
+    "mode": "incremental",
+    "revision": 54,
+    "generation": "64eb8cbf-330f-44cc-9828-08dadabe407c",
+    "contractHash": "74839214bb9d365576f6786ce5368fb2b123ffcbd99507d7eb5655b261c2c725",
+    "clauses": [
+      {
+        "id": "publish:SRC-bc8ba1310cbdd792",
+        "label": "SRC-bc8ba1310cbdd792 release decision",
+        "status": "retained",
+        "retained": true,
+        "reason": "Original protected evidence is unchanged; original approval snapshot retained.",
+        "approvalId": "APP-5c7446a74b14801a7ce5924a2362810bef2b4019f31b89206455fad0a5e17796",
+        "originalSnapshotId": "SNAP-18c104c6b40a65a9524707e8590dab0589999925993289745a3a967b450535ee",
+        "reviewedRevision": 51,
+        "validatedRevision": 54,
+        "canCommit": true,
+        "current": {
+          "value": {
+            "docId": "SRC-bc8ba1310cbdd792",
+            "contentDigest": "371e4b5ab87d7107546c51db66d40bfd11cb2763f16a6e36d6ae489baa17f8b2",
+            "classification": "public",
+            "requested": true,
+            "eligibleSignoffs": 2,
+            "requiredSignoffs": 2,
+            "releaseAudience": {
+              "audienceCount": 1,
+              "channelVersion": "researcher-generated-channel-v1",
+              "canCommit": true
+            },
+            "policyVersion": "596acb7f6031de2d560373c4d0ddfedf84097797f419ee88f355c1e09d3ace5e",
+            "grantVersion": 1,
+            "canCommit": true
+          },
+          "error": null,
+          "viewHash": "9ef3c1e371fe473132d81966000513f5c8e7cbd9b84cf171809cf821e84d8706",
+          "tokensHash": "d2939e6b500a942d04c0cc3b5dd0a5c25ca1d0256db3375bc59b09bf66000aeb"
+        }
+      },
+      {
+        "id": "publish:SRC-0f1dbd8bea159c1d",
+        "label": "SRC-0f1dbd8bea159c1d release decision",
+        "status": "retained",
+        "retained": true,
+        "reason": "Original protected evidence is unchanged; original approval snapshot retained.",
+        "approvalId": "APP-20a2cf9f4b6cd1c8bd70a53f4acfc33ec9982f7195636e62867c2da5b26fe139",
+        "originalSnapshotId": "SNAP-18c104c6b40a65a9524707e8590dab0589999925993289745a3a967b450535ee",
+        "reviewedRevision": 51,
+        "validatedRevision": 54,
+        "canCommit": true,
+        "current": {
+          "value": {
+            "docId": "SRC-0f1dbd8bea159c1d",
+            "contentDigest": "5ca2f2f2d6de977e71bc68c4f5070d60fcd269c04517758f1eb537badbca11aa",
+            "classification": "public",
+            "requested": true,
+            "eligibleSignoffs": 2,
+            "requiredSignoffs": 2,
+            "releaseAudience": {
+              "audienceCount": 1,
+              "channelVersion": "researcher-generated-channel-v1",
+              "canCommit": true
+            },
+            "policyVersion": "596acb7f6031de2d560373c4d0ddfedf84097797f419ee88f355c1e09d3ace5e",
+            "grantVersion": 1,
+            "canCommit": true
+          },
+          "error": null,
+          "viewHash": "ff5f35a2384170e5b2ec947ee1c1c9936d7ee86bb2b0826d36dfd734838c47d0",
+          "tokensHash": "9f636e76acc7989e638f8b7c6fd6758a5b366329e8ef1d593a78ae59dbfae009"
+        }
+      },
+      {
+        "id": "publish:SRC-691898886b6d0c66",
+        "label": "SRC-691898886b6d0c66 release decision",
+        "status": "retained",
+        "retained": true,
+        "reason": "Original protected evidence is unchanged; original approval snapshot retained.",
+        "approvalId": "APP-b46079ae096bb5884d4285ccae95db6cef5e22d11b1033c1d4ff1c76dd5d1481",
+        "originalSnapshotId": "SNAP-18c104c6b40a65a9524707e8590dab0589999925993289745a3a967b450535ee",
+        "reviewedRevision": 51,
+        "validatedRevision": 54,
+        "canCommit": true,
+        "current": {
+          "value": {
+            "docId": "SRC-691898886b6d0c66",
+            "contentDigest": "8964c0c8a3ec1c1f18eb12689a62c601f3bc7efd79739d1363cccd610c207b85",
+            "classification": "public",
+            "requested": true,
+            "eligibleSignoffs": 2,
+            "requiredSignoffs": 2,
+            "releaseAudience": {
+              "audienceCount": 1,
+              "channelVersion": "researcher-generated-channel-v1",
+              "canCommit": true
+            },
+            "policyVersion": "596acb7f6031de2d560373c4d0ddfedf84097797f419ee88f355c1e09d3ace5e",
+            "grantVersion": 1,
+            "canCommit": true
+          },
+          "error": null,
+          "viewHash": "d7b5d72be94667c48e0dded4f12b2085ea8e08522f6567f9af21a41d0290b470",
+          "tokensHash": "04ba8603fc9d4c3ced6a375f2795e2df236ecfdc3ea65e819180fa35ff5d0186"
+        }
+      },
+      {
+        "id": "publish:SRC-fea91f0ad1d1c7e2",
+        "label": "SRC-fea91f0ad1d1c7e2 release decision",
+        "status": "retained",
+        "retained": true,
+        "reason": "Original protected evidence is unchanged; original approval snapshot retained.",
+        "approvalId": "APP-f87d740cfa81fdec444e7dd7cd63c9711a0e542db2394ed5d95d8b2996b0d439",
+        "originalSnapshotId": "SNAP-18c104c6b40a65a9524707e8590dab0589999925993289745a3a967b450535ee",
+        "reviewedRevision": 51,
+        "validatedRevision": 54,
+        "canCommit": true,
+        "current": {
+          "value": {
+            "docId": "SRC-fea91f0ad1d1c7e2",
+            "contentDigest": "f0fb73500f410da432448ed5845cb3e6f5471d8b0b1c81db5c92c4809f849acd",
+            "classification": "public",
+            "requested": true,
+            "eligibleSignoffs": 2,
+            "requiredSignoffs": 2,
+            "releaseAudience": {
+              "audienceCount": 1,
+              "channelVersion": "researcher-generated-channel-v1",
+              "canCommit": true
+            },
+            "policyVersion": "596acb7f6031de2d560373c4d0ddfedf84097797f419ee88f355c1e09d3ace5e",
+            "grantVersion": 1,
+            "canCommit": true
+          },
+          "error": null,
+          "viewHash": "47d4b7ee4b79ea1f6fe0c9fd01cd29ec0913bfe85031c2d4ff805c3f413ca1ee",
+          "tokensHash": "b974be08371df9e877116f1b4af88f4a532f9d0dfa1e9cfae19dd5408a8b9d9a"
+        }
+      },
+      {
+        "id": "publish:SRC-e83645b07732fa66",
+        "label": "SRC-e83645b07732fa66 release decision",
+        "status": "retained",
+        "retained": true,
+        "reason": "Original protected evidence is unchanged; original approval snapshot retained.",
+        "approvalId": "APP-052c3f76365ad8b229f9df6ed78aa38389817d2500809156a5c321b95c8fcaaa",
+        "originalSnapshotId": "SNAP-18c104c6b40a65a9524707e8590dab0589999925993289745a3a967b450535ee",
+        "reviewedRevision": 51,
+        "validatedRevision": 54,
+        "canCommit": true,
+        "current": {
+          "value": {
+            "docId": "SRC-e83645b07732fa66",
+            "contentDigest": "13d732103cd6380da5ab40cd282e5a012815bc8d133d882b4085efbe856b9e1e",
+            "classification": "public",
+            "requested": true,
+            "eligibleSignoffs": 2,
+            "requiredSignoffs": 2,
+            "releaseAudience": {
+              "audienceCount": 1,
+              "channelVersion": "researcher-generated-channel-v1",
+              "canCommit": true
+            },
+            "policyVersion": "596acb7f6031de2d560373c4d0ddfedf84097797f419ee88f355c1e09d3ace5e",
+            "grantVersion": 1,
+            "canCommit": true
+          },
+          "error": null,
+          "viewHash": "050cfaa0b5cda16b8b5cf9473abcb867de7e0e0c8846931006167ca465ff02ff",
+          "tokensHash": "585bcfe928cc51940a4b05d447876be8a2f69810a137f72a6febfc059410956b"
+        }
+      },
+      {
+        "id": "publish:SRC-17eeefc6e504dbee",
+        "label": "SRC-17eeefc6e504dbee release decision",
+        "status": "retained",
+        "retained": true,
+        "reason": "Original protected evidence is unchanged; original approval snapshot retained.",
+        "approvalId": "APP-6748e2bbfa33b7f1b3e94df281e9ad36bd2a6207ad691f9b39946427ad10ea51",
+        "originalSnapshotId": "SNAP-18c104c6b40a65a9524707e8590dab0589999925993289745a3a967b450535ee",
+        "reviewedRevision": 51,
+        "validatedRevision": 54,
+        "canCommit": true,
+        "current": {
+          "value": {
+            "docId": "SRC-17eeefc6e504dbee",
+            "contentDigest": "c5f1a26b28cc53c8960548837ddf456fa41e9741d637ec21d8219628fb7dc296",
+            "classification": "public",
+            "requested": true,
+            "eligibleSignoffs": 2,
+            "requiredSignoffs": 2,
+            "releaseAudience": {
+              "audienceCount": 1,
+              "channelVersion": "researcher-generated-channel-v1",
+              "canCommit": true
+            },
+            "policyVersion": "596acb7f6031de2d560373c4d0ddfedf84097797f419ee88f355c1e09d3ace5e",
+            "grantVersion": 1,
+            "canCommit": true
+          },
+          "error": null,
+          "viewHash": "bf1c404f4665fc6860d7d2ec43eb00b3382fb93a9630288b70e7e44dc0714c45",
+          "tokensHash": "a12a8a6f96434c1c2d580e490dae78e317ab98df7cc9916d18a95ad99fef5519"
+        }
+      },
+      {
+        "id": "publish:SRC-a4e2c3f07fd120ab",
+        "label": "SRC-a4e2c3f07fd120ab release decision",
+        "status": "retained",
+        "retained": true,
+        "reason": "Original protected evidence is unchanged; original approval snapshot retained.",
+        "approvalId": "APP-72b9dfdb37f2d2a3f6e1af788b9516e352bc555efc67ccc7a3236d82dd012796",
+        "originalSnapshotId": "SNAP-18c104c6b40a65a9524707e8590dab0589999925993289745a3a967b450535ee",
+        "reviewedRevision": 51,
+        "validatedRevision": 54,
+        "canCommit": true,
+        "current": {
+          "value": {
+            "docId": "SRC-a4e2c3f07fd120ab",
+            "contentDigest": "69b0f4e1f5c4b341074c6d0d767fb76508f59314f66269f3a4823e43c9f385e2",
+            "classification": "public",
+            "requested": true,
+            "eligibleSignoffs": 2,
+            "requiredSignoffs": 2,
+            "releaseAudience": {
+              "audienceCount": 1,
+              "channelVersion": "researcher-generated-channel-v1",
+              "canCommit": true
+            },
+            "policyVersion": "596acb7f6031de2d560373c4d0ddfedf84097797f419ee88f355c1e09d3ace5e",
+            "grantVersion": 1,
+            "canCommit": true
+          },
+          "error": null,
+          "viewHash": "9181193510367867a1a0e466fce8cb1bc34381fea3189df8113fe7325fdf8499",
+          "tokensHash": "34b37067780ddcc0c3cbeb29f13694815227f8811aa6c474fa0425cac349082b"
+        }
+      },
+      {
+        "id": "publish:SRC-2baab988b2e9f199",
+        "label": "SRC-2baab988b2e9f199 release decision",
+        "status": "retained",
+        "retained": true,
+        "reason": "Original protected evidence is unchanged; original approval snapshot retained.",
+        "approvalId": "APP-51b353fc504dbeafde6408832518fa55e769b71f2d2786fff1692c23482d390e",
+        "originalSnapshotId": "SNAP-18c104c6b40a65a9524707e8590dab0589999925993289745a3a967b450535ee",
+        "reviewedRevision": 51,
+        "validatedRevision": 54,
+        "canCommit": true,
+        "current": {
+          "value": {
+            "docId": "SRC-2baab988b2e9f199",
+            "contentDigest": "886b755d5463542a3d10679388fcfccb73a0ece6b54ecf7d9c34ef5bd5e64ed8",
+            "classification": "public",
+            "requested": true,
+            "eligibleSignoffs": 2,
+            "requiredSignoffs": 2,
+            "releaseAudience": {
+              "audienceCount": 1,
+              "channelVersion": "researcher-generated-channel-v1",
+              "canCommit": true
+            },
+            "policyVersion": "596acb7f6031de2d560373c4d0ddfedf84097797f419ee88f355c1e09d3ace5e",
+            "grantVersion": 1,
+            "canCommit": true
+          },
+          "error": null,
+          "viewHash": "49014d6e210e5cddbe6629aa70f40ec5925ad89e2b19d0d12c5069e0c822f06c",
+          "tokensHash": "0ce0f1bdbf3e915578271669fbecfefb9cdd5c92a37fb8056e15a1d60346cac2"
+        }
+      },
+      {
+        "id": "publish:SRC-361e7b1acb6d80d7",
+        "label": "SRC-361e7b1acb6d80d7 release decision",
+        "status": "retained",
+        "retained": true,
+        "reason": "Original protected evidence is unchanged; original approval snapshot retained.",
+        "approvalId": "APP-8ee846ac0d9b08bcf864943eaa54825076f5a50b486d3628653c5331c38f480c",
+        "originalSnapshotId": "SNAP-18c104c6b40a65a9524707e8590dab0589999925993289745a3a967b450535ee",
+        "reviewedRevision": 51,
+        "validatedRevision": 54,
+        "canCommit": true,
+        "current": {
+          "value": {
+            "docId": "SRC-361e7b1acb6d80d7",
+            "contentDigest": "f85914c0d09df65ad37545d95566bb0cb6dc38c96c2aae5bc35081a0c43643ff",
+            "classification": "public",
+            "requested": true,
+            "eligibleSignoffs": 2,
+            "requiredSignoffs": 2,
+            "releaseAudience": {
+              "audienceCount": 1,
+              "channelVersion": "researcher-generated-channel-v1",
+              "canCommit": true
+            },
+            "policyVersion": "596acb7f6031de2d560373c4d0ddfedf84097797f419ee88f355c1e09d3ace5e",
+            "grantVersion": 1,
+            "canCommit": true
+          },
+          "error": null,
+          "viewHash": "617a17921801189a584e834784b83f35b7e78db55def492faaf447e2e49c7a03",
+          "tokensHash": "485677c7c44a7b12cf1583195838dcaf6034f1508f8198de5959ecd37f79d404"
+        }
+      },
+      {
+        "id": "publish:SRC-c8b61ec034d17530",
+        "label": "SRC-c8b61ec034d17530 release decision",
+        "status": "needs_review",
+        "retained": false,
+        "reason": "Protected evidence, member identity, rule or authority version changed.",
+        "approvalId": "APP-a669ee6565a1c9d3f4bd740fac3fa97b3061f45a938aa6e15e959067801546a4",
+        "originalSnapshotId": "SNAP-18c104c6b40a65a9524707e8590dab0589999925993289745a3a967b450535ee",
+        "reviewedRevision": 51,
+        "validatedRevision": 54,
+        "canCommit": true,
+        "current": {
+          "value": {
+            "docId": "SRC-c8b61ec034d17530",
+            "contentDigest": "a44c2e933dca1d3ca317e82d23666b76967915656a2afae06b97f53404604670",
+            "classification": "public",
+            "requested": true,
+            "eligibleSignoffs": 2,
+            "requiredSignoffs": 2,
+            "releaseAudience": {
+              "audienceCount": 1,
+              "channelVersion": "researcher-generated-channel-v1",
+              "canCommit": true
+            },
+            "policyVersion": "596acb7f6031de2d560373c4d0ddfedf84097797f419ee88f355c1e09d3ace5e",
+            "grantVersion": 1,
+            "canCommit": true
+          },
+          "error": null,
+          "viewHash": "4d0cf41e219e33cbc88f585a004ed2517e6d1483f0c9eb400e24fe4ab0c64675",
+          "tokensHash": "d7867de4e62442113793c6557ca36930f6dfeadfff7ea843eaa8e890a8a357a5"
+        }
+      },
+      {
+        "id": "publish:SRC-50b9032eef30a098",
+        "label": "SRC-50b9032eef30a098 release decision",
+        "status": "retained",
+        "retained": true,
+        "reason": "Original protected evidence is unchanged; original approval snapshot retained.",
+        "approvalId": "APP-c471875211e34d64ccacefe7dc2e6e2657be97af89efc0c5a30b17dbb8ee3366",
+        "originalSnapshotId": "SNAP-18c104c6b40a65a9524707e8590dab0589999925993289745a3a967b450535ee",
+        "reviewedRevision": 51,
+        "validatedRevision": 54,
+        "canCommit": true,
+        "current": {
+          "value": {
+            "docId": "SRC-50b9032eef30a098",
+            "contentDigest": "adf7c49302adbf65a61287246ae77d5d21be38c03a35f61dd154b7543e5d766c",
+            "classification": "public",
+            "requested": true,
+            "eligibleSignoffs": 2,
+            "requiredSignoffs": 2,
+            "releaseAudience": {
+              "audienceCount": 1,
+              "channelVersion": "researcher-generated-channel-v1",
+              "canCommit": true
+            },
+            "policyVersion": "596acb7f6031de2d560373c4d0ddfedf84097797f419ee88f355c1e09d3ace5e",
+            "grantVersion": 1,
+            "canCommit": true
+          },
+          "error": null,
+          "viewHash": "27062c23f3875f057f6cf52f2f60e41c32b5204f57a8497ceaa95682a994e9af",
+          "tokensHash": "36333c5fa3a03c23b20e559505bd990191a67cde43fe24907443f04fd73f9a2e"
+        }
+      }
+    ],
+    "allApproved": false,
+    "requiredReviewCount": 1,
+    "metrics": {
+      "verificationMicroseconds": 3430.2,
+      "materialization": {
+        "mode": "incremental",
+        "revision": 54,
+        "totalNodes": 73,
+        "evaluatedNodes": 5,
+        "reusedNodes": 68,
+        "nominatedLeaves": 3,
+        "propagationEdges": 5,
+        "keyReads": 3,
+        "scanReads": 1,
+        "rowsRead": 25,
+        "eventsRead": 3,
+        "elapsedMicroseconds": 1680.2,
+        "fallback": null,
+        "trackedKeyBuckets": 28,
+        "trackedScanNodes": 13
+      },
+      "coarseVersionLookups": 0
+    }
+  },
+  "cost": {
+    "verificationMicroseconds": 3430.2,
+    "materialization": {
+      "mode": "incremental",
+      "revision": 54,
+      "totalNodes": 73,
+      "evaluatedNodes": 5,
+      "reusedNodes": 68,
+      "nominatedLeaves": 3,
+      "propagationEdges": 5,
+      "keyReads": 3,
+      "scanReads": 1,
+      "rowsRead": 25,
+      "eventsRead": 3,
+      "elapsedMicroseconds": 1680.2,
+      "fallback": null,
+      "trackedKeyBuckets": 28,
+      "trackedScanNodes": 13
+    },
+    "coarseVersionLookups": 0
+  },
+  "requiredReviewCount": 1,
+  "extraReviewIds": [],
+  "extraReviewCount": 0,
+  "retainedCount": 10,
+  "initialConfirm": {
+    "ok": false,
+    "code": "NEEDS_REVIEW",
+    "message": "Protected evidence changed; explicit re-review is required."
+  },
+  "explicitSyntheticRenewal": [
+    "publish:SRC-c8b61ec034d17530"
+  ],
+  "finalRequest": {
+    "draftId": "CF-DOCUMENT-001",
+    "mode": "incremental",
+    "intentHash": "7b69dc6cf5b8add5e660e51f566402cbb4fbb8244862ae5a34951c323f9b047a",
+    "approvalSelection": "a163f2cfd64146f1e175d8809498b00923113109201bcd6da983d0e84f7120fc"
+  },
+  "finalRequestKey": "public-replay-022-incremental-renewed",
+  "finalConfirm": {
+    "ok": true,
+    "result": {
+      "receipt": {
+        "id": "SIM-e38fabf6-4242-4ced-a91e-0aaa0bc580e5",
+        "receiptId": "RECEIPT-8518901d-3b8d-458b-96b0-fe4b97caa7fe",
+        "draftId": "CF-DOCUMENT-001",
+        "workflow": "document",
+        "synthetic": true,
+        "execution": "SIMULATED_ONLY_NO_PUBLICATION",
+        "confirmedAt": "2026-11-01T08:33:25.640Z",
+        "confirmedBy": "researcher-synthetic-manager",
+        "intentHash": "7b69dc6cf5b8add5e660e51f566402cbb4fbb8244862ae5a34951c323f9b047a",
+        "contractHash": "74839214bb9d365576f6786ce5368fb2b123ffcbd99507d7eb5655b261c2c725",
+        "validatedRevision": 54,
+        "mode": "incremental",
+        "decisions": [
+          {
+            "clauseId": "publish:SRC-0f1dbd8bea159c1d",
+            "value": {
+              "docId": "SRC-0f1dbd8bea159c1d",
+              "contentDigest": "5ca2f2f2d6de977e71bc68c4f5070d60fcd269c04517758f1eb537badbca11aa",
+              "classification": "public",
+              "requested": true,
+              "eligibleSignoffs": 2,
+              "requiredSignoffs": 2,
+              "releaseAudience": {
+                "audienceCount": 1,
+                "channelVersion": "researcher-generated-channel-v1",
+                "canCommit": true
+              },
+              "policyVersion": "596acb7f6031de2d560373c4d0ddfedf84097797f419ee88f355c1e09d3ace5e",
+              "grantVersion": 1,
+              "canCommit": true
+            }
+          },
+          {
+            "clauseId": "publish:SRC-17eeefc6e504dbee",
+            "value": {
+              "docId": "SRC-17eeefc6e504dbee",
+              "contentDigest": "c5f1a26b28cc53c8960548837ddf456fa41e9741d637ec21d8219628fb7dc296",
+              "classification": "public",
+              "requested": true,
+              "eligibleSignoffs": 2,
+              "requiredSignoffs": 2,
+              "releaseAudience": {
+                "audienceCount": 1,
+                "channelVersion": "researcher-generated-channel-v1",
+                "canCommit": true
+              },
+              "policyVersion": "596acb7f6031de2d560373c4d0ddfedf84097797f419ee88f355c1e09d3ace5e",
+              "grantVersion": 1,
+              "canCommit": true
+            }
+          },
+          {
+            "clauseId": "publish:SRC-2baab988b2e9f199",
+            "value": {
+              "docId": "SRC-2baab988b2e9f199",
+              "contentDigest": "886b755d5463542a3d10679388fcfccb73a0ece6b54ecf7d9c34ef5bd5e64ed8",
+              "classification": "public",
+              "requested": true,
+              "eligibleSignoffs": 2,
+              "requiredSignoffs": 2,
+              "releaseAudience": {
+                "audienceCount": 1,
+                "channelVersion": "researcher-generated-channel-v1",
+                "canCommit": true
+              },
+              "policyVersion": "596acb7f6031de2d560373c4d0ddfedf84097797f419ee88f355c1e09d3ace5e",
+              "grantVersion": 1,
+              "canCommit": true
+            }
+          },
+          {
+            "clauseId": "publish:SRC-361e7b1acb6d80d7",
+            "value": {
+              "docId": "SRC-361e7b1acb6d80d7",
+              "contentDigest": "f85914c0d09df65ad37545d95566bb0cb6dc38c96c2aae5bc35081a0c43643ff",
+              "classification": "public",
+              "requested": true,
+              "eligibleSignoffs": 2,
+              "requiredSignoffs": 2,
+              "releaseAudience": {
+                "audienceCount": 1,
+                "channelVersion": "researcher-generated-channel-v1",
+                "canCommit": true
+              },
+              "policyVersion": "596acb7f6031de2d560373c4d0ddfedf84097797f419ee88f355c1e09d3ace5e",
+              "grantVersion": 1,
+              "canCommit": true
+            }
+          },
+          {
+            "clauseId": "publish:SRC-50b9032eef30a098",
+            "value": {
+              "docId": "SRC-50b9032eef30a098",
+              "contentDigest": "adf7c49302adbf65a61287246ae77d5d21be38c03a35f61dd154b7543e5d766c",
+              "classification": "public",
+              "requested": true,
+              "eligibleSignoffs": 2,
+              "requiredSignoffs": 2,
+              "releaseAudience": {
+                "audienceCount": 1,
+                "channelVersion": "researcher-generated-channel-v1",
+                "canCommit": true
+              },
+              "policyVersion": "596acb7f6031de2d560373c4d0ddfedf84097797f419ee88f355c1e09d3ace5e",
+              "grantVersion": 1,
+              "canCommit": true
+            }
+          },
+          {
+            "clauseId": "publish:SRC-691898886b6d0c66",
+            "value": {
+              "docId": "SRC-691898886b6d0c66",
+              "contentDigest": "8964c0c8a3ec1c1f18eb12689a62c601f3bc7efd79739d1363cccd610c207b85",
+              "classification": "public",
+              "requested": true,
+              "eligibleSignoffs": 2,
+              "requiredSignoffs": 2,
+              "releaseAudience": {
+                "audienceCount": 1,
+                "channelVersion": "researcher-generated-channel-v1",
+                "canCommit": true
+              },
+              "policyVersion": "596acb7f6031de2d560373c4d0ddfedf84097797f419ee88f355c1e09d3ace5e",
+              "grantVersion": 1,
+              "canCommit": true
+            }
+          },
+          {
+            "clauseId": "publish:SRC-a4e2c3f07fd120ab",
+            "value": {
+              "docId": "SRC-a4e2c3f07fd120ab",
+              "contentDigest": "69b0f4e1f5c4b341074c6d0d767fb76508f59314f66269f3a4823e43c9f385e2",
+              "classification": "public",
+              "requested": true,
+              "eligibleSignoffs": 2,
+              "requiredSignoffs": 2,
+              "releaseAudience": {
+                "audienceCount": 1,
+                "channelVersion": "researcher-generated-channel-v1",
+                "canCommit": true
+              },
+              "policyVersion": "596acb7f6031de2d560373c4d0ddfedf84097797f419ee88f355c1e09d3ace5e",
+              "grantVersion": 1,
+              "canCommit": true
+            }
+          },
+          {
+            "clauseId": "publish:SRC-bc8ba1310cbdd792",
+            "value": {
+              "docId": "SRC-bc8ba1310cbdd792",
+              "contentDigest": "371e4b5ab87d7107546c51db66d40bfd11cb2763f16a6e36d6ae489baa17f8b2",
+              "classification": "public",
+              "requested": true,
+              "eligibleSignoffs": 2,
+              "requiredSignoffs": 2,
+              "releaseAudience": {
+                "audienceCount": 1,
+                "channelVersion": "researcher-generated-channel-v1",
+                "canCommit": true
+              },
+              "policyVersion": "596acb7f6031de2d560373c4d0ddfedf84097797f419ee88f355c1e09d3ace5e",
+              "grantVersion": 1,
+              "canCommit": true
+            }
+          },
+          {
+            "clauseId": "publish:SRC-c8b61ec034d17530",
+            "value": {
+              "docId": "SRC-c8b61ec034d17530",
+              "contentDigest": "a44c2e933dca1d3ca317e82d23666b76967915656a2afae06b97f53404604670",
+              "classification": "public",
+              "requested": true,
+              "eligibleSignoffs": 2,
+              "requiredSignoffs": 2,
+              "releaseAudience": {
+                "audienceCount": 1,
+                "channelVersion": "researcher-generated-channel-v1",
+                "canCommit": true
+              },
+              "policyVersion": "596acb7f6031de2d560373c4d0ddfedf84097797f419ee88f355c1e09d3ace5e",
+              "grantVersion": 1,
+              "canCommit": true
+            }
+          },
+          {
+            "clauseId": "publish:SRC-e83645b07732fa66",
+            "value": {
+              "docId": "SRC-e83645b07732fa66",
+              "contentDigest": "13d732103cd6380da5ab40cd282e5a012815bc8d133d882b4085efbe856b9e1e",
+              "classification": "public",
+              "requested": true,
+              "eligibleSignoffs": 2,
+              "requiredSignoffs": 2,
+              "releaseAudience": {
+                "audienceCount": 1,
+                "channelVersion": "researcher-generated-channel-v1",
+                "canCommit": true
+              },
+              "policyVersion": "596acb7f6031de2d560373c4d0ddfedf84097797f419ee88f355c1e09d3ace5e",
+              "grantVersion": 1,
+              "canCommit": true
+            }
+          },
+          {
+            "clauseId": "publish:SRC-fea91f0ad1d1c7e2",
+            "value": {
+              "docId": "SRC-fea91f0ad1d1c7e2",
+              "contentDigest": "f0fb73500f410da432448ed5845cb3e6f5471d8b0b1c81db5c92c4809f849acd",
+              "classification": "public",
+              "requested": true,
+              "eligibleSignoffs": 2,
+              "requiredSignoffs": 2,
+              "releaseAudience": {
+                "audienceCount": 1,
+                "channelVersion": "researcher-generated-channel-v1",
+                "canCommit": true
+              },
+              "policyVersion": "596acb7f6031de2d560373c4d0ddfedf84097797f419ee88f355c1e09d3ace5e",
+              "grantVersion": 1,
+              "canCommit": true
+            }
+          }
+        ],
+        "authorityChain": [
+          {
+            "clauseId": "publish:SRC-bc8ba1310cbdd792",
+            "originalApprovalId": "APP-5c7446a74b14801a7ce5924a2362810bef2b4019f31b89206455fad0a5e17796",
+            "originalSnapshotId": "SNAP-18c104c6b40a65a9524707e8590dab0589999925993289745a3a967b450535ee",
+            "reviewedRevision": 51,
+            "validatedRevision": 54,
+            "protectedWitnessUnchanged": true
+          },
+          {
+            "clauseId": "publish:SRC-0f1dbd8bea159c1d",
+            "originalApprovalId": "APP-20a2cf9f4b6cd1c8bd70a53f4acfc33ec9982f7195636e62867c2da5b26fe139",
+            "originalSnapshotId": "SNAP-18c104c6b40a65a9524707e8590dab0589999925993289745a3a967b450535ee",
+            "reviewedRevision": 51,
+            "validatedRevision": 54,
+            "protectedWitnessUnchanged": true
+          },
+          {
+            "clauseId": "publish:SRC-691898886b6d0c66",
+            "originalApprovalId": "APP-b46079ae096bb5884d4285ccae95db6cef5e22d11b1033c1d4ff1c76dd5d1481",
+            "originalSnapshotId": "SNAP-18c104c6b40a65a9524707e8590dab0589999925993289745a3a967b450535ee",
+            "reviewedRevision": 51,
+            "validatedRevision": 54,
+            "protectedWitnessUnchanged": true
+          },
+          {
+            "clauseId": "publish:SRC-fea91f0ad1d1c7e2",
+            "originalApprovalId": "APP-f87d740cfa81fdec444e7dd7cd63c9711a0e542db2394ed5d95d8b2996b0d439",
+            "originalSnapshotId": "SNAP-18c104c6b40a65a9524707e8590dab0589999925993289745a3a967b450535ee",
+            "reviewedRevision": 51,
+            "validatedRevision": 54,
+            "protectedWitnessUnchanged": true
+          },
+          {
+            "clauseId": "publish:SRC-e83645b07732fa66",
+            "originalApprovalId": "APP-052c3f76365ad8b229f9df6ed78aa38389817d2500809156a5c321b95c8fcaaa",
+            "originalSnapshotId": "SNAP-18c104c6b40a65a9524707e8590dab0589999925993289745a3a967b450535ee",
+            "reviewedRevision": 51,
+            "validatedRevision": 54,
+            "protectedWitnessUnchanged": true
+          },
+          {
+            "clauseId": "publish:SRC-17eeefc6e504dbee",
+            "originalApprovalId": "APP-6748e2bbfa33b7f1b3e94df281e9ad36bd2a6207ad691f9b39946427ad10ea51",
+            "originalSnapshotId": "SNAP-18c104c6b40a65a9524707e8590dab0589999925993289745a3a967b450535ee",
+            "reviewedRevision": 51,
+            "validatedRevision": 54,
+            "protectedWitnessUnchanged": true
+          },
+          {
+            "clauseId": "publish:SRC-a4e2c3f07fd120ab",
+            "originalApprovalId": "APP-72b9dfdb37f2d2a3f6e1af788b9516e352bc555efc67ccc7a3236d82dd012796",
+            "originalSnapshotId": "SNAP-18c104c6b40a65a9524707e8590dab0589999925993289745a3a967b450535ee",
+            "reviewedRevision": 51,
+            "validatedRevision": 54,
+            "protectedWitnessUnchanged": true
+          },
+          {
+            "clauseId": "publish:SRC-2baab988b2e9f199",
+            "originalApprovalId": "APP-51b353fc504dbeafde6408832518fa55e769b71f2d2786fff1692c23482d390e",
+            "originalSnapshotId": "SNAP-18c104c6b40a65a9524707e8590dab0589999925993289745a3a967b450535ee",
+            "reviewedRevision": 51,
+            "validatedRevision": 54,
+            "protectedWitnessUnchanged": true
+          },
+          {
+            "clauseId": "publish:SRC-361e7b1acb6d80d7",
+            "originalApprovalId": "APP-8ee846ac0d9b08bcf864943eaa54825076f5a50b486d3628653c5331c38f480c",
+            "originalSnapshotId": "SNAP-18c104c6b40a65a9524707e8590dab0589999925993289745a3a967b450535ee",
+            "reviewedRevision": 51,
+            "validatedRevision": 54,
+            "protectedWitnessUnchanged": true
+          },
+          {
+            "clauseId": "publish:SRC-c8b61ec034d17530",
+            "originalApprovalId": "APP-4c9bd54b585a3e79b4fed21806d0a0ddeeffc34f9f7b6e9bbdfb0429990f8f9c",
+            "originalSnapshotId": "SNAP-8c5861fc802550ad1637b56393daf6ebe9f6048f17e52e2e5508c76f397cbda4",
+            "reviewedRevision": 54,
+            "validatedRevision": 54,
+            "protectedWitnessUnchanged": true
+          },
+          {
+            "clauseId": "publish:SRC-50b9032eef30a098",
+            "originalApprovalId": "APP-c471875211e34d64ccacefe7dc2e6e2657be97af89efc0c5a30b17dbb8ee3366",
+            "originalSnapshotId": "SNAP-18c104c6b40a65a9524707e8590dab0589999925993289745a3a967b450535ee",
+            "reviewedRevision": 51,
+            "validatedRevision": 54,
+            "protectedWitnessUnchanged": true
+          }
+        ]
+      },
+      "repeated": false
+    }
+  },
+  "retry": {
+    "ok": true,
+    "result": {
+      "receipt": {
+        "id": "SIM-e38fabf6-4242-4ced-a91e-0aaa0bc580e5",
+        "receiptId": "RECEIPT-8518901d-3b8d-458b-96b0-fe4b97caa7fe",
+        "draftId": "CF-DOCUMENT-001",
+        "workflow": "document",
+        "synthetic": true,
+        "execution": "SIMULATED_ONLY_NO_PUBLICATION",
+        "confirmedAt": "2026-11-01T08:33:25.640Z",
+        "confirmedBy": "researcher-synthetic-manager",
+        "intentHash": "7b69dc6cf5b8add5e660e51f566402cbb4fbb8244862ae5a34951c323f9b047a",
+        "contractHash": "74839214bb9d365576f6786ce5368fb2b123ffcbd99507d7eb5655b261c2c725",
+        "validatedRevision": 54,
+        "mode": "incremental",
+        "decisions": [
+          {
+            "clauseId": "publish:SRC-0f1dbd8bea159c1d",
+            "value": {
+              "docId": "SRC-0f1dbd8bea159c1d",
+              "contentDigest": "5ca2f2f2d6de977e71bc68c4f5070d60fcd269c04517758f1eb537badbca11aa",
+              "classification": "public",
+              "requested": true,
+              "eligibleSignoffs": 2,
+              "requiredSignoffs": 2,
+              "releaseAudience": {
+                "audienceCount": 1,
+                "channelVersion": "researcher-generated-channel-v1",
+                "canCommit": true
+              },
+              "policyVersion": "596acb7f6031de2d560373c4d0ddfedf84097797f419ee88f355c1e09d3ace5e",
+              "grantVersion": 1,
+              "canCommit": true
+            }
+          },
+          {
+            "clauseId": "publish:SRC-17eeefc6e504dbee",
+            "value": {
+              "docId": "SRC-17eeefc6e504dbee",
+              "contentDigest": "c5f1a26b28cc53c8960548837ddf456fa41e9741d637ec21d8219628fb7dc296",
+              "classification": "public",
+              "requested": true,
+              "eligibleSignoffs": 2,
+              "requiredSignoffs": 2,
+              "releaseAudience": {
+                "audienceCount": 1,
+                "channelVersion": "researcher-generated-channel-v1",
+                "canCommit": true
+              },
+              "policyVersion": "596acb7f6031de2d560373c4d0ddfedf84097797f419ee88f355c1e09d3ace5e",
+              "grantVersion": 1,
+              "canCommit": true
+            }
+          },
+          {
+            "clauseId": "publish:SRC-2baab988b2e9f199",
+            "value": {
+              "docId": "SRC-2baab988b2e9f199",
+              "contentDigest": "886b755d5463542a3d10679388fcfccb73a0ece6b54ecf7d9c34ef5bd5e64ed8",
+              "classification": "public",
+              "requested": true,
+              "eligibleSignoffs": 2,
+              "requiredSignoffs": 2,
+              "releaseAudience": {
+                "audienceCount": 1,
+                "channelVersion": "researcher-generated-channel-v1",
+                "canCommit": true
+              },
+              "policyVersion": "596acb7f6031de2d560373c4d0ddfedf84097797f419ee88f355c1e09d3ace5e",
+              "grantVersion": 1,
+              "canCommit": true
+            }
+          },
+          {
+            "clauseId": "publish:SRC-361e7b1acb6d80d7",
+            "value": {
+              "docId": "SRC-361e7b1acb6d80d7",
+              "contentDigest": "f85914c0d09df65ad37545d95566bb0cb6dc38c96c2aae5bc35081a0c43643ff",
+              "classification": "public",
+              "requested": true,
+              "eligibleSignoffs": 2,
+              "requiredSignoffs": 2,
+              "releaseAudience": {
+                "audienceCount": 1,
+                "channelVersion": "researcher-generated-channel-v1",
+                "canCommit": true
+              },
+              "policyVersion": "596acb7f6031de2d560373c4d0ddfedf84097797f419ee88f355c1e09d3ace5e",
+              "grantVersion": 1,
+              "canCommit": true
+            }
+          },
+          {
+            "clauseId": "publish:SRC-50b9032eef30a098",
+            "value": {
+              "docId": "SRC-50b9032eef30a098",
+              "contentDigest": "adf7c49302adbf65a61287246ae77d5d21be38c03a35f61dd154b7543e5d766c",
+              "classification": "public",
+              "requested": true,
+              "eligibleSignoffs": 2,
+              "requiredSignoffs": 2,
+              "releaseAudience": {
+                "audienceCount": 1,
+                "channelVersion": "researcher-generated-channel-v1",
+                "canCommit": true
+              },
+              "policyVersion": "596acb7f6031de2d560373c4d0ddfedf84097797f419ee88f355c1e09d3ace5e",
+              "grantVersion": 1,
+              "canCommit": true
+            }
+          },
+          {
+            "clauseId": "publish:SRC-691898886b6d0c66",
+            "value": {
+              "docId": "SRC-691898886b6d0c66",
+              "contentDigest": "8964c0c8a3ec1c1f18eb12689a62c601f3bc7efd79739d1363cccd610c207b85",
+              "classification": "public",
+              "requested": true,
+              "eligibleSignoffs": 2,
+              "requiredSignoffs": 2,
+              "releaseAudience": {
+                "audienceCount": 1,
+                "channelVersion": "researcher-generated-channel-v1",
+                "canCommit": true
+              },
+              "policyVersion": "596acb7f6031de2d560373c4d0ddfedf84097797f419ee88f355c1e09d3ace5e",
+              "grantVersion": 1,
+              "canCommit": true
+            }
+          },
+          {
+            "clauseId": "publish:SRC-a4e2c3f07fd120ab",
+            "value": {
+              "docId": "SRC-a4e2c3f07fd120ab",
+              "contentDigest": "69b0f4e1f5c4b341074c6d0d767fb76508f59314f66269f3a4823e43c9f385e2",
+              "classification": "public",
+              "requested": true,
+              "eligibleSignoffs": 2,
+              "requiredSignoffs": 2,
+              "releaseAudience": {
+                "audienceCount": 1,
+                "channelVersion": "researcher-generated-channel-v1",
+                "canCommit": true
+              },
+              "policyVersion": "596acb7f6031de2d560373c4d0ddfedf84097797f419ee88f355c1e09d3ace5e",
+              "grantVersion": 1,
+              "canCommit": true
+            }
+          },
+          {
+            "clauseId": "publish:SRC-bc8ba1310cbdd792",
+            "value": {
+              "docId": "SRC-bc8ba1310cbdd792",
+              "contentDigest": "371e4b5ab87d7107546c51db66d40bfd11cb2763f16a6e36d6ae489baa17f8b2",
+              "classification": "public",
+              "requested": true,
+              "eligibleSignoffs": 2,
+              "requiredSignoffs": 2,
+              "releaseAudience": {
+                "audienceCount": 1,
+                "channelVersion": "researcher-generated-channel-v1",
+                "canCommit": true
+              },
+              "policyVersion": "596acb7f6031de2d560373c4d0ddfedf84097797f419ee88f355c1e09d3ace5e",
+              "grantVersion": 1,
+              "canCommit": true
+            }
+          },
+          {
+            "clauseId": "publish:SRC-c8b61ec034d17530",
+            "value": {
+              "docId": "SRC-c8b61ec034d17530",
+              "contentDigest": "a44c2e933dca1d3ca317e82d23666b76967915656a2afae06b97f53404604670",
+              "classification": "public",
+              "requested": true,
+              "eligibleSignoffs": 2,
+              "requiredSignoffs": 2,
+              "releaseAudience": {
+                "audienceCount": 1,
+                "channelVersion": "researcher-generated-channel-v1",
+                "canCommit": true
+              },
+              "policyVersion": "596acb7f6031de2d560373c4d0ddfedf84097797f419ee88f355c1e09d3ace5e",
+              "grantVersion": 1,
+              "canCommit": true
+            }
+          },
+          {
+            "clauseId": "publish:SRC-e83645b07732fa66",
+            "value": {
+              "docId": "SRC-e83645b07732fa66",
+              "contentDigest": "13d732103cd6380da5ab40cd282e5a012815bc8d133d882b4085efbe856b9e1e",
+              "classification": "public",
+              "requested": true,
+              "eligibleSignoffs": 2,
+              "requiredSignoffs": 2,
+              "releaseAudience": {
+                "audienceCount": 1,
+                "channelVersion": "researcher-generated-channel-v1",
+                "canCommit": true
+              },
+              "policyVersion": "596acb7f6031de2d560373c4d0ddfedf84097797f419ee88f355c1e09d3ace5e",
+              "grantVersion": 1,
+              "canCommit": true
+            }
+          },
+          {
+            "clauseId": "publish:SRC-fea91f0ad1d1c7e2",
+            "value": {
+              "docId": "SRC-fea91f0ad1d1c7e2",
+              "contentDigest": "f0fb73500f410da432448ed5845cb3e6f5471d8b0b1c81db5c92c4809f849acd",
+              "classification": "public",
+              "requested": true,
+              "eligibleSignoffs": 2,
+              "requiredSignoffs": 2,
+              "releaseAudience": {
+                "audienceCount": 1,
+                "channelVersion": "researcher-generated-channel-v1",
+                "canCommit": true
+              },
+              "policyVersion": "596acb7f6031de2d560373c4d0ddfedf84097797f419ee88f355c1e09d3ace5e",
+              "grantVersion": 1,
+              "canCommit": true
+            }
+          }
+        ],
+        "authorityChain": [
+          {
+            "clauseId": "publish:SRC-bc8ba1310cbdd792",
+            "originalApprovalId": "APP-5c7446a74b14801a7ce5924a2362810bef2b4019f31b89206455fad0a5e17796",
+            "originalSnapshotId": "SNAP-18c104c6b40a65a9524707e8590dab0589999925993289745a3a967b450535ee",
+            "reviewedRevision": 51,
+            "validatedRevision": 54,
+            "protectedWitnessUnchanged": true
+          },
+          {
+            "clauseId": "publish:SRC-0f1dbd8bea159c1d",
+            "originalApprovalId": "APP-20a2cf9f4b6cd1c8bd70a53f4acfc33ec9982f7195636e62867c2da5b26fe139",
+            "originalSnapshotId": "SNAP-18c104c6b40a65a9524707e8590dab0589999925993289745a3a967b450535ee",
+            "reviewedRevision": 51,
+            "validatedRevision": 54,
+            "protectedWitnessUnchanged": true
+          },
+          {
+            "clauseId": "publish:SRC-691898886b6d0c66",
+            "originalApprovalId": "APP-b46079ae096bb5884d4285ccae95db6cef5e22d11b1033c1d4ff1c76dd5d1481",
+            "originalSnapshotId": "SNAP-18c104c6b40a65a9524707e8590dab0589999925993289745a3a967b450535ee",
+            "reviewedRevision": 51,
+            "validatedRevision": 54,
+            "protectedWitnessUnchanged": true
+          },
+          {
+            "clauseId": "publish:SRC-fea91f0ad1d1c7e2",
+            "originalApprovalId": "APP-f87d740cfa81fdec444e7dd7cd63c9711a0e542db2394ed5d95d8b2996b0d439",
+            "originalSnapshotId": "SNAP-18c104c6b40a65a9524707e8590dab0589999925993289745a3a967b450535ee",
+            "reviewedRevision": 51,
+            "validatedRevision": 54,
+            "protectedWitnessUnchanged": true
+          },
+          {
+            "clauseId": "publish:SRC-e83645b07732fa66",
+            "originalApprovalId": "APP-052c3f76365ad8b229f9df6ed78aa38389817d2500809156a5c321b95c8fcaaa",
+            "originalSnapshotId": "SNAP-18c104c6b40a65a9524707e8590dab0589999925993289745a3a967b450535ee",
+            "reviewedRevision": 51,
+            "validatedRevision": 54,
+            "protectedWitnessUnchanged": true
+          },
+          {
+            "clauseId": "publish:SRC-17eeefc6e504dbee",
+            "originalApprovalId": "APP-6748e2bbfa33b7f1b3e94df281e9ad36bd2a6207ad691f9b39946427ad10ea51",
+            "originalSnapshotId": "SNAP-18c104c6b40a65a9524707e8590dab0589999925993289745a3a967b450535ee",
+            "reviewedRevision": 51,
+            "validatedRevision": 54,
+            "protectedWitnessUnchanged": true
+          },
+          {
+            "clauseId": "publish:SRC-a4e2c3f07fd120ab",
+            "originalApprovalId": "APP-72b9dfdb37f2d2a3f6e1af788b9516e352bc555efc67ccc7a3236d82dd012796",
+            "originalSnapshotId": "SNAP-18c104c6b40a65a9524707e8590dab0589999925993289745a3a967b450535ee",
+            "reviewedRevision": 51,
+            "validatedRevision": 54,
+            "protectedWitnessUnchanged": true
+          },
+          {
+            "clauseId": "publish:SRC-2baab988b2e9f199",
+            "originalApprovalId": "APP-51b353fc504dbeafde6408832518fa55e769b71f2d2786fff1692c23482d390e",
+            "originalSnapshotId": "SNAP-18c104c6b40a65a9524707e8590dab0589999925993289745a3a967b450535ee",
+            "reviewedRevision": 51,
+            "validatedRevision": 54,
+            "protectedWitnessUnchanged": true
+          },
+          {
+            "clauseId": "publish:SRC-361e7b1acb6d80d7",
+            "originalApprovalId": "APP-8ee846ac0d9b08bcf864943eaa54825076f5a50b486d3628653c5331c38f480c",
+            "originalSnapshotId": "SNAP-18c104c6b40a65a9524707e8590dab0589999925993289745a3a967b450535ee",
+            "reviewedRevision": 51,
+            "validatedRevision": 54,
+            "protectedWitnessUnchanged": true
+          },
+          {
+            "clauseId": "publish:SRC-c8b61ec034d17530",
+            "originalApprovalId": "APP-4c9bd54b585a3e79b4fed21806d0a0ddeeffc34f9f7b6e9bbdfb0429990f8f9c",
+            "originalSnapshotId": "SNAP-8c5861fc802550ad1637b56393daf6ebe9f6048f17e52e2e5508c76f397cbda4",
+            "reviewedRevision": 54,
+            "validatedRevision": 54,
+            "protectedWitnessUnchanged": true
+          },
+          {
+            "clauseId": "publish:SRC-50b9032eef30a098",
+            "originalApprovalId": "APP-c471875211e34d64ccacefe7dc2e6e2657be97af89efc0c5a30b17dbb8ee3366",
+            "originalSnapshotId": "SNAP-18c104c6b40a65a9524707e8590dab0589999925993289745a3a967b450535ee",
+            "reviewedRevision": 51,
+            "validatedRevision": 54,
+            "protectedWitnessUnchanged": true
+          }
+        ]
+      },
+      "repeated": true
+    }
+  },
+  "finalState": {
+    "receipts": 1,
+    "outcomes": 1,
+    "releases": 1,
+    "draftStatus": "committed"
+  },
+  "passed": true
+}

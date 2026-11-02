@@ -1,0 +1,15 @@
+{
+  "evidence_origin": "Sanitized fields from the initial live public commits API response shown in the tool transcript, before outcome execution. No author, message, login or email is retained.",
+  "source_url": "https://api.github.com/repos/python/devguide/commits?sha=main&per_page=100",
+  "http_status": 200,
+  "observed_tip": {
+    "sha": "47542999540c8f14323ea5ea147030a95bca87f2",
+    "time_utc": "2026-11-01T01:50:50Z",
+    "tree_sha": "2fa7e4039bcb7fb55ba6313038658df683babe22",
+    "parents": ["a4da55860a469b4e4453f7c3cb2553ce4e38d03f"]
+  },
+  "cutoff_utc": "2026-11-01T00:00:00Z",
+  "excluded_first_parent_commits_after_cutoff": 1,
+  "newest_eligible_first_parent_sha": "a4da55860a469b4e4453f7c3cb2553ce4e38d03f",
+  "note": "The observed tip is after the cutoff and its first parent is the frozen newest state. This supplements the frozen window; no state or outcome is replaced."
+}

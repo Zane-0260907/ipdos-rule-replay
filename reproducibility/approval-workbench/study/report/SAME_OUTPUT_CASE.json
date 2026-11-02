@@ -1,0 +1,84 @@
+{
+  "sourceRun": "${ARTIFACT_ROOT}\\study\\results\\main-oQ52OT",
+  "sourceDigest": "c8016854e0faaf1b6283c56fe49ecf0a3001dedb68ed7e6d136971ae78fac1e5",
+  "scenario": "same_output_evidence",
+  "trialIndex": 93,
+  "mutation": {
+    "table": "reserveReasons",
+    "key": "SAFETY",
+    "field": "version",
+    "before": "reason-1",
+    "after": "reason-2",
+    "activeUnchanged": true
+  },
+  "fixture": {
+    "riceDemandG": 50000,
+    "riceOnHandG": 25000,
+    "twoActiveReserveRowsG": [
+      500,
+      500
+    ],
+    "bufferBp": 11300
+  },
+  "before": {
+    "id": "quantity:RICE",
+    "value": {
+      "sku": "RICE",
+      "proposedG": 31500,
+      "demandG": 50000,
+      "onHandG": 25000,
+      "reservedG": 1000,
+      "suggestedG": 32500,
+      "unitPriceCents": 200,
+      "sharedBudget": {
+        "limitCents": 30000,
+        "priorUseCents": 0,
+        "proposedCostCents": 13800,
+        "canCommit": true,
+        "ruleVersion": "budget-1"
+      },
+      "inventoryRuleVersion": "inventory-1",
+      "grantVersion": 1,
+      "canCommit": true
+    },
+    "tokensHash": "8668ae5fb014fbc74cb55ef9a52e0009794a15d3cd0ea2f5082058e25cc359c1",
+    "canCommit": true
+  },
+  "after": {
+    "id": "quantity:RICE",
+    "value": {
+      "sku": "RICE",
+      "proposedG": 31500,
+      "demandG": 50000,
+      "onHandG": 25000,
+      "reservedG": 1000,
+      "suggestedG": 32500,
+      "unitPriceCents": 200,
+      "sharedBudget": {
+        "limitCents": 30000,
+        "priorUseCents": 0,
+        "proposedCostCents": 13800,
+        "canCommit": true,
+        "ruleVersion": "budget-1"
+      },
+      "inventoryRuleVersion": "inventory-1",
+      "grantVersion": 1,
+      "canCommit": true
+    },
+    "tokensHash": "5cc024f369e7624e3aca4bb9e33240a1c3b1c9e413f9e52ffb60155247ef18cd",
+    "canCommit": true
+  },
+  "entireDecisionProjectionEqual": true,
+  "protectedTokensHashDifferent": true,
+  "expectedRetained": {
+    "quantity:RICE": false,
+    "quantity:CHICKEN": true,
+    "quantity:GREENS": true
+  },
+  "actualRetained": {
+    "quantity:RICE": false,
+    "quantity:CHICKEN": true,
+    "quantity:GREENS": true
+  },
+  "statisticalUnit": "Each row in the functional raw JSONL is one scenario x mode x scale x repetition. unnecessaryReviewCount counts clauses where actual.retained is false and oracle expectedRetained[clauseId] is true, evaluated once immediately after mutation and before repair. Summary unnecessaryReviewDecisions is the sum of those clause occurrences, including deterministic repeats and scale cases; it is neither distinct fields nor distinct scenarios or people."
+}

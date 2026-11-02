@@ -1,0 +1,28 @@
+{
+  "screenshots": [
+    "${ARTIFACT_ROOT}\\artifacts\\prototype-01-unrelated-retained.png",
+    "${ARTIFACT_ROOT}\\artifacts\\prototype-02-whole-invalidation.png",
+    "${ARTIFACT_ROOT}\\artifacts\\prototype-03-related-stock-reason.png",
+    "${ARTIFACT_ROOT}\\artifacts\\prototype-04-shared-budget-scope.png",
+    "${ARTIFACT_ROOT}\\artifacts\\prototype-05-saved-authority-chain.png"
+  ],
+  "actions": [
+    {
+      "change": "unrelated_stock",
+      "revision": 19
+    },
+    {
+      "change": "related_stock",
+      "revision": 20
+    },
+    {
+      "change": "unrelated_stock",
+      "revision": 23
+    }
+  ],
+  "startedUTC": "2026-11-01T07:20:58.029Z",
+  "completed": false,
+  "error": "Error: {\"exceptionId\":1,\"text\":\"Uncaught\",\"lineNumber\":0,\"columnNumber\":66,\"scriptId\":\"84\",\"stackTrace\":{\"callFrames\":[{\"functionName\":\"\",\"scriptId\":\"84\",\"url\":\"\",\"lineNumber\":0,\"columnNumber\":66}]},\"exception\":{\"type\":\"object\",\"subtype\":\"error\",\"className\":\"TypeError\",\"description\":\"TypeError: Cannot read properties of null (reading 'innerText')\\n    at <anonymous>:1:67\",\"objectId\":\"956914666374887115.2.2\"}}\n    at evaluate (file:///${ARTIFACT_ROOT}/scripts/browser-client.mjs:25:40)\n    at async Object.until (file:///${ARTIFACT_ROOT}/scripts/browser-client.mjs:29:59)\n    at async file:///${ARTIFACT_ROOT}/scripts/browser-approval-qa.mjs:29:76",
+  "exceptions": [],
+  "blockedExternal": []
+}

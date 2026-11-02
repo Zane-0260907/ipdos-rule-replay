@@ -1,0 +1,39 @@
+{
+  "prebuilt": {
+    "path": "${ARTIFACT_ROOT}\\deliverables\\ipdos-approval-prototype-prebuilt-v1.zip",
+    "bytes": 165728,
+    "sha256": "6b4410c194d573e511629d44d96f321686566209b2e6b4c465a2b7da5854005f",
+    "extractDirectory": "${ARTIFACT_ROOT}\\artifacts\\prebuilt-acceptance-0m00j9kz",
+    "runtimeFileCount": 19,
+    "manifestVerified": true,
+    "containsNodeModules": false
+  },
+  "workflows": {
+    "approval": {
+      "completed": true,
+      "evidence": "${ARTIFACT_ROOT}\\artifacts\\prebuilt-acceptance-0m00j9kz\\artifacts\\browser-approval-run-kC9X0x\\evidence.json",
+      "screenshots": [
+        "${ARTIFACT_ROOT}\\artifacts\\prebuilt-acceptance-0m00j9kz\\artifacts\\browser-approval-run-kC9X0x\\prototype-01-unrelated-retained.png",
+        "${ARTIFACT_ROOT}\\artifacts\\prebuilt-acceptance-0m00j9kz\\artifacts\\browser-approval-run-kC9X0x\\prototype-02-whole-invalidation.png",
+        "${ARTIFACT_ROOT}\\artifacts\\prebuilt-acceptance-0m00j9kz\\artifacts\\browser-approval-run-kC9X0x\\prototype-03-related-stock-reason.png",
+        "${ARTIFACT_ROOT}\\artifacts\\prebuilt-acceptance-0m00j9kz\\artifacts\\browser-approval-run-kC9X0x\\prototype-04-shared-budget-scope.png",
+        "${ARTIFACT_ROOT}\\artifacts\\prebuilt-acceptance-0m00j9kz\\artifacts\\browser-approval-run-kC9X0x\\prototype-05-saved-authority-chain.png"
+      ],
+      "exceptions": [],
+      "blockedExternal": []
+    },
+    "document": {
+      "completed": true,
+      "evidence": "${ARTIFACT_ROOT}\\artifacts\\prebuilt-acceptance-0m00j9kz\\artifacts\\browser-document-run-Wxkbig\\evidence.json",
+      "screenshots": [
+        "${ARTIFACT_ROOT}\\artifacts\\prebuilt-acceptance-0m00j9kz\\artifacts\\browser-document-run-Wxkbig\\prototype-document-01-content-blocked.png",
+        "${ARTIFACT_ROOT}\\artifacts\\prebuilt-acceptance-0m00j9kz\\artifacts\\browser-document-run-Wxkbig\\prototype-document-02-audience-reason.png",
+        "${ARTIFACT_ROOT}\\artifacts\\prebuilt-acceptance-0m00j9kz\\artifacts\\browser-document-run-Wxkbig\\prototype-document-03-saved-release.png"
+      ],
+      "exceptions": [],
+      "blockedExternal": []
+    }
+  },
+  "validatedRuntime": "Actual extracted package, no node_modules, built static frontend and native Node/SQLite API",
+  "passed": true
+}

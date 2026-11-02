@@ -1,61 +1,71 @@
-# IPDOS: Traceable Human-Confirmed Replenishment
+# IPDOS: Inspectable evidence-scoped approvals
 
-The current revision demonstrates a bounded restaurant workflow: **demand snapshot → inventory gap → human-edited proposal → matching review → simulated order → persistent receipt and report**. It retains the restaurant navigation, tables and chart. New source: [`business-demo/`](business-demo/).
+IPDOS is a bounded local workbench for inspecting changes to reviewed evidence, preserving unaffected approvals, explicitly reviewing affected decisions, and atomically saving a simulated effect with its authority receipt. **Procurement and document release share the same executable approval contract, dependency interpreter, review ledger, and commit service.**
 
-**Synthetic data and simulated procurement only.** No supplier connection, payment, real transaction, live forecasting model or production authentication is provided.
+Latest source: [`approval-workbench/`](approval-workbench/). Stable artifact entry: [release v0.3.0](https://github.com/Zane-0260907/ipdos-rule-replay/releases/tag/v0.3.0). Earlier versions, tags, restaurant demo files and evidence remain available; the previous landing page is preserved in [README-business-r2.md](README-business-r2.md).
 
-## Download and run — no build required
+## Run the English application
 
-[**Download the prebuilt business demo**](https://github.com/Zane-0260907/ipdos-rule-replay/releases/download/v0.2.0-business-r2/ipdos-business-prebuilt-r1.zip) · [Release files](https://github.com/Zane-0260907/ipdos-rule-replay/releases/tag/v0.2.0-business-r2) · [**Watch the new business-flow video**](https://www.youtube.com/watch?v=6EFWHdpDLiw)
+Download `ipdos-v0.3.0-prebuilt.zip` from the versioned release and extract it into a writable directory. Use an existing **Node.js 24.x** installation, then run:
 
-Requires **an existing Node.js 24 installation**. Verified with **Node 24.19.0 / Windows x64**. Node is **not bundled**. Other platforms and versions have not been validated.
-
-1. Extract the entire ZIP to a writable folder.
-2. Run `start.cmd`, or run `node reviewer-launcher.cjs` from that folder.
-3. Open **http://127.0.0.1:3038/** and select the synthetic manager role.
-4. Press **Ctrl+C** to stop. Records persist in that extracted copy's `data/simulation.sqlite`.
-
-The ZIP includes built frontend files, compiled Nest backend and runtime dependencies. **No npm install, compiler, Vite server, PostgreSQL or Docker is needed to run it.** Only loopback ports 3037/3038 are used. Port conflicts produce a startup error; other applications are not stopped. For a fresh scenario, extract another copy of the original ZIP and preserve records you want to keep.
-
-ZIP: **21,122,476 bytes**. SHA-256:
-
-```text
-65a4796410075577aa944540412e7f950c41e6b4b4a628a65b20795d15790415
+```sh
+node server/run.cjs
 ```
 
-## Business walkthrough
+Open **http://127.0.0.1:3338/**. The API listens only on **127.0.0.1:3337**. No npm installation, compiler, Docker, external database or supplier account is required by the prebuilt runtime. The local role selector is a demonstration convenience, not production authentication. Synthetic SQLite state is created under `artifacts/`; preserve that directory to retain receipts. Neither Node.js nor a browser is bundled.
 
-| Step | Observable result |
-| --- | --- |
-| Read 智能预测 / demand snapshot | Fixed rice demand 50 kg, stock 25 kg and suggestion 30 kg. The traffic chart is a fixed synthetic snapshot. |
-| Calculate, edit and review | Save a 31.5 kg proposal and explicitly review that content. Preview/review creates no order. |
-| Change stock during review | The synthetic button changes rice stock from 25 to 20 kg. Old confirmation returns HTTP 409, with zero orders. |
-| Recalculate and review again | Suggestion becomes 35 kg. Edit to 36.5 kg, save, review that content, then confirm. |
-| Read the simulated receipt | Local SQLite preserves the order, linked review, confirmed quantities and input revision. No supplier receives anything. |
-| Retry, export and restart | The same request returns the same receipt. DOCX/JSON read the saved record. After restart, select a role again to read it. |
+## What to inspect
 
-![Actual synthetic demand and inventory in the restaurant UI](business-demo/screenshots/ui-01-demand-snapshot.png)
+1. **Approval contract.** Inspect the supported-contract panel and sealed review preview. Protected evidence and display-only fields are declared separately. Original snapshots and approvals remain immutable.
+2. **Unrelated change.** Approve the procurement decisions, update another store's stock, and compare whole-revision binding with dependency-incremental validation. Unaffected approval identities remain unchanged in the precise mode.
+3. **Same decision value, changed evidence.** Insert and delete the previously missing join key. Rice's complete decision projection stays unchanged, but the persisted absence epoch changes and requires an explicit rice-only review. Equal final quantities alone never justify reusing changed protected evidence.
+4. **Shared scope.** Reduce rice stock from 25 to 20 kg, then save a 36.5 kg proposal. Its shared-budget evidence affects all dependent clauses; open a new preview and explicitly review the affected decisions.
+5. **Second adapter.** Switch to document release. A title is display-only; a changed content digest cannot reuse old signatures. Current-content signatures, distinct eligible editors and the shared reader audience determine the visible review scope.
+6. **Atomic receipt and retry.** Confirm a local simulated effect, inspect its original approval/snapshot chain, change source state and retry the identical saved request. It returns the original receipt. A new request key cannot create a second effect for the same draft.
 
-![Actual persisted simulated order and receipt](business-demo/screenshots/ui-04-persisted-order-receipt.png)
+All procurement records and document releases are **local simulations**. No supplier, payment system, publication service or participant is contacted.
 
-These are real screenshots of the isolated revision. Other restaurant navigation entries remain unconnected; their presence is not a claim of integrated functionality.
+## Reproduce and audit
 
-## Verification and limits
+The source and raw regression artifacts are separately downloadable from the same versioned release. From the extracted source, or from `approval-workbench/` in this repository:
 
-R2 passed **14 core checks and 12 real HTTP checks**, including stale input, content/review mismatch, permissions, durable retries, write failure/rollback, restart and report content. The layers overlap and are not field experiments. A separate fresh R2 dependency installation and both builds passed.
+```sh
+node --test tests/first-slice.test.cjs tests/boundary.test.cjs tests/explanation-and-identity.test.cjs
+node study/run-pilot.cjs
+node study/run-pilot.cjs --main
+node study/run-document-pilot.cjs
+node study/run-document-pilot.cjs --main
+node study/audit-results.cjs
+node study/audit-results.cjs --document
+```
 
-The exact prebuilt ZIP was extracted and run without dependency installation or compilation. Actual Chromium checks covered the workflow, matching DOCX/JSON downloads, process restart and viewer restrictions. See [runtime evidence](business-demo/verification/prebuilt-runtime-verification-r1.json) and [source correspondence](business-demo/SOURCE_PROVENANCE.json).
+Each runner creates fresh synthetic fixtures. The main plans require a passing same-code sanity gate. The frozen procurement plan contains **592 controlled traces**; the separate document plan contains **276**. The independent semantic audits compare each recorded approval and receipt with complete journal replay and a separately implemented full oracle. These are bounded designed scenarios, not independent deployments or production failure rates.
 
-- Proposals bind the complete synthetic snapshot, inventory revision, policy values, selected rule-module fingerprints and quantities. Review binds immutable content and actor. Creating B does not globally revoke a review of A.
-- Confirmation rechecks role, matching review/content, current input version and loaded rule binding. Calculation and registry modules are hashed on startup/module load; there is no live file monitor or whole-program fingerprint.
-- SQLite transactions, uniqueness constraints and a durable actor/key/request-hash/order association provide bounded local retry handling. This does not prevent every similar purchase or establish unconditional/distributed exactly-once execution.
-- The role selector is deliberately accessible. The viewer button's “只读” label is overbroad: viewer can calculate, edit and save proposals; it cannot review, confirm or change inventory.
-- No Prophet/SHAP/Kalman algorithms, causal identification, forecasting accuracy, optimal scheduling, real-store A/B results or business gains are established. DOCX structure/content were checked; Word layout was not visually validated.
+Archived public evidence is in [`reproducibility/approval-workbench/`](reproducibility/approval-workbench/). Its derivation manifest distinguishes original file hashes from public hashes. Only machine-local path metadata is normalized; numerical observations, decision values, witnesses, scenarios and source digests are unchanged. Original private archives are retained. Procurement/document controlled-fixture case databases are omitted from that regression download; the source runners regenerate them. The separate public-source replay ZIP includes its own explicitly synthetic SQLite traces. The corrected source retains the nine frozen core modules; the UI context-setter fix and strict handled-error regression are documented in [`UI_CORRECTION.md`](approval-workbench/study/UI_CORRECTION.md).
 
-## Source, earlier version and license
+The optional frontend rebuild uses its locked dependencies:
 
-The restaurant frontend is based on the owner's supplied restaurant project. Backend lineage includes [Juggle-ops/dietsystem](https://github.com/Juggle-ops/dietsystem), baseline `a52137f904f78eaebd546d9808503b26e3b10549`; its history remains here. This revision adds the isolated human-confirmed flow. [Developer instructions](business-demo/README.md) are optional; reviewers can use the ZIP.
+```sh
+cd frontend
+npm ci
+npm run build
+```
 
-The repository name preserves the earlier **rule-replay workbench**. Its original root files remain, its documentation is preserved in [README-rule-replay.md](README-rule-replay.md), and [commit 4e70bf6](https://github.com/Zane-0260907/ipdos-rule-replay/tree/4e70bf67abe48edf8045898b03f8e8f92bd24dd1) remains accessible. Its 28 tests and [older video](https://youtu.be/wjxquXh4LxQ) describe that older tool, not this business workflow.
+## Public-source counterfactual replay
 
-Project code follows the existing [Apache-2.0 LICENSE](LICENSE); original copyright text is retained. Dependencies retain their own licenses. The ZIP preserves their supplied LICENSE/NOTICE files and includes frontend/backend license inventories.
+The companion replay uses a fixed **30-transition counterfactual fixture** governed by an explicit, bounded public-source contract. Its inputs come from public developer documentation; the approval states and changes are constructed scenarios. They are **not observed human approvals, a participant study, real purchasing, or evidence of user time savings**. The companion source is in [`public-source-replay/`](public-source-replay/); download its release ZIP for all 240 synthetic databases from the original and separate validation runs. Its [protocol](public-source-replay/PROTOCOL.md), [report](public-source-replay/REPORT.md), [public derivation](public-source-replay/PUBLICATION.md) and [CC0 source attribution](public-source-replay/README.md) state the exact boundaries. It protects selected source-file membership and byte identities plus a conservative shared non-source binding; it does not model Sphinx rendering or the Python project's real review policy.
+
+## Scope and limits
+
+- The supported grammar is finite: projected unique-key reads including missing keys, predicate membership history, many-to-one joins, and bounded exact-integer aggregates. Unsupported rules fail closed or require conservative invalidation.
+- The contract assumes its encapsulated fact writer and complete transactional journal. It does not cover arbitrary database tampering, arbitrary SQL/plugins, nondeterministic or time-dependent functions, or distributed approval authority.
+- Final confirmation checks current rules, authority, draft identity and approvals within the local SQLite write transaction. Same-request retry recovery and per-draft uniqueness are bounded guarantees, not unrestricted exactly-once business execution or cross-draft semantic deduplication.
+- Selective invalidation, read sets, optimistic validation and approval binding have prior work. This artifact demonstrates their bounded executable integration, inspectable reasons and explicit operational re-review; it does not claim to invent those techniques.
+- Timing compares self-implemented modes under the same contract. Incremental validation beat full recomputation in the frozen local cases but was slower than whole-revision checking; shared-scope fanout and substantial witness storage are retained costs. Re-review counts are workload proxies, not measured human time savings.
+- The new prototype uses a 13% integer-gram buffer. The earlier restaurant demo used a 10% formula and human quantity edits. Their 31.5/36.5 kg endpoints must not be treated as the same calculation. See [legacy differences](approval-workbench/study/LEGACY_DIFFERENCES.md).
+
+## History and licenses
+
+[Business Flow R2](https://github.com/Zane-0260907/ipdos-rule-replay/releases/tag/v0.2.0-business-r2), [`business-demo/`](business-demo/), the original root rule-replay source, and [README-rule-replay.md](README-rule-replay.md) remain intact. Backend lineage includes [Juggle-ops/dietsystem](https://github.com/Juggle-ops/dietsystem); the repository retains its original history and Apache-2.0 license.
+
+Project code follows [Apache-2.0](LICENSE). Frontend dependencies retain their own terms; supplied and official upstream legal texts are preserved in [`THIRD_PARTY_LICENSES`](approval-workbench/THIRD_PARTY_LICENSES/INVENTORY.json). Public-source companion inputs retain their source-specific attribution and license terms; they are not relicensed as project code. SHA-256 checksums and a publication review accompany the versioned release. Papers, private Library identities, credentials and real business databases are excluded.

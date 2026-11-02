@@ -1,0 +1,108 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "unauthenticated context",
+      "actual": 401,
+      "expected": 401,
+      "passed": true
+    },
+    {
+      "name": "viewer can inspect",
+      "actual": 200,
+      "expected": 200,
+      "passed": true
+    },
+    {
+      "name": "viewer can save procurement proposal",
+      "actual": 200,
+      "expected": 200,
+      "passed": true
+    },
+    {
+      "name": "viewer cannot approve",
+      "actual": 403,
+      "expected": 403,
+      "passed": true
+    },
+    {
+      "name": "viewer cannot confirm",
+      "actual": 403,
+      "expected": 403,
+      "passed": true
+    },
+    {
+      "name": "viewer cannot change source",
+      "actual": 403,
+      "expected": 403,
+      "passed": true
+    },
+    {
+      "name": "viewer cannot reset fixture",
+      "actual": 403,
+      "expected": 403,
+      "passed": true
+    },
+    {
+      "name": "unknown validation mode rejected",
+      "actual": 400,
+      "expected": 400,
+      "passed": true
+    },
+    {
+      "name": "manager explicit review",
+      "actual": 200,
+      "expected": 200,
+      "passed": true
+    },
+    {
+      "name": "manager confirm",
+      "actual": 200,
+      "expected": 200,
+      "passed": true
+    },
+    {
+      "name": "different key same draft",
+      "actual": "DRAFT_ALREADY_COMMITTED",
+      "expected": "DRAFT_ALREADY_COMMITTED",
+      "passed": true
+    },
+    {
+      "name": "changed body same key",
+      "actual": "IDEMPOTENCY_CONFLICT",
+      "expected": "IDEMPOTENCY_CONFLICT",
+      "passed": true
+    },
+    {
+      "name": "receipt export authorized",
+      "actual": 200,
+      "expected": 200,
+      "passed": true
+    },
+    {
+      "name": "retry same receipt after source change",
+      "actual": "SIM-895874bc-9b31-4add-a674-eb49e5eb1430",
+      "expected": "SIM-895874bc-9b31-4add-a674-eb49e5eb1430",
+      "passed": true
+    },
+    {
+      "name": "retry marked repeated",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "viewer can inspect second workflow",
+      "actual": 200,
+      "expected": 200,
+      "passed": true
+    },
+    {
+      "name": "workflow request identity checked",
+      "actual": "WORKFLOW_MISMATCH",
+      "expected": "WORKFLOW_MISMATCH",
+      "passed": true
+    }
+  ],
+  "scope": "Loopback HTTP adapter and actual server token role boundary; no production authentication claim"
+}

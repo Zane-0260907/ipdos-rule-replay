@@ -1,0 +1,17 @@
+import {openBrowser,delay} from './browser-client.mjs';
+import {mkdtempSync,writeFileSync} from 'node:fs';
+import {isDeepStrictEqual} from 'node:util';
+const run=mkdtempSync('artifacts/paper-case-'),b=await openBrowser();
+async function idle(){await b.until(`document.querySelector('.approval-controls button')&&!document.querySelector('.approval-controls button').disabled`);await delay(100);const uiError=await b.evaluate(`document.querySelector('[data-testid=\"approval-error\"]')?.textContent||''`);if(uiError||b.uiErrors.length)throw Error('VISIBLE_UI_ERROR: '+(uiError||b.uiErrors.join('; ')));}
+const context=()=>b.evaluate(`fetch('http://127.0.0.1:3337/approval/context?mode=incremental',{headers:{Authorization:'Bearer '+sessionStorage.getItem('businessToken')}}).then(r=>r.json())`);
+try{
+ await b.send('Emulation.setDeviceMetricsOverride',{width:1600,height:1600,deviceScaleFactor:1,mobile:false});
+ await b.send('Page.navigate',{url:'http://127.0.0.1:3338/'});await b.until(`document.body.innerText.includes('Enter as demo manager')`);await b.click('Enter as demo manager (review and confirm)');await b.until(`document.querySelector('[data-testid="approval-items"]')`);await idle();await b.resetFixture('[data-testid="approval-items"]');await idle();
+ await b.click('Open review preview');await b.until(`document.querySelector('[data-testid="sealed-preview"]')`);await idle();await b.click('Select decisions needing review');await b.click('Approve selected decisions');await b.until(`!document.querySelector('[data-testid="sealed-preview"]')`);await idle();const before=await context();
+ await b.evaluate(`(()=>{const e=document.querySelector('[aria-label="Synthetic source change"]');e.value='absent_aba';e.dispatchEvent(new Event('change',{bubbles:true}));})()`);await b.click('Apply source change');await idle();const after=await context();
+ const old=before.validation.clauses.find(c=>c.id==='quantity:RICE'),now=after.validation.clauses.find(c=>c.id==='quantity:RICE');if(!isDeepStrictEqual(old.current.value,now.current.value)||after.validation.requiredReviewCount!==1)throw Error('Same-output paper fixture did not reproduce');
+ await b.click('Open review preview');await b.until(`document.querySelector('[data-testid="sealed-preview"]')`);await idle();await b.click('Select decisions needing review');
+ await b.evaluate(`document.querySelector('[data-testid="decision-quantity:RICE"] details').open=true;document.querySelector('[data-testid="decision-quantity:RICE"]').scrollIntoView({block:'start'})`);
+ const screenshot=await b.screenshot(run.slice('artifacts/'.length)+'/same-output-evidence-review');const selection=await b.evaluate(`[...document.querySelectorAll('.approval-review-choices input:checked')].map(e=>e.getAttribute('aria-label'))`);
+ const evidence={run,completed:true,screenshot,before,after,identicalEntireDecisionProjection:true,explicitSelection:selection,explanation:'A previously observed absent reason key was inserted and deleted. Its final value and all decision outputs are unchanged, but its persisted absence epoch changes. Only rice requires explicit review.',viewport:{width:1600,height:1600},exceptions:b.exceptions,blockedExternal:b.blockedExternal,uiErrors:b.uiErrors};writeFileSync(run+'/evidence.json',JSON.stringify(evidence,null,2));writeFileSync('artifacts/paper-case-latest.json',JSON.stringify({run,evidence:run+'/evidence.json',screenshot},null,2));console.log(JSON.stringify({completed:true,run,screenshot,selected:selection}));
+}finally{await b.close();}

@@ -1,0 +1,269 @@
+{
+  "generatedUTC": "2026-11-01T07:53:02.313061+00:00",
+  "procurement": {
+    "phase": "main",
+    "run": "${ARTIFACT_ROOT}\\study\\results\\main-oQ52OT",
+    "finishedUTC": "2026-11-01T07:39:46.916Z",
+    "codeDigest": "c8016854e0faaf1b6283c56fe49ecf0a3001dedb68ed7e6d136971ae78fac1e5",
+    "trials": 592,
+    "scenarioCount": 44,
+    "byMode": {
+      "whole": {
+        "trials": 148,
+        "unsafeRetainedApprovals": 0,
+        "incorrectNewCommits": 0,
+        "partialEffectStates": 0,
+        "unnecessaryReviewDecisions": 908,
+        "requiredReviewDecisions": 1383,
+        "validOriginalRequestRejections": 18,
+        "receiptRecoveries": 3,
+        "infrastructureErrors": 0
+      },
+      "rows": {
+        "trials": 148,
+        "unsafeRetainedApprovals": 0,
+        "incorrectNewCommits": 0,
+        "partialEffectStates": 0,
+        "unnecessaryReviewDecisions": 360,
+        "requiredReviewDecisions": 835,
+        "validOriginalRequestRejections": 10,
+        "receiptRecoveries": 3,
+        "infrastructureErrors": 0
+      },
+      "full": {
+        "trials": 148,
+        "unsafeRetainedApprovals": 0,
+        "incorrectNewCommits": 0,
+        "partialEffectStates": 0,
+        "unnecessaryReviewDecisions": 0,
+        "requiredReviewDecisions": 475,
+        "validOriginalRequestRejections": 0,
+        "receiptRecoveries": 3,
+        "infrastructureErrors": 0
+      },
+      "incremental": {
+        "trials": 148,
+        "unsafeRetainedApprovals": 0,
+        "incorrectNewCommits": 0,
+        "partialEffectStates": 0,
+        "unnecessaryReviewDecisions": 0,
+        "requiredReviewDecisions": 475,
+        "validOriginalRequestRejections": 0,
+        "receiptRecoveries": 3,
+        "infrastructureErrors": 0
+      }
+    },
+    "passed": true,
+    "interpretation": "Functional repetitions are deterministic replay checks, not independent field cases. Injected SQLite exceptions are not process crashes or power loss. Child-process reopen/retry is normal process recovery. All SQLite runs use one database authority boundary; no distributed, multi-writer throughput or production rate is claimed.",
+    "denominator": "Deterministic pre-specified synthetic scenario-mode-scale repetitions; not production probabilities",
+    "files": [
+      "raw.jsonl",
+      "trials.csv",
+      "environment.json",
+      "summary.json",
+      "per-trial synthetic SQLite and process inputs/outputs"
+    ]
+  },
+  "document": {
+    "run": "${ARTIFACT_ROOT}\\study\\results\\document-main-FL9ist",
+    "phase": "main",
+    "trials": 276,
+    "scenarios": 23,
+    "sourceDigest": "34e875921be64d7875b08eef67dfeb103a264f171ff82d6406538755b754d387",
+    "passed": true,
+    "byMode": {
+      "whole": {
+        "trials": 69,
+        "unsafeRetainedApprovals": 0,
+        "incorrectNewCommits": 0,
+        "partialEffectStates": 0,
+        "unnecessaryReviewDecisions": 42,
+        "infrastructureErrors": 0
+      },
+      "rows": {
+        "trials": 69,
+        "unsafeRetainedApprovals": 0,
+        "incorrectNewCommits": 0,
+        "partialEffectStates": 0,
+        "unnecessaryReviewDecisions": 18,
+        "infrastructureErrors": 0
+      },
+      "full": {
+        "trials": 69,
+        "unsafeRetainedApprovals": 0,
+        "incorrectNewCommits": 0,
+        "partialEffectStates": 0,
+        "unnecessaryReviewDecisions": 0,
+        "infrastructureErrors": 0
+      },
+      "incremental": {
+        "trials": 69,
+        "unsafeRetainedApprovals": 0,
+        "incorrectNewCommits": 0,
+        "partialEffectStates": 0,
+        "unnecessaryReviewDecisions": 0,
+        "infrastructureErrors": 0
+      }
+    },
+    "limits": "Two local synthetic documents; deterministic replay, no human study, publication, paid API, external file access or distributed-throughput claim"
+  },
+  "procurementSemantic": {
+    "scope": "Independent post-run semantic audit of every immutable approval and receipt against complete journal replay and manual oracle; no candidate cache/selection imports",
+    "run": "${ARTIFACT_ROOT}\\study\\results\\main-oQ52OT",
+    "codeDigest": "c8016854e0faaf1b6283c56fe49ecf0a3001dedb68ed7e6d136971ae78fac1e5",
+    "auditScriptSha256": "9c63a562f32299487738ddb2246b7b5c9bb82f87b1dc33c37b4ea6cc90354612",
+    "oracleSources": {
+      "full-oracle.cjs": "e19f67cf3db5f41d55bdb17c2dc75f0e139240f01de317384f68ce04c67499a0",
+      "document-oracle.cjs": "8764ded58bd5c37dcc66114969c186e2885f1c3911bbaf823554356cb1222aca"
+    },
+    "trials": 592,
+    "approvalClausesChecked": 9366,
+    "receiptDecisionsChecked": 6132,
+    "failures": [],
+    "passed": true,
+    "auditDirectory": "${ARTIFACT_ROOT}\\study\\results\\main-oQ52OT\\semantic-audit-4AEQDZ",
+    "itemRaw": "${ARTIFACT_ROOT}\\study\\results\\main-oQ52OT\\semantic-audit-4AEQDZ\\items.jsonl"
+  },
+  "documentSemantic": {
+    "scope": "Independent post-run semantic audit of every immutable approval and receipt against complete journal replay and manual oracle; no candidate cache/selection imports",
+    "run": "${ARTIFACT_ROOT}\\study\\results\\document-main-FL9ist",
+    "codeDigest": "34e875921be64d7875b08eef67dfeb103a264f171ff82d6406538755b754d387",
+    "auditScriptSha256": "9c63a562f32299487738ddb2246b7b5c9bb82f87b1dc33c37b4ea6cc90354612",
+    "oracleSources": {
+      "full-oracle.cjs": "e19f67cf3db5f41d55bdb17c2dc75f0e139240f01de317384f68ce04c67499a0",
+      "document-oracle.cjs": "8764ded58bd5c37dcc66114969c186e2885f1c3911bbaf823554356cb1222aca"
+    },
+    "trials": 276,
+    "approvalClausesChecked": 747,
+    "receiptDecisionsChecked": 336,
+    "failures": [],
+    "passed": true,
+    "auditDirectory": "${ARTIFACT_ROOT}\\study\\results\\document-main-FL9ist\\semantic-audit-dUx6sP",
+    "itemRaw": "${ARTIFACT_ROOT}\\study\\results\\document-main-FL9ist\\semantic-audit-dUx6sP\\items.jsonl"
+  },
+  "timing": {
+    "run": "${ARTIFACT_ROOT}\\study\\results\\timing-OF5SNJ",
+    "measuredSamples": 1440,
+    "warmups": 240,
+    "cells": 48,
+    "comparison": [
+      {
+        "scale": 3,
+        "pattern": "unchanged",
+        "fullMedianMicroseconds": 1895.6,
+        "incrementalMedianMicroseconds": 679.7,
+        "fullOverIncrementalRatio": 2.7888774459320285,
+        "incrementalFaster": true
+      },
+      {
+        "scale": 3,
+        "pattern": "unrelated_store",
+        "fullMedianMicroseconds": 1884.6,
+        "incrementalMedianMicroseconds": 736.1,
+        "fullOverIncrementalRatio": 2.560249966037223,
+        "incrementalFaster": true
+      },
+      {
+        "scale": 3,
+        "pattern": "related_stock",
+        "fullMedianMicroseconds": 2106.6,
+        "incrementalMedianMicroseconds": 975.1,
+        "fullOverIncrementalRatio": 2.1603938057635115,
+        "incrementalFaster": true
+      },
+      {
+        "scale": 3,
+        "pattern": "shared_budget_price",
+        "fullMedianMicroseconds": 2009.9,
+        "incrementalMedianMicroseconds": 1200.6,
+        "fullOverIncrementalRatio": 1.6740796268532403,
+        "incrementalFaster": true
+      },
+      {
+        "scale": 30,
+        "pattern": "unchanged",
+        "fullMedianMicroseconds": 17900,
+        "incrementalMedianMicroseconds": 4593.5,
+        "fullOverIncrementalRatio": 3.8968107107869816,
+        "incrementalFaster": true
+      },
+      {
+        "scale": 30,
+        "pattern": "unrelated_store",
+        "fullMedianMicroseconds": 18038.9,
+        "incrementalMedianMicroseconds": 4603.1,
+        "fullOverIncrementalRatio": 3.918859029784276,
+        "incrementalFaster": true
+      },
+      {
+        "scale": 30,
+        "pattern": "related_stock",
+        "fullMedianMicroseconds": 17281,
+        "incrementalMedianMicroseconds": 4901.1,
+        "fullOverIncrementalRatio": 3.525943155618126,
+        "incrementalFaster": true
+      },
+      {
+        "scale": 30,
+        "pattern": "shared_budget_price",
+        "fullMedianMicroseconds": 17631.4,
+        "incrementalMedianMicroseconds": 12566.1,
+        "fullOverIncrementalRatio": 1.4030924471395263,
+        "incrementalFaster": true
+      },
+      {
+        "scale": 120,
+        "pattern": "unchanged",
+        "fullMedianMicroseconds": 151546.1,
+        "incrementalMedianMicroseconds": 38034.4,
+        "fullOverIncrementalRatio": 3.984448288917401,
+        "incrementalFaster": true
+      },
+      {
+        "scale": 120,
+        "pattern": "unrelated_store",
+        "fullMedianMicroseconds": 249752.2,
+        "incrementalMedianMicroseconds": 61206.4,
+        "fullOverIncrementalRatio": 4.0804915825796,
+        "incrementalFaster": true
+      },
+      {
+        "scale": 120,
+        "pattern": "related_stock",
+        "fullMedianMicroseconds": 156538.5,
+        "incrementalMedianMicroseconds": 39426.2,
+        "fullOverIncrementalRatio": 3.9704181483379077,
+        "incrementalFaster": true
+      },
+      {
+        "scale": 120,
+        "pattern": "shared_budget_price",
+        "fullMedianMicroseconds": 251077.9,
+        "incrementalMedianMicroseconds": 188376,
+        "fullOverIncrementalRatio": 1.3328550346116277,
+        "incrementalFaster": true
+      }
+    ]
+  },
+  "old420Included": false,
+  "externalScore": null,
+  "assessment": "Evidence ready for independent review; no numeric score assigned by this implementation task",
+  "limits": [
+    "Synthetic predetermined scenarios, deterministic repetitions",
+    "No real users, procurement benefit or publication effect",
+    "Single local SQLite authority, bounded two-process uniqueness test",
+    "No power-loss test or distributed-throughput result",
+    "Explicit renewal of selected retained clauses is allowed; unselected identities preserved",
+    "New 13% integer-gram contract differs from legacy 10% round2-kg flow",
+    "Sequential local timing; no asymptotic improvement established; shared metadata duplicates"
+  ],
+  "uiCorrection": {
+    "notice": "study/UI_CORRECTION.md",
+    "prebuilt": "v2",
+    "acceptance": "artifacts/prebuilt-acceptance-v2.json",
+    "coreUnchanged": true,
+    "researchRawUnchanged": true,
+    "historicalV1UiPass": "superseded; handled UI banner was missed",
+    "video": "full clean re-record in progress; final separate VIDEO_QA is authoritative"
+  }
+}

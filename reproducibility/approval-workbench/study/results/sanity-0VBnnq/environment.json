@@ -1,0 +1,291 @@
+{
+  "phase": "sanity",
+  "startedUTC": "2026-11-01T07:14:18.539Z",
+  "node": "v24.19.0",
+  "versions": {
+    "node": "24.19.0",
+    "acorn": "8.17.0",
+    "ada": "3.4.4",
+    "amaro": "1.1.10",
+    "ares": "1.34.6",
+    "brotli": "1.2.0",
+    "cldr": "48.0",
+    "icu": "78.3",
+    "llhttp": "9.4.3",
+    "merve": "1.2.2",
+    "modules": "137",
+    "napi": "10",
+    "nbytes": "0.1.4",
+    "ncrypto": "0.0.1",
+    "nghttp2": "1.69.0",
+    "nghttp3": "",
+    "ngtcp2": "",
+    "openssl": "3.5.7",
+    "simdjson": "4.6.4",
+    "simdutf": "6.4.0",
+    "sqlite": "3.53.3",
+    "tz": "2026b",
+    "undici": "7.29.0",
+    "unicode": "17.0",
+    "uv": "1.52.1",
+    "uvwasi": "0.0.23",
+    "v8": "13.6.233.17-node.51",
+    "zlib": "1.3.2.1-motley-3246f1b",
+    "zstd": "1.5.7"
+  },
+  "platform": "win32",
+  "arch": "x64",
+  "processor": "12th Gen Intel(R) Core(TM) i7-12700H",
+  "codeDigest": "c78191881f575fa9c098f499de0b7e2d37b9957c6bbe251bf1835035d20dc27f",
+  "hashes": {
+    "study/PILOT_MATRIX.json": "fb120eae7aedbd8d5eeb6f7d19cbebc4319043f93762498b7f4dd05d5e855f67",
+    "study/CONTRACT.md": "126c8c80ce766eddd902adedc535d25d42ba75b26003a0f9b9c773aab2b364cf",
+    "study/run-pilot.cjs": "26a30aa5c16cba2d69cac82b5c96db0cb9618e3725fceec6a93e201a7911f343",
+    "study/commit-worker.cjs": "2592e335654058f41fef77ef48d55fbe4a2b92ac83ae7d48833805512828d289",
+    "tests/full-oracle.cjs": "f9de821a2752ff447ab3e2b0daeff7ebe68bf77c26cfde0b650dadd0a1a4d81a",
+    "core/contracts.cjs": "366f18e4ed088a51859e1b23e39082843fb41a8e47d356bb4f45af0358bf98cb",
+    "core/engine.cjs": "42060ae93c0406322c8aed9303025e01618d8d9ade8166e3ea6e7be33778e3b4",
+    "core/fixtures.cjs": "701b8bbf3218fc4989a606defb68c51c58faad72554d2cc720de5351232d859c",
+    "core/predicate.cjs": "e69ef5a2d904cce215f5c83839ed263c8c3d9994e129ceb5e8a4623e7afac3e9",
+    "core/service.cjs": "c576ab74fd30312b92db1b5c4dba4a70ae0e083eefae5f875666e043b7e9d0e6",
+    "core/store.cjs": "18857bf553fd1f65d543d2a92aa22f663e5f06ce3681b4509fbd303f55727b53",
+    "core/value.cjs": "08aabda7ba336faffab8488fd364ff5bc621d6a3065ecab985d723cdb0476bc4"
+  },
+  "matrix": {
+    "protocol": "approval-contract-pilot-v1",
+    "frozenBeforeFirstPilot": true,
+    "fixtureCalibration": "Inventory buffer is 11300 basis points, restoring the existing 31.5 kg -> 36.5 kg suggested-order story. Earlier 8 development checks used 11000; these are not formal pilot trials.",
+    "modes": [
+      "whole",
+      "rows",
+      "full",
+      "incremental"
+    ],
+    "baselines": "All four modes enforce the same protected evidence contract. Row mode includes table fences, key absence epochs and row generations. No weak baseline is exposed as a commit mode.",
+    "gate": {
+      "unsafeRetainedApprovals": 0,
+      "incorrectNewCommits": 0,
+      "partialEffectStates": 0,
+      "infrastructureErrors": 0
+    },
+    "functionalPlan": {
+      "sanityRepeats": 1,
+      "sanityScale": 3,
+      "mainRepeats": 3,
+      "mainScale": 3,
+      "extraScalePoints": [
+        30,
+        120
+      ],
+      "extraScaleRepeats": 1
+    },
+    "timingPlan": {
+      "scales": [
+        3,
+        30,
+        120
+      ],
+      "warmupsPerCell": 5,
+      "samplesPerCell": 30,
+      "scope": "Local direct service validation; cold capture and real commit costs reported separately, no user-time or deployment-cost claims"
+    },
+    "scenarios": [
+      {
+        "id": "unchanged",
+        "description": "No source write; original approvals remain valid",
+        "scale": true
+      },
+      {
+        "id": "unrelated_store",
+        "description": "Update on-hand stock in another store",
+        "scale": true
+      },
+      {
+        "id": "unselected_sku",
+        "description": "Insert inventory for a SKU outside the selected draft"
+      },
+      {
+        "id": "display_only",
+        "description": "Change inventory name and note; protected fields unchanged",
+        "scale": true
+      },
+      {
+        "id": "related_stock",
+        "description": "Rice on-hand 25 kg -> 20 kg; proposed 31.5 kg initially unchanged",
+        "scale": true
+      },
+      {
+        "id": "zero_quantity_stock",
+        "description": "Change greens inventory despite proposed zero quantity"
+      },
+      {
+        "id": "field_aba",
+        "description": "Change and restore protected rice on-hand field"
+      },
+      {
+        "id": "same_output_evidence",
+        "description": "Change joined reason version while reserve sum and suggestion stay equal",
+        "setup": "two_reserves"
+      },
+      {
+        "id": "matching_insert",
+        "description": "Insert active rice reserve into initially empty predicate",
+        "scale": true
+      },
+      {
+        "id": "nonmatching_insert",
+        "description": "Insert another-store reserve; fine predicate certificate unchanged",
+        "scale": true
+      },
+      {
+        "id": "matching_insert_delete",
+        "description": "Insert then delete matching reserve; empty final membership still changed"
+      },
+      {
+        "id": "matching_delete",
+        "description": "Delete one original matching reserve",
+        "setup": "two_reserves"
+      },
+      {
+        "id": "member_replacement_same_total",
+        "description": "Replace reserve key with same quantity/reason; equal sum is not equal evidence",
+        "setup": "two_reserves"
+      },
+      {
+        "id": "predicate_boundary",
+        "description": "Inactive reserve becomes active",
+        "setup": "inactive_reserve"
+      },
+      {
+        "id": "predicate_aba",
+        "description": "Inactive -> active -> inactive before validation",
+        "setup": "inactive_reserve"
+      },
+      {
+        "id": "null_numeric",
+        "description": "A protected stock integer becomes explicit null"
+      },
+      {
+        "id": "missing_numeric",
+        "description": "A protected stock integer field is removed"
+      },
+      {
+        "id": "negative_numeric",
+        "description": "A protected reserve quantity becomes negative",
+        "setup": "two_reserves"
+      },
+      {
+        "id": "overflow_numeric",
+        "description": "Safe-integer input creates overflowing protected arithmetic"
+      },
+      {
+        "id": "duplicate_key",
+        "description": "Attempt insertOnly of an existing fact key; transaction rejects it"
+      },
+      {
+        "id": "distinct_equal_members",
+        "description": "Add a distinct equal-valued reserve member",
+        "setup": "two_reserves"
+      },
+      {
+        "id": "join_fanout",
+        "description": "Two reserve rows share one right key; right-state change affects both",
+        "setup": "two_reserves"
+      },
+      {
+        "id": "missing_right_insert",
+        "description": "Insert a previously missing joined reason",
+        "setup": "missing_reason"
+      },
+      {
+        "id": "absent_key_aba_restart",
+        "description": "Insert/delete a missing right key, close DB, open in a fresh process for validation",
+        "setup": "missing_reason"
+      },
+      {
+        "id": "stock_delete_reinsert",
+        "description": "Delete/reinsert same-valued stock row; generation changed"
+      },
+      {
+        "id": "shared_budget_price",
+        "description": "Rice unit-price change affects every shared-budget clause",
+        "scale": true
+      },
+      {
+        "id": "shared_budget_quantity",
+        "description": "Change one proposed quantity; shared budget affects all clauses"
+      },
+      {
+        "id": "shared_budget_member",
+        "description": "Insert a distinct committed budget use; all clauses need review"
+      },
+      {
+        "id": "shared_budget_member_aba",
+        "description": "Insert/delete committed budget-use member; final amount equal"
+      },
+      {
+        "id": "shared_budget_exceeded",
+        "description": "An additional committed use exhausts the shared budget"
+      },
+      {
+        "id": "rule_version",
+        "description": "Change rule version with same numerical buffer"
+      },
+      {
+        "id": "rule_revoke",
+        "description": "Disable inventory rule"
+      },
+      {
+        "id": "permission_revoke",
+        "description": "Revoke designated approver commit grant"
+      },
+      {
+        "id": "permission_restore",
+        "description": "Revoke then restore approve grant; history versions change"
+      },
+      {
+        "id": "opaque_fallback",
+        "description": "Opaque legacy rule forces global invalidation for unrelated update",
+        "opaque": true,
+        "scale": true
+      },
+      {
+        "id": "stale_preview",
+        "description": "Protected source changes after sealed preview; review is rejected"
+      },
+      {
+        "id": "before_commit_change",
+        "description": "A valid request is captured, then source changes before confirm"
+      },
+      {
+        "id": "committed_response_lost_restart",
+        "description": "Commit in child process, discard response, alter source, retry in new child process; original receipt returned"
+      },
+      {
+        "id": "changed_body_key",
+        "description": "Committed key reused with changed request body is rejected"
+      },
+      {
+        "id": "different_key_same_draft",
+        "description": "New key for committed draft cannot create second receipt"
+      },
+      {
+        "id": "concurrent_different_keys",
+        "description": "Two actual child processes race with distinct keys for the same draft; one receipt"
+      },
+      {
+        "id": "atomic_exception",
+        "description": "Temporary SQLite trigger aborts outcome insert after receipt/budget write; all effects roll back; retry succeeds"
+      },
+      {
+        "id": "contract_mismatch",
+        "description": "Contract definition version changes after review"
+      },
+      {
+        "id": "journal_floor",
+        "description": "Journal provenance floor changes; approvals require conservative fresh review"
+      }
+    ],
+    "interpretation": "Functional repetitions are deterministic replay checks, not independent field cases. Injected SQLite exceptions are not process crashes or power loss. Child-process reopen/retry is normal process recovery. All SQLite runs use one database authority boundary; no distributed, multi-writer throughput or production rate is claimed."
+  }
+}

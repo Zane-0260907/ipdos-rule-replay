@@ -1,0 +1,82 @@
+{
+  "passed": true,
+  "platform": "Windows-10-10.0.26200-SP0",
+  "python": "3.10.0 (tags/v3.10.0:b494f59, Oct  4 2021, 19:00:18) [MSC v.1929 64 bit (AMD64)]",
+  "node": "v24.19.0",
+  "clean_extraction": "${ORIGINAL_EXECUTION_PATH}/ipdos-portability-mfectkza",
+  "input_archive": {
+    "path": "${ORIGINAL_EXECUTION_PATH}/portable-validation-input.zip",
+    "bytes": 8117451,
+    "sha256": "dac9b308875dce8a5f93879128b1293013ce96f14ac842ecd4c0db94e39b6797",
+    "files": 425
+  },
+  "commands": [
+    {
+      "label": "guard-self-test",
+      "args": [
+        "node",
+        "--require",
+        "./tests/forbid-origin-read.cjs",
+        "-e",
+        "const fs=require('node:fs');const s=JSON.parse(fs.readFileSync('source-freeze.json','utf8').replace(/^\\uFEFF/,''));try{fs.readFileSync(s.source_root+'/core/engine.cjs');process.exitCode=1;}catch(e){if(!e.message.startsWith('PORTABILITY_ORIGINAL_SOURCE_ACCESS_FORBIDDEN:'))throw e;console.log('guard verified');}"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "original-immutable-results-audit",
+      "args": [
+        "node",
+        "--require",
+        "./tests/forbid-origin-read.cjs",
+        "audit-replay.cjs"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "source-mapping",
+      "args": [
+        "node",
+        "mapping.cjs"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "independent-source-verification",
+      "args": [
+        "C:\\Program Files\\Python310\\python.exe",
+        "tests/verify-source.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "fresh-complete-replay",
+      "args": [
+        "node",
+        "--require",
+        "./tests/forbid-origin-read.cjs",
+        "run-replay.cjs"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "fresh-complete-audit",
+      "args": [
+        "node",
+        "--require",
+        "./tests/forbid-origin-read.cjs",
+        "audit-replay.cjs"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "original_source_directory_access_blocked": true,
+  "original_source_access_attempts_during_replay_and_audits": 0,
+  "original_audit_checks": 10053,
+  "fresh_replay_traces": 120,
+  "fresh_audit_checks": 10054,
+  "fresh_audit_failures": 0,
+  "functional_field_comparisons_to_original": 1440,
+  "original_result_and_source_files_preserved": 405,
+  "core_sample_protocol_and_original_results_unchanged": true,
+  "note": "Fresh UUIDs and local timing observations are separate verification evidence; original counts, timings, raw databases and report are not replaced. Validation host is relocated Windows; this does not claim an actual Linux execution."
+}

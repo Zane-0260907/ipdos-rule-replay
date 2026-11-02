@@ -1,0 +1,1819 @@
+{
+  "run": "artifacts/browser-document-run-Q1qjJx",
+  "startedUTC": "2026-11-01T09:01:50.826Z",
+  "screenshots": [
+    "${ARTIFACT_ROOT}\\artifacts\\prebuilt-acceptance-cl7q2vdh\\artifacts\\browser-document-run-Q1qjJx\\prototype-document-01-content-blocked.png",
+    "${ARTIFACT_ROOT}\\artifacts\\prebuilt-acceptance-cl7q2vdh\\artifacts\\browser-document-run-Q1qjJx\\prototype-document-02-audience-reason.png",
+    "${ARTIFACT_ROOT}\\artifacts\\prebuilt-acceptance-cl7q2vdh\\artifacts\\browser-document-run-Q1qjJx\\prototype-document-03-saved-release.png"
+  ],
+  "initial": {
+    "workflow": "document",
+    "draft": {
+      "id": "DOC-001",
+      "workflow": "document",
+      "context": {
+        "draftId": "DOC-001",
+        "actorId": "synthetic-manager-01",
+        "channelId": "LOCAL-DEMO",
+        "docIds": [
+          "GUIDE-A",
+          "RUNBOOK-B"
+        ]
+      },
+      "intent_revision": 1,
+      "status": "open"
+    },
+    "actor": "synthetic-manager-01",
+    "role": "manager",
+    "mode": "incremental",
+    "validation": {
+      "draftId": "DOC-001",
+      "mode": "incremental",
+      "revision": 17,
+      "generation": "b7e4a56b-81f5-4f29-b7ec-02c1d77a39c6",
+      "contractHash": "aa610d3421f4ed1120c7bce2df70656154976b62f34fc986ee74d48fa9f3ff3c",
+      "clauses": [
+        {
+          "id": "publish:GUIDE-A",
+          "label": "GUIDE-A release decision",
+          "status": "retained",
+          "retained": true,
+          "reason": "Original protected evidence is unchanged; original approval snapshot retained.",
+          "approvalId": "APP-ee3249e71761aba3ff894531e8ef091c1edced5100200052e29a9ab8b5788b3a",
+          "originalSnapshotId": "SNAP-26754b60bdfda1fed1714c4e7235a6b19dacf536161559e485cad208c84a243b",
+          "reviewedRevision": 17,
+          "validatedRevision": 17,
+          "canCommit": true,
+          "current": {
+            "value": {
+              "docId": "GUIDE-A",
+              "contentDigest": "bd7a4cfd077ea00f646b145ede51430a647b5b62c9007485909fc15337bc4783",
+              "classification": "internal",
+              "requested": true,
+              "eligibleSignoffs": 2,
+              "requiredSignoffs": 2,
+              "releaseAudience": {
+                "audienceCount": 1,
+                "channelVersion": "channel-1",
+                "canCommit": true
+              },
+              "policyVersion": "publishing-1",
+              "grantVersion": 1,
+              "canCommit": true
+            },
+            "error": null,
+            "viewHash": "255fc24063e40551f9565008cd6518c2ab3e7a6c74025fe36747afcf7cac83d0"
+          },
+          "differences": []
+        },
+        {
+          "id": "publish:RUNBOOK-B",
+          "label": "RUNBOOK-B release decision",
+          "status": "retained",
+          "retained": true,
+          "reason": "Original protected evidence is unchanged; original approval snapshot retained.",
+          "approvalId": "APP-3cf0a7f48e9ae6532ab2f1c268da4dd9afd35c890417b1374c9575ed79201597",
+          "originalSnapshotId": "SNAP-26754b60bdfda1fed1714c4e7235a6b19dacf536161559e485cad208c84a243b",
+          "reviewedRevision": 17,
+          "validatedRevision": 17,
+          "canCommit": true,
+          "current": {
+            "value": {
+              "docId": "RUNBOOK-B",
+              "contentDigest": "105d7799891e6f3c2eb4871e3233d77cac1574fc6274af82d28e6e12fd60f50d",
+              "classification": "internal",
+              "requested": true,
+              "eligibleSignoffs": 2,
+              "requiredSignoffs": 2,
+              "releaseAudience": {
+                "audienceCount": 1,
+                "channelVersion": "channel-1",
+                "canCommit": true
+              },
+              "policyVersion": "publishing-1",
+              "grantVersion": 1,
+              "canCommit": true
+            },
+            "error": null,
+            "viewHash": "11e48dcdf43c61c9f4c34267a04ce7b57cddf863e6ea4533014ced7fde41dd4b"
+          },
+          "differences": []
+        }
+      ],
+      "allApproved": true,
+      "requiredReviewCount": 0,
+      "metrics": {
+        "verificationMicroseconds": 769,
+        "materialization": {
+          "mode": "incremental",
+          "revision": 17,
+          "totalNodes": 19,
+          "evaluatedNodes": 0,
+          "reusedNodes": 19,
+          "nominatedLeaves": 0,
+          "propagationEdges": 0,
+          "keyReads": 0,
+          "scanReads": 0,
+          "rowsRead": 0,
+          "eventsRead": 0,
+          "elapsedMicroseconds": 130.6,
+          "fallback": null,
+          "trackedKeyBuckets": 10,
+          "trackedScanNodes": 4
+        },
+        "coarseVersionLookups": 0
+      }
+    },
+    "items": [],
+    "documents": [
+      {
+        "docId": "GUIDE-A",
+        "title": "Synthetic GUIDE-A",
+        "note": "Display-only title/note",
+        "contentDigest": "bd7a4cfd077ea00f646b145ede51430a647b5b62c9007485909fc15337bc4783",
+        "classification": "internal",
+        "ready": true,
+        "version": "content-1"
+      },
+      {
+        "docId": "RUNBOOK-B",
+        "title": "Synthetic RUNBOOK-B",
+        "note": "Display-only title/note",
+        "contentDigest": "105d7799891e6f3c2eb4871e3233d77cac1574fc6274af82d28e6e12fd60f50d",
+        "classification": "internal",
+        "ready": true,
+        "version": "content-1"
+      }
+    ],
+    "changes": [],
+    "receipts": [],
+    "request": {
+      "draftId": "DOC-001",
+      "mode": "incremental",
+      "intentHash": "b0dd2d7bacfde5a7949fd97d72f218c46c55d0a44698b9fb9aecc47dc521b1f2",
+      "approvalSelection": "183273e2e2f5cda8ce92b9df4fd72de21dd63008b379c8ce7f8fca235a2b64f3"
+    },
+    "displayOnly": [
+      {
+        "table": "documents",
+        "fields": [
+          "title",
+          "note"
+        ]
+      },
+      {
+        "table": "principals",
+        "fields": [
+          "name"
+        ]
+      }
+    ],
+    "protectedScope": "Document content digests, classification/readiness, distinct eligible signers and all signoff members, current audience/principal membership, policy and authority versions.",
+    "grants": {
+      "view": true,
+      "approve": true,
+      "commit": true,
+      "grantVersion": 1
+    }
+  },
+  "display": {
+    "workflow": "document",
+    "draft": {
+      "id": "DOC-001",
+      "workflow": "document",
+      "context": {
+        "draftId": "DOC-001",
+        "actorId": "synthetic-manager-01",
+        "channelId": "LOCAL-DEMO",
+        "docIds": [
+          "GUIDE-A",
+          "RUNBOOK-B"
+        ]
+      },
+      "intent_revision": 1,
+      "status": "open"
+    },
+    "actor": "synthetic-manager-01",
+    "role": "manager",
+    "mode": "incremental",
+    "validation": {
+      "draftId": "DOC-001",
+      "mode": "incremental",
+      "revision": 18,
+      "generation": "b7e4a56b-81f5-4f29-b7ec-02c1d77a39c6",
+      "contractHash": "aa610d3421f4ed1120c7bce2df70656154976b62f34fc986ee74d48fa9f3ff3c",
+      "clauses": [
+        {
+          "id": "publish:GUIDE-A",
+          "label": "GUIDE-A release decision",
+          "status": "retained",
+          "retained": true,
+          "reason": "Original protected evidence is unchanged; original approval snapshot retained.",
+          "approvalId": "APP-ee3249e71761aba3ff894531e8ef091c1edced5100200052e29a9ab8b5788b3a",
+          "originalSnapshotId": "SNAP-26754b60bdfda1fed1714c4e7235a6b19dacf536161559e485cad208c84a243b",
+          "reviewedRevision": 17,
+          "validatedRevision": 18,
+          "canCommit": true,
+          "current": {
+            "value": {
+              "docId": "GUIDE-A",
+              "contentDigest": "bd7a4cfd077ea00f646b145ede51430a647b5b62c9007485909fc15337bc4783",
+              "classification": "internal",
+              "requested": true,
+              "eligibleSignoffs": 2,
+              "requiredSignoffs": 2,
+              "releaseAudience": {
+                "audienceCount": 1,
+                "channelVersion": "channel-1",
+                "canCommit": true
+              },
+              "policyVersion": "publishing-1",
+              "grantVersion": 1,
+              "canCommit": true
+            },
+            "error": null,
+            "viewHash": "255fc24063e40551f9565008cd6518c2ab3e7a6c74025fe36747afcf7cac83d0"
+          },
+          "differences": []
+        },
+        {
+          "id": "publish:RUNBOOK-B",
+          "label": "RUNBOOK-B release decision",
+          "status": "retained",
+          "retained": true,
+          "reason": "Original protected evidence is unchanged; original approval snapshot retained.",
+          "approvalId": "APP-3cf0a7f48e9ae6532ab2f1c268da4dd9afd35c890417b1374c9575ed79201597",
+          "originalSnapshotId": "SNAP-26754b60bdfda1fed1714c4e7235a6b19dacf536161559e485cad208c84a243b",
+          "reviewedRevision": 17,
+          "validatedRevision": 18,
+          "canCommit": true,
+          "current": {
+            "value": {
+              "docId": "RUNBOOK-B",
+              "contentDigest": "105d7799891e6f3c2eb4871e3233d77cac1574fc6274af82d28e6e12fd60f50d",
+              "classification": "internal",
+              "requested": true,
+              "eligibleSignoffs": 2,
+              "requiredSignoffs": 2,
+              "releaseAudience": {
+                "audienceCount": 1,
+                "channelVersion": "channel-1",
+                "canCommit": true
+              },
+              "policyVersion": "publishing-1",
+              "grantVersion": 1,
+              "canCommit": true
+            },
+            "error": null,
+            "viewHash": "11e48dcdf43c61c9f4c34267a04ce7b57cddf863e6ea4533014ced7fde41dd4b"
+          },
+          "differences": []
+        }
+      ],
+      "allApproved": true,
+      "requiredReviewCount": 0,
+      "metrics": {
+        "verificationMicroseconds": 840.8,
+        "materialization": {
+          "mode": "incremental",
+          "revision": 18,
+          "totalNodes": 19,
+          "evaluatedNodes": 0,
+          "reusedNodes": 19,
+          "nominatedLeaves": 0,
+          "propagationEdges": 0,
+          "keyReads": 0,
+          "scanReads": 0,
+          "rowsRead": 0,
+          "eventsRead": 0,
+          "elapsedMicroseconds": 138.3,
+          "fallback": null,
+          "trackedKeyBuckets": 10,
+          "trackedScanNodes": 4
+        },
+        "coarseVersionLookups": 0
+      }
+    },
+    "items": [],
+    "documents": [
+      {
+        "docId": "GUIDE-A",
+        "title": "Synthetic GUIDE-A (title updated)",
+        "note": "Current display note",
+        "contentDigest": "bd7a4cfd077ea00f646b145ede51430a647b5b62c9007485909fc15337bc4783",
+        "classification": "internal",
+        "ready": true,
+        "version": "content-1"
+      },
+      {
+        "docId": "RUNBOOK-B",
+        "title": "Synthetic RUNBOOK-B",
+        "note": "Display-only title/note",
+        "contentDigest": "105d7799891e6f3c2eb4871e3233d77cac1574fc6274af82d28e6e12fd60f50d",
+        "classification": "internal",
+        "ready": true,
+        "version": "content-1"
+      }
+    ],
+    "changes": [
+      {
+        "revision": 18,
+        "table": "documents",
+        "key": "GUIDE-A",
+        "fields": [
+          "note",
+          "title"
+        ],
+        "before": {
+          "title": "Synthetic GUIDE-A",
+          "note": "Display-only title/note",
+          "contentDigest": "bd7a4cfd077ea00f646b145ede51430a647b5b62c9007485909fc15337bc4783",
+          "classification": "internal",
+          "ready": true,
+          "version": "content-1"
+        },
+        "after": {
+          "title": "Synthetic GUIDE-A (title updated)",
+          "note": "Current display note",
+          "contentDigest": "bd7a4cfd077ea00f646b145ede51430a647b5b62c9007485909fc15337bc4783",
+          "classification": "internal",
+          "ready": true,
+          "version": "content-1"
+        }
+      }
+    ],
+    "receipts": [],
+    "request": {
+      "draftId": "DOC-001",
+      "mode": "incremental",
+      "intentHash": "b0dd2d7bacfde5a7949fd97d72f218c46c55d0a44698b9fb9aecc47dc521b1f2",
+      "approvalSelection": "183273e2e2f5cda8ce92b9df4fd72de21dd63008b379c8ce7f8fca235a2b64f3"
+    },
+    "displayOnly": [
+      {
+        "table": "documents",
+        "fields": [
+          "title",
+          "note"
+        ]
+      },
+      {
+        "table": "principals",
+        "fields": [
+          "name"
+        ]
+      }
+    ],
+    "protectedScope": "Document content digests, classification/readiness, distinct eligible signers and all signoff members, current audience/principal membership, policy and authority versions.",
+    "grants": {
+      "view": true,
+      "approve": true,
+      "commit": true,
+      "grantVersion": 1
+    }
+  },
+  "changedContent": {
+    "workflow": "document",
+    "draft": {
+      "id": "DOC-001",
+      "workflow": "document",
+      "context": {
+        "draftId": "DOC-001",
+        "actorId": "synthetic-manager-01",
+        "channelId": "LOCAL-DEMO",
+        "docIds": [
+          "GUIDE-A",
+          "RUNBOOK-B"
+        ]
+      },
+      "intent_revision": 1,
+      "status": "open"
+    },
+    "actor": "synthetic-manager-01",
+    "role": "manager",
+    "mode": "incremental",
+    "validation": {
+      "draftId": "DOC-001",
+      "mode": "incremental",
+      "revision": 19,
+      "generation": "b7e4a56b-81f5-4f29-b7ec-02c1d77a39c6",
+      "contractHash": "aa610d3421f4ed1120c7bce2df70656154976b62f34fc986ee74d48fa9f3ff3c",
+      "clauses": [
+        {
+          "id": "publish:GUIDE-A",
+          "label": "GUIDE-A release decision",
+          "status": "needs_review",
+          "retained": false,
+          "reason": "A protected commit condition is false.",
+          "approvalId": "APP-ee3249e71761aba3ff894531e8ef091c1edced5100200052e29a9ab8b5788b3a",
+          "originalSnapshotId": "SNAP-26754b60bdfda1fed1714c4e7235a6b19dacf536161559e485cad208c84a243b",
+          "reviewedRevision": 17,
+          "validatedRevision": 19,
+          "canCommit": false,
+          "current": {
+            "value": {
+              "docId": "GUIDE-A",
+              "contentDigest": "8b00b55ff9f0d47f486bfc38be7c82769fba1b74b251357bed2841f0614595a0",
+              "classification": "internal",
+              "requested": true,
+              "eligibleSignoffs": 0,
+              "requiredSignoffs": 2,
+              "releaseAudience": {
+                "audienceCount": 1,
+                "channelVersion": "channel-1",
+                "canCommit": true
+              },
+              "policyVersion": "publishing-1",
+              "grantVersion": 1,
+              "canCommit": false
+            },
+            "error": null,
+            "viewHash": "babd3a7493b3216fba42054e1cce2bfd9cf34b0f18721731edeec8b0fd265a1a"
+          },
+          "differences": [
+            {
+              "token": "key:{\"fields\":[\"classification\",\"contentDigest\",\"ready\",\"version\"],\"key\":\"GUIDE-A\",\"table\":\"documents\"}",
+              "before": {
+                "id": "key:{\"fields\":[\"classification\",\"contentDigest\",\"ready\",\"version\"],\"key\":\"GUIDE-A\",\"table\":\"documents\"}",
+                "kind": "key",
+                "table": "documents",
+                "key": "GUIDE-A",
+                "exists": true,
+                "birth": 10,
+                "fields": {
+                  "classification": {
+                    "present": true,
+                    "value": "internal",
+                    "version": 10
+                  },
+                  "contentDigest": {
+                    "present": true,
+                    "value": "bd7a4cfd077ea00f646b145ede51430a647b5b62c9007485909fc15337bc4783",
+                    "version": 10
+                  },
+                  "ready": {
+                    "present": true,
+                    "value": true,
+                    "version": 10
+                  },
+                  "version": {
+                    "present": true,
+                    "value": "content-1",
+                    "version": 10
+                  }
+                }
+              },
+              "after": {
+                "id": "key:{\"fields\":[\"classification\",\"contentDigest\",\"ready\",\"version\"],\"key\":\"GUIDE-A\",\"table\":\"documents\"}",
+                "kind": "key",
+                "table": "documents",
+                "key": "GUIDE-A",
+                "exists": true,
+                "birth": 10,
+                "fields": {
+                  "classification": {
+                    "present": true,
+                    "value": "internal",
+                    "version": 10
+                  },
+                  "contentDigest": {
+                    "present": true,
+                    "value": "8b00b55ff9f0d47f486bfc38be7c82769fba1b74b251357bed2841f0614595a0",
+                    "version": 19
+                  },
+                  "ready": {
+                    "present": true,
+                    "value": true,
+                    "version": 10
+                  },
+                  "version": {
+                    "present": true,
+                    "value": "content-19",
+                    "version": 19
+                  }
+                }
+              },
+              "rulePaths": [
+                [
+                  "document:GUIDE-A",
+                  "release-decision:GUIDE-A"
+                ],
+                [
+                  "document:GUIDE-A",
+                  "eligible-signoffs:GUIDE-A",
+                  "release-decision:GUIDE-A"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "id": "publish:RUNBOOK-B",
+          "label": "RUNBOOK-B release decision",
+          "status": "retained",
+          "retained": true,
+          "reason": "Original protected evidence is unchanged; original approval snapshot retained.",
+          "approvalId": "APP-3cf0a7f48e9ae6532ab2f1c268da4dd9afd35c890417b1374c9575ed79201597",
+          "originalSnapshotId": "SNAP-26754b60bdfda1fed1714c4e7235a6b19dacf536161559e485cad208c84a243b",
+          "reviewedRevision": 17,
+          "validatedRevision": 19,
+          "canCommit": true,
+          "current": {
+            "value": {
+              "docId": "RUNBOOK-B",
+              "contentDigest": "105d7799891e6f3c2eb4871e3233d77cac1574fc6274af82d28e6e12fd60f50d",
+              "classification": "internal",
+              "requested": true,
+              "eligibleSignoffs": 2,
+              "requiredSignoffs": 2,
+              "releaseAudience": {
+                "audienceCount": 1,
+                "channelVersion": "channel-1",
+                "canCommit": true
+              },
+              "policyVersion": "publishing-1",
+              "grantVersion": 1,
+              "canCommit": true
+            },
+            "error": null,
+            "viewHash": "11e48dcdf43c61c9f4c34267a04ce7b57cddf863e6ea4533014ced7fde41dd4b"
+          },
+          "differences": []
+        }
+      ],
+      "allApproved": false,
+      "requiredReviewCount": 1,
+      "metrics": {
+        "verificationMicroseconds": 816.1,
+        "materialization": {
+          "mode": "incremental",
+          "revision": 19,
+          "totalNodes": 19,
+          "evaluatedNodes": 0,
+          "reusedNodes": 19,
+          "nominatedLeaves": 0,
+          "propagationEdges": 0,
+          "keyReads": 0,
+          "scanReads": 0,
+          "rowsRead": 0,
+          "eventsRead": 0,
+          "elapsedMicroseconds": 134.6,
+          "fallback": null,
+          "trackedKeyBuckets": 10,
+          "trackedScanNodes": 4
+        },
+        "coarseVersionLookups": 0
+      }
+    },
+    "items": [],
+    "documents": [
+      {
+        "docId": "GUIDE-A",
+        "title": "Synthetic GUIDE-A (title updated)",
+        "note": "Current display note",
+        "contentDigest": "8b00b55ff9f0d47f486bfc38be7c82769fba1b74b251357bed2841f0614595a0",
+        "classification": "internal",
+        "ready": true,
+        "version": "content-19"
+      },
+      {
+        "docId": "RUNBOOK-B",
+        "title": "Synthetic RUNBOOK-B",
+        "note": "Display-only title/note",
+        "contentDigest": "105d7799891e6f3c2eb4871e3233d77cac1574fc6274af82d28e6e12fd60f50d",
+        "classification": "internal",
+        "ready": true,
+        "version": "content-1"
+      }
+    ],
+    "changes": [
+      {
+        "revision": 18,
+        "table": "documents",
+        "key": "GUIDE-A",
+        "fields": [
+          "note",
+          "title"
+        ],
+        "before": {
+          "title": "Synthetic GUIDE-A",
+          "note": "Display-only title/note",
+          "contentDigest": "bd7a4cfd077ea00f646b145ede51430a647b5b62c9007485909fc15337bc4783",
+          "classification": "internal",
+          "ready": true,
+          "version": "content-1"
+        },
+        "after": {
+          "title": "Synthetic GUIDE-A (title updated)",
+          "note": "Current display note",
+          "contentDigest": "bd7a4cfd077ea00f646b145ede51430a647b5b62c9007485909fc15337bc4783",
+          "classification": "internal",
+          "ready": true,
+          "version": "content-1"
+        }
+      },
+      {
+        "revision": 19,
+        "table": "documents",
+        "key": "GUIDE-A",
+        "fields": [
+          "contentDigest",
+          "version"
+        ],
+        "before": {
+          "title": "Synthetic GUIDE-A (title updated)",
+          "note": "Current display note",
+          "contentDigest": "bd7a4cfd077ea00f646b145ede51430a647b5b62c9007485909fc15337bc4783",
+          "classification": "internal",
+          "ready": true,
+          "version": "content-1"
+        },
+        "after": {
+          "title": "Synthetic GUIDE-A (title updated)",
+          "note": "Current display note",
+          "contentDigest": "8b00b55ff9f0d47f486bfc38be7c82769fba1b74b251357bed2841f0614595a0",
+          "classification": "internal",
+          "ready": true,
+          "version": "content-19"
+        }
+      }
+    ],
+    "receipts": [],
+    "request": {
+      "draftId": "DOC-001",
+      "mode": "incremental",
+      "intentHash": "b0dd2d7bacfde5a7949fd97d72f218c46c55d0a44698b9fb9aecc47dc521b1f2",
+      "approvalSelection": "183273e2e2f5cda8ce92b9df4fd72de21dd63008b379c8ce7f8fca235a2b64f3"
+    },
+    "displayOnly": [
+      {
+        "table": "documents",
+        "fields": [
+          "title",
+          "note"
+        ]
+      },
+      {
+        "table": "principals",
+        "fields": [
+          "name"
+        ]
+      }
+    ],
+    "protectedScope": "Document content digests, classification/readiness, distinct eligible signers and all signoff members, current audience/principal membership, policy and authority versions.",
+    "grants": {
+      "view": true,
+      "approve": true,
+      "commit": true,
+      "grantVersion": 1
+    }
+  },
+  "audience": {
+    "workflow": "document",
+    "draft": {
+      "id": "DOC-001",
+      "workflow": "document",
+      "context": {
+        "draftId": "DOC-001",
+        "actorId": "synthetic-manager-01",
+        "channelId": "LOCAL-DEMO",
+        "docIds": [
+          "GUIDE-A",
+          "RUNBOOK-B"
+        ]
+      },
+      "intent_revision": 1,
+      "status": "open"
+    },
+    "actor": "synthetic-manager-01",
+    "role": "manager",
+    "mode": "incremental",
+    "validation": {
+      "draftId": "DOC-001",
+      "mode": "incremental",
+      "revision": 22,
+      "generation": "b7e4a56b-81f5-4f29-b7ec-02c1d77a39c6",
+      "contractHash": "aa610d3421f4ed1120c7bce2df70656154976b62f34fc986ee74d48fa9f3ff3c",
+      "clauses": [
+        {
+          "id": "publish:GUIDE-A",
+          "label": "GUIDE-A release decision",
+          "status": "needs_review",
+          "retained": false,
+          "reason": "Protected evidence, member identity, rule or authority version changed.",
+          "approvalId": "APP-417ecf9cec0ff4915b33fb8d4f7cc920ffa50467a6f9c815e7569efa43bc31c9",
+          "originalSnapshotId": "SNAP-ca5aa8e9b59a4e7424825ef3a2fadc895280d4e3ba7b059c965f3b5e967e81a4",
+          "reviewedRevision": 21,
+          "validatedRevision": 22,
+          "canCommit": true,
+          "current": {
+            "value": {
+              "docId": "GUIDE-A",
+              "contentDigest": "8b00b55ff9f0d47f486bfc38be7c82769fba1b74b251357bed2841f0614595a0",
+              "classification": "internal",
+              "requested": true,
+              "eligibleSignoffs": 2,
+              "requiredSignoffs": 2,
+              "releaseAudience": {
+                "audienceCount": 2,
+                "channelVersion": "channel-1",
+                "canCommit": true
+              },
+              "policyVersion": "publishing-1",
+              "grantVersion": 1,
+              "canCommit": true
+            },
+            "error": null,
+            "viewHash": "ff29a9dcffecd31d3e1d2cd9ffa5837efde6671719e8255fc75cfe9fcf3649b5"
+          },
+          "differences": [
+            {
+              "token": "scan:release-audience",
+              "before": {
+                "id": "scan:release-audience",
+                "kind": "scan",
+                "table": "audienceMembers",
+                "predicate": {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "field": "channelId",
+                      "value": "LOCAL-DEMO"
+                    },
+                    {
+                      "op": "eq",
+                      "field": "enabled",
+                      "value": true
+                    }
+                  ]
+                },
+                "fieldsProjected": [
+                  "channelId",
+                  "enabled",
+                  "principalId",
+                  "role"
+                ],
+                "membershipEpoch": 7,
+                "members": [
+                  {
+                    "key": "AUDIENCE-A",
+                    "birth": 7,
+                    "fields": {
+                      "channelId": {
+                        "present": true,
+                        "value": "LOCAL-DEMO",
+                        "version": 7
+                      },
+                      "enabled": {
+                        "present": true,
+                        "value": true,
+                        "version": 7
+                      },
+                      "principalId": {
+                        "present": true,
+                        "value": "READER-A",
+                        "version": 7
+                      },
+                      "role": {
+                        "present": true,
+                        "value": "reader",
+                        "version": 7
+                      }
+                    }
+                  }
+                ]
+              },
+              "after": {
+                "id": "scan:release-audience",
+                "kind": "scan",
+                "table": "audienceMembers",
+                "predicate": {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "field": "channelId",
+                      "value": "LOCAL-DEMO"
+                    },
+                    {
+                      "op": "eq",
+                      "field": "enabled",
+                      "value": true
+                    }
+                  ]
+                },
+                "fieldsProjected": [
+                  "channelId",
+                  "enabled",
+                  "principalId",
+                  "role"
+                ],
+                "membershipEpoch": 22,
+                "members": [
+                  {
+                    "key": "AUDIENCE-A",
+                    "birth": 7,
+                    "fields": {
+                      "channelId": {
+                        "present": true,
+                        "value": "LOCAL-DEMO",
+                        "version": 7
+                      },
+                      "enabled": {
+                        "present": true,
+                        "value": true,
+                        "version": 7
+                      },
+                      "principalId": {
+                        "present": true,
+                        "value": "READER-A",
+                        "version": 7
+                      },
+                      "role": {
+                        "present": true,
+                        "value": "reader",
+                        "version": 7
+                      }
+                    }
+                  },
+                  {
+                    "key": "AUDIENCE-B",
+                    "birth": 22,
+                    "fields": {
+                      "channelId": {
+                        "present": true,
+                        "value": "LOCAL-DEMO",
+                        "version": 22
+                      },
+                      "enabled": {
+                        "present": true,
+                        "value": true,
+                        "version": 22
+                      },
+                      "principalId": {
+                        "present": true,
+                        "value": "READER-B",
+                        "version": 22
+                      },
+                      "role": {
+                        "present": true,
+                        "value": "reader",
+                        "version": 22
+                      }
+                    }
+                  }
+                ]
+              },
+              "rulePaths": [
+                [
+                  "release-audience",
+                  "release-gate",
+                  "release-decision:GUIDE-A"
+                ],
+                [
+                  "release-audience",
+                  "audience-principals",
+                  "release-gate",
+                  "release-decision:GUIDE-A"
+                ],
+                [
+                  "audience-principals",
+                  "release-gate",
+                  "release-decision:GUIDE-A"
+                ]
+              ]
+            },
+            {
+              "token": "key:{\"fields\":[\"active\",\"grantVersion\"],\"key\":\"READER-B\",\"table\":\"principals\"}",
+              "before": null,
+              "after": {
+                "id": "key:{\"fields\":[\"active\",\"grantVersion\"],\"key\":\"READER-B\",\"table\":\"principals\"}",
+                "kind": "key",
+                "table": "principals",
+                "key": "READER-B",
+                "exists": true,
+                "birth": 6,
+                "fields": {
+                  "active": {
+                    "present": true,
+                    "value": true,
+                    "version": 6
+                  },
+                  "grantVersion": {
+                    "present": true,
+                    "value": 1,
+                    "version": 6
+                  }
+                }
+              },
+              "rulePaths": [
+                [
+                  "audience-principals",
+                  "release-gate",
+                  "release-decision:GUIDE-A"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "id": "publish:RUNBOOK-B",
+          "label": "RUNBOOK-B release decision",
+          "status": "needs_review",
+          "retained": false,
+          "reason": "Protected evidence, member identity, rule or authority version changed.",
+          "approvalId": "APP-3cf0a7f48e9ae6532ab2f1c268da4dd9afd35c890417b1374c9575ed79201597",
+          "originalSnapshotId": "SNAP-26754b60bdfda1fed1714c4e7235a6b19dacf536161559e485cad208c84a243b",
+          "reviewedRevision": 17,
+          "validatedRevision": 22,
+          "canCommit": true,
+          "current": {
+            "value": {
+              "docId": "RUNBOOK-B",
+              "contentDigest": "105d7799891e6f3c2eb4871e3233d77cac1574fc6274af82d28e6e12fd60f50d",
+              "classification": "internal",
+              "requested": true,
+              "eligibleSignoffs": 2,
+              "requiredSignoffs": 2,
+              "releaseAudience": {
+                "audienceCount": 2,
+                "channelVersion": "channel-1",
+                "canCommit": true
+              },
+              "policyVersion": "publishing-1",
+              "grantVersion": 1,
+              "canCommit": true
+            },
+            "error": null,
+            "viewHash": "0f1c09e671ee71e650a21bfe2c516022203bcc29fe39d39825c20e776c364fd5"
+          },
+          "differences": [
+            {
+              "token": "scan:release-audience",
+              "before": {
+                "id": "scan:release-audience",
+                "kind": "scan",
+                "table": "audienceMembers",
+                "predicate": {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "field": "channelId",
+                      "value": "LOCAL-DEMO"
+                    },
+                    {
+                      "op": "eq",
+                      "field": "enabled",
+                      "value": true
+                    }
+                  ]
+                },
+                "fieldsProjected": [
+                  "channelId",
+                  "enabled",
+                  "principalId",
+                  "role"
+                ],
+                "membershipEpoch": 7,
+                "members": [
+                  {
+                    "key": "AUDIENCE-A",
+                    "birth": 7,
+                    "fields": {
+                      "channelId": {
+                        "present": true,
+                        "value": "LOCAL-DEMO",
+                        "version": 7
+                      },
+                      "enabled": {
+                        "present": true,
+                        "value": true,
+                        "version": 7
+                      },
+                      "principalId": {
+                        "present": true,
+                        "value": "READER-A",
+                        "version": 7
+                      },
+                      "role": {
+                        "present": true,
+                        "value": "reader",
+                        "version": 7
+                      }
+                    }
+                  }
+                ]
+              },
+              "after": {
+                "id": "scan:release-audience",
+                "kind": "scan",
+                "table": "audienceMembers",
+                "predicate": {
+                  "op": "and",
+                  "args": [
+                    {
+                      "op": "eq",
+                      "field": "channelId",
+                      "value": "LOCAL-DEMO"
+                    },
+                    {
+                      "op": "eq",
+                      "field": "enabled",
+                      "value": true
+                    }
+                  ]
+                },
+                "fieldsProjected": [
+                  "channelId",
+                  "enabled",
+                  "principalId",
+                  "role"
+                ],
+                "membershipEpoch": 22,
+                "members": [
+                  {
+                    "key": "AUDIENCE-A",
+                    "birth": 7,
+                    "fields": {
+                      "channelId": {
+                        "present": true,
+                        "value": "LOCAL-DEMO",
+                        "version": 7
+                      },
+                      "enabled": {
+                        "present": true,
+                        "value": true,
+                        "version": 7
+                      },
+                      "principalId": {
+                        "present": true,
+                        "value": "READER-A",
+                        "version": 7
+                      },
+                      "role": {
+                        "present": true,
+                        "value": "reader",
+                        "version": 7
+                      }
+                    }
+                  },
+                  {
+                    "key": "AUDIENCE-B",
+                    "birth": 22,
+                    "fields": {
+                      "channelId": {
+                        "present": true,
+                        "value": "LOCAL-DEMO",
+                        "version": 22
+                      },
+                      "enabled": {
+                        "present": true,
+                        "value": true,
+                        "version": 22
+                      },
+                      "principalId": {
+                        "present": true,
+                        "value": "READER-B",
+                        "version": 22
+                      },
+                      "role": {
+                        "present": true,
+                        "value": "reader",
+                        "version": 22
+                      }
+                    }
+                  }
+                ]
+              },
+              "rulePaths": [
+                [
+                  "release-audience",
+                  "release-gate",
+                  "release-decision:RUNBOOK-B"
+                ],
+                [
+                  "release-audience",
+                  "audience-principals",
+                  "release-gate",
+                  "release-decision:RUNBOOK-B"
+                ],
+                [
+                  "audience-principals",
+                  "release-gate",
+                  "release-decision:RUNBOOK-B"
+                ]
+              ]
+            },
+            {
+              "token": "key:{\"fields\":[\"active\",\"grantVersion\"],\"key\":\"READER-B\",\"table\":\"principals\"}",
+              "before": null,
+              "after": {
+                "id": "key:{\"fields\":[\"active\",\"grantVersion\"],\"key\":\"READER-B\",\"table\":\"principals\"}",
+                "kind": "key",
+                "table": "principals",
+                "key": "READER-B",
+                "exists": true,
+                "birth": 6,
+                "fields": {
+                  "active": {
+                    "present": true,
+                    "value": true,
+                    "version": 6
+                  },
+                  "grantVersion": {
+                    "present": true,
+                    "value": 1,
+                    "version": 6
+                  }
+                }
+              },
+              "rulePaths": [
+                [
+                  "audience-principals",
+                  "release-gate",
+                  "release-decision:RUNBOOK-B"
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "allApproved": false,
+      "requiredReviewCount": 2,
+      "metrics": {
+        "verificationMicroseconds": 804.6,
+        "materialization": {
+          "mode": "incremental",
+          "revision": 22,
+          "totalNodes": 19,
+          "evaluatedNodes": 0,
+          "reusedNodes": 19,
+          "nominatedLeaves": 0,
+          "propagationEdges": 0,
+          "keyReads": 0,
+          "scanReads": 0,
+          "rowsRead": 0,
+          "eventsRead": 0,
+          "elapsedMicroseconds": 144.1,
+          "fallback": null,
+          "trackedKeyBuckets": 11,
+          "trackedScanNodes": 4
+        },
+        "coarseVersionLookups": 0
+      }
+    },
+    "items": [],
+    "documents": [
+      {
+        "docId": "GUIDE-A",
+        "title": "Synthetic GUIDE-A (title updated)",
+        "note": "Current display note",
+        "contentDigest": "8b00b55ff9f0d47f486bfc38be7c82769fba1b74b251357bed2841f0614595a0",
+        "classification": "internal",
+        "ready": true,
+        "version": "content-19"
+      },
+      {
+        "docId": "RUNBOOK-B",
+        "title": "Synthetic RUNBOOK-B",
+        "note": "Display-only title/note",
+        "contentDigest": "105d7799891e6f3c2eb4871e3233d77cac1574fc6274af82d28e6e12fd60f50d",
+        "classification": "internal",
+        "ready": true,
+        "version": "content-1"
+      }
+    ],
+    "changes": [
+      {
+        "revision": 18,
+        "table": "documents",
+        "key": "GUIDE-A",
+        "fields": [
+          "note",
+          "title"
+        ],
+        "before": {
+          "title": "Synthetic GUIDE-A",
+          "note": "Display-only title/note",
+          "contentDigest": "bd7a4cfd077ea00f646b145ede51430a647b5b62c9007485909fc15337bc4783",
+          "classification": "internal",
+          "ready": true,
+          "version": "content-1"
+        },
+        "after": {
+          "title": "Synthetic GUIDE-A (title updated)",
+          "note": "Current display note",
+          "contentDigest": "bd7a4cfd077ea00f646b145ede51430a647b5b62c9007485909fc15337bc4783",
+          "classification": "internal",
+          "ready": true,
+          "version": "content-1"
+        }
+      },
+      {
+        "revision": 19,
+        "table": "documents",
+        "key": "GUIDE-A",
+        "fields": [
+          "contentDigest",
+          "version"
+        ],
+        "before": {
+          "title": "Synthetic GUIDE-A (title updated)",
+          "note": "Current display note",
+          "contentDigest": "bd7a4cfd077ea00f646b145ede51430a647b5b62c9007485909fc15337bc4783",
+          "classification": "internal",
+          "ready": true,
+          "version": "content-1"
+        },
+        "after": {
+          "title": "Synthetic GUIDE-A (title updated)",
+          "note": "Current display note",
+          "contentDigest": "8b00b55ff9f0d47f486bfc38be7c82769fba1b74b251357bed2841f0614595a0",
+          "classification": "internal",
+          "ready": true,
+          "version": "content-19"
+        }
+      },
+      {
+        "revision": 20,
+        "table": "signoffs",
+        "key": "GUIDE-A:EDITOR-A",
+        "fields": [
+          "contentDigest",
+          "version"
+        ],
+        "before": {
+          "docId": "GUIDE-A",
+          "state": "approved",
+          "editorId": "EDITOR-A",
+          "decision": "approve",
+          "contentDigest": "bd7a4cfd077ea00f646b145ede51430a647b5b62c9007485909fc15337bc4783",
+          "version": 1
+        },
+        "after": {
+          "docId": "GUIDE-A",
+          "state": "approved",
+          "editorId": "EDITOR-A",
+          "decision": "approve",
+          "contentDigest": "8b00b55ff9f0d47f486bfc38be7c82769fba1b74b251357bed2841f0614595a0",
+          "version": 20
+        }
+      },
+      {
+        "revision": 21,
+        "table": "signoffs",
+        "key": "GUIDE-A:EDITOR-B",
+        "fields": [
+          "contentDigest",
+          "version"
+        ],
+        "before": {
+          "docId": "GUIDE-A",
+          "state": "approved",
+          "editorId": "EDITOR-B",
+          "decision": "approve",
+          "contentDigest": "bd7a4cfd077ea00f646b145ede51430a647b5b62c9007485909fc15337bc4783",
+          "version": 1
+        },
+        "after": {
+          "docId": "GUIDE-A",
+          "state": "approved",
+          "editorId": "EDITOR-B",
+          "decision": "approve",
+          "contentDigest": "8b00b55ff9f0d47f486bfc38be7c82769fba1b74b251357bed2841f0614595a0",
+          "version": 21
+        }
+      },
+      {
+        "revision": 22,
+        "table": "audienceMembers",
+        "key": "AUDIENCE-B",
+        "fields": [
+          "channelId",
+          "enabled",
+          "principalId",
+          "role"
+        ],
+        "before": null,
+        "after": {
+          "channelId": "LOCAL-DEMO",
+          "enabled": true,
+          "principalId": "READER-B",
+          "role": "reader"
+        }
+      }
+    ],
+    "receipts": [],
+    "request": {
+      "draftId": "DOC-001",
+      "mode": "incremental",
+      "intentHash": "b0dd2d7bacfde5a7949fd97d72f218c46c55d0a44698b9fb9aecc47dc521b1f2",
+      "approvalSelection": "6e522d9ad8f1abf172fca23072546845e3fba045612cb8b8efa55463dd460f4b"
+    },
+    "displayOnly": [
+      {
+        "table": "documents",
+        "fields": [
+          "title",
+          "note"
+        ]
+      },
+      {
+        "table": "principals",
+        "fields": [
+          "name"
+        ]
+      }
+    ],
+    "protectedScope": "Document content digests, classification/readiness, distinct eligible signers and all signoff members, current audience/principal membership, policy and authority versions.",
+    "grants": {
+      "view": true,
+      "approve": true,
+      "commit": true,
+      "grantVersion": 1
+    }
+  },
+  "committed": {
+    "workflow": "document",
+    "draft": {
+      "id": "DOC-001",
+      "workflow": "document",
+      "context": {
+        "draftId": "DOC-001",
+        "actorId": "synthetic-manager-01",
+        "channelId": "LOCAL-DEMO",
+        "docIds": [
+          "GUIDE-A",
+          "RUNBOOK-B"
+        ]
+      },
+      "intent_revision": 1,
+      "status": "committed"
+    },
+    "actor": "synthetic-manager-01",
+    "role": "manager",
+    "mode": "incremental",
+    "validation": {
+      "draftId": "DOC-001",
+      "mode": "incremental",
+      "revision": 23,
+      "generation": "b7e4a56b-81f5-4f29-b7ec-02c1d77a39c6",
+      "contractHash": "aa610d3421f4ed1120c7bce2df70656154976b62f34fc986ee74d48fa9f3ff3c",
+      "clauses": [
+        {
+          "id": "publish:GUIDE-A",
+          "label": "GUIDE-A release decision",
+          "status": "retained",
+          "retained": true,
+          "reason": "Original protected evidence is unchanged; original approval snapshot retained.",
+          "approvalId": "APP-27377067a23abe5bd5ab5172d8dc6ba30a2463d960be3d813425aab9b6f4e80c",
+          "originalSnapshotId": "SNAP-a0c4cd4bf9d9fe5096622e934708195d3c2bd7264573bccd1360cb615810c591",
+          "reviewedRevision": 22,
+          "validatedRevision": 23,
+          "canCommit": true,
+          "current": {
+            "value": {
+              "docId": "GUIDE-A",
+              "contentDigest": "8b00b55ff9f0d47f486bfc38be7c82769fba1b74b251357bed2841f0614595a0",
+              "classification": "internal",
+              "requested": true,
+              "eligibleSignoffs": 2,
+              "requiredSignoffs": 2,
+              "releaseAudience": {
+                "audienceCount": 2,
+                "channelVersion": "channel-1",
+                "canCommit": true
+              },
+              "policyVersion": "publishing-1",
+              "grantVersion": 1,
+              "canCommit": true
+            },
+            "error": null,
+            "viewHash": "ff29a9dcffecd31d3e1d2cd9ffa5837efde6671719e8255fc75cfe9fcf3649b5"
+          },
+          "differences": []
+        },
+        {
+          "id": "publish:RUNBOOK-B",
+          "label": "RUNBOOK-B release decision",
+          "status": "retained",
+          "retained": true,
+          "reason": "Original protected evidence is unchanged; original approval snapshot retained.",
+          "approvalId": "APP-d8d7b6f15421d2b6c599dfcb00677a25299df8803e90f7cb993a7d6e3200bac7",
+          "originalSnapshotId": "SNAP-a0c4cd4bf9d9fe5096622e934708195d3c2bd7264573bccd1360cb615810c591",
+          "reviewedRevision": 22,
+          "validatedRevision": 23,
+          "canCommit": true,
+          "current": {
+            "value": {
+              "docId": "RUNBOOK-B",
+              "contentDigest": "105d7799891e6f3c2eb4871e3233d77cac1574fc6274af82d28e6e12fd60f50d",
+              "classification": "internal",
+              "requested": true,
+              "eligibleSignoffs": 2,
+              "requiredSignoffs": 2,
+              "releaseAudience": {
+                "audienceCount": 2,
+                "channelVersion": "channel-1",
+                "canCommit": true
+              },
+              "policyVersion": "publishing-1",
+              "grantVersion": 1,
+              "canCommit": true
+            },
+            "error": null,
+            "viewHash": "0f1c09e671ee71e650a21bfe2c516022203bcc29fe39d39825c20e776c364fd5"
+          },
+          "differences": []
+        }
+      ],
+      "allApproved": true,
+      "requiredReviewCount": 0,
+      "metrics": {
+        "verificationMicroseconds": 831.9,
+        "materialization": {
+          "mode": "incremental",
+          "revision": 23,
+          "totalNodes": 19,
+          "evaluatedNodes": 0,
+          "reusedNodes": 19,
+          "nominatedLeaves": 0,
+          "propagationEdges": 0,
+          "keyReads": 0,
+          "scanReads": 0,
+          "rowsRead": 0,
+          "eventsRead": 0,
+          "elapsedMicroseconds": 141.6,
+          "fallback": null,
+          "trackedKeyBuckets": 11,
+          "trackedScanNodes": 4
+        },
+        "coarseVersionLookups": 0
+      }
+    },
+    "items": [],
+    "documents": [
+      {
+        "docId": "GUIDE-A",
+        "title": "Synthetic GUIDE-A (title updated)",
+        "note": "Current display note",
+        "contentDigest": "8b00b55ff9f0d47f486bfc38be7c82769fba1b74b251357bed2841f0614595a0",
+        "classification": "internal",
+        "ready": true,
+        "version": "content-19"
+      },
+      {
+        "docId": "RUNBOOK-B",
+        "title": "Synthetic RUNBOOK-B",
+        "note": "Display-only title/note",
+        "contentDigest": "105d7799891e6f3c2eb4871e3233d77cac1574fc6274af82d28e6e12fd60f50d",
+        "classification": "internal",
+        "ready": true,
+        "version": "content-1"
+      }
+    ],
+    "changes": [
+      {
+        "revision": 23,
+        "table": "localReleases",
+        "key": "SIM-c39c2418-2cbf-4415-a5c2-1f7c6bfc0626",
+        "fields": [
+          "channelId",
+          "documentIds",
+          "draftId",
+          "status"
+        ],
+        "before": null,
+        "after": {
+          "draftId": "DOC-001",
+          "channelId": "LOCAL-DEMO",
+          "status": "simulated",
+          "documentIds": [
+            "GUIDE-A",
+            "RUNBOOK-B"
+          ]
+        }
+      }
+    ],
+    "receipts": [
+      {
+        "id": "SIM-c39c2418-2cbf-4415-a5c2-1f7c6bfc0626",
+        "receiptId": "RECEIPT-e06c9d2c-e2ce-4a24-bf41-a10aff041bf8",
+        "draftId": "DOC-001",
+        "workflow": "document",
+        "synthetic": true,
+        "execution": "SIMULATED_ONLY_NO_PUBLICATION",
+        "confirmedAt": "2026-11-01T09:01:56.170Z",
+        "confirmedBy": "synthetic-manager-01",
+        "intentHash": "b0dd2d7bacfde5a7949fd97d72f218c46c55d0a44698b9fb9aecc47dc521b1f2",
+        "contractHash": "aa610d3421f4ed1120c7bce2df70656154976b62f34fc986ee74d48fa9f3ff3c",
+        "validatedRevision": 22,
+        "mode": "incremental",
+        "decisions": [
+          {
+            "clauseId": "publish:GUIDE-A",
+            "value": {
+              "docId": "GUIDE-A",
+              "contentDigest": "8b00b55ff9f0d47f486bfc38be7c82769fba1b74b251357bed2841f0614595a0",
+              "classification": "internal",
+              "requested": true,
+              "eligibleSignoffs": 2,
+              "requiredSignoffs": 2,
+              "releaseAudience": {
+                "audienceCount": 2,
+                "channelVersion": "channel-1",
+                "canCommit": true
+              },
+              "policyVersion": "publishing-1",
+              "grantVersion": 1,
+              "canCommit": true
+            }
+          },
+          {
+            "clauseId": "publish:RUNBOOK-B",
+            "value": {
+              "docId": "RUNBOOK-B",
+              "contentDigest": "105d7799891e6f3c2eb4871e3233d77cac1574fc6274af82d28e6e12fd60f50d",
+              "classification": "internal",
+              "requested": true,
+              "eligibleSignoffs": 2,
+              "requiredSignoffs": 2,
+              "releaseAudience": {
+                "audienceCount": 2,
+                "channelVersion": "channel-1",
+                "canCommit": true
+              },
+              "policyVersion": "publishing-1",
+              "grantVersion": 1,
+              "canCommit": true
+            }
+          }
+        ],
+        "authorityChain": [
+          {
+            "clauseId": "publish:GUIDE-A",
+            "originalApprovalId": "APP-27377067a23abe5bd5ab5172d8dc6ba30a2463d960be3d813425aab9b6f4e80c",
+            "originalSnapshotId": "SNAP-a0c4cd4bf9d9fe5096622e934708195d3c2bd7264573bccd1360cb615810c591",
+            "reviewedRevision": 22,
+            "validatedRevision": 22,
+            "protectedWitnessUnchanged": true
+          },
+          {
+            "clauseId": "publish:RUNBOOK-B",
+            "originalApprovalId": "APP-d8d7b6f15421d2b6c599dfcb00677a25299df8803e90f7cb993a7d6e3200bac7",
+            "originalSnapshotId": "SNAP-a0c4cd4bf9d9fe5096622e934708195d3c2bd7264573bccd1360cb615810c591",
+            "reviewedRevision": 22,
+            "validatedRevision": 22,
+            "protectedWitnessUnchanged": true
+          }
+        ]
+      }
+    ],
+    "request": {
+      "draftId": "DOC-001",
+      "mode": "incremental",
+      "intentHash": "b0dd2d7bacfde5a7949fd97d72f218c46c55d0a44698b9fb9aecc47dc521b1f2",
+      "approvalSelection": "479e5fc3f369ffde1905e92b967630df8be8f1c821b491f8aba5a123ad7237ad"
+    },
+    "displayOnly": [
+      {
+        "table": "documents",
+        "fields": [
+          "title",
+          "note"
+        ]
+      },
+      {
+        "table": "principals",
+        "fields": [
+          "name"
+        ]
+      }
+    ],
+    "protectedScope": "Document content digests, classification/readiness, distinct eligible signers and all signoff members, current audience/principal membership, policy and authority versions.",
+    "grants": {
+      "view": true,
+      "approve": true,
+      "commit": true,
+      "grantVersion": 1
+    }
+  },
+  "uiErrors": [],
+  "exceptions": [],
+  "blockedExternal": [],
+  "responses": [
+    {
+      "path": "/auth/login",
+      "status": 204,
+      "mimeType": ""
+    },
+    {
+      "path": "/auth/login",
+      "status": 200,
+      "mimeType": "application/json"
+    },
+    {
+      "path": "/approval/context",
+      "status": 204,
+      "mimeType": ""
+    },
+    {
+      "path": "/approval/context",
+      "status": 200,
+      "mimeType": "application/json"
+    },
+    {
+      "path": "/approval/context",
+      "status": 200,
+      "mimeType": "application/json"
+    },
+    {
+      "path": "/demo/reset",
+      "status": 204,
+      "mimeType": ""
+    },
+    {
+      "path": "/demo/reset",
+      "status": 200,
+      "mimeType": "application/json"
+    },
+    {
+      "path": "/approval/context",
+      "status": 200,
+      "mimeType": "application/json"
+    },
+    {
+      "path": "/approval/context",
+      "status": 200,
+      "mimeType": "application/json"
+    },
+    {
+      "path": "/approval/preview",
+      "status": 204,
+      "mimeType": ""
+    },
+    {
+      "path": "/approval/preview",
+      "status": 200,
+      "mimeType": "application/json"
+    },
+    {
+      "path": "/approval/context",
+      "status": 200,
+      "mimeType": "application/json"
+    },
+    {
+      "path": "/approval/review",
+      "status": 204,
+      "mimeType": ""
+    },
+    {
+      "path": "/approval/review",
+      "status": 200,
+      "mimeType": "application/json"
+    },
+    {
+      "path": "/approval/context",
+      "status": 200,
+      "mimeType": "application/json"
+    },
+    {
+      "path": "/approval/context",
+      "status": 200,
+      "mimeType": "application/json"
+    },
+    {
+      "path": "/demo/change",
+      "status": 204,
+      "mimeType": ""
+    },
+    {
+      "path": "/demo/change",
+      "status": 200,
+      "mimeType": "application/json"
+    },
+    {
+      "path": "/approval/context",
+      "status": 200,
+      "mimeType": "application/json"
+    },
+    {
+      "path": "/approval/context",
+      "status": 200,
+      "mimeType": "application/json"
+    },
+    {
+      "path": "/demo/change",
+      "status": 200,
+      "mimeType": "application/json"
+    },
+    {
+      "path": "/approval/context",
+      "status": 200,
+      "mimeType": "application/json"
+    },
+    {
+      "path": "/approval/context",
+      "status": 200,
+      "mimeType": "application/json"
+    },
+    {
+      "path": "/demo/change",
+      "status": 200,
+      "mimeType": "application/json"
+    },
+    {
+      "path": "/approval/context",
+      "status": 200,
+      "mimeType": "application/json"
+    },
+    {
+      "path": "/approval/preview",
+      "status": 200,
+      "mimeType": "application/json"
+    },
+    {
+      "path": "/approval/context",
+      "status": 200,
+      "mimeType": "application/json"
+    },
+    {
+      "path": "/approval/review",
+      "status": 200,
+      "mimeType": "application/json"
+    },
+    {
+      "path": "/approval/context",
+      "status": 200,
+      "mimeType": "application/json"
+    },
+    {
+      "path": "/approval/context",
+      "status": 200,
+      "mimeType": "application/json"
+    },
+    {
+      "path": "/demo/change",
+      "status": 200,
+      "mimeType": "application/json"
+    },
+    {
+      "path": "/approval/context",
+      "status": 200,
+      "mimeType": "application/json"
+    },
+    {
+      "path": "/approval/context",
+      "status": 200,
+      "mimeType": "application/json"
+    },
+    {
+      "path": "/approval/preview",
+      "status": 200,
+      "mimeType": "application/json"
+    },
+    {
+      "path": "/approval/context",
+      "status": 200,
+      "mimeType": "application/json"
+    },
+    {
+      "path": "/approval/review",
+      "status": 200,
+      "mimeType": "application/json"
+    },
+    {
+      "path": "/approval/context",
+      "status": 200,
+      "mimeType": "application/json"
+    },
+    {
+      "path": "/approval/confirm",
+      "status": 204,
+      "mimeType": ""
+    },
+    {
+      "path": "/approval/confirm",
+      "status": 200,
+      "mimeType": "application/json"
+    },
+    {
+      "path": "/approval/context",
+      "status": 204,
+      "mimeType": ""
+    },
+    {
+      "path": "/approval/context",
+      "status": 200,
+      "mimeType": "application/json"
+    },
+    {
+      "path": "/approval/context",
+      "status": 200,
+      "mimeType": "application/json"
+    }
+  ],
+  "completed": true
+}
