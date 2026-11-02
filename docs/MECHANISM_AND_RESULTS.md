@@ -1,5 +1,7 @@
 # IPDOS: Reproducible Regression Checks for Decision Rules
 
+> Historical guide: the initial rule-replay demonstrator. For the current v0.3.0 procurement/document workbench, use the [documentation index](README.md) and [current walkthrough](DEMO.md). The earlier formulas, tests and recording here retain their original scope.
+
 ## Mechanism and provenance
 
 The newly implemented workbench applies the existing production `RulesRegistryService` to a small frozen synthetic scenario catalog. The regular sales, traffic and menu API methods and the replay service execute the same private arrays of `RuleDefinition.evaluate` functions through `traceRules`. There is no duplicate evaluator or table of precomputed actual results. Explicit expected warning IDs are a separate authored oracle.

@@ -1,5 +1,7 @@
 # Rule replay demonstrator: scope and reproduction
 
+> Historical guide: the initial rule-replay demonstrator. For the current v0.3.0 procurement/document workbench, use the [documentation index](README.md) and [current walkthrough](DEMO.md). The earlier formulas, tests and recording here retain their original scope.
+
 ## What was implemented
 
 This is a narrow software engineering demonstrator around three existing IPDOS rule groups: sales forecast, traffic forecast, and menu adjustments. It adds fixed synthetic input snapshots, frozen evaluation times, immutable named policy profiles, explicit test oracles, traces for both triggered and clear rules, policy/output differences, and complete JSON exports. The web UI is new. It does not claim these facilities existed in the public baseline.

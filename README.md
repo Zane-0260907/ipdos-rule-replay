@@ -1,71 +1,96 @@
-# IPDOS: Inspectable evidence-scoped approvals
+<div align="center">
+<h1>IPDOS</h1>
+<p><strong>Inspectable approvals across procurement and document release</strong></p>
+<p>See what changed. Keep unaffected approvals. Review the decisions that need attention.</p>
+<p><a href="https://github.com/Zane-0260907/ipdos-rule-replay/releases/download/v0.3.0/ipdos-v0.3.0-prebuilt.zip"><strong>Download &amp; run</strong></a> &middot; <a href="docs/DEMO.md"><strong>Illustrated walkthrough</strong></a> &middot; <a href="docs/README.md"><strong>Documentation</strong></a> &middot; <a href="#versions-and-recordings"><strong>Videos &amp; versions</strong></a> &middot; <a href="https://github.com/Zane-0260907/ipdos-rule-replay/releases/tag/v0.3.0"><strong>Release v0.3.0</strong></a></p>
+</div>
 
-IPDOS is a bounded local workbench for inspecting changes to reviewed evidence, preserving unaffected approvals, explicitly reviewing affected decisions, and atomically saving a simulated effect with its authority receipt. **Procurement and document release share the same executable approval contract, dependency interpreter, review ledger, and commit service.**
+IPDOS connects changing evidence to the decisions a person reviewed. **Two local workflows share one contract and commit service:** preserve unchanged approvals, explain affected ones, and explicitly review what changed.
 
-Latest source: [`approval-workbench/`](approval-workbench/). Stable artifact entry: [release v0.3.0](https://github.com/Zane-0260907/ipdos-rule-replay/releases/tag/v0.3.0). Earlier versions, tags, restaurant demo files and evidence remain available; the previous landing page is preserved in [README-business-r2.md](README-business-r2.md).
+## See the current application
 
-## Run the English application
+### Procurement: keep unaffected approvals
 
-Download `ipdos-v0.3.0-prebuilt.zip` from the versioned release and extract it into a writable directory. Use an existing **Node.js 24.x** installation, then run:
+Another store's stock changes; all three original approvals remain. Related stock and shared-budget changes show different review scopes.
 
-```sh
-node server/run.cjs
-```
+[![English procurement interface showing three approvals retained after an unrelated inventory update](docs/images/approval-workbench/01-unrelated-retained.png)](docs/images/approval-workbench/01-unrelated-retained.png)
 
-Open **http://127.0.0.1:3338/**. The API listens only on **127.0.0.1:3337**. No npm installation, compiler, Docker, external database or supplier account is required by the prebuilt runtime. The local role selector is a demonstration convenience, not production authentication. Synthetic SQLite state is created under `artifacts/`; preserve that directory to retain receipts. Neither Node.js nor a browser is bundled.
+### Document release: bind review to current content
 
-## What to inspect
+A changed document digest cannot use old-content signatures. The guide needs review while the unaffected runbook keeps its original approval. A shared audience change can affect both documents.
 
-1. **Approval contract.** Inspect the supported-contract panel and sealed review preview. Protected evidence and display-only fields are declared separately. Original snapshots and approvals remain immutable.
-2. **Unrelated change.** Approve the procurement decisions, update another store's stock, and compare whole-revision binding with dependency-incremental validation. Unaffected approval identities remain unchanged in the precise mode.
-3. **Same decision value, changed evidence.** Insert and delete the previously missing join key. Rice's complete decision projection stays unchanged, but the persisted absence epoch changes and requires an explicit rice-only review. Equal final quantities alone never justify reusing changed protected evidence.
-4. **Shared scope.** Reduce rice stock from 25 to 20 kg, then save a 36.5 kg proposal. Its shared-budget evidence affects all dependent clauses; open a new preview and explicitly review the affected decisions.
-5. **Second adapter.** Switch to document release. A title is display-only; a changed content digest cannot reuse old signatures. Current-content signatures, distinct eligible editors and the shared reader audience determine the visible review scope.
-6. **Atomic receipt and retry.** Confirm a local simulated effect, inspect its original approval/snapshot chain, change source state and retry the identical saved request. It returns the original receipt. A new request key cannot create a second effect for the same draft.
+[![English document release interface showing old signatures ineligible for changed content and the unaffected runbook retained](docs/images/approval-workbench/06-content-signatures.png)](docs/images/approval-workbench/06-content-signatures.png)
 
-All procurement records and document releases are **local simulations**. No supplier, payment system, publication service or participant is contacted.
+These are complete, unmodified screenshots of the application with synthetic data. Click either image to inspect it at full resolution. [Browse all nine screenshots and reason chains](docs/SCREENSHOTS.md).
 
-## Reproduce and audit
+## Run the demo
 
-The source and raw regression artifacts are separately downloadable from the same versioned release. From the extracted source, or from `approval-workbench/` in this repository:
+1. [Download the runnable ZIP](https://github.com/Zane-0260907/ipdos-rule-replay/releases/download/v0.3.0/ipdos-v0.3.0-prebuilt.zip) and extract it to a writable folder.
+2. With **Node.js 24.x** installed, run this command from that extracted folder:
 
-```sh
-node --test tests/first-slice.test.cjs tests/boundary.test.cjs tests/explanation-and-identity.test.cjs
-node study/run-pilot.cjs
-node study/run-pilot.cjs --main
-node study/run-document-pilot.cjs
-node study/run-document-pilot.cjs --main
-node study/audit-results.cjs
-node study/audit-results.cjs --document
-```
+   ```sh
+   node server/run.cjs
+   ```
 
-Each runner creates fresh synthetic fixtures. The main plans require a passing same-code sanity gate. The frozen procurement plan contains **592 controlled traces**; the separate document plan contains **276**. The independent semantic audits compare each recorded approval and receipt with complete journal replay and a separately implemented full oracle. These are bounded designed scenarios, not independent deployments or production failure rates.
+3. Open **http://127.0.0.1:3338/** and choose the demo manager.
 
-Archived public evidence is in [`reproducibility/approval-workbench/`](reproducibility/approval-workbench/). Its derivation manifest distinguishes original file hashes from public hashes. Only machine-local path metadata is normalized; numerical observations, decision values, witnesses, scenarios and source digests are unchanged. Original private archives are retained. Procurement/document controlled-fixture case databases are omitted from that regression download; the source runners regenerate them. The separate public-source replay ZIP includes its own explicitly synthetic SQLite traces. The corrected source retains the nine frozen core modules; the UI context-setter fix and strict handled-error regression are documented in [`UI_CORRECTION.md`](approval-workbench/study/UI_CORRECTION.md).
+The API uses loopback port **3337**; the page uses **3338**. No npm installation, Docker or external database is needed by the prebuilt app. [Full quick start, source checkout and troubleshooting](docs/QUICKSTART.md).
 
-The optional frontend rebuild uses its locked dependencies:
+## What to try
 
-```sh
-cd frontend
-npm ci
-npm run build
-```
+| Try this | What to inspect |
+| --- | --- |
+| Switch whole-revision and dependency modes after an unrelated change | Different review scope; preserved approval identities |
+| Insert then delete a previously missing join key | Equal decision values still require review when protected evidence history changes |
+| Reduce rice stock from 25 to 20 kg; save a 36.5 kg proposal | Stock reason chain, then shared-budget review scope |
+| Change GUIDE-A content, refresh its synthetic signatures, then change the audience | Content binding, selected renewal and shared dependencies |
+| Confirm once, change source state, then retry the saved request | The original receipt and authority chain; no second local effect |
 
-## Public-source counterfactual replay
+Follow the [step-by-step walkthrough](docs/DEMO.md). The new v0.3.0 recording is awaiting upload; the [available recordings below](#versions-and-recordings) are clearly marked by version.
 
-The companion replay uses a fixed **30-transition counterfactual fixture** governed by an explicit, bounded public-source contract. Its inputs come from public developer documentation; the approval states and changes are constructed scenarios. They are **not observed human approvals, a participant study, real purchasing, or evidence of user time savings**. The companion source is in [`public-source-replay/`](public-source-replay/); download its release ZIP for all 240 synthetic databases from the original and separate validation runs. Its [protocol](public-source-replay/PROTOCOL.md), [report](public-source-replay/REPORT.md), [public derivation](public-source-replay/PUBLICATION.md) and [CC0 source attribution](public-source-replay/README.md) state the exact boundaries. It protects selected source-file membership and byte identities plus a conservative shared non-source binding; it does not model Sphinx rendering or the Python project's real review policy.
+## Downloads and evidence
 
-## Scope and limits
+| You want to… | Download | Guide |
+| --- | --- | --- |
+| Run the current English app | [Prebuilt application](https://github.com/Zane-0260907/ipdos-rule-replay/releases/download/v0.3.0/ipdos-v0.3.0-prebuilt.zip) | [Quick start](docs/QUICKSTART.md) |
+| Inspect or rebuild the current implementation | [Application source](https://github.com/Zane-0260907/ipdos-rule-replay/releases/download/v0.3.0/ipdos-v0.3.0-source.zip) | [Architecture and contracts](docs/ARCHITECTURE.md) |
+| Inspect controlled-fixture results and raw records | [Regression evidence](https://github.com/Zane-0260907/ipdos-rule-replay/releases/download/v0.3.0/ipdos-v0.3.0-regression-public.zip) | [Evaluation](docs/EVALUATION.md) · [Reproduction](docs/REPRODUCING.md) |
+| Replay the bounded public-source example | [Devguide replay, including synthetic case databases](https://github.com/Zane-0260907/ipdos-rule-replay/releases/download/v0.3.0/ipdos-v0.3.0-public-devguide-replay.zip) | [Frozen source contract](public-source-replay/PROTOCOL.md) · [Replay report](public-source-replay/REPORT.md) |
 
-- The supported grammar is finite: projected unique-key reads including missing keys, predicate membership history, many-to-one joins, and bounded exact-integer aggregates. Unsupported rules fail closed or require conservative invalidation.
-- The contract assumes its encapsulated fact writer and complete transactional journal. It does not cover arbitrary database tampering, arbitrary SQL/plugins, nondeterministic or time-dependent functions, or distributed approval authority.
-- Final confirmation checks current rules, authority, draft identity and approvals within the local SQLite write transaction. Same-request retry recovery and per-draft uniqueness are bounded guarantees, not unrestricted exactly-once business execution or cross-draft semantic deduplication.
-- Selective invalidation, read sets, optimistic validation and approval binding have prior work. This artifact demonstrates their bounded executable integration, inspectable reasons and explicit operational re-review; it does not claim to invent those techniques.
-- Timing compares self-implemented modes under the same contract. Incremental validation beat full recomputation in the frozen local cases but was slower than whole-revision checking; shared-scope fanout and substantial witness storage are retained costs. Re-review counts are workload proxies, not measured human time savings.
-- The new prototype uses a 13% integer-gram buffer. The earlier restaurant demo used a 10% formula and human quantity edits. Their 31.5/36.5 kg endpoints must not be treated as the same calculation. See [legacy differences](approval-workbench/study/LEGACY_DIFFERENCES.md).
+[SHA-256 checksums](https://github.com/Zane-0260907/ipdos-rule-replay/releases/download/v0.3.0/SHA256SUMS.txt) · [Publication verification](verification/v0.3.0/PUBLICATION_REVIEW.json) · [All release files](https://github.com/Zane-0260907/ipdos-rule-replay/releases/tag/v0.3.0)
 
-## History and licenses
+The named source ZIP is the compact application package. GitHub's automatic “Source code” archives contain the whole repository, including historical projects.
 
-[Business Flow R2](https://github.com/Zane-0260907/ipdos-rule-replay/releases/tag/v0.2.0-business-r2), [`business-demo/`](business-demo/), the original root rule-replay source, and [README-rule-replay.md](README-rule-replay.md) remain intact. Backend lineage includes [Juggle-ops/dietsystem](https://github.com/Juggle-ops/dietsystem); the repository retains its original history and Apache-2.0 license.
+## One contract and commit path
 
-Project code follows [Apache-2.0](LICENSE). Frontend dependencies retain their own terms; supplied and official upstream legal texts are preserved in [`THIRD_PARTY_LICENSES`](approval-workbench/THIRD_PARTY_LICENSES/INVENTORY.json). Public-source companion inputs retain their source-specific attribution and license terms; they are not relicensed as project code. SHA-256 checksums and a publication review accompany the versioned release. Papers, private Library identities, credentials and real business databases are excluded.
+| Layer | Responsibility |
+| --- | --- |
+| Workflow adapters | Map procurement or document evidence into a finite declared contract |
+| Evidence and review ledger | Preserve original snapshots, explain protected changes and append explicitly selected reviews |
+| Commit transaction | Recheck evidence, rules, authority and request identity; atomically save a simulated effect and receipt |
+
+[Architecture diagram and module map](docs/ARCHITECTURE.md) · [Approval contract](approval-workbench/study/CONTRACT.md) · [Document contract](approval-workbench/study/DOCUMENT_CONTRACT.md)
+
+## Documentation
+
+[**Open the documentation index**](docs/README.md)
+
+- **Use it:** [Quick start](docs/QUICKSTART.md), [walkthrough](docs/DEMO.md), [screenshots](docs/SCREENSHOTS.md).
+- **Understand it:** [Architecture](docs/ARCHITECTURE.md), [review semantics](approval-workbench/study/CONTRACT_IMPLEMENTATION_NOTES.md), [scope and limits](docs/LIMITS.md).
+- **Verify it:** [Evaluation](docs/EVALUATION.md), [reproduction commands](docs/REPRODUCING.md), [release status](docs/RELEASE_STATUS.md), [public evidence provenance](reproducibility/approval-workbench/PUBLIC_EVIDENCE_DERIVATION.json).
+
+## Versions and recordings
+
+| Version | Interface and guide | Recording / download |
+| --- | --- | --- |
+| **Current: v0.3.0 approval workbench** | [Procurement + document workflows](docs/DEMO.md) | New video awaiting upload · [Runnable ZIP](https://github.com/Zane-0260907/ipdos-rule-replay/releases/download/v0.3.0/ipdos-v0.3.0-prebuilt.zip) |
+| **Legacy: Business Flow R2** | [Original illustrated landing page](README-business-r2.md) · [source guide](business-demo/README.md) | [Watch the R2 video](https://www.youtube.com/watch?v=6EFWHdpDLiw) · [R2 downloads](https://github.com/Zane-0260907/ipdos-rule-replay/releases/tag/v0.2.0-business-r2) |
+| **Legacy: initial rule replay** | [Original guide, screenshot and checks](README-rule-replay.md) | [Watch the rule-replay video](https://youtu.be/wjxquXh4LxQ) · [original mechanism](docs/MECHANISM_AND_RESULTS.md) |
+
+Historical code, screenshots, evidence and tags remain available. The new prototype's 13% integer-gram calculation differs from the R2 10% formula and human edits; [the quantities have different derivations](approval-workbench/study/LEGACY_DIFFERENCES.md).
+
+## Scope and license
+
+All purchases, releases, actors and signoffs are **local simulations**. The role selector is demo access, not production authentication. The finite contract trusts its mediated fact writer and journal. The evidence covers controlled fixtures and a bounded source-contract replay; it does not measure real approvals, participant time, production failure rates or business gains. [Read the full limits and related-work boundaries](docs/LIMITS.md).
+
+Project code retains [Apache-2.0](LICENSE), [upstream lineage](https://github.com/Juggle-ops/dietsystem), and the [recorded author credits](README-rule-replay.md#authors--maintainers). [Third-party legal texts](approval-workbench/THIRD_PARTY_LICENSES/INVENTORY.json) and [CC0 devguide attribution](public-source-replay/README.md) are retained.

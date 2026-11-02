@@ -1,5 +1,7 @@
 # Proposed 4 minute 30 second tool demonstration
 
+> Historical guide: the initial rule-replay demonstrator. For the current v0.3.0 procurement/document workbench, use the [documentation index](README.md) and [current walkthrough](DEMO.md). The earlier formulas, tests and recording here retain their original scope.
+
 A 270-second local recording was prepared against engineering commit `52c7897560c0fc967a020a162c8bacc2ae2cb077`. This document retains its preparation script. Video publication is handled separately.
 
 ## Preparation
